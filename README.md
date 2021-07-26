@@ -4,8 +4,8 @@ This is the Basis Theory Integration Guides.
 
 ## Installation
 
- - gem install jekyll bundler
- - bundle exec jekyll serve
+ - `gem install jekyll bundler`
+ - `bundle exec jekyll serve`
 
 ## Development
 
