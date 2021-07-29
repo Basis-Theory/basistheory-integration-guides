@@ -2,6 +2,98 @@
 body {
     font-family: $body-font-family;
     background-color: $body-background-color;
+    .main-content {
+        h1 {
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px !important;
+            line-height: 116.7%;
+            color: #1B1D32;
+        }
+    
+        h5 {
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px !important;
+            line-height: 133.4%;
+            /* grey/grey-200 */
+            color: #A4A9C5;
+        }
+
+        p {
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            /* or 24px */
+            letter-spacing: 0.15px;
+            /* grey / grey-800 */
+            color: #1E233B;
+        }
+    
+        .text-delta{
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            /* grey/grey-900 */
+            color: #1B1D32;
+        }
+
+        ul {
+            list-style: none; 
+            counter-reset: li;
+            li {
+                counter-increment: li;
+                font-family: Source Sans Pro;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 143%;
+                /* identical to box height, or 20px */
+                text-decoration-line: underline;
+                color: #009FA9;
+
+                a {
+                    color: #009FA9; /* blue colors for links too */
+                    text-decoration: inherit; /* no underline */
+                }
+            }
+
+            > li::before {
+                position: absolute;
+                margin-left: -1.4em;
+                /* grey/grey-900 */
+                color: #1B1D32;
+                content: counter(li);
+                font-family: Source Sans Pro;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 130%;
+            }
+        }
+
+        a:not([class]) { 
+            text-decoration: none; 
+            opacity: 1;
+        }
+
+        a:not([class]):hover { 
+            opacity: 1;
+            text-decoration: none;
+        }
+
+
+    }
+
+
 }
 .side-bar {
     padding: 16px;

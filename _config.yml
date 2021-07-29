@@ -38,6 +38,8 @@ plugins:
 
 theme: just-the-docs
 
+heading_anchors: false
+
 collections:
   docs:
     guides_content:
