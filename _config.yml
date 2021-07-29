@@ -30,13 +30,17 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 logo: "assets/images/top-bar.svg"
-color_scheme: bt-color
+color_schemes: bt-color
 
 # Build settings
 plugins:
   - jekyll-feed
 
 theme: just-the-docs
+
+collections:
+  docs:
+    guides_content:
 
 # Exclude from processing.
 # The following items will not be processed, by default.
