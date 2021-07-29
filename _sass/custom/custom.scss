@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
+body {
+    font-family: $body-font-family;
+    background-color: $body-background-color;
+}
+.side-bar {
+    padding: 16px;
+    background: #13172A;
+    max-width: 240px;
+    
+    .site-header {
+        border-bottom: inherit;
+        
+    }
+    .site-title.lh-tight {
+        padding: 0;
+        pointer-events: none;
+    }
+}
+
+.nav-list-item {
+    a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.15px;
+        color: $link-color;
+
+        :active {
+            color: $green-000;
+        }
+    }
+}
+
+.main-header {
+    background-color: $search-background-color;
+    border-bottom: $border #E6E8F0;
+}
+
+@media (min-width: 50rem) { 
+    .side-bar { 
+        flex-wrap: nowrap; 
+        position: fixed; 
+        width: 240px; 
+        height: 100%; 
+        flex-direction: column; 
+        border-right: 1px solid #eeebee; 
+        align-items: flex-end; 
+    }
+    .site-header { 
+        height: 60px; 
+        max-height: 60px; 
+        border-bottom: inherit; 
+    }  
+}
+
+
+@media (min-width: 66.5rem) {
+    .site-nav, .site-header, .site-footer {
+        width:100%; 
+    }
+}
+
