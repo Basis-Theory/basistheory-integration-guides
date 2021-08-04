@@ -3,6 +3,7 @@ layout: default
 title: How to setup a token exchange
 permalink: /token_exchanges/
 nav_order: 2
+has_children: true
 ---
 # How to setup a token exchange
 {: .no_toc }

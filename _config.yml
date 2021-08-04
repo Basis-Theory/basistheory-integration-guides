@@ -40,9 +40,6 @@ theme: just-the-docs
 
 heading_anchors: false
 
-collections:
-  content:
-    token_exchanges:
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -220,9 +220,10 @@ body {
     }
 }
 .side-bar {
-    padding: 16px;
     background: #13172A;
     max-width: 240px;
+    z-index: 30;
+    padding-bottom: 200px;
     
     .site-header {
         border-bottom: inherit;
