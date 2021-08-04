@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
+@import 'navigation';
+
+//Color
+$grey-900: #1B1D32;
+$grey-200: #A4A9C5;
+$primary-text: #1AD1DB;
+$primary-dark: #009FA9;
+$border-subtitles: rgba(65, 73, 112, 0.2);
+
 body {
     font-family: $body-font-family;
     background-color: $body-background-color;
@@ -9,8 +18,24 @@ body {
             font-weight: normal;
             font-size: 48px !important;
             line-height: 116.7%;
-            color: #1B1D32;
+            color: $grey-900;
         }
+
+        h2 {
+            font-family: Source Sans Pro;
+            padding-left: 0;
+            font-size: 20px !important;
+            font-weight: 600;
+            line-height: 160%;
+            letter-spacing: 0.15px;
+            font-style: normal;
+            text-align: left;
+            color: $grey-900;
+            margin: 0.8em 0;
+            background-color: transparent;
+            border-bottom: 1px solid $border-subtitles;
+            padding-bottom: 1em
+          }
     
         h5 {
             font-family: Source Sans Pro;
@@ -18,8 +43,8 @@ body {
             font-weight: normal;
             font-size: 24px !important;
             line-height: 133.4%;
-            /* grey/grey-200 */
-            color: #A4A9C5;
+            color: $grey-200;
+            margin: 1.5em 0;
         }
 
         p {
@@ -38,12 +63,32 @@ body {
             font-family: Source Sans Pro;
             font-style: normal;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 12px !important;
             line-height: 140%;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            /* grey/grey-900 */
-            color: #1B1D32;
+            color: $grey-900;
+            border-bottom: 1px solid $border-subtitles;
+        }
+
+        ol  {
+            margin: 0.8em 0;
+            li {
+                counter-increment: li;
+                font-family: Source Sans Pro;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 143%;
+                /* identical to box height, or 20px */
+                text-decoration-line: underline;
+                color: $primary-dark;
+
+                a {
+                    color: $primary-dark;
+                    text-decoration: inherit; /* no underline */
+                }
+            }
         }
 
         ul {
@@ -56,12 +101,11 @@ body {
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 143%;
-                /* identical to box height, or 20px */
                 text-decoration-line: underline;
-                color: #009FA9;
+                color: $primary-dark;
 
                 a {
-                    color: #009FA9; /* blue colors for links too */
+                    color: $primary-dark;
                     text-decoration: inherit; /* no underline */
                 }
             }
@@ -69,8 +113,7 @@ body {
             > li::before {
                 position: absolute;
                 margin-left: -1.4em;
-                /* grey/grey-900 */
-                color: #1B1D32;
+                color: $grey-900;
                 content: counter(li);
                 font-family: Source Sans Pro;
                 font-style: normal;
@@ -90,10 +133,91 @@ body {
             text-decoration: none;
         }
 
+        .card-box {
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            column-gap: 24px;
+            row-gap: 32px;
+            padding: 32px 0;
+      
+            .card {
+                border: 1px solid $border-subtitles;
+                box-sizing: border-box;
+                border-radius: 4px;
+        
+                img {
+                    width: 100%;
+                }
+            
+                .container {
+                    padding: 16px;
+                
+                    h4 {
+                        font-family: Source Sans Pro;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 175%;
+                        letter-spacing: 0.15px;
+                        margin: 0;
+                        padding: 0 0 4px;
+                        color: #1E233B;
+                    }
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        color: #1E233B;
+                        font-family: Source Sans Pro;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 143%;
+                    }
+                }
+            }
+        }
 
+        .table-wrapper {
+            box-shadow: none;
+            border: 1px solid #E3E5F9;         
+            box-sizing: border-box;
+            border-radius: 2px;
+            background: #F2F3FF;
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+
+                thead {
+                    th {
+                        padding: 6px 24px 6px 16px;
+                        background: #E8EBF8;
+                        box-shadow: inset 0px -1px 0px #E2E4F0;
+                        border-left: 0;
+                    }
+                    
+                }
+
+                tr:nth-child(even)>td {
+                    background-color: #E8EBF8;
+                }
+
+                tr:nth-child(odd)>td {
+                    background-color: #F2F3FF;
+                }
+
+                td {
+                    padding: 10px;
+                }
+
+                td, th {
+                    border-left: 0;
+                }
+            }
+
+            
+        }
     }
-
-
 }
 .side-bar {
     padding: 16px;
@@ -110,19 +234,79 @@ body {
     }
 }
 
-.nav-list-item {
-    a {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 175%;
-        letter-spacing: 0.15px;
-        color: $link-color;
+.nav-list {
+    .nav-list-item {
+        .nav-list-link {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.15px;
+            color: #E5E6EC;
 
-        :active {
-            color: $green-000;
+            &:hover {
+                color: $primary-text;
+                background-image: none;
+            }
+
+            &.active {
+                color: $primary-text;
+                background-image: none;
+            }
+        }
+        > .nav-list {
+            .nav-list-item {
+                .nav-list-link {
+                    color: #8B92B6;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 143%;
+
+                    &:hover {
+                        color: $primary-text;
+                        background-image: none;
+                    }
+        
+                    &.active {
+                        color: $primary-text;
+                        background-image: none;
+                    }
+
+                }
+            }
+        } 
+        .nav-list-expander {
+            svg {
+                color: $primary-text
+            }
+            &:hover {
+                background-image: none;
+            }
         }
     }
+
 }
+
+.nav-principal-href {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #E5E6EC;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 13% auto;
+    align-items: center;
+    text-decoration: none;
+
+    &::before {
+        justify-self: start;
+        content: url(../../assets/images/icons/chevron-left.svg);
+    }
+}
+
 
 .main-header {
     background-color: $search-background-color;
@@ -143,11 +327,15 @@ body {
         height: 60px; 
         max-height: 60px; 
         border-bottom: inherit; 
-    }  
+    } 
+    .main {
+        max-width: 800px;
+    } 
 }
 
 
-@media (min-width: 66.5rem) {
+
+@media (min-width: 66.5rem) {    
     .site-nav, .site-header, .site-footer {
         width:100%; 
     }

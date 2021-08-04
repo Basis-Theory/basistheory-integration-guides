@@ -1,8 +1,9 @@
 ---
-layout: page
-title: Token Exchange
-permalink: /token_exchange/
+layout: default
+title: How to setup a token exchange
+permalink: /token_exchanges/
 has_children: true
+token-exchanges: index.html
 ---
 
 # How to setup a token exchange

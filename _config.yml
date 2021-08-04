@@ -41,8 +41,8 @@ theme: just-the-docs
 heading_anchors: false
 
 collections:
-  docs:
-    guides_content:
+  content:
+    token_exchanges:
 
 # Exclude from processing.
 # The following items will not be processed, by default.
