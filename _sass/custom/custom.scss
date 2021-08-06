@@ -135,8 +135,6 @@ body {
 
         .card-box {
             display: grid;
-            grid-template-columns: repeat(3,auto);
-            column-gap: 24px;
             row-gap: 32px;
             padding: 32px 0;
       
@@ -221,16 +219,16 @@ body {
 }
 .side-bar {
     background: #13172A;
-    max-width: 240px;
     z-index: 30;
-    padding-bottom: 200px;
     
     .site-header {
-        border-bottom: inherit;
-        
+        border-bottom: 1px solid #2D2F4A;
+        .site-button:hover { 
+            background-image: none; 
+        }
     }
     .site-title.lh-tight {
-        padding: 0;
+        padding: 16px;
         pointer-events: none;
     }
 }
@@ -289,7 +287,6 @@ body {
 }
 
 .nav-principal-href {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -312,33 +309,76 @@ body {
 .main-header {
     background-color: $search-background-color;
     border-bottom: $border #E6E8F0;
+    margin-left: 15rem;
 }
 
-@media (min-width: 50rem) { 
+@media (min-width: 50rem) {
     .side-bar { 
         flex-wrap: nowrap; 
         position: fixed; 
-        width: 240px; 
+        max-width: 240px;
         height: 100%; 
         flex-direction: column; 
         border-right: 1px solid #eeebee; 
-        align-items: flex-end; 
+        align-items: flex-end;
+
+        .site-header { 
+            height: 60px; 
+            max-height: 60px;
+            border-bottom: 1px solid #2D2F4A;
+            .site-title.lh-tight {
+                padding: 0 16px;
+            }
+        } 
     }
-    .site-header { 
-        height: 60px; 
-        max-height: 60px; 
-        border-bottom: inherit; 
-    } 
+
+    .main-header {
+        .search {
+            background: #F2F3FF;
+            border: 1px solid #E6E8F0;
+            box-sizing: border-box;
+            .search-input {
+                background: #F2F3FF;
+                box-sizing: border-box;
+            }
+        }
+
+    }
+
     .main {
         max-width: 800px;
-    } 
+    }
+    .card-box {
+        grid-template-columns: repeat(3, auto);
+        column-gap: 24px;
+    }
 }
-
 
 
 @media (min-width: 66.5rem) {    
     .site-nav, .site-header, .site-footer {
         width:100%; 
     }
+    .side-bar { 
+        flex-wrap: nowrap; 
+        position: fixed; 
+        max-width: 240px;
+        height: 100%; 
+        flex-direction: column; 
+        border-right: 1px solid #eeebee; 
+        align-items: flex-end;
+    }
 }
 
+@media (max-width: 930px) {
+    .side-bar {
+        position: fixed;
+        width: 100%;
+        .site-footer {
+            display: none;
+        }
+    }
+    .main-content-wrap {
+        padding-top: 5rem;
+    }
+}

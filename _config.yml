@@ -29,7 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
-logo: "assets/images/top-bar.svg"
+logo: "assets/images/logos-guides.svg"
 color_schemes: bt-color
 
 # Build settings

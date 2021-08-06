@@ -4,6 +4,7 @@ title: How to setup a token exchange
 permalink: /token_exchanges/
 nav_order: 2
 has_children: true
+has_toc: false
 ---
 # How to setup a token exchange
 {: .no_toc }

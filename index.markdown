@@ -5,6 +5,7 @@
 layout: home
 title: Basis Theory Overview
 nav_order: 1
+has_children: false
 ---
 <html>
     <head>
@@ -17,7 +18,7 @@ nav_order: 1
             <h5>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties.</h5>
         </div>
         <div id="container">
-            <h2>Concepts</h2>
+            <h2 class="no_toc">Concepts</h2>
             <p>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties. </p>
             <div class="card-box">
                 <div class="card">
@@ -42,7 +43,7 @@ nav_order: 1
                     </div>
                 </div>
             </div>
-            <h2>Guides</h2>
+            <h2 class="no_toc">Guides</h2>
             <p>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties.</p>
             <div class="card-box">
                 <div class="card">
