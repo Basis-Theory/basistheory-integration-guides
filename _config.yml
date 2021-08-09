@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Basis Theory Guides
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,10 +29,17 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+logo: "assets/images/logos-guides.svg"
+color_schemes: bt-color
+
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+
+theme: just-the-docs
+
+heading_anchors: false
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
