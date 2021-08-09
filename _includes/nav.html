@@ -62,7 +62,7 @@
         {%- unless node.nav_exclude -%}
         <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
             {%- if node.has_children && page.url == node.url -%}
-            <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+            <a href="#" class="nav-list-expander"></a>
           {%- endif -%}
           <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
           {%- if node.has_children -%}
@@ -72,7 +72,7 @@
               {%- unless child.nav_exclude -%}
               <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
                 {%- if child.has_children -%}
-                  <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+                  <a href="#" class="nav-list-expander"></a>
                 {%- endif -%}
                 <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
                 {%- if child.has_children -%}
