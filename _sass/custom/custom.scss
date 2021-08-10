@@ -4,8 +4,13 @@
 //Color
 $grey-900: #1B1D32;
 $grey-200: #A4A9C5;
+$grey-800: #1E233B;
 $primary-text: #1AD1DB;
 $primary-dark: #009FA9;
+$side-bar-gray: #E5E6EC;
+$blue-light: #F2F3FF;
+$blue-shadow: #8B92B6;
+$magenta-light: #EEEBEE;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
 body {
@@ -53,10 +58,8 @@ body {
             font-weight: normal;
             font-size: 16px;
             line-height: 150%;
-            /* or 24px */
             letter-spacing: 0.15px;
-            /* grey / grey-800 */
-            color: #1E233B;
+            color: $grey-800;
         }
     
         .text-delta{
@@ -80,13 +83,12 @@ body {
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 143%;
-                /* identical to box height, or 20px */
                 text-decoration-line: underline;
                 color: $primary-dark;
 
                 a {
                     color: $primary-dark;
-                    text-decoration: inherit; /* no underline */
+                    text-decoration: inherit;
                 }
             }
         }
@@ -136,7 +138,6 @@ body {
         .card-box {
             display: grid;
             row-gap: 32px;
-            padding: 32px 0;
       
             .card {
                 border: 1px solid $border-subtitles;
@@ -159,12 +160,12 @@ body {
                         letter-spacing: 0.15px;
                         margin: 0;
                         padding: 0 0 4px;
-                        color: #1E233B;
+                        color: $grey-800;
                     }
                     p {
                         padding: 0;
                         margin: 0;
-                        color: #1E233B;
+                        color: $grey-800;
                         font-family: Source Sans Pro;
                         font-style: normal;
                         font-weight: normal;
@@ -180,7 +181,7 @@ body {
             border: 1px solid #E3E5F9;         
             box-sizing: border-box;
             border-radius: 2px;
-            background: #F2F3FF;
+            background: $blue-light;
 
             table {
                 border-collapse: collapse;
@@ -201,7 +202,7 @@ body {
                 }
 
                 tr:nth-child(odd)>td {
-                    background-color: #F2F3FF;
+                    background-color: $blue-light;
                 }
 
                 td {
@@ -223,9 +224,15 @@ body {
     
     .site-header {
         border-bottom: 1px solid #2D2F4A;
-        .site-button:hover { 
-            background-image: none; 
+        .site-button {
+            &:hover { 
+                background-image: none; 
+            }
+            .icon {
+                color: $side-bar-gray;
+            }
         }
+
     }
     .site-title.lh-tight {
         padding: 16px;
@@ -240,7 +247,7 @@ body {
             font-size: 16px;
             line-height: 175%;
             letter-spacing: 0.15px;
-            color: #E5E6EC;
+            color: $side-bar-gray;
 
             &:hover {
                 color: $primary-text;
@@ -255,7 +262,7 @@ body {
         > .nav-list {
             .nav-list-item {
                 .nav-list-link {
-                    color: #8B92B6;
+                    color: $blue-shadow;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 14px;
@@ -291,7 +298,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
-    color: #E5E6EC;
+    color: $side-bar-gray;
     padding-right: 2rem;
     padding-left: 2rem;
     display: grid;
@@ -311,6 +318,19 @@ body {
     margin-left: 15rem;
 }
 
+@media (min-width: 24rem) {
+    .card-box {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2%;
+    }
+}
+
+@media (min-width: 40rem) {
+    .card-box {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
 @media (min-width: 50rem) {
     .side-bar { 
         flex-wrap: nowrap; 
@@ -318,7 +338,7 @@ body {
         max-width: 240px;
         height: 100%; 
         flex-direction: column; 
-        border-right: 1px solid #eeebee; 
+        border-right: 1px solid $magenta-light; 
         align-items: flex-end;
 
         .site-header { 
@@ -336,7 +356,7 @@ body {
     }
     .main-header {
         .search {
-            background: #F2F3FF;
+            background: $blue-light;
             border: 1px solid #E6E8F0;
             box-sizing: border-box;
 
@@ -344,13 +364,13 @@ body {
                 max-width: 800px;
 
                 .search-input {
-                    background: #F2F3FF;
+                    background: $blue-light;
                     box-sizing: border-box;
                     padding-left: 4.5rem;
                 }
             }
             .search-results {
-                background-color: #F2F3FF;
+                background-color: $blue-light;
                 border: 1px solid #E6E8F0;
                 width: 100%;
                 max-width: 800px;
@@ -368,10 +388,9 @@ body {
 
     .main {
         max-width: 800px;
-    }
-    .card-box {
-        grid-template-columns: repeat(3, auto);
-        column-gap: 24px;
+        .card-box {
+            grid-template-columns: repeat(2, auto);
+        }
     }
 }
 
@@ -385,7 +404,7 @@ body {
         max-width: 240px;
         height: 100%; 
         flex-direction: column; 
-        border-right: 1px solid #EEEBEE; 
+        border-right: 1px solid $magenta-light; 
         align-items: flex-end;
     }
 
@@ -413,6 +432,11 @@ body {
         }
         .search-input {
             padding-left: 3.3rem;
+        }
+    }
+    .main {
+        .card-box {
+            grid-template-columns: repeat(3, auto);
         }
     }
     
