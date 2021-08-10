@@ -17,6 +17,8 @@ has_toc: false
 
 1. Get Started
 {:toc}
+2. Paragraph Examples
+{:toc}
 
 
 ## Get started
@@ -25,7 +27,6 @@ Our software becomes a core part of your infrastructure enabling you to quickly 
 
 
 ## Paragraph Examples
-{: .no_toc }
 
 Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties.
 

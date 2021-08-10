@@ -2,9 +2,10 @@
 @import 'navigation';
 
 //Color
-$grey-900: #1B1D32;
 $grey-200: #A4A9C5;
+$grey-600: #545A78;
 $grey-800: #1E233B;
+$grey-900: #1B1D32;
 $primary-text: #1AD1DB;
 $primary-dark: #009FA9;
 $side-bar-gray: #E5E6EC;
@@ -14,26 +15,24 @@ $magenta-light: #EEEBEE;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
 body {
-    font-family: $body-font-family;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
     background-color: $body-background-color;
     .main-content {
         h1 {
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: normal;
             font-size: 48px !important;
             line-height: 116.7%;
             color: $grey-900;
+            font-weight: normal;
         }
 
         h2 {
-            font-family: Source Sans Pro;
             padding-left: 0;
             font-size: 20px !important;
             font-weight: 600;
             line-height: 160%;
             letter-spacing: 0.15px;
-            font-style: normal;
             text-align: left;
             color: $grey-900;
             margin: 0.8em 0;
@@ -43,9 +42,6 @@ body {
           }
     
         h5 {
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: normal;
             font-size: 24px !important;
             line-height: 133.4%;
             color: $grey-200;
@@ -53,9 +49,6 @@ body {
         }
 
         p {
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: normal;
             font-size: 16px;
             line-height: 150%;
             letter-spacing: 0.15px;
@@ -63,8 +56,6 @@ body {
         }
     
         .text-delta{
-            font-family: Source Sans Pro;
-            font-style: normal;
             font-weight: 600;
             font-size: 12px !important;
             line-height: 140%;
@@ -78,8 +69,6 @@ body {
             margin: 0.8em 0;
             li {
                 counter-increment: li;
-                font-family: Source Sans Pro;
-                font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 143%;
@@ -98,8 +87,6 @@ body {
             counter-reset: li;
             li {
                 counter-increment: li;
-                font-family: Source Sans Pro;
-                font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 143%;
@@ -117,8 +104,6 @@ body {
                 margin-left: -1.4em;
                 color: $grey-900;
                 content: counter(li);
-                font-family: Source Sans Pro;
-                font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 130%;
@@ -152,8 +137,6 @@ body {
                     padding: 16px;
                 
                     h4 {
-                        font-family: Source Sans Pro;
-                        font-style: normal;
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 175%;
@@ -166,9 +149,6 @@ body {
                         padding: 0;
                         margin: 0;
                         color: $grey-800;
-                        font-family: Source Sans Pro;
-                        font-style: normal;
-                        font-weight: normal;
                         font-size: 14px;
                         line-height: 143%;
                     }
@@ -240,61 +220,105 @@ body {
     }
 }
 
-.nav-list {
-    .nav-list-item {
-        .nav-list-link {
+.site-nav {
+    .nav-more {
+        .nav-title {
+            color: $grey-600;
+            margin: 1em 1.7rem;
             font-weight: 600;
-            font-size: 16px;
-            line-height: 175%;
-            letter-spacing: 0.15px;
-            color: $side-bar-gray;
-
-            &:hover {
-                color: $primary-text;
-                background-image: none;
-            }
-
-            &.active {
-                color: $primary-text;
-                background-image: none;
+            font-size: 12px!important;
+            line-height: 157%;
+            letter-spacing: 0.1px;
+    
+            &::after {
+                display: inline-block;
+                content: "";
+                border: 1px solid $grey-800;
+                width: 62%;
+                margin-left: 10px;
+                -webkit-transform: translateY(-0.2rem);
+                transform: translateY(-0.2rem);
             }
         }
-        > .nav-list {
+        .nav-list {
             .nav-list-item {
                 .nav-list-link {
                     color: $blue-shadow;
-                    font-style: normal;
-                    font-weight: normal;
                     font-size: 14px;
                     line-height: 143%;
-
-                    &:hover {
-                        color: $primary-text;
-                        background-image: none;
-                    }
-        
-                    &.active {
-                        color: $primary-text;
-                        background-image: none;
-                    }
-
+                    padding-top: 0;
+                    padding-bottom: 0;
                 }
-            }
-        } 
-        .nav-list-expander {
-            svg {
-                color: $primary-text
-            }
-            &:hover {
-                background-image: none;
             }
         }
     }
-
+    
+    .nav-list {
+        li:first-of-type {
+            .nav-list-link {
+                color: $blue-shadow;
+                font-size: 14px;
+                line-height: 143%;
+                padding-top: 20px;
+                padding-bottom: 26px;
+            }
+        }
+        .nav-list-item {
+            .nav-list-link {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.15px;
+                color: $side-bar-gray;
+    
+                &:hover {
+                    color: $primary-text;
+                    background-image: none;
+                }
+    
+                &.active {
+                    color: $primary-text;
+                    background-image: none;
+                }
+    
+            }
+            > .nav-list {
+                .nav-list-item {
+                    .nav-list-link {
+                        color: $blue-shadow;
+                        font-size: 14px;
+                        line-height: 143%;
+                        padding-top: 0.25rem;
+                        padding-bottom: 0.25rem;
+    
+                        &:hover {
+                            color: $primary-text;
+                            background-image: none;
+                        }
+            
+                        &.active {
+                            color: $primary-text;
+                            background-image: none;
+                        }
+    
+                    }
+                }
+            } 
+            .nav-list-expander {
+                svg {
+                    color: $primary-text
+                }
+                &:hover {
+                    background-image: none;
+                }
+            }
+        }
+    
+    }
 }
 
+
 .nav-principal-href {
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -410,7 +434,6 @@ body {
 
     .main-header {
         .search {
-
             .search-input-wrap {
                 margin-left: calc( (100% - 1064px) / 2 + 159px);
                 max-width: 800px;
@@ -439,7 +462,6 @@ body {
             grid-template-columns: repeat(3, auto);
         }
     }
-    
 }
 
 @media (max-width: 930px) {
