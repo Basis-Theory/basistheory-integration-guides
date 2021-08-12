@@ -48,7 +48,7 @@ layout: table_wrappers
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-        <a href="https://portal.basistheory.com/" class="nav-principal-href">Go to Portal</a>
+      <a href="https://portal.basistheory.com/" class="nav-principal-href">Go to Portal</a>
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
@@ -65,6 +65,14 @@ layout: table_wrappers
       {% else %}
         {% include nav.html pages=site.html_pages %}
       {% endif %}
+      <div class="nav-more">
+        <h1 class="nav-title">More</h1>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a class="nav-list-link" href="https://discord.gg/XjWsy8PqK2" target="_blank">Join Discord</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="https://github.com/Basis-Theory" target="_blank">Github</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="mailto:support@basistheory.com?subject=Help!">Email Support</a></li>
+        </ul>
+      </div>
     </nav>
     <footer class="site-footer">
     </footer>
