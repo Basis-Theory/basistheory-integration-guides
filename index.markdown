@@ -4,6 +4,7 @@
 
 layout: home
 title: Basis Theory Overview
+permalink: /
 nav_order: 1
 has_children: false
 ---

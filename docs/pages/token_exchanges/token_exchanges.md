@@ -17,8 +17,6 @@ has_toc: false
 
 1. Get Started
 {:toc}
-2. Paragraph Examples
-{:toc}
 
 
 ## Get started

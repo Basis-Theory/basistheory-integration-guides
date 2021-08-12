@@ -241,6 +241,17 @@ body {
             }
         }
         .nav-list {
+            h2 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.15px;
+                color: $side-bar-gray;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                overflow-x: hidden;
+            }
             .nav-list-item {
                 .nav-list-link {
                     color: $blue-shadow;
@@ -270,9 +281,13 @@ body {
                 line-height: 175%;
                 letter-spacing: 0.15px;
                 color: $side-bar-gray;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                overflow-x: hidden;
     
                 &:hover {
-                    color: $primary-text;
+                    color: inherit;
                     background-image: none;
                 }
     
@@ -280,19 +295,27 @@ body {
                     color: $primary-text;
                     background-image: none;
                 }
-    
             }
-            > .nav-list {
+            > .nav-list.nav-child {
+
                 .nav-list-item {
+                    list-style: disc;
+                    margin-left: 3rem;
+
                     .nav-list-link {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        text-decoration: none;
+                        overflow-x: hidden;
                         color: $blue-shadow;
                         font-size: 14px;
                         line-height: 143%;
                         padding-top: 0.25rem;
                         padding-bottom: 0.25rem;
+                        padding-left: 0;
     
                         &:hover {
-                            color: $primary-text;
+                            color: inherit;
                             background-image: none;
                         }
             
