@@ -54,16 +54,22 @@
     {%- for group in sorted_string_ordered_groups -%}
       {%- assign sorted_string_ordered_pages = sorted_string_ordered_pages | concat: group.items -%}
     {%- endfor -%}
+
+
+    {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
+
+       <a href="{{ pages_list[0].url | absolute_url }}" class="nav-list-home nav-list-link {% if page.url == pages_list[0].url %} active{% endif %}">{{ pages_list[0].title }}</a>
     <h2>Concepts</h2>
     <ul>
       {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
+        <li class="nav-list-post">
+          <a  href="{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endfor %}
     </ul>
     <h2>Guides</h2>
-    {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
+
+
     {%- for node in pages_list -%} 
       {%- if node.parent == nil and node.layout != 'home' -%}
         {%- unless node.nav_exclude -%}

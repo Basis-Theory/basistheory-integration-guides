@@ -241,17 +241,6 @@ body {
             }
         }
         .nav-list {
-            h2 {
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 175%;
-                letter-spacing: 0.15px;
-                color: $side-bar-gray;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                text-decoration: none;
-                overflow-x: hidden;
-            }
             .nav-list-item {
                 .nav-list-link {
                     color: $blue-shadow;
@@ -265,26 +254,77 @@ body {
     }
     
     .nav-list {
-        li:first-of-type {
-            .nav-list-link {
-                color: $blue-shadow;
-                font-size: 14px;
-                line-height: 143%;
-                padding-top: 20px;
-                padding-bottom: 26px;
+        h2 {
+            font-weight: 600;
+            font-size: 16px !important;
+            line-height: 175%;
+            letter-spacing: 0.15px;
+            color: $side-bar-gray;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            overflow-x: hidden;     
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        .nav-list-home {
+            color: $blue-shadow;
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 143%;
+            padding-bottom: 26px;     
+            padding-right: 2rem;
+            padding-left: 2rem;
+
+            &:hover {
+                color: inherit;
+                background-image: none;
+            }
+
+            &.active {
+                color: $primary-text;
+                background-image: none;
+            }
+        }
+        ul {
+            padding-left: 2rem;
+            .nav-list-post {
+                list-style: none;
+                a {
+                    color: $blue-shadow;
+                    font-size: 14px;
+                    line-height: 143%;
+                    padding-top: 20px;
+                    background-image: none;
+                }
+                
+                &:hover {
+                    color: inherit;
+                    background-image: none;
+                }
+
+                &.active {
+                    color: $primary-text;
+                    background-image: none;
+                }
+
             }
         }
         .nav-list-item {
             .nav-list-link {
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 175%;
-                letter-spacing: 0.15px;
-                color: $side-bar-gray;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 text-decoration: none;
                 overflow-x: hidden;
+                color: $blue-shadow;
+                font-size: 14px;
+                line-height: 143%;
+                padding: 0.25rem 2rem;
     
                 &:hover {
                     color: inherit;
@@ -348,6 +388,7 @@ body {
     color: $side-bar-gray;
     padding-right: 2rem;
     padding-left: 2rem;
+    padding-bottom: 1rem;;
     display: grid;
     grid-template-columns: 13% auto;
     align-items: center;
