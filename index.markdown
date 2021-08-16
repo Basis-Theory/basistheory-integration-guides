@@ -21,13 +21,15 @@ has_children: false
         <div id="container">
             <h2 class="no_toc">Concepts</h2>
             <div class="card-box">
-                <div class="card">
-                    <img src="./assets/images/card1.svg">
-                    <div class="container">
-                        <h4>What are Tokens?</h4>
-                        <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you. </p>
+                <a href= "/concepts/2021/08/11/what-are-token.html">
+                    <div class="card">
+                        <img src="./assets/images/card1.svg">
+                        <div class="container">
+                            <h4>What are Tokens?</h4>
+                            <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you. </p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="card">
                     <img src="assets/images/card2.svg">
                     <div class="container">

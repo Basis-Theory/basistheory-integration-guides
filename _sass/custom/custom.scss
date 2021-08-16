@@ -173,6 +173,14 @@ body {
         .card-box {
             display: grid;
             row-gap: 32px;
+
+            a {
+                text-overflow: inherit;
+                white-space: inherit;
+                font-style: normal;
+                font-weight: normal;
+                overflow: inherit;
+            }
       
             .card {
                 border: 1px solid $border-subtitles;
