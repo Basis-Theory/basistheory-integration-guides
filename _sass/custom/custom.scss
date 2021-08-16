@@ -12,7 +12,46 @@ $side-bar-gray: #E5E6EC;
 $blue-light: #F2F3FF;
 $blue-shadow: #8B92B6;
 $magenta-light: #EEEBEE;
+$warning-bg: #FFD582 !default;
+$success-bg: #3AC3A2 !default;
+$danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
+
+
+@font-face {
+    font-family: 'slate';
+    src:font-url('slate.eot?-syv14m');
+    src:font-url('slate.eot?#iefix-syv14m') format('embedded-opentype'),
+      font-url('slate.woff2?-syv14m') format('woff2'),
+      font-url('slate.woff?-syv14m') format('woff'),
+      font-url('slate.ttf?-syv14m') format('truetype'),
+      font-url('slate.svg?-syv14m#slate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  %icon {
+    font-family: 'slate';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  }
+  
+  %icon-exclamation-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/warning.svg);
+  }
+  %icon-info-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/info.svg);
+  }
+  %icon-ok-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/check-circle.svg);
+  }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -53,6 +92,12 @@ body {
             line-height: 150%;
             letter-spacing: 0.15px;
             color: $grey-800;
+        }
+
+        code {
+            font-size: 14px;
+            font-family: "Source Sans Pro", sans-serif;
+            letter-spacing: 0.15px;
         }
     
         .text-delta{
@@ -415,6 +460,46 @@ body {
     border-bottom: $border #E6E8F0;
     margin-left: 15rem;
 }
+
+// Aler, Warning e Info Box
+
+.base-alert {
+    font-size: 14px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    letter-spacing: 0.15px;
+    padding: 1em;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+
+    code {
+        margin: 0 0.2em;
+    }
+
+    &.danger {
+        background-color: $danger-bg;
+    }
+
+    &.warning {
+        background-color: $warning-bg;
+    }
+
+    &.success {
+        background-color: $success-bg;
+    }
+}
+
+.base-alert.warning::before {
+    @extend %icon-exclamation-sign;
+    padding-right: 1em;
+}
+
+.base-alert.success::before {
+    @extend %icon-ok-sign;
+    padding-right: 1em;
+}
+
 
 @media (min-width: 24rem) {
     .card-box {
