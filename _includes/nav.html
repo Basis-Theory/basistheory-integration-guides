@@ -58,7 +58,7 @@
 
     {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
 
-       <a href="{{ pages_list[0].url | absolute_url }}" class="nav-list-home nav-list-link {% if page.url == pages_list[0].url %} active{% endif %}">{{ pages_list[0].title }}</a>
+    <a href="{{ pages_list[0].url | absolute_url }}" class="nav-list-home nav-list-link {% if page.url == pages_list[0].url %} active{% endif %}">{{ pages_list[0].title }}</a>
     <h2>Concepts</h2>
     <ul>
       {% for post in site.posts %}
@@ -68,8 +68,6 @@
       {% endfor %}
     </ul>
     <h2>Guides</h2>
-
-
     {%- for node in pages_list -%} 
       {%- if node.parent == nil and node.layout != 'home' -%}
         {%- unless node.nav_exclude -%}

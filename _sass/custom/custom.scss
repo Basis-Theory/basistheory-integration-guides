@@ -113,6 +113,11 @@ body {
         a:not([class]) { 
             text-decoration: none; 
             opacity: 1;
+            background-image: none;
+            color: $primary-dark;  
+            font-weight: 600;
+            line-height: 21px;
+            text-align: left;
         }
 
         a:not([class]):hover { 
@@ -128,13 +133,14 @@ body {
                 border: 1px solid $border-subtitles;
                 box-sizing: border-box;
                 border-radius: 4px;
+                padding-bottom: 16px;
         
                 img {
                     width: 100%;
                 }
             
                 .container {
-                    padding: 16px;
+                    padding: 0 16px;
                 
                     h4 {
                         font-weight: 600;
@@ -146,11 +152,15 @@ body {
                         color: $grey-800;
                     }
                     p {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                         padding: 0;
                         margin: 0;
                         color: $grey-800;
                         font-size: 14px;
                         line-height: 143%;
+                        -webkit-line-clamp: 4;
                     }
                 }
             }
@@ -410,12 +420,26 @@ body {
     .card-box {
         grid-template-columns: repeat(2, auto);
         column-gap: 2%;
+        .card {
+            .container {
+                p {
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 40rem) {
     .card-box {
         grid-template-columns: repeat(3, auto);
+        .card {
+            .container {
+                p {
+                    -webkit-line-clamp: 4;
+                }
+            }
+        }
     }
 }
 
@@ -478,6 +502,13 @@ body {
         max-width: 800px;
         .card-box {
             grid-template-columns: repeat(2, auto);
+            .card {
+                .container {
+                    p {
+                        -webkit-line-clamp: 4;
+                    }
+                }
+            }
         }
     }
 }
@@ -524,6 +555,13 @@ body {
     .main {
         .card-box {
             grid-template-columns: repeat(3, auto);
+            .card {
+                .container {
+                    p {
+                        -webkit-line-clamp: 4;
+                    }
+                }
+            }
         }
     }
 }

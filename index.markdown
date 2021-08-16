@@ -16,17 +16,16 @@ has_children: false
     <body>
         <div id="header">
             <h1>Basis Theory Guides</h1>
-            <h5>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties.</h5>
+            <h5>Basis Theory is built to enable you to secure your data away from your core systems while still retaining the control you need to operate and use that data. We enable two generic use-cases which will enable you to solve nearly ANY of your business-related needs.</h5>
         </div>
         <div id="container">
             <h2 class="no_toc">Concepts</h2>
-            <p>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties. </p>
             <div class="card-box">
                 <div class="card">
                     <img src="./assets/images/card1.svg">
                     <div class="container">
-                        <h4>Tokens</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                        <h4>What are Tokens?</h4>
+                        <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you. </p>
                     </div>
                 </div>
                 <div class="card">
