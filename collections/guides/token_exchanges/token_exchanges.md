@@ -2,6 +2,7 @@
 layout: default
 title: How to setup a token exchange
 permalink: /token_exchanges/
+categories: guides
 nav_order: 2
 has_children: true
 has_toc: false

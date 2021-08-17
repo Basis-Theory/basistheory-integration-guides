@@ -2,6 +2,7 @@
 layout: default
 title: Collect payments with Elements
 permalink: /collect_payments_with_elements/
+categories: guides
 nav_order: 3
 has_children: true
 has_toc: false

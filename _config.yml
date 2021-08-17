@@ -40,6 +40,14 @@ theme: just-the-docs
 
 heading_anchors: false
 
+collections:
+  concepts:
+    output: true
+    permalink: /concepts/:path/
+  guides:
+    output: true
+    permalink: /guides/:path/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
