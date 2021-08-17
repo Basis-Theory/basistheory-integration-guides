@@ -31,3 +31,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # https://github.com/pmarsceill/just-the-docs
 gem "just-the-docs"
 
+# https://github.com/jekyll/jekyll-sitemap
+gem 'jekyll-sitemap'
