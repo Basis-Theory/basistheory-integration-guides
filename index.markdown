@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Basis Theory Overview
+title: Guides Home
 permalink: /
 nav_order: 1
 has_children: false
@@ -51,8 +51,8 @@ has_children: false
                 <div class="card">
                     <img src="./assets/images/card4.svg">
                     <div class="container">
-                        <h4>Securing Any Data</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                        <h4><a href="/basis-theory-sample-app/">Sample App</a></h4>
+                        <p>Our sample app walks you through Basis Theory basics.</p>
                     </div>
                 </div>
                 <div class="card">
