@@ -145,7 +145,7 @@ Anything is possible with your card data stored with us, just configure a new Re
 ### See it in action:
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? <a href="https://codesandbox.io/s/example-charging-card-o2qss">Check it out here.</a>
+See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.]("https://codesandbox.io/s/example-charging-card-o2qss")
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/s/example-charging-card-o2qss" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
