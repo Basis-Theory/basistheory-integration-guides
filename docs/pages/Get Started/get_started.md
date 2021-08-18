@@ -30,7 +30,8 @@ token:decrypt
 token:read      
 token:create
 ```
-After your API key is generated copy your API key. You'll need it for a future step.
+After your API key is generated, copy your API key. You'll need it for a future step.
+
 
 ### Step 3
 
