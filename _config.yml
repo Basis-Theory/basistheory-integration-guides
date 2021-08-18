@@ -30,7 +30,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 logo: "assets/images/logos-guides.svg"
-color_schemes: bt-color
+color_schemes: dark
 
 # Build settings
 plugins:

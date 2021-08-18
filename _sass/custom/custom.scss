@@ -32,7 +32,6 @@ $border-subtitles: rgba(65, 73, 112, 0.2);
   
   %icon {
     font-family: 'slate';
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -78,7 +77,13 @@ body {
             background-color: transparent;
             border-bottom: 1px solid $border-subtitles;
             padding-bottom: 1em
-          }
+        }
+
+        h3 {
+            font-size: 48px;
+            line-height: 116.7%;
+            margin-bottom: 0.5em;
+        }
     
         h5 {
             font-size: 24px !important;
@@ -213,7 +218,7 @@ body {
                         color: $grey-800;
                         font-size: 14px;
                         line-height: 143%;
-                        -webkit-line-clamp: 4;
+                        -webkit-line-clamp: 3;
                     }
                 }
             }
@@ -258,7 +263,72 @@ body {
             }
 
             
+    
+    
+    
         }
+        .language-js.highlighter-rouge, .language-html.highlighter-rouge {
+            background-color: #1B1D32;
+            code {
+                background-color: transparent;
+            }
+        }
+
+        .highlight {
+            .gh {
+                color: #999;
+            }
+            .sr {
+                color: #F6AA11;
+            }
+            .go {
+                color: #888;
+            }
+            .gp {
+                color: #555;
+            }
+            .gu {
+                color: #AAA;
+            }
+            .nb {
+                color: #F6AA11;
+            }
+            .cm, .cp, .c1, .cs, .c, .ch, .cd, .cpf {
+                color: #75715E;
+            }
+            .err, .gr, .gt {
+                color: #960050;
+            }
+            .gd, .gi, .ge {
+                color: #49483E;
+            }
+            .kc,.kd,.kr,.no, .kt {
+                color: #66D9EF;
+            }
+            .mf, .mh, .il, .mi, .mo, .m, .mb, .mx, .sc, .se, .ss {
+                color: #AE81FF;
+            }
+            .sd,.s2,.sb,.sh,.si,.sx,.s1,.s, .sa, .dl {
+                color: #E6DB74;
+            }
+            .na, .nc,.nd,.ne, .ne, .nf, .fm {
+                color: #A6E22E;
+            }
+            .bp, .vg, .vi, .nv, .vm, .n, .py, .nx, .w {
+                color: #FFF;
+            }
+            .vc, .nn, .ni, .n1, .nt, .ow, .k, .kv, .kn, .kp, .o {
+                color: #F92672;
+            }
+        }
+        .iframe-container {
+            overflow: auto;
+            .iframe-code {
+                height: 820px;
+                width: calc((calc( (100% - 1064px) / 2 + 264px)) + 100%);
+            }
+        }
+
     }
 }
 .side-bar {
@@ -481,8 +551,8 @@ body {
     display: flex;
     align-items: center;
 
-    code {
-        margin: 0 0.2em;
+    span {
+        flex-wrap: wrap;
     }
 
     &.danger {
@@ -513,26 +583,12 @@ body {
     .card-box {
         grid-template-columns: repeat(2, auto);
         column-gap: 2%;
-        .card {
-            .container {
-                p {
-                    -webkit-line-clamp: 3;
-                }
-            }
-        }
     }
 }
 
 @media (min-width: 40rem) {
     .card-box {
         grid-template-columns: repeat(3, auto);
-        .card {
-            .container {
-                p {
-                    -webkit-line-clamp: 4;
-                }
-            }
-        }
     }
 }
 
@@ -595,13 +651,6 @@ body {
         max-width: 800px;
         .card-box {
             grid-template-columns: repeat(2, auto);
-            .card {
-                .container {
-                    p {
-                        -webkit-line-clamp: 4;
-                    }
-                }
-            }
         }
     }
 }
@@ -648,14 +697,16 @@ body {
     .main {
         .card-box {
             grid-template-columns: repeat(3, auto);
-            .card {
-                .container {
-                    p {
-                        -webkit-line-clamp: 4;
-                    }
-                }
-            }
         }
+        .iframe-container {
+            display: flex;
+            width: calc(((((100% - 1064px) / 2 ) + 264px)) + 100%);
+            overflow: auto;
+            height: 100%;
+            position: absolute;
+            margin-left: calc(( (100% - 1064px) / 2 + 264px) * -1);
+        }
+
     }
 }
 

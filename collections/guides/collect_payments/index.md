@@ -27,7 +27,11 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 ## Add Elements to your website
 
-<span class="base-alert warning">To start, you'll need a new Elements Application with the  <code>card:create</code> permission</span>
+<span class="base-alert warning">
+  <span>
+    To start, you'll need a new Elements Application with the <code>card:create</code> permission
+  </span>
+</span>
 
 Using our hosted elements, you can collect cards on any webpage you need to, while maintaining the lowest possible PCI compliance level.
 
@@ -81,8 +85,12 @@ Configure one of our pre-built reactor-formulas, enabling you to quickly exchang
 
 To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our guide.
 
-2.1 Using your new Reactor 
-<span class="base-alert warning"><span>To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>card:read</code>, <code>card:create</code>, and <code>reactor:read</code> permissions</span></span>
+### 2.1 Using your new Reactor 
+<span class="base-alert warning">
+  <span>
+    To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>card:read</code>, <code>card:create</code>, and <code>reactor:read</code>.
+  </span>
+</span>
 
 Once you’ve created your Stripe Reactor, use the reactor_id and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
@@ -138,3 +146,6 @@ Anything is possible with your card data stored with us, just configure a new Re
 {: .no_toc }
 
 See a sample and the code that drives it below, want to experience the sandbox yourself? <a href="https://codesandbox.io/s/example-charging-card-o2qss">Check it out here.</a>
+<div class="iframe-container">
+  <iframe src="https://codesandbox.io/s/example-charging-card-o2qss" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+</div>
