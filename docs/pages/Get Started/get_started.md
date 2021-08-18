@@ -76,4 +76,4 @@ Great! You've retrieved the token and the encrypted data along with it. Now you 
 
 ## You did it! 
 
-We suggest celebrating this new found knowledge by going back to step 6 and changing the keys and repeating steps 6-10 with different types of data. If you're not sure if you want to do that, take a quick 5 second smile.
+We suggest celebrating this new-found knowledge by going back to step 6 and changing the keys and repeating steps 6-10 with different types of data. If you're not sure if you want to do that, take a quick 5 second smile.
