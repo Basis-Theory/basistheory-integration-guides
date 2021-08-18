@@ -33,3 +33,4 @@ gem "just-the-docs"
 
 # https://github.com/jekyll/jekyll-sitemap
 gem 'jekyll-sitemap'
+gem "webrick", "~> 1.7"

@@ -71,7 +71,7 @@ Now that you've created your first token and encrypted the data behind it. You c
 
 ### Step 10
 
-Great! You've retreived the token and the encrupted data along with it. Now you can decrypt it to see the original payload.
+Great! You've retreived the token and the encrypted data along with it. Now you can decrypt it to see the original payload.
 
 ## You did it! 
 

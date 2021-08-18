@@ -7,7 +7,7 @@ This is the Basis Theory Integration Guides.
  - `gem install jekyll bundler`
  - `bundle exec jekyll serve`
 
-## Development
+## Local Development
 
 To set up your environment to develop this theme, run `bundle install`.
 
