@@ -67,7 +67,8 @@ Encrypt your first payload. The app gives you the ability to encrypt text or a f
 
 ### Step 9
 
-Now that you've created your first token and encrypted the data behind it. You can now use the API to retreive the token and the encrypted ciphertext.
+Now that you've created your first token and encrypted the data behind it. You can now use the API to retrieve the token and the encrypted ciphertext.
+
 
 ### Step 10
 
