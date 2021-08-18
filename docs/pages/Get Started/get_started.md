@@ -15,7 +15,8 @@ has_toc: false
 
 ## Get started
 
-To understand how to implement Basis Theory we are pleased to offer you this 10 step guide. If you don't want a guide and just want to see it work, run on over to the [sandbox](https://portal.basistheory.com/sandbox). If you're wanting to go right to postman to test you can use our official library hosted [here](https://github.com/Basis-Theory/basistheory-postman). For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.
+To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don't want a guide and just want to see it work, run on over to the [sandbox](https://portal.basistheory.com/sandbox). If you want to go right to postman to test you can use our official library hosted [here](https://github.com/Basis-Theory/basistheory-postman). For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.
+
 
 
 ### Step 1
