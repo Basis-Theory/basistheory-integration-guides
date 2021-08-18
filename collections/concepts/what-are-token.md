@@ -1,10 +1,13 @@
 ---
 layout: post
 title:  "What are tokens"
-date:   2021-08-11 23:41:00 -0300
 categories: concepts
+permalink: /what_are_tokens/
+nav_order: 1
+has_children: true
+has_toc: false
 ---
-# What are token?
+# What are tokens
 
 Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you. 
 

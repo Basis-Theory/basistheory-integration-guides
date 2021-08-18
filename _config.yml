@@ -30,7 +30,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 logo: "assets/images/logos-guides.svg"
-color_schemes: bt-color
+color_schemes: dark
 
 # Build settings
 plugins:
@@ -39,6 +39,14 @@ plugins:
 theme: just-the-docs
 
 heading_anchors: false
+
+collections:
+  concepts:
+    output: true
+    permalink: /concepts/:path/
+  guides:
+    output: true
+    permalink: /guides/:path/
 
 
 # Exclude from processing.

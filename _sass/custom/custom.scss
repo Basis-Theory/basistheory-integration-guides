@@ -12,7 +12,45 @@ $side-bar-gray: #E5E6EC;
 $blue-light: #F2F3FF;
 $blue-shadow: #8B92B6;
 $magenta-light: #EEEBEE;
+$warning-bg: #FFD582 !default;
+$success-bg: #3AC3A2 !default;
+$danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
+
+
+@font-face {
+    font-family: 'slate';
+    src:font-url('slate.eot?-syv14m');
+    src:font-url('slate.eot?#iefix-syv14m') format('embedded-opentype'),
+      font-url('slate.woff2?-syv14m') format('woff2'),
+      font-url('slate.woff?-syv14m') format('woff'),
+      font-url('slate.ttf?-syv14m') format('truetype'),
+      font-url('slate.svg?-syv14m#slate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  %icon {
+    font-family: 'slate';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  }
+  
+  %icon-exclamation-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/warning.svg);
+  }
+  %icon-info-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/info.svg);
+  }
+  %icon-ok-sign {
+    @extend %icon;
+    content: url(../../assets/images/icons/check-circle.svg);
+  }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -39,7 +77,13 @@ body {
             background-color: transparent;
             border-bottom: 1px solid $border-subtitles;
             padding-bottom: 1em
-          }
+        }
+
+        h3 {
+            font-size: 48px;
+            line-height: 116.7%;
+            margin-bottom: 0.5em;
+        }
     
         h5 {
             font-size: 24px !important;
@@ -53,6 +97,12 @@ body {
             line-height: 150%;
             letter-spacing: 0.15px;
             color: $grey-800;
+        }
+
+        code {
+            font-size: 14px;
+            font-family: "Source Sans Pro", sans-serif;
+            letter-spacing: 0.15px;
         }
     
         .text-delta{
@@ -113,6 +163,11 @@ body {
         a:not([class]) { 
             text-decoration: none; 
             opacity: 1;
+            background-image: none;
+            color: $primary-dark;  
+            font-weight: 600;
+            line-height: 21px;
+            text-align: left;
         }
 
         a:not([class]):hover { 
@@ -123,18 +178,27 @@ body {
         .card-box {
             display: grid;
             row-gap: 32px;
+
+            a {
+                text-overflow: inherit;
+                white-space: inherit;
+                font-style: normal;
+                font-weight: normal;
+                overflow: inherit;
+            }
       
             .card {
                 border: 1px solid $border-subtitles;
                 box-sizing: border-box;
                 border-radius: 4px;
+                padding-bottom: 16px;
         
                 img {
                     width: 100%;
                 }
             
                 .container {
-                    padding: 16px;
+                    padding: 0 16px;
                 
                     h4 {
                         font-weight: 600;
@@ -146,11 +210,15 @@ body {
                         color: $grey-800;
                     }
                     p {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                         padding: 0;
                         margin: 0;
                         color: $grey-800;
                         font-size: 14px;
                         line-height: 143%;
+                        -webkit-line-clamp: 3;
                     }
                 }
             }
@@ -195,7 +263,72 @@ body {
             }
 
             
+    
+    
+    
         }
+        .language-js.highlighter-rouge, .language-html.highlighter-rouge {
+            background-color: #1B1D32;
+            code {
+                background-color: transparent;
+            }
+        }
+
+        .highlight {
+            .gh {
+                color: #999;
+            }
+            .sr {
+                color: #F6AA11;
+            }
+            .go {
+                color: #888;
+            }
+            .gp {
+                color: #555;
+            }
+            .gu {
+                color: #AAA;
+            }
+            .nb {
+                color: #F6AA11;
+            }
+            .cm, .cp, .c1, .cs, .c, .ch, .cd, .cpf {
+                color: #75715E;
+            }
+            .err, .gr, .gt {
+                color: #960050;
+            }
+            .gd, .gi, .ge {
+                color: #49483E;
+            }
+            .kc,.kd,.kr,.no, .kt {
+                color: #66D9EF;
+            }
+            .mf, .mh, .il, .mi, .mo, .m, .mb, .mx, .sc, .se, .ss {
+                color: #AE81FF;
+            }
+            .sd,.s2,.sb,.sh,.si,.sx,.s1,.s, .sa, .dl {
+                color: #E6DB74;
+            }
+            .na, .nc,.nd,.ne, .ne, .nf, .fm {
+                color: #A6E22E;
+            }
+            .bp, .vg, .vi, .nv, .vm, .n, .py, .nx, .w {
+                color: #FFF;
+            }
+            .vc, .nn, .ni, .n1, .nt, .ow, .k, .kv, .kn, .kp, .o {
+                color: #F92672;
+            }
+        }
+        .iframe-container {
+            overflow: auto;
+            .iframe-code {
+                height: 820px;
+                width: calc((calc( (100% - 1064px) / 2 + 264px)) + 100%);
+            }
+        }
+
     }
 }
 .side-bar {
@@ -406,6 +539,46 @@ body {
     margin-left: 15rem;
 }
 
+// Aler, Warning e Info Box
+
+.base-alert {
+    font-size: 14px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    letter-spacing: 0.15px;
+    padding: 1em;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+
+    span {
+        flex-wrap: wrap;
+    }
+
+    &.danger {
+        background-color: $danger-bg;
+    }
+
+    &.warning {
+        background-color: $warning-bg;
+    }
+
+    &.success {
+        background-color: $success-bg;
+    }
+}
+
+.base-alert.warning::before {
+    @extend %icon-exclamation-sign;
+    padding-right: 1em;
+}
+
+.base-alert.success::before {
+    @extend %icon-ok-sign;
+    padding-right: 1em;
+}
+
+
 @media (min-width: 24rem) {
     .card-box {
         grid-template-columns: repeat(2, auto);
@@ -525,6 +698,15 @@ body {
         .card-box {
             grid-template-columns: repeat(3, auto);
         }
+        .iframe-container {
+            display: flex;
+            width: calc(((((100% - 1064px) / 2 ) + 264px)) + 100%);
+            overflow: auto;
+            height: 100%;
+            position: absolute;
+            margin-left: calc(( (100% - 1064px) / 2 + 264px) * -1);
+        }
+
     }
 }
 
