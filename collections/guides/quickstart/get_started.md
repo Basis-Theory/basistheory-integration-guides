@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Sample Application
+title: Quickstart
 permalink: /basis-theory-sample-app/
+categories: guides
 nav_order: 2
 has_children: true
 has_toc: false

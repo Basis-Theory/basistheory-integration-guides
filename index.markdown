@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Basis Theory Overview
+title: Guides Home
 permalink: /
 nav_order: 1
 has_children: false
