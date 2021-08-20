@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart
-permalink: /basis-theory-sample-app/
+permalink: /guides/basis-theory-sample-app/
 categories: guides
 nav_order: 2
 has_children: true
