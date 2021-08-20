@@ -1,0 +1,27 @@
+name: Pull Request
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      ruby-version: 2.7
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: 'gh-pages'
+
+      - name: Slack Deploy / Release Alert
+        uses: 8398a7/action-slack@v3
+        if: always()
+        with:
+          status: ${{ job.status }}
+          channel: ${{ secrets.SLACK_RELEASE_CHANNEL_ID }}
+          fields: 'repo,commit,message,workflow,job'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

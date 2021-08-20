@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Collect payments with Elements
-permalink: /collect_payments_with_elements/
+title: Collect Atomic Cards with Elements
+permalink: /collect_atomic_cards_with_elements/
 categories: guides
 nav_order: 3
 has_children: true
