@@ -417,7 +417,7 @@ body {
             padding-left: 2rem;
 
             &:hover {
-                color: transparent;
+                color: inherit;
                 background-image: none;
             }
 
@@ -439,7 +439,7 @@ body {
                 }
                 
                 &:hover {
-                    color: transparent;
+                    color: inherit;
                     background-image: none;
                 }
 
@@ -462,7 +462,7 @@ body {
                 padding: 0.25rem 2rem;
     
                 &:hover {
-                    color: transparent;
+                    color: inherit;
                     background-image: none;
                 }
     
@@ -490,7 +490,7 @@ body {
                         padding-left: 0;
     
                         &:hover {
-                            color: transparent;
+                            color: inherit;
                             background-image: none;
                         }
             
