@@ -1,2 +1,2 @@
 title: Basis Theory Guides (local)
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://localhost:4001" # the base hostname & protocol for your site, e.g. http://example.com

@@ -4,7 +4,7 @@ services:
   guides:
     container_name: guides
     image: jekyll/builder:4
-    command: jekyll serve
+    command: jekyll serve --config _config.yml,_config.dev.yml
     ports:
     - 4001:4000
     volumes:
