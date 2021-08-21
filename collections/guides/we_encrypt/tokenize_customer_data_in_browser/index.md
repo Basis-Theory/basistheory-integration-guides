@@ -112,4 +112,4 @@ See a sample and the code that drives it below, want to experience the sandbox y
 # Want to see you you can own the encryption for this data?
 {: .no_toc }
 
-Check out our guides for ["Own encryption client side"]("https://guides.basistheory.com/own-encryption-client-side") and ["Own encryption server side"]("https://guides.basistheory.com/own-encryption-server-side") to learn how to encrypt the data yourself, so Basis Theory isn't able to see your data.
+Check out our guides for [Own encryption client side](https://guides.basistheory.com/own-encryption-client-side) and [Own encryption server side](https://guides.basistheory.com/own-encryption-server-side) to learn how to encrypt the data yourself, so Basis Theory isn't able to see your data.
