@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tokenize customer data in browser
-permalink: we_encrypt/tokenize_customer_data_in_browser/
+permalink: guides/tokenize-customer-data-in-browser/
 categories: guides
 nav_order: 4
 has_children: true

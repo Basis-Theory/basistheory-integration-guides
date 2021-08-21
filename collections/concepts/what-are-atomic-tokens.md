@@ -2,7 +2,7 @@
 layout: post
 title:  "What are Atomic Tokens"
 categories: concepts
-permalink: /concepts/what_are_atomic_tokens/
+permalink: /concepts/what-are-atomic-tokens/
 nav_order: 2
 has_children: true
 has_toc: false
