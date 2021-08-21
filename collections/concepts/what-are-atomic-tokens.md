@@ -2,7 +2,7 @@
 layout: post
 title:  "What are Atomic Tokens"
 categories: concepts
-permalink: /what_are_atomic_tokens/
+permalink: /concepts/what_are_atomic_tokens/
 nav_order: 2
 has_children: true
 has_toc: false
@@ -30,7 +30,7 @@ Our Atomic Bank model enables quick and easy compliance with the latest NACHA en
             }
         }'
 ```
-Learn more about Atomic Banks in our [developer documentation](https://docs.basistheory.com/?shell#atomic-banks).
+Learn more about Atomic Banks in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-banks).
 
 ## Atomic Cards
 
@@ -63,8 +63,8 @@ If you're in the need to secure and store your PCI credit card data, you are ena
         }'
 ```
 
-Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/?shell#atomic-cards).
+Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-cards).
 
 
-Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements!](https://guides.basistheory.com/collect_atomic_cards_with_elements). 
+Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements.](guides/collect-atomic-cards-with-elements/). 
 

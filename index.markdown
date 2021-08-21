@@ -31,6 +31,15 @@ has_children: false
                         </div>
                     </div>
                 </a>
+                <a href= "/concepts/what-are-atomic-tokens">
+                    <div class="card">
+                        <img src="./assets/images/card2.svg">
+                        <div class="container">
+                            <h4>What are Atomic Tokens?</h4>
+                            <p>Atomic Token enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
             <h2 class="no_toc">Guides</h2>
             <div class="card-box">

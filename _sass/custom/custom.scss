@@ -73,7 +73,7 @@ body {
             letter-spacing: 0.15px;
             text-align: left;
             color: $grey-900;
-            margin: 0.8em 0;
+            margin: 50px 0 .8em 0;
             background-color: transparent;
             border-bottom: 1px solid $border-subtitles;
             padding-bottom: 1em
@@ -710,6 +710,10 @@ body {
         }
 
     }
+}
+
+#table-of-contents {
+    margin-top: 50px;
 }
 
 @media (max-width: 930px) {

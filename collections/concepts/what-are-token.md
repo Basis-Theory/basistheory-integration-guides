@@ -28,4 +28,4 @@ When you tokenize unencrypted data with Basis Theory, we will carefully encrypt 
 
 ## Try it out
 
-Want to see our tokens in action? try out our [Quickstart Guide](/basis-theory-sample-app). 
+Want to see our tokens in action? try out our [Quickstart Guide](/guides/basis-theory-sample-app). 
