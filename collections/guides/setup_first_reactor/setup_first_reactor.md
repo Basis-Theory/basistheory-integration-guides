@@ -31,7 +31,8 @@ Initially, we will show you how to create a Reactor from our portal, although yo
 Once you're logged into the Basis Theory Portal, navigate to our [Reactors](https://portal.basistheory.com/reactors) page and click on "Create Reactor" on the top right to begin creating a new Reactor. On this page, you'll see a listing of all available Reactor Formulas.
 
 
-Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint along with your token at the time of the request.
+Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used during enriching your token.
+
 
 <img src="/assets/images/setup_first_reactor/token-reactor-formula.png">
 
