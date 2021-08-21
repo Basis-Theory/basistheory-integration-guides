@@ -81,7 +81,8 @@ On a successful call, you will be returned the newly generated Token including t
     "id": "66bcf7cf-7846-432c-8637-9e849bcc053b",
     "tenant_id": "4cd722ab-55ea-41e1-a2c8-47c6d3843186",
     "type": "card:reaction",
-		"data": "<Response from Reactor>"
+    "data": "<Response from Reactor>"
+
     "metadata": {
         "reactor_id": "b2423757-bf5c-4044-9e5b-dc4b01fbc772",
         "reactor_name": "Sample Reactor"
