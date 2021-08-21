@@ -261,11 +261,6 @@ body {
                     border-left: 0;
                 }
             }
-
-            
-    
-    
-    
         }
         .language-js.highlighter-rouge, .language-html.highlighter-rouge {
             background-color: #1B1D32;
@@ -540,6 +535,11 @@ body {
     border-bottom: $border #E6E8F0;
     margin-left: 15rem;
 }
+
+.site-title:hover { background: transparent !important; }
+
+.site-button:hover { background: transparent !important; }
+
 
 // Aler, Warning e Info Box
 
