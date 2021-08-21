@@ -52,6 +52,10 @@ $border-subtitles: rgba(65, 73, 112, 0.2);
     content: url(../../assets/images/icons/check-circle.svg);
   }
 
+  .nav-list .nav-list-item {
+      list-style-type: none !important;
+  }
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
