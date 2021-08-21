@@ -90,11 +90,7 @@ GEM
     webrick (1.7.0)
 
 PLATFORMS
-  java
-  ruby
-  x64-mingw32
-  x86-mingw32
-  x86-mswin32
+  arm64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
