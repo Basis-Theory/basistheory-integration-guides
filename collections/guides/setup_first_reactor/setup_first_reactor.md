@@ -33,15 +33,13 @@ Once you're logged into the Basis Theory Portal, navigate to our [Reactors](http
 
 Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used during enriching your token.
 
-
-<img src="/assets/images/setup_first_reactor/token-reactor-formula.png">
+![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/token-reactor-formula.png "Screenshot of selecting a rector formula")
 
 Once you find the Reactor formula you want to create, select "Use this formula" to start creating a Reactor.  Next, you'll be able to name and add any additional configuration to the Reactor.
 
-<img src="/assets/images/setup_first_reactor/create-reactor.png">
+![Screenshot of create a Reactor](/assets/images/setup_first_reactor/create-reactor.png "Screenshot of selecting a rector formula")
 
 Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
-
 
 <span class="base-alert success">
   <span>
