@@ -14,11 +14,6 @@ has_toc: false
 
 {: .no_toc }
 
-<span class="base-alert warning">
-  <span>
-    As you begin tokenizing your data, please join Discord to learn more about our private beta PII-specific Token Reactors.
-  </span>
-</span>
 
 ### Table of contents
 {: .no_toc .text-delta }
