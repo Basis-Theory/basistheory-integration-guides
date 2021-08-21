@@ -23,7 +23,7 @@ In this guide, we will show you how to use the pre-built [Parrot BIN service](ht
 {:toc}
 
 
-## 1.  Create a Reactor
+## Create a Reactor
 
 Initially, we will show you how to create a Reactor from our portal, although you can also use the [Basis Theory API](https://docs.basistheory.com/#reactors) to replicate these steps with your CI pipelines or code base.
 
@@ -45,7 +45,7 @@ Thats it! Once you've saved your first Reactor, you can begin interacting with i
     As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
 </span>
 
-## 2.  Create a reaction with your new Reactor
+## Create a reaction with your new Reactor
 
 With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to create the correct corresponding token type (for example the "Parrot" reactor is for [Atomic Cards](https://docs.basistheory.com/api-reference/#atomic-cards)).
 
@@ -88,7 +88,7 @@ On a successful call, you will be returned the newly generated Token including t
 }
 ```
 
-## 3.  Retrieve your newly created reaction
+## Retrieve your newly created reaction
 
 Now that you have successfully created your first reaction, you can always request that token back by using the [/reactions](https://docs.basistheory.com/api-reference/#get-an-atomic-card-reaction-token) endpoint on your token.
 

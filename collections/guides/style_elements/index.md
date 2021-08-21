@@ -7,6 +7,7 @@ nav_order: 3
 has_children: true
 has_toc: false
 ---
+
 # How to style Elements for my brand
 {: .no_toc }
 
@@ -69,7 +70,7 @@ var cardElement = BasisTheory.elements.create('card', {
 })
 ```
 
-### See it in action:
+## See it in action
 {: .no_toc }
 
 See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here](https://codesandbox.io/s/styling-elements-sample-0eyoh).

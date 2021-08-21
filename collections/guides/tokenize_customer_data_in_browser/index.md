@@ -19,7 +19,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 {:toc}
 
 
-## 1. Tokenize your PII data in the browser
+## Tokenize your PII data in the browser
 
 <span class="base-alert warning">
   <span>
@@ -29,7 +29,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 To get started, you'll need to first start creating tokens out of your customer data. You are able to use our <code>basistheory-js</code> SDK to take values from your frontend and begin tokenizing the data. *(You're also able to create these tokens from your server-side by using the same tokenization code.)*
 
-### 1. Collect data on your frontend application
+### Collect data on your frontend application
 
 ```js
   <div id="customer_form">
@@ -51,7 +51,7 @@ To get started, you'll need to first start creating tokens out of your customer 
   </div>
 ```
 
-### 2. Tokenize the data with our SDK.
+### Tokenize the data with our SDK.
 
 ```js
   async function submit() {
@@ -71,7 +71,7 @@ To get started, you'll need to first start creating tokens out of your customer 
   }
 ```
 
-## 3. Retrieve your decrypted Token on your server
+## Retrieve your decrypted Token on your server
 
 
 <span class="base-alert warning">
@@ -99,7 +99,7 @@ We suggest only decrypting Token data via your server-side code, this will ensur
   }
 ```
 
-# See it in action:
+## See it in action
 {: .no_toc }
 
 See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.]("https://codesandbox.io/s/tokenize-customer-data-ifqz0")
