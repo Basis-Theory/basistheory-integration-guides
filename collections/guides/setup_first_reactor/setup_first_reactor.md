@@ -42,7 +42,6 @@ Once you find the Reactor formula you want to create, select "Use this formula" 
 
 Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
-
 <span class="base-alert success">
   <span>
     As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).

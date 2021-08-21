@@ -3,7 +3,7 @@ layout: post
 title:  "What are Atomic Tokens"
 categories: concepts
 permalink: /concepts/what-are-atomic-tokens/
-nav_order: 2
+nav_order: 3
 has_children: true
 has_toc: false
 ---
@@ -20,15 +20,18 @@ Our Atomic Bank model enables quick and easy compliance with the latest NACHA en
 
 ```js
     curl "https://api.basistheory.com/atomic/banks" \
-        -H "X-API-KEY: key_XXXXXXXXXXXXXXX"
-        -H "Content-Type: application/json"
-        -X "POST"
-        -D '{
-            "bank": {
-                "routing_number": "021000021",
+      -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
+      -H "Content-Type: application/json" \
+      -X "POST" \
+      -d '{
+        "bank": {
+            "routing_number": "021000021",
                 "account_number": "1234567890"
-            }
-        }'
+        },
+        "metadata": {
+            "nonSensitiveField": "Non-Sensitive Value"
+        }
+    }'
 ```
 Learn more about Atomic Banks in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-banks).
 
@@ -38,33 +41,36 @@ If you're in the need to secure and store your PCI credit card data, you are ena
 
 ```js
     curl "api.basistheory.com/atomic/cards" \
-        -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED"
-        -H "Content-Type: application/json"
-        -X "POST"
-        -D '{
-            "card": {
+      -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
+      -H "Content-Type: application/json" \
+      -X "POST" \
+      -d '{
+        "card": {
             "number": "4242424242424242",
-            "expiration_month": 12,
-            "expiration_year": 2025,
-            "cvc": "123"
-            },
-            "billing_details": {
+                "expiration_month": 12,
+                "expiration_year": 2025,
+                "cvc": "123"
+        },
+        "billing_details": {
             "name": "John Doe",
-            "email": "johndoe@test.com",
-            "phone": "555-123-4567",
-            "address": {
+                "email": "johndoe@test.com",
+                "phone": "555-123-4567",
+                "address": {
                 "line1": "111 Test St.",
-                "line2": "Apt 304",
-                "city": "San Francisco",
-                "state": "CA",
-                "postal_code": "94141",
-                "country": "US"
+                    "line2": "Apt 304",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "postal_code": "94141",
+                    "country": "US"
             }
-        }'
+        },
+        "metadata": {
+            "nonSensitiveField": "Non-Sensitive Value"
+        }
+    }'
 ```
 
 Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-cards).
 
 
-Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements.](guides/collect-atomic-cards-with-elements/). 
-
+Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements](guides/collect-atomic-cards-with-elements/).
