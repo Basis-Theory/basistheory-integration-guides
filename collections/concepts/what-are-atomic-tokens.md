@@ -63,6 +63,7 @@ If you're in the need to secure and store your PCI credit card data, you are ena
         }'
 ```
 
-Learn more about Atomic Cards in our [developer documentation]("https://docs.basistheory.com/?shell#atomic-cards").
+Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/?shell#atomic-cards).
+
 
 Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements!]("https://guides.basistheory.com/collect_atomic_cards_with_elements"). 
