@@ -27,7 +27,7 @@ Sign up and validate your e-mail. You can sign up for a free Basis Theory accoun
 ### Step 2
 
 Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Select the following scopes when creating your API Key
-```
+```html
 token:decrypt 
 token:read      
 token:create
@@ -39,20 +39,20 @@ After your API key is generated, copy your API key. You'll need it for a future 
 
 Download the sample Basis Theory application. You can download it from Github or 
 
-```
+```html
 git clone https://github.com/Basis-Theory/basistheory-sample-app
 ```
 
 ### Step 4
 
 Go to the directory where you installed the app. If you used git this should be 
-```
+```html
 cd basistheory-sample-app
 ```
 ### Step 5
 
 Run the application by using the following command 
-```
+```html
 make token
 ```
 
