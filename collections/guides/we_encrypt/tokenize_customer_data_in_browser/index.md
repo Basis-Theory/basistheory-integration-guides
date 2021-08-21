@@ -71,9 +71,6 @@ To get started, you'll need to first start creating tokens out of your customer 
         phone
       })
     });
-
-  ...
-
   }
 ```
 
