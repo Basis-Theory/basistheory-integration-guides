@@ -60,31 +60,31 @@ make token
 
 When the app starts add the API key you generated in Step 2.
 
-<img src="/assets/images/quickstart/step_6.png">
+![Screenshot of sample app api key](/assets/images/quickstart/step_6.png "Screenshot of sample app api key")
 
 ## Step 7
 
 Encrypt your first payload. The app gives you the ability to encrypt text or a file. A basic account is limited at a 1mb payload so if you do select a file to encrypt make sure it's under 1mb. After you encrypt and submit the ciphertext via the API, you'll retrieve a token.
 
-<img src="/assets/images/quickstart/step_7.png">
+![Screenshot of tokenizing data ](/assets/images/quickstart/step_7.png "tokenizing data")
 
 ## Step 8
 
 Decide if you want to encrypt your data using a key pair only you have on your computer, or encrypt using a key pair hosted at Basis Theory. If you use a keypair that is only on your machine all encryption and decryption will be done on your computer. Basis Theory will not be able to decrypt your data.
 
-<img src="/assets/images/quickstart/step_8.png">
+![Screenshot of how to encrypt](/assets/images/quickstart/step_8.png "Screenshot of how to encrypt")
 
 ## Step 9
 
 Now that you've created your first token and encrypted the data behind it. You can now use the API to retrieve the token and the encrypted ciphertext.
 
-<img src="/assets/images/quickstart/step_9.png">
+![Screenshot of retrieving a token](/assets/images/quickstart/step_9.png "Screenshot of how to encrypt")
 
 ## Step 10
 
 Great! You've retrieved the token and the encrypted data along with it. Now you can decrypt it to see the original payload.
 
-<img src="/assets/images/quickstart/step_10.png">
+![Screenshot of decrypting a token](/assets/images/quickstart/step_10.png "Screenshot of decrypting a token")
 
 ## You did it! 
 
