@@ -10,7 +10,8 @@ has_toc: false
 # Setup your first Reactor
 {: .no_toc }
 
-Token Reactors are foundational to your ability to make your data more usable within your application. Instead of having the data in your own system running queries and procedures, our Reactor platform allows code to be run against your data, enabling it to be enriched in any way you can code to.
+Reactors are foundational to your ability to make your data more usable within your application. Instead of having the data in your own system running queries and procedures, our Reactor platform allows code to be run against your data, enabling you the freedom to choose how you want to enrich and process your data in a secure and compliant environment.
+
 
 In this guide, we will show you how to use the pre-built [Parrot BIN](https://askparrot.com) Service Reactor Formula to take your Atomic Cards and capture new analytical data about them in 3 short steps. After the first time it's simple to add additional reactors.
 
