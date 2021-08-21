@@ -54,7 +54,8 @@ Thats it! Once you've saved your first Token Reactor, you can begin interacting 
 With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to create the correct corresponding token type (for example the "Parrot" reactor is for [Atomic Cards](https://docs.basistheory.com/api-reference/#atomic-cards)).
 
 
-Now that you have a token, we can use the [/react](https://docs.basistheory.com/api-reference/#create-an-atomic-card-reaction) endpoint to send the token to your new Token Reactor!
+Now that you have a token, we can use the [/react](https://docs.basistheory.com/api-reference/#create-an-atomic-card-reaction) endpoint to send the token to your new Reactor.
+
 
 The following example is for an [Atomic Card](https://docs.basistheory.com/api-reference/#atomic-cards). If your Reactor takes a different token type, you'll want to use that token base URL.
 
