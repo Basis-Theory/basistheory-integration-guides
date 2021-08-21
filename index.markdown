@@ -8,6 +8,7 @@ permalink: /
 nav_order: 1
 has_children: false
 ---
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -16,12 +17,12 @@ has_children: false
     <body>
         <div id="header">
             <h1>Basis Theory Guides</h1>
-            <h5>Basis Theory is built to enable you to secure your data away from your core systems while still retaining the control you need to operate and use that data. We enable two generic use-cases which will enable you to solve nearly ANY of your business-related needs.</h5>
+            <h5>Explore step-by-step guides to use our APIs and SDKs.</h5>
         </div>
         <div id="container">
             <h2 class="no_toc">Concepts</h2>
-            <div class="card-box">
-                <a href= "/what_are_tokens/">
+            <div class="card-box card-box-concepts">
+                <a href= "/concepts/what-are-tokens">
                     <div class="card">
                         <img src="./assets/images/card1.svg">
                         <div class="container">
@@ -30,72 +31,72 @@ has_children: false
                         </div>
                     </div>
                 </a>
-                <a href= "/what_are_atomic_tokens/">
+                <a href= "/concepts/what-are-atomic-tokens">
                     <div class="card">
-                        <img src="assets/images/card2.svg">
+                        <img src="./assets/images/card2.svg">
                         <div class="container">
                             <h4>What are Atomic Tokens?</h4>
-                            <p>Atomic Token enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application. We take on all of the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well defined property mapping enabling you to easily use the data within our platform.</p>
+                            <p>Atomic Token enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application.</p>
                         </div>
                     </div>
                 </a>
-                <div class="card">
-                    <img src="./assets/images/card3.svg">
-                    <div class="container">
-                        <h4>NoSee (Encryption)</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
-                    </div>
-                </div>
             </div>
             <h2 class="no_toc">Guides</h2>
-            <p>Our software becomes a core part of your infrastructure enabling you to quickly encrypt, tokenize, and store any payload securely. Your token infrastructure can be used to protect data at rest, as it passes between your own internal systems, or as it’s permissioned and shared with third parties.</p>
             <div class="card-box">
-                <a href= "/basis-theory-sample-app/">
+                <a href="/guides/basis-theory-sample-app/">
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Sample App</h4>
-                            <p>Our sample app walks you through Basis Theory basics.</p>
+                            <h4>Quickstart Guide</h4>
+                            <p>To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don’t want a guide and just want to see it work, run on over to the sandbox. If you want to go right to postman to test you can use our official library hosted here. For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.</p>
                         </div>
                     </div>
                 </a>
-                <a href= "/">
+                <a href="/guides/collect-atomic-cards-with-elements/">
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Securing Card Data</h4>
-                            <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                            <h4>Collect Atomic Cards</h4>
+                            <p>Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it.</p>
                         </div>
                     </div>
                 </a>
-                <div class="card">
-                    <img src="./assets/images/card4.svg">
-                    <div class="container">
-                        <h4>Safely Share Tokens</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                <a href="/guides/style-elements-for-my-brand/">
+                    <div class="card">
+                        <img src="./assets/images/card4.svg">
+                        <div class="container">
+                            <h4>Style Elements</h4>
+                            <p>Our Elements has been built to act as if it were just a normal input field within your own application. </p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/card4.svg">
-                    <div class="container">
-                        <h4>Create Your First Token</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                </a>
+                <a href="/guides/tokenize-customer-data-in-browser/">
+                    <div class="card">
+                        <img src="./assets/images/card4.svg">
+                        <div class="container">
+                            <h4>Tokenize customer data</h4>
+                            <p>Basis Theory is intended to handle any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/card4.svg">
-                    <div class="container">
-                        <h4>Atomic Tokens</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                </a>
+                <a href="/guides/setup-your-first-reactor/">
+                    <div class="card">
+                        <img src="./assets/images/card4.svg">
+                        <div class="container">
+                            <h4>Setup your first Reactor</h4>
+                            <p>Token Reactors are foundational to your ability to make your data more usable within your application.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/card4.svg">
-                    <div class="container">
-                        <h4>NoSee (Encryption)</h4>
-                        <p>Etiam varius ut tellus eget ullamcorper. In hendrerit luctus diam non scelerisque.</p>
+                </a>
+                <a href="/guides/own-your-encryption-keys/">
+                    <div class="card">
+                        <img src="./assets/images/card4.svg">
+                        <div class="container">
+                            <h4>Own Your Encryption Keys</h4>
+                            <p>This guide will show you how to start encrypting data within your applications, so only you can see the data.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </body>

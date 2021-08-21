@@ -17,7 +17,6 @@ $success-bg: #3AC3A2 !default;
 $danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
-
 @font-face {
     font-family: 'slate';
     src:font-url('slate.eot?-syv14m');
@@ -73,7 +72,7 @@ body {
             letter-spacing: 0.15px;
             text-align: left;
             color: $grey-900;
-            margin: 0.8em 0;
+            margin: 50px 0 .8em 0;
             background-color: transparent;
             border-bottom: 1px solid $border-subtitles;
             padding-bottom: 1em
@@ -592,6 +591,9 @@ body {
         grid-auto-rows: 1fr;
         grid-template-columns: repeat(3, 32%);
     }
+    .card-box-concepts {
+        grid-template-columns: repeat(2, 49%) !important;
+    }
 }
 
 @media (min-width: 50rem) {
@@ -700,6 +702,9 @@ body {
         .card-box {
             grid-template-columns: repeat(3, 32%);
         }
+        .card-box-concepts {
+            grid-template-columns: repeat(2, 49%) !important;
+        }
         .iframe-container {
             display: flex;
             width: calc(((((100% - 1064px) / 2 ) + 366px)) + 100%);
@@ -710,6 +715,10 @@ body {
         }
 
     }
+}
+
+#table-of-contents {
+    margin-top: 50px;
 }
 
 @media (max-width: 930px) {

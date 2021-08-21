@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Styling Elements 
-permalink: /style_elements_for_my_brand/
+permalink: /guides/style-elements-for-my-brand/
 categories: guides
 nav_order: 3
 has_children: true

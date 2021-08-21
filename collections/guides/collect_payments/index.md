@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collect Atomic Cards with Elements
-permalink: we_encrypt/collect_atomic_cards_with_elements/
+permalink: /guides/collect-atomic-cards-with-elements/
 categories: guides
 nav_order: 3
 has_children: true

@@ -2,7 +2,7 @@
 layout: post
 title:  "What are tokens"
 categories: concepts
-permalink: /what_are_tokens/
+permalink: /concepts/what-are-tokens/
 nav_order: 1
 has_children: true
 has_toc: false
@@ -28,4 +28,4 @@ When you tokenize unencrypted data with Basis Theory, we will carefully encrypt 
 
 ## Try it out
 
-Want to see our tokens in action? try out our [Quickstart Guide](/basis-theory-sample-app). 
+Want to see our tokens in action? try out our [Quickstart Guide](/guides/basis-theory-sample-app). 
