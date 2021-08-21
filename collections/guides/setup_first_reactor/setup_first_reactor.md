@@ -25,7 +25,8 @@ In this guide, we will show you how to use the pre-built [Parrot BIN service](ht
 
 ## 1.  Create a Reactor
 
-Initially, we will show you how to create a Reactor from our portal, although you can ALWAYS use our [Management API](https://docs.basistheory.com/#reactors) to replicate the exact steps with your CI pipelines or code base.
+Initially, we will show you how to create a Reactor from our portal, although you can also use the [Basis Theory API](https://docs.basistheory.com/#reactors) to replicate these steps with your CI pipelines or code base.
+
 
 Once you're logged into the Basis Theory Portal, navigate to our Token Reactors page and click on "Create Reactor" on the top right to begin creating a new Token Reactor. On this page, you'll see a listing of all available Reactor Formulas.
 
