@@ -102,12 +102,7 @@ We suggest only decrypting Token data via your server-side code, this will ensur
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.]("https://codesandbox.io/s/tokenize-customer-data-ifqz0")
+See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/tokenize-customer-data-ifqz0)
 <div class="iframe-container">
-  <iframe src="https://ifqz0.sse.codesandbox.io/" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/tokenize-customer-data-ifqz0?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
-
-# Want to see how you can own the encryption for this data?
-{: .no_toc }
-
-Check out our guides for [Own browser encryption](/guides/own-browser-encryption) and [Own your encryption keys](/guides/own-your-encrypt-keys) to learn how to encrypt the data yourself, so Basis Theory isn't able to see your data.

@@ -97,7 +97,7 @@ Now that you have successfully created your first reaction, you can always reque
 
 ```js
 curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
-  -H "X-API-KEY: <application_api_key>" \
+  -H "X-API-KEY: <application_api_key>"
 ```
 
 <span class="base-alert info">
