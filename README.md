@@ -1,24 +1,7 @@
-# Basis Theory guides
+# Basis Theory Integration Guides
 
-This is the Basis Theory Integration Guides.
+The [Basis Theory](https://basistheory.com/) Integration Guides. This site is hosted at [guides.basistheory.com](https://guides.basistheory.com/)
 
-## Installation
+## Getting Started
 
- - `gem install jekyll bundler`
- - `bundle exec jekyll serve`
-
-## Local Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve --config _config.yml,_config.dev.yml` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Dev set local url
-
-On Dev environment, replace the **url** params to your localhost on file **_config.yml**, Please remember not commit this changes!!
+Run `docker-compose up -d` and navigate to http://localhost:4001/ in your browser
