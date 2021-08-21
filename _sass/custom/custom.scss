@@ -261,11 +261,6 @@ body {
                     border-left: 0;
                 }
             }
-
-            
-    
-    
-    
         }
         .language-js.highlighter-rouge, .language-html.highlighter-rouge {
             background-color: #1B1D32;
@@ -337,6 +332,9 @@ body {
     
     .site-header {
         border-bottom: 1px solid #2D2F4A;
+        &:hover {
+            background-image: none;
+        }
         .site-button {
             &:hover { 
                 background-image: none; 
@@ -349,7 +347,6 @@ body {
     }
     .site-title.lh-tight {
         padding: 16px;
-        pointer-events: none;
     }
 }
 
@@ -538,6 +535,11 @@ body {
     border-bottom: $border #E6E8F0;
     margin-left: 15rem;
 }
+
+.site-title:hover { background: transparent !important; }
+
+.site-button:hover { background: transparent !important; }
+
 
 // Aler, Warning e Info Box
 
