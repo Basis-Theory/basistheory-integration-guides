@@ -22,7 +22,8 @@ has_toc: false
 {:toc}
 
 
-## Add Elements to your website
+## 1. Tokenize your PII data in the browser
+
 <span class="base-alert warning">
   <span>
     You'll need a <code>public</code> api application created with the <code>token:create</code> permission for this step.
