@@ -66,7 +66,7 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 </span>
 
 ```js
-curl "api.basistheory.com/atomic/cards/<atomic_card_id>/react" \
+curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/react" \
   -H "X-API-KEY: <application_api_key>" \
   -X "POST" \
   -d '{
@@ -98,9 +98,8 @@ Now that you have successfully created your first reaction, you can always reque
 
 
 ```js
-curl "api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
+curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
   -H "X-API-KEY: <application_api_key>" \
-  -X "GET"
 ```
 
 <span class="base-alert success">
