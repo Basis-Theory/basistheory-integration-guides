@@ -24,14 +24,14 @@ Our Atomic Bank model enables quick and easy compliance with the latest NACHA en
       -H "Content-Type: application/json" \
       -X "POST" \
       -d '{
-        "bank": {
-            "routing_number": "021000021",
-                "account_number": "1234567890"
-        },
-        "metadata": {
-            "nonSensitiveField": "Non-Sensitive Value"
-        }
-    }'
+            "bank": {
+                "routing_number": "021000021",
+                    "account_number": "1234567890"
+            },
+            "metadata": {
+                "nonSensitiveField": "Non-Sensitive Value"
+            }
+        }'
 ```
 Learn more about Atomic Banks in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-banks).
 
@@ -40,11 +40,11 @@ Learn more about Atomic Banks in our [developer documentation](https://docs.basi
 If you're in the need to secure and store your PCI credit card data, you are enabled to call our API directly or embed our Card Elements into your browser-based application. These Atomic Cards enable your business to future proof against change and continue to build your business using new partners and integrations - all while never having to touch the underlying card data or costly PCI compliance controls.
 
 ```js
-    curl "api.basistheory.com/atomic/cards" \
-      -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
+ curl "https://api.basistheory.com/atomic/cards" \
+  -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
+  -H "Content-Type: application/json" \
+  -X "POST" \
+  -d '{
         "card": {
             "number": "4242424242424242",
                 "expiration_month": 12,
