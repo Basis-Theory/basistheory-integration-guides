@@ -74,7 +74,8 @@ To get started, you'll need to first start creating tokens out of your customer 
   }
 ```
 
-## Retrieve your decrypted Token on your server
+## 3. Retrieve your decrypted Token on your server
+
 
 <span class="base-alert warning">
   <span>
