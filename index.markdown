@@ -21,7 +21,7 @@ has_children: false
         </div>
         <div id="container">
             <h2 class="no_toc">Concepts</h2>
-            <div class="card-box">
+            <div class="card-box card-box-concepts">
                 <a href= "/concepts/what-are-tokens">
                     <div class="card">
                         <img src="./assets/images/card1.svg">
