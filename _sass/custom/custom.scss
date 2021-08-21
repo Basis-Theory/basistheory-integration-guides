@@ -337,6 +337,9 @@ body {
     
     .site-header {
         border-bottom: 1px solid #2D2F4A;
+        &:hover {
+            background-image: none;
+        }
         .site-button {
             &:hover { 
                 background-image: none; 
@@ -349,7 +352,6 @@ body {
     }
     .site-title.lh-tight {
         padding: 16px;
-        pointer-events: none;
     }
 }
 
@@ -415,7 +417,7 @@ body {
             padding-left: 2rem;
 
             &:hover {
-                color: inherit;
+                color: transparent;
                 background-image: none;
             }
 
@@ -437,7 +439,7 @@ body {
                 }
                 
                 &:hover {
-                    color: inherit;
+                    color: transparent;
                     background-image: none;
                 }
 
@@ -460,7 +462,7 @@ body {
                 padding: 0.25rem 2rem;
     
                 &:hover {
-                    color: inherit;
+                    color: transparent;
                     background-image: none;
                 }
     
@@ -488,7 +490,7 @@ body {
                         padding-left: 0;
     
                         &:hover {
-                            color: inherit;
+                            color: transparent;
                             background-image: none;
                         }
             
