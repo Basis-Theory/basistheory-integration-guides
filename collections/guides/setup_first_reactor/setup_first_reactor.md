@@ -61,7 +61,8 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 
 <span class="base-alert warning">
   <span>
-    To create a reaction, an application needs `<source_token_type>:read`, `<source_token_type>:create`, and `reactor:read` permissions
+    To create a reaction, an application needs `<source_token_type>:read`, `<source_token_type>:create`, and `reactor:read` permissions. For this example you will need `card:read`, `card:create`, and `reactor:read`.
+
   </span>
 </span>
 
