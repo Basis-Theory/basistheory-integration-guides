@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collect Atomic Cards with Elements
-permalink: /collect_atomic_cards_with_elements/
+permalink: we_encrypt/collect_atomic_cards_with_elements/
 categories: guides
 nav_order: 3
 has_children: true
@@ -85,7 +85,7 @@ Configure one of our pre-built reactor-formulas, enabling you to quickly exchang
 
 To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our guide.
 
-### 2.1 Using your new Reactor 
+### 1. Using your new Reactor 
 <span class="base-alert warning">
   <span>
     To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>card:read</code>, <code>card:create</code>, and <code>reactor:read</code>.
