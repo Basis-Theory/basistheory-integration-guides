@@ -192,6 +192,7 @@ body {
                 box-sizing: border-box;
                 border-radius: 4px;
                 padding-bottom: 16px;
+                height: 100%;
         
                 img {
                     width: 100%;
@@ -325,7 +326,7 @@ body {
             overflow: auto;
             .iframe-code {
                 height: 820px;
-                width: calc((calc( (100% - 1064px) / 2 + 264px)) + 100%);
+                width: 100%;
             }
         }
 
@@ -581,14 +582,15 @@ body {
 
 @media (min-width: 24rem) {
     .card-box {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 49%);
         column-gap: 2%;
     }
 }
 
 @media (min-width: 40rem) {
     .card-box {
-        grid-template-columns: repeat(3, auto);
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(3, 32%);
     }
 }
 
@@ -650,7 +652,7 @@ body {
     .main {
         max-width: 800px;
         .card-box {
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(2, 50%);
         }
     }
 }
@@ -696,14 +698,14 @@ body {
     }
     .main {
         .card-box {
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 32%);
         }
         .iframe-container {
             display: flex;
-            width: calc(((((100% - 1064px) / 2 ) + 264px)) + 100%);
+            width: calc(((((100% - 1064px) / 2 ) + 366px)) + 100%);
             overflow: auto;
             height: 100%;
-            position: absolute;
+            position: relative;
             margin-left: calc(( (100% - 1064px) / 2 + 264px) * -1);
         }
 

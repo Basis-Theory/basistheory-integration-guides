@@ -27,16 +27,7 @@ has_children: false
                         <img src="./assets/images/card1.svg">
                         <div class="container">
                             <h4>What are Tokens?</h4>
-                            <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you. </p>
-                        </div>
-                    </div>
-                </a>
-                <a href= "/concepts/what-are-tokens">
-                    <div class="card">
-                        <img src="./assets/images/card2.svg">
-                        <div class="container">
-                            <h4>Atomic Tokens</h4>
-                            <p>Atomic Token enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application. We take on all of the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well defined property mapping enabling you to easily use the data within our platform.</p>
+                            <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you.</p>
                         </div>
                     </div>
                 </a>
