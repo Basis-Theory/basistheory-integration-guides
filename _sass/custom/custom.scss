@@ -325,7 +325,7 @@ body {
             overflow: auto;
             .iframe-code {
                 height: 820px;
-                width: calc((calc( (100% - 1064px) / 2 + 264px)) + 100%);
+                width: calc((calc( (100% - 1064px) / 2 + 300px)) + 100%);
             }
         }
 
@@ -700,10 +700,10 @@ body {
         }
         .iframe-container {
             display: flex;
-            width: calc(((((100% - 1064px) / 2 ) + 264px)) + 100%);
+            width: calc(((((100% - 1064px) / 2 ) + 366px)) + 100%);
             overflow: auto;
             height: 100%;
-            position: absolute;
+            position: relative;
             margin-left: calc(( (100% - 1064px) / 2 + 264px) * -1);
         }
 

@@ -18,3 +18,7 @@ When your theme is released, only the files in `_layouts`, `_includes`, `_sass` 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Dev set local url
+
+On Dev environment, replace the **url** params to your localhost on file **_config.yml**, Please remember not commit this changes!!
