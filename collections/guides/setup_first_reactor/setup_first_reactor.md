@@ -40,7 +40,8 @@ Once you find the Reactor formula you want to create, select "Use this formula" 
 
 <img src="/assets/images/setup_first_reactor/create-reactor.png">
 
-Thats it! Once you've saved your first Token Reactor, you can begin interacting with it via our API.
+Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
+
 
 <span class="base-alert success">
   <span>
