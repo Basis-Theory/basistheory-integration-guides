@@ -33,19 +33,16 @@ Once you're logged into the Basis Theory Portal, navigate to our [Reactors](http
 
 Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used during enriching your token.
 
-![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/token-reactor-formula.png "Screenshot of selecting a rector formula")
+![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/token-reactor-formula.png)
 
 Once you find the Reactor formula you want to create, select "Use this formula" to start creating a Reactor.  Next, you'll be able to name and add any additional configuration to the Reactor.
 
-![Screenshot of create a Reactor](/assets/images/setup_first_reactor/create-reactor.png "Screenshot of selecting a rector formula")
+![Screenshot of create a Reactor](/assets/images/setup_first_reactor/create-reactor.png)
 
 Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
 <span class="base-alert success">
-  <span>
     As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
-
-  </span>
 </span>
 
 ## 3.  Create a reaction with your new Reactor
@@ -61,12 +58,11 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 <span class="base-alert warning">
   <span>
     To create a reaction, an application needs `<source_token_type>:read`, `<source_token_type>:create`, and `reactor:read` permissions. For this example you will need `card:read`, `card:create`, and `reactor:read`.
-
   </span>
 </span>
 
 ```js
-curl "api.basistheory.com/atomic/cards/<atomic_card_id>/react" \
+curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/react" \
   -H "X-API-KEY: <application_api_key>" \
   -X "POST" \
   -d '{
@@ -98,9 +94,8 @@ Now that you have successfully created your first reaction, you can always reque
 
 
 ```js
-curl "api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
+curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
   -H "X-API-KEY: <application_api_key>" \
-  -X "GET"
 ```
 
 <span class="base-alert success">
