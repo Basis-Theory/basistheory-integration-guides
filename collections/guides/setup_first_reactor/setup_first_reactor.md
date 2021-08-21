@@ -41,8 +41,10 @@ Once you find the Reactor formula you want to create, select "Use this formula" 
 
 Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
-<span class="base-alert success">
-    As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
+<span class="base-alert info">
+  <span>
+    As always, you can create the same results with the Basis Theory API to codify the <a href="https://docs.basistheory.com/api-reference/#create-reactor">creation of Reactors</a>.
+  </span>
 </span>
 
 ## Create a reaction with your new Reactor
@@ -98,7 +100,7 @@ curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reacti
   -H "X-API-KEY: <application_api_key>" \
 ```
 
-<span class="base-alert success">
+<span class="base-alert info">
   <span>
     Want to create your own Formulas? We are currently in private beta with our Custom Formula, [join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
   </span>
