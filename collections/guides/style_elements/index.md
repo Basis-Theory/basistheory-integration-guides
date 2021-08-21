@@ -5,7 +5,7 @@ permalink: /guides/style-elements-for-my-brand/
 categories: guides
 nav_order: 3
 has_children: true
-has_toc: true
+has_toc: false
 ---
 # How to style Elements for my brand
 {: .no_toc }

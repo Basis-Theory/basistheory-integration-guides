@@ -45,7 +45,7 @@ Thats it! Once you've saved your first Reactor, you can begin interacting with i
     As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
 </span>
 
-## 3.  Create a reaction with your new Reactor
+## 2.  Create a reaction with your new Reactor
 
 With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to create the correct corresponding token type (for example the "Parrot" reactor is for [Atomic Cards](https://docs.basistheory.com/api-reference/#atomic-cards)).
 
