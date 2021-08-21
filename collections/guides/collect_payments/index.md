@@ -85,7 +85,7 @@ Configure one of our pre-built reactor-formulas, enabling you to quickly exchang
 
 To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our guide.
 
-### 1. Using your new Reactor 
+## Using your new Reactor 
 <span class="base-alert warning">
   <span>
     To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>card:read</code>, <code>card:create</code>, and <code>reactor:read</code>.
@@ -95,23 +95,20 @@ To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If y
 Once you’ve created your Stripe Reactor, use the reactor_id and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
 ```js
-const response = await fetch(
-    `https://api.basistheory.com/atomic/cards/${id}/react`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-api-key": SERVER_KEY
-      },
-      body: JSON.stringify({
-        reactor_id: REACTOR_ID,
-        metadata: {}
-      })
-    }
-  );
+const response = await fetch(`https://api.basistheory.com/atomic/cards/${id}/react`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+    "x-api-key": SERVER_KEY
+  },
+  body: JSON.stringify({
+    reactor_id: REACTOR_ID,
+    metadata: {}
+  })
+});
 
-  return (await response.json());
+return (await response.json());
 ```
 
 Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that card and you'll have a newly attached token.
@@ -133,7 +130,7 @@ const paymentIntent = await stripe.paymentIntents.create({
 return paymentIntent;
 ```
 
-## Use the raw card data whenever you need.
+## Use the raw card data whenever you need
 
 With Basis Theory, we enable the highest level of usability for your card data possible. 
 Is your primary processor down?  `react` with a back up processor. 
@@ -142,10 +139,11 @@ Want to understand your customers card analytics?  `react` with a BIN List like 
 
 Anything is possible with your card data stored with us, just configure a new Reactor and expand your possibilities.
 
-### See it in action:
+## See it in action
 {: .no_toc }
 
 See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.]("https://codesandbox.io/s/example-charging-card-o2qss")
+
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/s/example-charging-card-o2qss" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/example-charging-card-o2qss?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>

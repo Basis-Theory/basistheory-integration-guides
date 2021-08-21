@@ -14,6 +14,7 @@ $blue-shadow: #8B92B6;
 $magenta-light: #EEEBEE;
 $warning-bg: #FFD582 !default;
 $success-bg: #3AC3A2 !default;
+$info-bg: #1AD1DB !default;
 $danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
@@ -566,6 +567,16 @@ body {
         background-color: $warning-bg;
     }
 
+    &.info {
+        background-color: $info-bg;
+
+        span a {
+            color: #047F87;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+
     &.success {
         background-color: $success-bg;
     }
@@ -578,6 +589,11 @@ body {
 
 .base-alert.success::before {
     @extend %icon-ok-sign;
+    padding-right: 1em;
+}
+
+.base-alert.info::before {
+    @extend %icon-info-sign;
     padding-right: 1em;
 }
 
@@ -710,11 +726,11 @@ body {
         }
         .iframe-container {
             display: flex;
-            width: calc(((((100% - 1064px) / 2 ) + 366px)) + 100%);
+            width: calc(((((100% - 600px) / 2 ) + 366px)) + 100%);
             overflow: auto;
             height: 100%;
             position: relative;
-            margin-left: calc(( (100% - 1064px) / 2 + 264px) * -1);
+            margin-left: calc(( (100% - 800px) / 2 + 264px) * -1);
         }
 
     }

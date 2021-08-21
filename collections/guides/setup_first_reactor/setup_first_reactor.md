@@ -23,7 +23,7 @@ In this guide, we will show you how to use the pre-built [Parrot BIN service](ht
 {:toc}
 
 
-## 1.  Create a Reactor
+## Create a Reactor
 
 Initially, we will show you how to create a Reactor from our portal, although you can also use the [Basis Theory API](https://docs.basistheory.com/#reactors) to replicate these steps with your CI pipelines or code base.
 
@@ -41,11 +41,13 @@ Once you find the Reactor formula you want to create, select "Use this formula" 
 
 Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
-<span class="base-alert success">
-    As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
+<span class="base-alert info">
+  <span>
+    As always, you can create the same results with the Basis Theory API to codify the <a href="https://docs.basistheory.com/api-reference/#create-reactor">creation of Reactors</a>.
+  </span>
 </span>
 
-## 2.  Create a reaction with your new Reactor
+## Create a reaction with your new Reactor
 
 With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to create the correct corresponding token type (for example the "Parrot" reactor is for [Atomic Cards](https://docs.basistheory.com/api-reference/#atomic-cards)).
 
@@ -88,17 +90,17 @@ On a successful call, you will be returned the newly generated Token including t
 }
 ```
 
-## 3.  Retrieve your newly created reaction
+## Retrieve your newly created reaction
 
 Now that you have successfully created your first reaction, you can always request that token back by using the [/reactions](https://docs.basistheory.com/api-reference/#get-an-atomic-card-reaction-token) endpoint on your token.
 
 
 ```js
 curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
-  -H "X-API-KEY: <application_api_key>" \
+  -H "X-API-KEY: <application_api_key>"
 ```
 
-<span class="base-alert success">
+<span class="base-alert info">
   <span>
     Want to create your own Formulas? We are currently in private beta with our Custom Formula, [join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
   </span>
