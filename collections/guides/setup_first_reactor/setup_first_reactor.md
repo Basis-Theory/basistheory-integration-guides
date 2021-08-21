@@ -44,7 +44,8 @@ Thats it! Once you've saved your first Token Reactor, you can begin interacting 
 
 <span class="base-alert success">
   <span>
-    As always, you can create the same results with our Management API to codify the creation of Token Reactors.
+    As always, you can create the same results with the Basis Theory API to codify the [creation of Reactors](https://docs.basistheory.com/api-reference/#create-reactor).
+
   </span>
 </span>
 
