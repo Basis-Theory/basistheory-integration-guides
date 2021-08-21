@@ -95,7 +95,8 @@ On a successful call, you will be returned the newly generated Token including t
 
 ## 3.  Retrieve your newly created reaction
 
-Now that you have successfully created your first token reaction, you can always request that token back by using the [/reactions](https://docs.basistheory.com/api-reference/?shell#get-an-atomic-card-reaction-token) endpoint on your token.
+Now that you have successfully created your first reaction, you can always request that token back by using the [/reactions](https://docs.basistheory.com/api-reference/#get-an-atomic-card-reaction-token) endpoint on your token.
+
 
 ```js
 curl "api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
