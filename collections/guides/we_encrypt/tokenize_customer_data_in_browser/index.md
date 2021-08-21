@@ -10,7 +10,8 @@ has_toc: false
 # Collect payments with Elements
 {: .no_toc }
 
-##### Basis Theory is intended to handle any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
+##### Basis Theory is built to handle any payload of data you can serialize. The following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
+
 {: .no_toc }
 
 <span class="base-alert warning">
