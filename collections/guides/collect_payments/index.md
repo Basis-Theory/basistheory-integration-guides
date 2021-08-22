@@ -12,19 +12,15 @@ description: Basis Theory
 {: .no_toc }
 
 Retain control of your card data  while enabling your business to use any current or new processing relationships as you extend your business's product lines, want to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it even if that means exporting the data out of Basis Theory.
-{: .no_toc }
 
 Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
-{: .no_toc }
 
 If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS <a href="http://codesandbox.io/">codesandbox.io</a> sandbox and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/example-charging-card-o2qss?file=/public/index.html">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
-
-1. Add Elements to your website
+1. 
 {:toc}
-
 
 ## Add Elements to your website
 
@@ -90,9 +86,9 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
 
 ## Setup and Use a Token Reactor
 
-Configure one of our pre-built reactor-formulas, enabling you to quickly exchange raw card data for a processor tokens(e.g. Stripe).
+Configure one of our pre-built Reactor Formulas, enabling you to quickly exchange raw card data for a processor tokens (e.g. Stripe).
 
-To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our guide.
+To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our [guide](/guides/setup-your-first-reactor).
 
 ## Using your new Reactor 
 <span class="base-alert warning">
@@ -101,7 +97,7 @@ To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If y
   </span>
 </span>
 
-Once you’ve created your Stripe Reactor, use the reactor_id and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
+Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
 ```js
 const reactionToken = await bt.atomicCards.react(atomic_card.id, {

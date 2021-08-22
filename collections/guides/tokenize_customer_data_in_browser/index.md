@@ -14,10 +14,8 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 ### Table of contents
 {: .no_toc .text-delta }
-
-1. Tokenize your PII data in the browser
+1. 
 {:toc}
-
 
 ## Tokenize your PII data in the browser
 
@@ -73,7 +71,6 @@ To get started, you'll need to first start creating tokens out of your customer 
 
 ## Retrieve your decrypted Token on your server
 
-
 <span class="base-alert warning">
   <span>
     You'll need a <code>server-to-server</code> api application created with the <code>token:decrypt</code> permission for this step.
@@ -95,7 +92,8 @@ We suggest only decrypting Token data via your server-side code, this will ensur
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/tokenize-customer-data-ifqz0)
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/tokenize-customer-data-ifqz0)
+
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/embed/tokenize-customer-data-ifqz0?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
