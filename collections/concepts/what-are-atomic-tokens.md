@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What are Atomic Tokens"
+title:  "What are Atomic Tokens?"
 categories: concepts
 permalink: /concepts/what-are-atomic-tokens/
 nav_order: 3
@@ -8,7 +8,7 @@ has_children: true
 has_toc: false
 ---
 
-# What are Atomic Tokens
+# What are Atomic Tokens?
 
 ### How do Atomic Tokens work?
 
@@ -37,7 +37,7 @@ Learn more about Atomic Banks in our [developer documentation](https://docs.basi
 
 ## Atomic Cards
 
-If you're in the need to secure and store your PCI credit card data, you are enabled to call our API directly or embed our Card Elements into your browser-based application. These Atomic Cards enable your business to future proof against change and continue to build your business using new partners and integrations - all while never having to touch the underlying card data or costly PCI compliance controls.
+If you need to secure and store PCI credit card data, you are enabled to call our API directly or embed our Card Elements into your browser-based application. These Atomic Cards enable your business to future proof against change and continue to build your business using new partners and integrations - all while never having to touch the underlying card data or implement costly PCI compliance controls.
 
 ```js
  curl "https://api.basistheory.com/atomic/cards" \
@@ -73,4 +73,4 @@ If you're in the need to secure and store your PCI credit card data, you are ena
 Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-cards).
 
 
-Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Checkout how to collect Credit Cards with our Elements](guides/collect-atomic-cards-with-elements/).
+Want to learn more about how you can use our Atomic types to enable your business to take advantage of your highest sensitive data? [Check out how to collect Credit Cards with our Elements](/guides/collect-atomic-cards-with-elements/).
