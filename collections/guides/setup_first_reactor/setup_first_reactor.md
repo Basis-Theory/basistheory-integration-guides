@@ -7,7 +7,7 @@ nav_order: 2
 has_children: true
 has_toc: false
 ---
-# Setup your first Reactor
+# Set up your first Reactor
 {: .no_toc }
 
 Reactors are foundational to your ability to make your data more usable within your application. Instead of having the data in your own system running queries and procedures, our Reactor platform allows code to be executed against your data, enabling you the freedom to choose how you want to enrich and process your data in a secure and compliant environment.
@@ -33,7 +33,7 @@ Once you find the Reactor formula you want to create, select "Use this formula" 
 
 ![Screenshot of create a Reactor](/assets/images/setup_first_reactor/create-reactor.png)
 
-Thats it! Once you've saved your first Reactor, you can begin interacting with it via our API.
+That's it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
 <span class="base-alert info">
   <span>

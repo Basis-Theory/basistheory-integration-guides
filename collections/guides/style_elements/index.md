@@ -22,7 +22,7 @@ Want to just jump into an example? [Check it out here](https://codesandbox.io/s/
 
 ## Update the base variant of Elements
 
-The base variant in our style object enables you to update the way the input fields look during most user interactions (invalid, typing, etc).
+The base variant in our style object enables you to update the way the input fields look during most user interactions (invalid, typing, etc.).
 
 For security reasons, we only support fonts from Google's list of supported fonts. If you're looking to include an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/XjWsy8PqK2).
 
@@ -50,7 +50,7 @@ var cardElement = BasisTheory.elements.create('card', {
 
 These styling configurations allow you to easily update what happens when users engage with the input fields, no matter if that is when an invalid value is entered or when they simply hover over the fields.
 
-Ready to see all of the options our variants provide? Checkout our [Elements Style Documentation](https://docs.basistheory.com/elements/#element-style).
+Ready to see all the options our variants provide? Checkout our [Elements Style Documentation](https://docs.basistheory.com/elements/#element-style).
 
 ```js
 var cardElement = BasisTheory.elements.create('card', {

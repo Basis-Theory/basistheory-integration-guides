@@ -11,11 +11,11 @@ description: Basis Theory
 # Collect payments with Elements
 {: .no_toc }
 
-Retain control of your card data  while enabling your business to use any current or new processing relationships as you extend your business's product lines, want to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it even if that means exporting the data out of Basis Theory.
+Retain control of your card data while enabling your business to use any current or new processing relationships as you extend your business's product lines, look to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it. Even if that means exporting the data out of Basis Theory.
 
-Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
+Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
 
-If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS <a href="http://codesandbox.io/">codesandbox.io</a> sandbox and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/example-charging-card-o2qss?file=/public/index.html">Find it here!</a>
+If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/example-charging-card-o2qss?file=/public/index.html">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -86,9 +86,11 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
 
 ## Setup and Use a Token Reactor
 
-Configure one of our pre-built Reactor Formulas, enabling you to quickly exchange raw card data for a processor tokens (e.g. Stripe).
+Configure one of our pre-built Reactor Formulas, enabling you to quickly exchange raw card data for a processor token (e.g. Stripe).
 
-To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our [guide](/guides/setup-your-first-reactor).
+To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If you're looking for step-by-step guide on how to set up a token Reactor, head over to our [guide](/guides/setup-your-first-reactor).
+
+
 
 ## Using your new Reactor 
 <span class="base-alert warning">
@@ -97,7 +99,7 @@ To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If y
   </span>
 </span>
 
-Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
+Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's ID to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
 ```js
 const reactionToken = await bt.atomicCards.react(atomic_card.id, {
@@ -107,11 +109,12 @@ const reactionToken = await bt.atomicCards.react(atomic_card.id, {
 return reactionToken.data.id;
 ```
 
-Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that card and you'll have a newly attached token.
+Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that card, and you'll have a newly attached token.
 
 ## Use the reaction data to charge a customer
 
-Now, you’re able to access the token created by your token exchange. You may be using this for analytical BIN information, fraud analytics, or to charge a card using the processor token you’ve created.
+Now, you’re able to access the token created by your token Reactor. You may be using this for analytical BIN information, fraud analytics, or to charge a card using the processor token you’ve created.
+
 
 ```js
 const stripe = require("stripe")(STRIPE_API_KEY);
@@ -129,16 +132,16 @@ return paymentIntent;
 ## Use the raw card data whenever you need
 
 With Basis Theory, we enable the highest level of usability for your card data possible. 
-Is your primary processor down?  `react` with a back up processor. 
+Is your primary processor down?  `react` with a back-up processor. 
 Soft decline and want to reprocess?  `react` with another processor. 
 Want to understand your customers card analytics?  `react` with a BIN List like Parrot.
 
-Anything is possible with your card data stored with us, just configure a new Reactor and expand your possibilities.
+Anything is possible when you store your card data with us. To expand your possibilities, just configure a new Reactor.
 
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.]("https://codesandbox.io/s/example-charging-card-o2qss")
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/example-charging-card-o2qss)
 
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/embed/example-charging-card-o2qss?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
