@@ -10,20 +10,16 @@ has_toc: false
 # Collect payments with Elements
 {: .no_toc }
 
-##### Retain control of your card data  while enabling your business to use any current or new processing relationships as you extend your business's product lines, want to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it even if that means exporting the data out of Basis Theory.
-{: .no_toc }
+Retain control of your card data  while enabling your business to use any current or new processing relationships as you extend your business's product lines, want to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it even if that means exporting the data out of Basis Theory.
 
 Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
-{: .no_toc }
 
 If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS <a href="http://codesandbox.io/">codesandbox.io</a> sandbox and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/example-charging-card-o2qss?file=/public/index.html">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
-
-1. Add Elements to your website
+1. 
 {:toc}
-
 
 ## Add Elements to your website
 

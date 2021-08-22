@@ -14,10 +14,8 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 ### Table of contents
 {: .no_toc .text-delta }
-
-1. Tokenize your PII data in the browser
+1. 
 {:toc}
-
 
 ## Tokenize your PII data in the browser
 
@@ -72,7 +70,6 @@ To get started, you'll need to first start creating tokens out of your customer 
 ```
 
 ## Retrieve your decrypted Token on your server
-
 
 <span class="base-alert warning">
   <span>
