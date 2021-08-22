@@ -102,6 +102,6 @@ curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reactions/<react
 
 <span class="base-alert info">
   <span>
-    Want to create your own Formulas? Support for Custom Formulas is currently in private beta, [join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
+    Want to create your own Formulas? Support for Custom Formulas is currently in private beta. [Join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
   </span>
 </span>

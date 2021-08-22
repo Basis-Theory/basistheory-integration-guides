@@ -11,7 +11,7 @@ has_toc: false
 # How to style Elements for my brand
 {: .no_toc }
 
-Our Elements has been built to act as if it were just a normal input field within your own application. We've taken care in building out the supported styles and needs of our customers. In this guide, we will walk you through a few of the different styles you can adjust.
+Our Elements have been built to act as normal input fields within your own application. We've taken care in building out the supported styles and needs of our customers. In this guide, we will walk you through a few of the different styles you can adjust.
 
 Want to just jump into an example? [Check it out here](https://codesandbox.io/s/styling-elements-sample-0eyoh)!
 
@@ -24,9 +24,9 @@ Want to just jump into an example? [Check it out here](https://codesandbox.io/s/
 
 ## Update the base variant of Elements
 
-The base variant in our style object enables you to update the way the input fields look during most user interactions. (invalid, typing, etc).
+The base variant in our style object enables you to update the way the input fields look during most user interactions (invalid, typing, etc).
 
-For security reasons, we only support fonts that are supported from Google's list of fonts. If you're looking to support an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/XjWsy8PqK2).
+For security reasons, we only support fonts from Google's list of supported fonts. If you're looking to include an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/XjWsy8PqK2).
 
 
 ```js
@@ -42,10 +42,11 @@ var cardElement = BasisTheory.elements.create('card', {
             fontSize: "16px",
             fontSmooth: "antialiased",
             "::placeholder": {
-            color: "#6b7294"
-        },
+                color: "#6b7294"
+            }
+        }
     }
-})
+});
 ```
 
 ## Update variant styles
@@ -67,13 +68,13 @@ var cardElement = BasisTheory.elements.create('card', {
             color: "#1ad1db"
         }
     }
-})
+});
 ```
 
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here](https://codesandbox.io/s/styling-elements-sample-0eyoh).
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/styling-elements-sample-0eyoh)
 
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/embed/styling-elements-sample-0eyoh?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
