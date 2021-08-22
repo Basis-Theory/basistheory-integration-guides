@@ -81,7 +81,7 @@ We suggest only decrypting Token data via your server-side code, this will ensur
 
 ```js
     const bt = new BasisTheory();
-    bt.init(SERVER_KEY);
+    await bt.init(SERVER_KEY);
 
     const token = await bt.tokens.retrieveDecrypted(customerTokenId);
     
