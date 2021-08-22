@@ -12,7 +12,7 @@ has_toc: false
 
 ### How do Atomic Tokens work?
 
-Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application. We take on all of the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well defined property mapping enabling you to easily use the data within our platform.
+Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application. We take on all the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well-defined property mapping enabling you to easily use the data within our platform.
 
 ## Atomic Banks
 
@@ -37,7 +37,7 @@ Learn more about Atomic Banks in our [developer documentation](https://docs.basi
 
 ## Atomic Cards
 
-If you need to secure and store PCI credit card data, you are enabled to call our API directly or embed our Card Elements into your browser-based application. These Atomic Cards enable your business to future proof against change and continue to build your business using new partners and integrations - all while never having to touch the underlying card data or implement costly PCI compliance controls.
+If you need to secure and store PCI credit card data, you are enabled to call our API directly or embed our Card Elements into your browser-based application. These Atomic Cards enable your business to future-proof against change and continue to build your business using new partners and integrations - all while never having to touch the underlying card data or implement costly PCI compliance controls.
 
 ```js
  curl "https://api.basistheory.com/atomic/cards" \
