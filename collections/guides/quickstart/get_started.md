@@ -10,7 +10,7 @@ has_toc: false
 # Take Basis Theory For A Spin
 {: .no_toc }
 
-Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application. 
+Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application.
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -20,20 +20,26 @@ Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of
 ## Get started
 {: .no_toc }
 
-To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don't want a guide and just want to see it work, run on over to the [sandbox](https://portal.basistheory.com/sandbox). If you want to go right to postman to test you can use our official library hosted [here](https://github.com/Basis-Theory/basistheory-postman). For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.
+To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don't want a guide and just want to see it work, run on over to the [sandbox](https://portal.basistheory.com/sandbox). 
+
+If you want to go right to postman to test you can use our official library hosted: 
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14036973-d1c59e9d-81cb-4d06-b4d9-5b66bdd060b2?action=collection%2Ffork&collection-url=entityId%3D14036973-d1c59e9d-81cb-4d06-b4d9-5b66bdd060b2%26entityType%3Dcollection%26workspaceId%3Dcca928dd-d01d-4c7d-9002-84d5f2b33a63#?env%5BProd%5D=W3sia2V5IjoiYnRfYXBpX2hvc3RuYW1lIiwidmFsdWUiOiJhcGkuYmFzaXN0aGVvcnkuY29tIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJidF9tYW5hZ2VtZW50X2FwaV9rZXkiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYnRfYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJiYW5rX3JlYWN0b3JfaWQiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2FyZF9yZWFjdG9yX2lkIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlfV0=)
+
+For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.
 
 ## Register for Basis Theory
 
-Sign up and validate your e-mail. You can sign up for a free Basis Theory account [here](https://portal.basistheory.com).
+Sign up and validate your e-mail. You can sign up for a free Basis Theory account [here](https://portal.basistheory.com/register).
 
 ## Create an Application
 
 Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Select the following scopes when creating your API Key
-```html
-token:decrypt 
-token:read      
-token:create
-```
+
+- `token:decrypt`
+- `token:read`
+- `token:create`
+
 After your API key is generated, copy your API key. You'll need it for a future step.
 
 <img src="/assets/images/quickstart/capture_api_key.png">
