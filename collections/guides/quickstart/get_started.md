@@ -10,14 +10,17 @@ has_toc: false
 # Take Basis Theory For A Spin
 {: .no_toc }
 
-##### Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application. 
-{: .no_toc }
+Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application. 
 
+### Table of contents
+{: .no_toc .text-delta }
+1. 
+{:toc}
 
 ## Get started
+{: .no_toc }
 
 To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don't want a guide and just want to see it work, run on over to the [sandbox](https://portal.basistheory.com/sandbox). If you want to go right to postman to test you can use our official library hosted [here](https://github.com/Basis-Theory/basistheory-postman). For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.
-
 
 ## Register for Basis Theory
 
@@ -86,6 +89,8 @@ Great! You've retrieved the token and the encrypted data along with it. Now you 
 
 ![Screenshot of decrypting a token](/assets/images/quickstart/step_10.png "Screenshot of decrypting a token")
 
+
 ## You did it! 
+{: .no_toc }
 
 We suggest celebrating this new-found knowledge by going back to step 6 and changing the keys and repeating steps 6-10 with different types of data. If you're not sure if you want to do that, take a quick 5 second smile.
