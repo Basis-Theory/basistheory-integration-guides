@@ -24,7 +24,7 @@ Our SDKs support multiple ways to manage your own encryption and those encryptio
 {:toc}
 
 
-## Set up Your Encryption Key
+## Set Up Your Encryption Key
 
 All Basis Theory SDKs support key management. In order to utilize this feature, you need to set up a Provider Key Factory and register it with the Provider Key Service. This allows you to register multiple key management solutions and use them interchangeably in your application.
 
