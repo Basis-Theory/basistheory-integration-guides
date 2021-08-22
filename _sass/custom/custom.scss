@@ -729,12 +729,12 @@ body {
             grid-template-columns: repeat(2, 49%) !important;
         }
         .iframe-container {
-            display: flex;
-            width: calc(((((100% - 600px) / 2 ) + 366px)) + 100%);
+            //display: flex;
+            width: 120%;
             overflow: auto;
             height: 100%;
             position: relative;
-            margin-left: calc(( (100% - 800px) / 2 + 264px) * -1);
+            margin: -10%;
         }
 
     }
