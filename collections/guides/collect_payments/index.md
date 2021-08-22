@@ -6,6 +6,7 @@ categories: guides
 nav_order: 3
 has_children: true
 has_toc: false
+description: Basis Theory 
 ---
 # Collect payments with Elements
 {: .no_toc }
@@ -38,23 +39,31 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
     <script>
       var card;
       async function submitCard() {
-        const name = document.getElementById("name").value;
-        const token = await BasisTheory.elements.storeCreditCard({
-          card,
-          billingDetails: {
-            name
-          }
-        });
-        console.log(token);
+          const name = document.getElementById("name").value;
+    
+          const atomic_card = await BasisTheory.elements.storeCreditCard({
+              card,
+              billingDetails: {
+                  name
+              }
+          });
+          
+        console.log(atomic_card);
       }
 
       window.addEventListener("load", async () => {
-        await BasisTheory.init("<ELEMENTS APPLICATION ID>", {
-          elements: true,
-          environment: "sandbox"
-        });
-        card = BasisTheory.elements.create("card");
-        await card.mount("#card");
+          await BasisTheory.init(<ELEMENTS_API_KEY>, {
+              elements: true
+          });
+
+          card = BasisTheory.elements.create("card", style);
+
+          await card.mount("#card");
+
+          card.on("change", (e) => {
+              const button = document.getElementById("submit_button");
+              button.disabled = !e.complete;
+          });
       });
     </script>
   </head>
@@ -91,20 +100,11 @@ To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If y
 Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
 ```js
-const response = await fetch(`https://api.basistheory.com/atomic/cards/${id}/react`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-    "x-api-key": SERVER_KEY
-  },
-  body: JSON.stringify({
-    reactor_id: REACTOR_ID,
-    metadata: {}
-  })
+const reactionToken = await bt.atomicCards.react(atomic_card.id, {
+    reactorId: REACTOR_ID
 });
 
-return (await response.json());
+return reactionToken.data.id;
 ```
 
 Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that card and you'll have a newly attached token.

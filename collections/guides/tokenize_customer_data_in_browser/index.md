@@ -60,11 +60,11 @@ To get started, you'll need to first start creating tokens out of your customer 
 
     const bt = await new BasisTheory().init('your_api_key');
     const token = await bt.tokens.create({
-      data: JSON.stringify({
+      data: {
         name,
         ssn,
         phone
-      })
+      }
     });
   }
 ```
@@ -80,20 +80,12 @@ To get started, you'll need to first start creating tokens out of your customer 
 We suggest only decrypting Token data via your server-side code, this will ensure your <code>server-to-server</code> application keys are never visible in the browser and your sensitive customer data is only revealed to your servers.
 
 ```js
-  async function getCustomerDataFromToken(customerTokenId) {
-    const response = await fetch(
-      `https://api-dev.basistheory.com/tokens/${customerTokenId}/decrypt`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "x-api-key": SERVER_KEY
-        }
-      }
-    );
+    const bt = new BasisTheory();
+    bt.init(SERVER_KEY);
 
-    return await response.json();
-  }
+    const token = await bt.tokens.retrieveDecrypted(customerTokenId);
+    
+    return token;
 ```
 
 ## See it in action
