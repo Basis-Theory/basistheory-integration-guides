@@ -79,7 +79,8 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
 
 Configure one of our pre-built Reactor Formulas, enabling you to quickly exchange raw card data for a processor token (e.g. Stripe).
 
-To set up a Reactor, head over to our Portal and set up a new Stripe reactor. If you're looking for step-by-step guide on how to set up a token reactor, head over to our [guide](/guides/setup-your-first-reactor).
+To set up a Reactor, head over to our Portal and set up a new Stripe reactor. If you're looking for step-by-step guide on how to set up a token Reactor, head over to our [guide](/guides/setup-your-first-reactor).
+
 
 ## Using your new Reactor 
 <span class="base-alert warning">
