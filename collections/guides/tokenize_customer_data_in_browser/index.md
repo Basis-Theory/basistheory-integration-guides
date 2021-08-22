@@ -58,7 +58,7 @@ To get started, you'll need to first start creating tokens out of your customer 
     const masked_ssn = ssn.substring(ssn.length - 4)
     const phone = document.getElementById("phone").value;
 
-    const bt = await new BasisTheory().init('your_api_key');
+    const bt = await BasisTheory.init('your_api_key');
     const token = await bt.tokens.create({
       data: {
         name,
