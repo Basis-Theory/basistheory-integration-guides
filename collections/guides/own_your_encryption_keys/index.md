@@ -13,7 +13,7 @@ has_toc: false
 
 A huge benefit of the Basis Theory platform is controlling your data the way you see fit. This guide will show you how to start encrypting data within your applications, so only you can see the data. If you'd like to dive right into the code, feel free to clone our [Basis Theory Sample App](https://github.com/Basis-Theory/basistheory-sample-app-dotnet).
 
-This example only supports Tokenizing data today, and will soon enable you to also use our Reactor platform in a safe and secure manner without Basis Theory having on-going access to your data. If you'd like to use our Reactors with your own encryption, [we'd love to chat.](https://discord.gg/XjWsy8PqK2)
+This example only supports Tokenizing data today, and will soon enable you to also use our Reactor platform in a safe and secure manner without Basis Theory having ongoing access to your data. If you'd like to use our Reactors with your own encryption, [we'd love to chat.](https://discord.gg/XjWsy8PqK2)
 
 Our SDKs support multiple ways to manage your own encryption and those encryption keys, for this example we will be using our [Basis Theory .NET SDK](https://github.com/Basis-Theory/basistheory-dotnet) and showing how you can encrypt data using simple key pairs.
 
@@ -24,11 +24,11 @@ Our SDKs support multiple ways to manage your own encryption and those encryptio
 {:toc}
 
 
-## Setup Your Encryption Key
+## Set up Your Encryption Key
 
-All of Basis Theory's SDKs support key management. In order to utilize this feature, you need to setup a Provider Key Factory and register it with the Provider Key Service. This allows you to register multiple key management solutions and use them interchangeably in your application.
+All Basis Theory SDKs support key management. In order to utilize this feature, you need to set up a Provider Key Factory and register it with the Provider Key Service. This allows you to register multiple key management solutions and use them interchangeably in your application.
 
-For this example, we will setup a simple, in-memory RSA key factory and register it with our Provider Key Service.
+For this example, we will set up a simple, in-memory RSA key factory and register it with our Provider Key Service.
 
 ```csharp
 public class RSAKeyProvider : IProviderKeyFactory
@@ -92,11 +92,11 @@ Attribute | Description
 
 ## Encrypt Your Data
 
-Now that we have generated an encryption key, we need to actually encrypt the data. The Encryption Service can be used independently of the Provider Key Service. If you want to construct a Provider Encryptuon Key and pass it to the Encryption Service, it will still work as long as all of the required properties of the Provider Encryption Key are populated.
+Now that we have generated an encryption key, we need to actually encrypt the data. The Encryption Service can be used independently of the Provider Key Service. If you want to construct a Provider Encryption Key and pass it to the Encryption Service, it will still work as long as all required properties of the Provider Encryption Key are populated.
 
-In order to utilize the Encryption Service, you need to setup an Encryption Factory and register it with the Encryption Service. This allows you to register multiple encryption solutions to encrypt and decrypt your data with your services of choice.
+In order to utilize the Encryption Service, you need to set up an Encryption Factory and register it with the Encryption Service. This allows you to register multiple encryption solutions to encrypt and decrypt your data with your services of choice.
 
-We will setup a simple Encryption Factory which will deserialize and read the RSA key we wrote to the Provider Key ID in the previous step.
+We will set up a simple Encryption Factory which will deserialize and read the RSA key we wrote to the Provider Key ID in the previous step.
 
 ```csharp
 public class RSAEncryptionFactory : IEncryptionFactory
@@ -178,7 +178,7 @@ var response = await tokenClient.CreateAsync(token);
 
 ## Retrieve Your Token
 
-Next, we can optionally fetch the token back from Basis Theory. This will return the encrypted `data` field and the `encryption` metadata which will have all of the information needed to decrypt your token.
+Next, we can optionally fetch the token back from Basis Theory. This will return the encrypted `data` field and the `encryption` metadata which will have all the information needed to decrypt your token.
 
 ```csharp
 // Retrieve back the token by ID
