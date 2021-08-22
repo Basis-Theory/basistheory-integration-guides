@@ -17,17 +17,14 @@ Want to just jump into an example? [Check it out here](https://codesandbox.io/s/
 
 ### Table of contents
 {: .no_toc .text-delta }
-
-1. Add Elements to your website 
+1. 
 {:toc}
-
 
 ## Update the base variant of Elements
 
 The base variant in our style object enables you to update the way the input fields look during most user interactions. (invalid, typing, etc).
 
 For security reasons, we only support fonts that are supported from Google's list of fonts. If you're looking to support an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/XjWsy8PqK2).
-
 
 ```js
 var cardElement = BasisTheory.elements.create('card', {
