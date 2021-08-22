@@ -77,9 +77,9 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
 
 ## Setup and Use a Token Reactor
 
-Configure one of our pre-built reactor-formulas, enabling you to quickly exchange raw card data for a processor tokens(e.g. Stripe).
+Configure one of our pre-built Reactor Formulas, enabling you to quickly exchange raw card data for a processor tokens (e.g. Stripe).
 
-To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our guide.
+To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If you're looking for step by step guide on how to setup a token reactor, head over to our [guide](/guides/setup-your-first-reactor).
 
 ## Using your new Reactor 
 <span class="base-alert warning">
@@ -88,7 +88,7 @@ To setup a Reactor, head over to our Portal and setup a new Stripe reactor. If y
   </span>
 </span>
 
-Once you’ve created your Stripe Reactor, use the reactor_id and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
+Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's id to exchange for a Stripe token, which you'll be able to use to charge your customer.
 
 ```js
 const response = await fetch(`https://api.basistheory.com/atomic/cards/${id}/react`, {

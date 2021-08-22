@@ -99,7 +99,8 @@ We suggest only decrypting Token data via your server-side code, this will ensur
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below, want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/tokenize-customer-data-ifqz0)
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/tokenize-customer-data-ifqz0)
+
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/embed/tokenize-customer-data-ifqz0?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>

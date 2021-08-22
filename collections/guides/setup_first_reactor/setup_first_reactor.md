@@ -10,7 +10,7 @@ has_toc: false
 # Setup your first Reactor
 {: .no_toc }
 
-Reactors are foundational to your ability to make your data more usable within your application. Instead of having the data in your own system running queries and procedures, our Reactor platform allows code to be run against your data, enabling you the freedom to choose how you want to enrich and process your data in a secure and compliant environment.
+Reactors are foundational to your ability to make your data more usable within your application. Instead of having the data in your own system running queries and procedures, our Reactor platform allows code to be executed against your data, enabling you the freedom to choose how you want to enrich and process your data in a secure and compliant environment.
 
 In this guide, we will show you how to use the pre-built [Parrot BIN service](https://askparrot.com) Reactor Formula to take your Atomic Cards and capture new analytical data about them in 3 short steps. After the first time it's simple to add additional reactors.
 
@@ -25,7 +25,7 @@ Initially, we will show you how to create a Reactor from our portal, although yo
 
 Once you're logged into the Basis Theory Portal, navigate to our [Reactors](https://portal.basistheory.com/reactors) page and click on "Create Reactor" on the top right to begin creating a new Reactor. On this page, you'll see a listing of all available Reactor Formulas.
 
-Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used during enriching your token.
+Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used when enriching your token.
 
 ![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/token-reactor-formula.png)
 
@@ -87,12 +87,12 @@ On a successful call, you will be returned the newly generated Token including t
 Now that you have successfully created your first reaction, you can always request that token back by using the [/reactions](https://docs.basistheory.com/api-reference/#get-an-atomic-card-reaction-token) endpoint on your token.
 
 ```js
-curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reaction/<reaction_token_id>" \
+curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/reactions/<reaction_token_id>" \
   -H "X-API-KEY: <application_api_key>"
 ```
 
 <span class="base-alert info">
   <span>
-    Want to create your own Formulas? We are currently in private beta with our Custom Formula, [join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
+    Want to create your own Formulas? Support for Custom Formulas is currently in private beta. [Join our Discord to learn more](https://discord.gg/XjWsy8PqK2).
   </span>
 </span>
