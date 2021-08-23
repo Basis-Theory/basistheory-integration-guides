@@ -16,7 +16,7 @@ Atomic Tokens enable your business to reduce its overall security and compliance
 
 ## Atomic Banks
 
-Our Atomic Bank model enables quick and easy comply with the latest NACHA encryption regulations. As a NACHA approved partner, we can have you quickly securing your customers bank account details.
+Our Atomic Bank model enables quick and easy compliance with the latest NACHA encryption regulations. As a NACHA approved partner, we can have you quickly securing your customers bank account details.
 
 ```js
     curl "https://api.basistheory.com/atomic/banks" \
