@@ -26,6 +26,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://guides.basistheory.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: basistheory
 github_username:  basis-theory
+image:
+  path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+  width: 1200
+  height: 630
 
 logo: "assets/images/logos-guides.svg"
 color_schemes: dark
