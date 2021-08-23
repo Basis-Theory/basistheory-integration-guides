@@ -22,7 +22,7 @@ Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of
 
 We are pleased to offer you this 10-step guide and sample application to demonstrate how to tokenize data using Basis Theory. This is an excellent way to quickly get started testing Basis Theory end to end. If you'd rather dive right into the API, run on over to the [sandbox](https://portal.basistheory.com/sandbox).
 
-if you prefer to test out our API directly in Postman, you can quickly get started using our official library: 
+If you prefer to test out our API directly in Postman, you can quickly get started using our official library: 
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14036973-d1c59e9d-81cb-4d06-b4d9-5b66bdd060b2?action=collection%2Ffork&collection-url=entityId%3D14036973-d1c59e9d-81cb-4d06-b4d9-5b66bdd060b2%26entityType%3Dcollection%26workspaceId%3Dcca928dd-d01d-4c7d-9002-84d5f2b33a63#?env%5BProd%5D=W3sia2V5IjoiYnRfYXBpX2hvc3RuYW1lIiwidmFsdWUiOiJhcGkuYmFzaXN0aGVvcnkuY29tIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJidF9tYW5hZ2VtZW50X2FwaV9rZXkiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYnRfYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJiYW5rX3JlYWN0b3JfaWQiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2FyZF9yZWFjdG9yX2lkIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlfV0=)
 
@@ -45,7 +45,7 @@ After your API key is generated, copy your API key. You'll need it for a future 
 
 ## Download the Sample Application
 
-Download the sample Basis Theory application. You can download it from [Github](https://github.com/Basis-Theory/basistheory-sample-app-dotnet) or clone the repository
+Download the sample Basis Theory application. You can download it from [GitHub](https://github.com/Basis-Theory/basistheory-sample-app-dotnet) or clone the repository
 
 ```html
 git clone https://github.com/Basis-Theory/basistheory-sample-app-dotnet.git

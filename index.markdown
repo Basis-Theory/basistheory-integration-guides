@@ -36,7 +36,7 @@ has_children: false
                         <img src="./assets/images/card2.svg">
                         <div class="container">
                             <h4>What are Atomic Tokens?</h4>
-                            <p>Atomic Token enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application.</p>
+                            <p>Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application.</p>
                         </div>
                     </div>
                 </a>
@@ -48,7 +48,7 @@ has_children: false
                         <img src="./assets/images/card4.svg">
                         <div class="container">
                             <h4>Quickstart Guide</h4>
-                            <p>To understand how to implement Basis Theory we are pleased to offer you this 10-step guide. If you don’t want a guide and just want to see it work, run on over to the sandbox. If you want to go right to postman to test you can use our official library hosted here. For those of you who want a technical guide, here is an excellent way to get started testing Basis Theory end to end.</p>
+                            <p>We are pleased to offer you this 10-step guide and sample application to demonstrate how to tokenize data using Basis Theory. This is an excellent way to quickly get started testing Basis Theory end to end.</p>
                         </div>
                     </div>
                 </a>
@@ -66,7 +66,7 @@ has_children: false
                         <img src="./assets/images/card4.svg">
                         <div class="container">
                             <h4>Style Elements</h4>
-                            <p>Our Elements has been built to act as if it were just a normal input field within your own application. </p>
+                            <p>Our Elements have been built to act as normal input fields within your own application. We've taken care in building out the supported styles and needs of our customers. In this guide, we will walk you through a few of the different styles you can adjust.</p>
                         </div>
                     </div>
                 </a>
