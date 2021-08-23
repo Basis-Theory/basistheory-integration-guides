@@ -30,43 +30,43 @@ To get started, you'll need to first start creating tokens out of your customer 
 ### Collect data on your frontend application
 
 ```js
-  <div id="customer_form">
-    <div class="row">
-      <label for="name">Name</label>
-      <input id="name" placeholder="Jane Doe" />
-    </div>
-    <div class="row">
-      <label for="phone">Phone</label>
-      <input id="phone" placeholder="+55 (55) 55555-5555" />
-    </div>
-    <div class="row">
-      <label for="ssn">"Gov't Id"</label>
-      <input id="ssn" placeholder="555-55-5555" />
-    </div>
-    <button id="submit_button" type="button" onclick="submit()">
-      Submit
-    </button>
+<div id="customer_form">
+  <div class="row">
+    <label for="name">Name</label>
+    <input id="name" placeholder="Jane Doe" />
   </div>
+  <div class="row">
+    <label for="phone">Phone</label>
+    <input id="phone" placeholder="+55 (55) 55555-5555" />
+  </div>
+  <div class="row">
+    <label for="ssn">"Gov't Id"</label>
+    <input id="ssn" placeholder="555-55-5555" />
+  </div>
+  <button id="submit_button" type="button" onclick="submit()">
+    Submit
+  </button>
+</div>
 ```
 
 ### Tokenize the data with our SDK.
 
 ```js
-  async function submit() {
-    const name = document.getElementById("name").value;
-    const ssn = document.getElementById("ssn").value;
-    const masked_ssn = ssn.substring(ssn.length - 4)
-    const phone = document.getElementById("phone").value;
+async function submit() {
+  const name = document.getElementById("name").value;
+  const ssn = document.getElementById("ssn").value;
+  const masked_ssn = ssn.substring(ssn.length - 4)
+  const phone = document.getElementById("phone").value;
 
-    const bt = await BasisTheory.init('your_api_key');
-    const token = await bt.tokens.create({
-      data: {
-        name,
-        ssn,
-        phone
-      }
-    });
-  }
+  const bt = await BasisTheory.init('your_api_key');
+  const token = await bt.tokens.create({
+    data: {
+      name,
+      ssn,
+      phone
+    }
+  });
+}
 ```
 
 ## Retrieve your decrypted Token on your server
@@ -80,12 +80,12 @@ To get started, you'll need to first start creating tokens out of your customer 
 We suggest only decrypting Token data via your server-side code, this will ensure your <code>server-to-server</code> application keys are never visible in the browser and your sensitive customer data is only revealed to your servers.
 
 ```js
-    const bt = new BasisTheory();
-    await bt.init(SERVER_KEY);
+const bt = new BasisTheory();
+await bt.init(SERVER_KEY);
 
-    const token = await bt.tokens.retrieveDecrypted(customerTokenId);
-    
-    return token;
+const token = await bt.tokens.retrieveDecrypted(customerTokenId);
+
+return token;
 ```
 
 ## See it in action

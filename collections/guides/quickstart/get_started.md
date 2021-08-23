@@ -10,7 +10,7 @@ has_toc: false
 # Take Basis Theory For A Spin
 {: .no_toc}
 
-Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application.
+Basis Theory is built to encrypt, decrypt, tokenize, and delegate any payload of data that can be serialized. To show the flexibility of our tokenization platform, the following guide will show you how you can tokenize any payload in an application.
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -54,6 +54,7 @@ git clone https://github.com/Basis-Theory/basistheory-sample-app-dotnet.git
 ## Go to Directory
 
 Go to the directory where you downloaded the app. If you used git this should be 
+
 ```html
 cd basistheory-sample-app-dotnet
 ```
@@ -61,13 +62,14 @@ cd basistheory-sample-app-dotnet
 ## Run the Application
 
 Run the application by using the following command 
+
 ```html
 make token
 ```
 
 ## Insert Application API Key
 
-When the app starts add the API key you generated in Step 2.
+When the app starts add the API key you generated the `Create an Application` step.
 
 ![Screenshot of sample app api key](/assets/images/quickstart/step_6.png "Screenshot of sample app api key")
 

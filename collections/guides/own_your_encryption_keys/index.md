@@ -13,7 +13,7 @@ has_toc: false
 
 A huge benefit of the Basis Theory platform is controlling your data the way you see fit. This guide will show you how to start encrypting data within your applications, so only you can see the data. If you'd like to dive right into the code, feel free to clone our [Basis Theory Sample App](https://github.com/Basis-Theory/basistheory-sample-app-dotnet).
 
-This example only supports Tokenizing data today, and will soon enable you to also use our Reactor platform in a safe and secure manner without Basis Theory having ongoing access to your data. If you'd like to use our Reactors with your own encryption, [we'd love to chat.](https://discord.gg/XjWsy8PqK2)
+This example only supports tokenizing data today, and will soon enable you to also use our Reactor platform in a safe and secure manner without Basis Theory having ongoing access to your data. If you'd like to use our Reactors with your own encryption, [we'd love to chat.](https://discord.gg/XjWsy8PqK2)
 
 Our SDKs support multiple ways to manage your own encryption and those encryption keys, for this example we will be using our [Basis Theory .NET SDK](https://github.com/Basis-Theory/basistheory-dotnet) and showing how you can encrypt data using simple key pairs.
 

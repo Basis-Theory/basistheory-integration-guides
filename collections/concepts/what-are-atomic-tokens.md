@@ -12,11 +12,11 @@ has_toc: false
 
 ### How do Atomic Tokens work?
 
-Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application. We take on all the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well-defined property mapping enabling you to easily use the data within our platform.
+Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your systems. We take on all the compliance, regulatory, and security responsibilities to store your data at rest and enable multiple different solutions for getting your sensitive data into our platform to reduce your overall liability footprint. These tokens have a well-defined property mapping enabling you to easily use the data within our platform.
 
 ## Atomic Banks
 
-Our Atomic Bank model enables quick and easy compliance with the latest NACHA encryption regulations. As a NACHA approved partner, we can have you quickly securing your customers bank account details.
+Our Atomic Bank model enables quick and easy comply with the latest NACHA encryption regulations. As a NACHA approved partner, we can have you quickly securing your customers bank account details.
 
 ```js
     curl "https://api.basistheory.com/atomic/banks" \
