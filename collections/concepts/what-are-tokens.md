@@ -6,6 +6,10 @@ permalink: /concepts/what-are-tokens/
 nav_order: 2
 has_children: true
 has_toc: false
+image:
+    path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+    width: 1200
+    height: 630
 ---
 
 # What are tokens?

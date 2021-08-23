@@ -6,6 +6,10 @@ categories: guides
 nav_order: 4
 has_children: true
 has_toc: false
+image:
+    path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+    width: 1200
+    height: 630
 ---
 # Tokenize customer data in browser
 {: .no_toc }

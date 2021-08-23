@@ -6,7 +6,11 @@ categories: guides
 nav_order: 3
 has_children: true
 has_toc: false
-description: Basis Theory 
+description: Basis Theory
+image:
+    path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+    width: 1200
+    height: 630
 ---
 # Collect payments with Elements
 {: .no_toc }

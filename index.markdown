@@ -7,6 +7,10 @@ title: Guides Home
 permalink: /
 nav_order: 1
 has_children: false
+image:
+    path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+    width: 1200
+    height: 630
 ---
 
 <html>
