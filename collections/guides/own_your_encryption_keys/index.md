@@ -206,4 +206,4 @@ var plaintext = await encryptionService.DecryptAsync(retrievedToken.ToEncryptedD
 ## See it in action
 {: .no_toc }
 
-Want to play with this guide? [Check it out here.](https://dotnetfiddle.net/LU2IaX)
+Want to play with this guide? [Check it out here.](https://dotnetfiddle.net/UPso8S)
