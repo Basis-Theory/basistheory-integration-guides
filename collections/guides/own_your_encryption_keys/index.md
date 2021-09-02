@@ -195,8 +195,7 @@ Now that we have retrieved the encrypted token back from Basis Theory, we can us
 
 ```csharp
 // Fetch the Provider Encryption Key to decrypt the token
-var keyToDecrypt = await providerKeyService.GetKeyByKeyIdAsync(retrievedToken.Encryption.KeyEncryptionKey.Key, "MEMORY", 
-        retrievedToken.Encryption.KeyEncryptionKey.Algorithm);
+var keyToDecrypt = await providerKeyService.GetKeyByKeyIdAsync(retrievedToken.Encryption.KeyEncryptionKey);
 		
 // Decrypt the ciphertext with the encrypted data from the token and the provider encryption key
 // used to originally to encrypt
@@ -206,4 +205,4 @@ var plaintext = await encryptionService.DecryptAsync(retrievedToken.ToEncryptedD
 ## See it in action
 {: .no_toc }
 
-Want to play with this guide? [Check it out here.](https://dotnetfiddle.net/UPso8S)
+Want to play with this guide? [Check it out here.](https://dotnetfiddle.net/Qelkr4)
