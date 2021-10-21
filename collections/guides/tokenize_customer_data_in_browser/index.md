@@ -64,6 +64,7 @@ async function submit() {
 
   const bt = await BasisTheory.init('your_api_key');
   const token = await bt.tokens.create({
+    type: 'token',
     data: {
       name,
       ssn,
