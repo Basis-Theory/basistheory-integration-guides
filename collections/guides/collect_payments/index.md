@@ -41,18 +41,12 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
   <head>
     <script src="https://js.basistheory.com"></script>
     <script>
-      var card;
-      async function submitCard() {
-          const name = document.getElementById("name").value;
-    
+      let card;
+      async function submitCard() {    
           const atomic_card = await BasisTheory.elements.storeCreditCard({
-              card,
-              billingDetails: {
-                  name
-              }
+              card
           });
-          
-        console.log(atomic_card);
+          console.log(atomic_card);
       }
 
       window.addEventListener("load", async () => {
@@ -74,11 +68,7 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
   <body>
     <div class="container">
       <div id="form">
-        <div class="row">
-          <label for="name">Name</label>
-          <input id="name" placeholder="Jane Doe" />
-        </div>
-        <div class="row temp" id="card"></div>
+        <div class="row" id="card"></div>
         <button id="submit_button" type="button" onclick="submitCard()">
           Submit
         </button>
@@ -146,5 +136,5 @@ Anything is possible when you store your card data with us. To expand your possi
 See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/example-charging-card-o2qss)
 
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/example-charging-card-o2qss?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples?fontsize=14&hidenavigation=1&theme=dark&initialpath=/card&module=/card/public/index.html,/card/public/index.js,/card/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
