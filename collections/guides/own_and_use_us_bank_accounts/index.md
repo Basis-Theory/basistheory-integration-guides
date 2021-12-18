@@ -122,6 +122,7 @@ Now that you understand the basics of using our Elements and Atomic Banks to col
 - Use our Serverless Reactors to create an ACH file (if you're looking to do this, [reach out!](https://basistheory.com/contact))
 - Quickly begin securing and using raw bank data yourself with our API
 - Interact with any other banking service you can imagine (e.g. Dwolla, Plaid, etc)
+- [Style our Elements to look exactly like your own application](/guides/style-elements-for-my-brand/)
 
 
 ## See it in action
