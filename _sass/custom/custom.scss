@@ -18,6 +18,12 @@ $info-bg: #1AD1DB !default;
 $danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
+@media (min-width: 66.5rem) {
+    .main .iframe-container {
+        margin: 0 !important;
+    }
+}
+
 @font-face {
     font-family: 'slate';
     src:font-url('slate.eot?-syv14m');
@@ -267,7 +273,7 @@ body {
                 }
             }
         }
-        .language-js.highlighter-rouge, .language-html.highlighter-rouge, .language-csharp.highlighter-rouge {
+        .language-bash.highlighter-rouge, .language-json.highlighter-rouge, .language-js.highlighter-rouge, .language-html.highlighter-rouge, .language-csharp.highlighter-rouge {
             background-color: #1B1D32;
             code {
                 background-color: transparent;

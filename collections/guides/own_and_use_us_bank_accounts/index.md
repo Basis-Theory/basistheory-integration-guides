@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Safely store and use U.S. Bank Accounts
-permalink: /guides/safely-store-and-use-us-bank-accounts/
+title: Use U.S. Bank Accounts without touching them
+permalink: /guides/use-us-bank-accounts-without-touching-them/
 categories: guides
 nav_order: 3
 has_children: true
@@ -12,7 +12,7 @@ image:
     width: 1200
     height: 630
 ---
-# Safely store and use U.S. Bank Accounts
+# Use U.S. Bank Accounts without touching them
 {: .no_toc }
 
 <span class="base-alert success">
