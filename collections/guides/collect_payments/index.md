@@ -43,7 +43,7 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
     <script>
       let card;
       async function submitCard() {    
-          const atomic_card = await BasisTheory.elements.storeCreditCard({
+          const atomic_card = await BasisTheory.atomicCards.create({
               card
           });
           console.log(atomic_card);
@@ -54,7 +54,7 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
               elements: true
           });
 
-          card = BasisTheory.elements.create("card", style);
+          card = BasisTheory.createElement("card", style);
 
           await card.mount("#card");
 
