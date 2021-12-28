@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.0.1...v1.1.0) (2021-12-28)
+
+
+### Features
+
+* refere to new Elements consolidate interfaces ([#60](https://github.com/Basis-Theory/basistheory-integration-guides/issues/60)) ([f53bd3f](https://github.com/Basis-Theory/basistheory-integration-guides/commit/f53bd3f21c4e42b42e61e15ce80522b845986cb9))
+
 ## [1.0.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.0.0...v1.0.1) (2021-12-03)
 
 
