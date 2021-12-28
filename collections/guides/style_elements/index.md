@@ -31,7 +31,7 @@ The base variant in our style object enables you to update the way the input fie
 For security reasons, we only support fonts from Google's list of supported fonts. If you're looking to include an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/NSvXxaW5Fv).
 
 ```js
-var cardElement = BasisTheory.elements.create('card', {
+var cardElement = BasisTheory.createElement('card', {
     style: {
         fonts: [
             "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
@@ -57,7 +57,7 @@ These styling configurations allow you to easily update what happens when users 
 Ready to see all the options our variants provide? Checkout our [Elements Style Documentation](https://docs.basistheory.com/elements/#element-style).
 
 ```js
-var cardElement = BasisTheory.elements.create('card', {
+var cardElement = BasisTheory.createElement('card', {
     style: {
         fonts: [
             "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
