@@ -56,7 +56,7 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 
 <span class="base-alert warning">
   <span>
-    To run a Reactor, an application needs `<source_token_type>:read` and `reactor:read` permissions. For this example you will need `card:read` and `reactor:read`.
+    To run a Reactor, an application needs `token:<classification>:read:<impact_level>` and `token:<classification>:use:reactor` permissions. For this example you will need `token:pci:read:<classification>` and `token:pci:use:reactor`.
   </span>
 </span>
 

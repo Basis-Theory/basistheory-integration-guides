@@ -38,11 +38,10 @@ Sign up and validate your e-mail. You can sign up for a free Basis Theory accoun
 
 ## Create an Application
 
-Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Select the following scopes when creating your API Key
+Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Enter an application name and select the application's type, which for our guide can be `Server to Server`. Select the following scopes when creating your API Key
 
-- `token:decrypt`
-- `token:read`
-- `token:create`
+- `token:general:create`
+- `token:general:read:high`
 
 After your API key is generated, copy your API key. You'll need it for a future step.
 

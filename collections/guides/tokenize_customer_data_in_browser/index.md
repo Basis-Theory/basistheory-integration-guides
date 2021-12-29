@@ -25,7 +25,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:create</code> permission for this step.
+    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:pii:create</code> permission for this step.
   </span>
 </span>
 
@@ -78,7 +78,7 @@ async function submit() {
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>server-to-server</code> api application created with the <code>token:decrypt</code> permission for this step.
+    You'll need a <code>server-to-server</code> api application created with the <code>token:pii:read:high</code> permission for this step.
   </span>
 </span>
 
