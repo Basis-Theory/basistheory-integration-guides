@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Encrypt U.S Banks in your applications
+title: Encrypt U.S. Banks in your applications
+
 permalink: /guides/encrypt-us-banks-in-your-applications/
 categories: guides
 nav_order: 3
