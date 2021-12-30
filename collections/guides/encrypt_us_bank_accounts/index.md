@@ -210,9 +210,3 @@ You're now able to quickly update your existing systems to encrypt and safely st
 {: .no_toc }
 
 Want to see the final result? <a href="https://github.com/armsteadj1/basistheory-bank-node-example">Find it here!</a>
-
-## Watch the video guide
-
-<div class="iframe-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y2rxXGEayAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
