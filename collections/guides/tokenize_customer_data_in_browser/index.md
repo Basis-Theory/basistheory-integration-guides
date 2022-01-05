@@ -69,10 +69,15 @@ async function submit() {
       name,
       ssn,
       phone
+    },
+    privacy: {
+      classification: 'pii'
     }
   });
 }
 ```
+
+In the previous example, we are overriding the token's privacy settings to specify a classification of `pii`, which is the type of data we are tokenizing. If we omit this, the default classification `general` would be used. 
 
 ## Retrieve your decrypted Token on your server
 
