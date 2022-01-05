@@ -36,7 +36,7 @@ If you'd like to follow along with this guide jump right into our sample app - <
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Elements Application with the <code>bank:create</code> permission
+    To start, you'll need a new Elements Application with the <code>token:bank:create</code> permission
   </span>
 </span>
 
@@ -98,7 +98,7 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
 ## Using your new Reactor 
 <span class="base-alert warning">
   <span>
-    To use your new Spreedly Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>bank:read</code>, <code>bank:create</code>, and <code>reactor:read</code>.
+    To use your new Spreedly Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:bank:use:reactor</code> and <code>token:bank:create</code>.
   </span>
 </span>
 

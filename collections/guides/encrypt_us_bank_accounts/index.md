@@ -17,7 +17,7 @@ image:
 
 <span class="base-alert success">
   <span>
-    This guide will quickly enable you to be compliant with new Nacha Encryption rules. 
+    This guide will quickly enable you to be compliant with new Nacha encryption rules. 
   </span>
 </span>
 
@@ -25,7 +25,7 @@ Your customer's bank information is as sensitive as their credit card data, and 
 
 In this guide, we will show you how to take an existing API and use Basis Theory to safely store the bank data while and retain the exact application functionality. 
 
-If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/armsteadj1/basistheory-bank-node-example">Find it here!</a>
+If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/store-atomic-banks">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -95,11 +95,11 @@ app.listen(port, async () => {
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Server to Server Application with the <code>bank:create</code> and <code>bank:decrypt</code> permission
+    To start, you'll need a new Server to Server Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission
   </span>
 </span>
 
-First, you'll need to install the [basis-theory-js](https://www.npmjs.com/package/@basis-theory/basis-theory-js) npm module"
+First, you'll need to install the [basis-theory-js](https://www.npmjs.com/package/@basis-theory/basis-theory-js) npm module
 
 ```bash
     npm install @basis-theory/basis-theory-js --save
@@ -209,10 +209,10 @@ You're now able to quickly update your existing systems to encrypt and safely st
 ## See it in action
 {: .no_toc }
 
-Want to see the final result? <a href="https://github.com/armsteadj1/basistheory-bank-node-example">Find it here!</a>
+Want to see the final result? <a href="https://github.com/Basis-Theory/basis-theory-js-examples/store-atomic-banks">Find it here!</a>
 
 ## Watch the video guide
 
 <div class="iframe-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y2rxXGEayAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tj53k37qxSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
