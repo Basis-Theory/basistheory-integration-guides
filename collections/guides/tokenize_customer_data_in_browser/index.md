@@ -25,7 +25,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:create</code> permission for this step.
+    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:pii:create</code> permission for this step.
   </span>
 </span>
 
@@ -69,16 +69,21 @@ async function submit() {
       name,
       ssn,
       phone
+    },
+    privacy: {
+      classification: 'pii'
     }
   });
 }
 ```
 
+In the previous example, we are overriding the token's privacy settings to specify a classification of `pii`, which is the type of data we are tokenizing. If we omit this, the default classification `general` would be used. 
+
 ## Retrieve your decrypted Token on your server
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>server-to-server</code> api application created with the <code>token:decrypt</code> permission for this step.
+    You'll need a <code>server-to-server</code> api application created with the <code>token:pii:read:high</code> permission for this step.
   </span>
 </span>
 

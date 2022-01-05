@@ -38,11 +38,10 @@ Sign up and validate your e-mail. You can sign up for a free Basis Theory accoun
 
 ## Create an Application
 
-Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Select the following scopes when creating your API Key
+Generate your first API key. To generate your first API key head to the [portal](https://portal.basistheory.com/applications) and click "Create New Application" in the Applications tab. Enter an application name and select the application's type, which for our guide can be `Server to Server`. Select the following scopes when creating your API Key
 
-- `token:decrypt`
-- `token:read`
-- `token:create`
+- `token:general:create`
+- `token:general:read:high`
 
 After your API key is generated, copy your API key. You'll need it for a future step.
 
@@ -74,33 +73,33 @@ make token
 
 ## Insert Application API Key
 
-When the app starts add the API key you generated the `Create an Application` step.
+When the app starts add the API key you generated in the `Create an Application` step.
 
-![Screenshot of sample app api key](/assets/images/quickstart/step_6.png "Screenshot of sample app api key")
+![Screenshot of sample app api key](/assets/images/quickstart/step_1.png "Screenshot of sample app api key")
 
 ## Encrypt your data
 
-Encrypt your first payload. The app gives you the ability to encrypt text or a file. A basic account is limited to a 1mb payload, so if you do select a file to encrypt make sure it's under 1mb. After you encrypt and submit the ciphertext via the API, you'll retrieve a token.
+Encrypt your first payload. The app gives you the ability to encrypt text or a file. A basic account is limited to a 1mb payload, so if you do select a file to encrypt make sure it's under 1mb. After you encrypt and submit the data via the API, you'll retrieve a token.
 
-![Screenshot of tokenizing data ](/assets/images/quickstart/step_7.png "Screenshot of tokenizing data")
+![Screenshot of tokenizing data ](/assets/images/quickstart/step_2.png "Screenshot of tokenizing data")
 
 ## Decide who encrypts
 
 Decide if you want to encrypt your data using a key pair only you have on your computer, or encrypt using a key pair hosted at Basis Theory. If you use a key pair that is only on your machine, all encryption and decryption will be done on your computer. Basis Theory will not be able to decrypt your data.
 
-![Screenshot of how to encrypt](/assets/images/quickstart/step_8.png "Screenshot of how to encrypt")
+![Screenshot of how to encrypt](/assets/images/quickstart/step_3.png "Screenshot of how to encrypt")
 
-## Retrieve your token
+## Create your token
 
 Now that you've created your first token and encrypted the data behind it, you can use the API to retrieve the token and the encrypted payload.
 
-![Screenshot of retrieving a token](/assets/images/quickstart/step_9.png "Screenshot of retrieving a token")
+![Screenshot of retrieving a token](/assets/images/quickstart/step_4.png "Screenshot of retrieving a token")
 
-## Decrypt your token
+## Retrieve your token's data
 
-Great! You've retrieved the token and the encrypted data along with it. Now you can decrypt it to see the original payload.
+Great! You've retrieved the token and the encrypted data along with it, based on the read permission's impact level you have. Since we selected the `token:general:read:high` scope, we are able to get the original payload back. 
 
-![Screenshot of decrypting a token](/assets/images/quickstart/step_10.png "Screenshot of decrypting a token")
+![Screenshot of decrypting a token](/assets/images/quickstart/step_5.png "Screenshot of decrypting a token")
 
 ## You did it! 
 {: .no_toc }

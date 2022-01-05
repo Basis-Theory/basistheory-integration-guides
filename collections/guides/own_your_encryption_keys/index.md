@@ -160,7 +160,7 @@ var encryptedData = await encryptionService.EncryptAsync(toEncrypt, providerEncr
 Now that we have encrypted the data, we want to configure the SDK to be able to store the encrypted data with Basis Theory.
 
 ```csharp
-// Create the TokenClient providing your API Key which has token:create and token:read permissions
+// Create the TokenClient providing your API Key which has token:general:create and token:general:read:high permissions
 var tokenClient = new TokenClient("<REPLACE WITH API KEY>");
 ```
 

@@ -30,7 +30,7 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Elements Application with the <code>card:create</code> permission
+    To start, you'll need a new Elements Application with the <code>token:pci:create</code> permission
   </span>
 </span>
 
@@ -87,7 +87,7 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
 ## Using your new Reactor 
 <span class="base-alert warning">
   <span>
-    To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>card:read</code>, <code>card:create</code>, and <code>reactor:read</code>.
+    To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:pci:read:low</code>, <code>token:pci:create</code> and <code>token:pci:use:reactor</code>.
   </span>
 </span>
 
