@@ -4,4 +4,4 @@ The [Basis Theory](https://basistheory.com/) Integration Guides. This site is ho
 
 ## Getting Started
 
-Run `docker-compose up -d` and navigate to http://localhost:4001/ in your browser
+Run `make start` and navigate to http://localhost:4001/ in your browser
