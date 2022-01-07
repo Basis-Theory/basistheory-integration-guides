@@ -31,8 +31,8 @@ This will allow us to inspect the manipulated request that was forwarded from th
 
 ### Application Setup
 
-Will will be creating and proxying tokens that contain PCI data in this example.
-We will first need to ensure we have a `Server to Server` application configured that has `token:pci:create` and `token:pci:use:proxy` permissions.
+We will be creating and proxying tokens that contain PCI data in this example.
+First, we need to ensure we have a `Server to Server` application configured that has `token:pci:create` and `token:pci:use:proxy` permissions.
 We will be using the API Key associated with this application in all HTTP requests below.
 
 <span class="base-alert info">
