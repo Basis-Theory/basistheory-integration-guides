@@ -24,7 +24,7 @@ Our Atomic Bank model enables quick and easy compliance with the latest NACHA en
 
 ```js
     curl "https://api.basistheory.com/atomic/banks" \
-      -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
+      -H "BT-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
       -H "Content-Type: application/json" \
       -X "POST" \
       -d '{
@@ -45,7 +45,7 @@ If you need to secure and store PCI credit card data, you are enabled to call ou
 
 ```js
  curl "https://api.basistheory.com/atomic/cards" \
-  -H "X-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
+  -H "BT-API-KEY: key_N88mVGsp3sCXkykyN2EFED" \
   -H "Content-Type: application/json" \
   -X "POST" \
   -d '{
