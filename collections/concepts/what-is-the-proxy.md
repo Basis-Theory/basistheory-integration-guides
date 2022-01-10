@@ -24,11 +24,11 @@ The end result is that you can call HTTP APIs with tokenized data without needin
 
 ## How It Works
 
-![Outbound Proxy Diagram](/assets/images/what_is_the_proxy/outbound-proxy.png)
-
 Your system initiates an outbound HTTP request to the Proxy hosted by Basis Theory.
 The request is transformed by detokenizing any standard token interpolation patterns included in the request (patterns of the form `{%raw%}{{tokenId}}{%endraw%}`, where `tokenId` is the id of a token created within your tenant). Any token interpolation patterns will be replaced with the decrypted `data` value of this token.
 Finally, the request is delivered to the destination URL that was specified through a `BT-PROXY-URL` HTTP header.
+
+![Outbound Proxy Diagram](/assets/images/what_is_the_proxy/outbound-proxy.png)
 
 The Proxy terminates the inbound TLS connection from your servers and initiates a new TLS connection to the destination in order to guarantee secure transmission of your sensitive token data.
 For this reason, we require the destination servers to support TLSv1.2+ and that the provided destination URL uses `https`.
