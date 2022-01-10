@@ -155,11 +155,11 @@ curl --location --request POST 'http://127.0.0.1:3000/create' \
 
 ## Retrieve and return the raw data
 
-After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. With that in mind, we will alter our `/get` endpoint to decrypt and retrieve the bank information and return it from our API:
+After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. With that in mind, we will alter our `/get` endpoint to retrieve using our `token:bank:read:high` permission whic grants us access to the raw bank data and return it from our API:
 
 ```js
 app.get('/get', async (req, res) => {
-    const atomicBank = await basisTheory.atomicBanks.retrieveDecrypted(account.id);
+    const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
     res.send(atomicBank.bank)
 })
 ```
