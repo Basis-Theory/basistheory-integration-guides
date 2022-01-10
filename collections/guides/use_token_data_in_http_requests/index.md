@@ -98,7 +98,7 @@ Instead, we will send a request to the Basis Theory Proxy which contains the non
 }
 ```
 
-The token interpolation pattern `{{tokenId}}` within the request will be identified by the Proxy, and the raw credit card number represented by this token will be substituted in its place.
+The token interpolation pattern `{%raw%}{{a70f8701-8b65-476b-ac0a-21bcd7d943d5}}{%endraw%}` within the request will be identified by the Proxy, and the raw credit card number represented by this token will be substituted in its place.
 
 
 ## Send the Proxy Request Containing Detokenized Values
