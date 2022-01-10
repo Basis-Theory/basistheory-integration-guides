@@ -25,7 +25,7 @@ If you would like to learn more about the Basis Theory Proxy first, or how this 
 
 ### Table of contents
 {: .no_toc .text-delta }
-1.
+1. 
 {:toc}
 
 ## Prerequisites
