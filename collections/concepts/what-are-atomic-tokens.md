@@ -55,19 +55,6 @@ If you need to secure and store PCI credit card data, you are enabled to call ou
             "expiration_year": 2025,
             "cvc": "123"
         },
-        "billing_details": {
-            "name": "John Doe",
-            "email": "johndoe@test.com",
-            "phone": "555-123-4567",
-            "address": {
-                "line1": "111 Test St.",
-                "line2": "Apt 304",
-                "city": "San Francisco",
-                "state": "CA",
-                "postal_code": "94141",
-                "country": "US"
-            }
-        },
         "metadata": {
             "nonSensitiveField": "Non-Sensitive Value"
         }

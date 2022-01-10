@@ -7,20 +7,21 @@ nav_order: 5
 has_children: true
 has_toc: false
 image:
-path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
-width: 1200
-height: 630
+    path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
+    width: 1200
+    height: 630
 ---
 
 # Use Token Data in HTTP Requests
 {: .no_toc }
 
-In this guide, we will walk through how to send an outbound HTTP request through the Basis Theory Proxy to an external API containing sensitive detokenized data. 
-If you would like to learn more about the Basis Theory Proxy, or how this service could help you meet your security and compliance needs, check out [Oubound Proxy](/concepts/outbound-proxy) first before continuing.
+In this guide, we will walk through how to use the Proxy to send an outbound HTTP request containing sensitive detokenized data.
 
 We will be leveraging the third party service https://httpbin.org/ as our external destination API. 
 HTTPBin is a free service that will accept any input request and respond with information about the request it received. 
-This will allow us to inspect the manipulated request that was forwarded from the Basis Theory Proxy to the destination API.
+This will allow us to inspect the manipulated request that was forwarded from the Proxy to the destination API.
+
+If you would like to learn more about the Basis Theory Proxy first, or how this product can help you meet your security and compliance needs, check out [Oubound Proxy](/concepts/outbound-proxy) before continuing.
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -48,7 +49,7 @@ Next, we will create a `card_number` token containing a credit card number we wi
 
 ```js
     curl "https://api.basistheory.com/tokens" \
-      -H "X-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
+      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
       -H "Content-Type: application/json" \
       -X "POST" \
       -d '{
@@ -103,12 +104,12 @@ The token interpolation pattern `{{tokenId}}` within the request will be identif
 ## Send the Proxy Request Containing Detokenized Values
 
 In order to send this request payload into the Basis Theory Proxy a few additional pieces of information are required as HTTP headers:
-- X-API-KEY: the API key of the Basis Theory application we created earlier
+- BT-API-KEY: the API key of the Basis Theory application we created earlier
 - BT-PROXY-URL: the destination url to which the request should be forwarded (`https://httpbin.org/anything`)
 
 ```js
 curl "https://api.basistheory.com/proxy" \
-      -H "X-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
+      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
       -H "BT-PROXY-URL: https://httpbin.org/anything" \
       -H "Content-Type: application/json" \
       -X "POST" \
@@ -148,4 +149,4 @@ HTTPBin returns the following response describing the request that it received, 
 As we can see from this response, the request received by the destination service included the original raw credit card number that had been tokenized with Basis Theory.
 The other non-sensitive data fields that were provided in plaintext were forwarded in the request without modification.
 
-This was just a basic example of what you can accomplish using the Proxy. If you're interested in some of the more advanced proxying features, head over to [our docs](https://docs.basistheory.com/api-reference/#proxy-beta) to learn more!
+This was just a basic example of what you can accomplish using the Proxy. If you're interested in some of the more advanced proxying features, head over to [our docs](https://docs.basistheory.com/api-reference/#proxy) to learn more!
