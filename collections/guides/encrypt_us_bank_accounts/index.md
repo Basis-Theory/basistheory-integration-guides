@@ -26,7 +26,8 @@ Your customer's bank information is as sensitive as their credit card data, and 
 
 In this guide, we will show you how to take an existing API and use Basis Theory to safely store the bank data while and retain the exact application functionality. 
 
-If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/store-atomic-banks">Find it here!</a>
+If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-atomic-banks">Find it here!</a>
+
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -35,14 +36,16 @@ If you'd like to follow along with this guide jump right into the code - <a href
 
 ## The existing application
 
-Below is an existing nodejs application that is currently storing bank data in memory, this will be used as our foundation as we update to more securely store the bank data. 
+Below is an existing Node.js application that is currently storing bank data in memory, this will be used as our foundation as we update to more securely store the bank data. 
+
 
 _(Note: this is only to simplify the guide, the same process will work when storing in a database)_.
 
 ### package.json
 Our simple `package.json`, only has two dependencies to start. [express](https://www.npmjs.com/package/express) allows us to quickly create an HTTP API, and [nodemon](https://www.npmjs.com/package/nodemon) allows us to have our nodejs application restart automatically.
 
-```js
+```json
+
 {
   "name": "bank-data",
   "description": "",
@@ -108,7 +111,7 @@ First, you'll need to install the [basis-theory-js](https://www.npmjs.com/packag
 
 ## Initialize basis-theory-js 
 
-Next, we will need to initialize `BasisTheory` and store it to be used when banks are being stored:
+Next, we will need to initialize an instance of `BasisTheory` and store a reference to be used later:
 
 ```js
 let basisTheory; // top of your file
@@ -179,7 +182,8 @@ Success! You are now securely storing your data with Basis Theory *(who will man
 
 Your system may now be safely storing bank information, but how do you make your systems even safer?
 
-Basis Theory by default returns `mask` bank information back to your system, so you're able to store and use this non-sensitive data. These masks allow your systems to ONLY use the raw decrypted bank account data when you absolutely need it!
+Basis Theory by default returns a `tokenId` and masked bank information back to your system when creating an atomic bank, so you're able to store and use this non-sensitive data while letting Basis Theory hold the raw sensitive data. Storing `tokenId`s or presenting masks to end users allows your systems to ONLY have direct access to non-sensitive data! The raw decrypted bank account data can be retrieved from Basis Theory only when you absolutely need it and only by applications that are explicitly granted access to this raw data.
+
 
 Below is a new endpoint, showing how you can return the masked data stored in your system:
 ```js
@@ -210,7 +214,8 @@ You're now able to quickly update your existing systems to encrypt and safely st
 ## See it in action
 {: .no_toc }
 
-Want to see the final result? <a href="https://github.com/Basis-Theory/basis-theory-js-examples/store-atomic-banks">Find it here!</a>
+Want to see the final result? <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-atomic-banks">Find it here!</a>
+
 
 ## Watch the video guide
 
