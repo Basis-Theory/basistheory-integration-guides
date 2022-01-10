@@ -24,7 +24,7 @@ image:
 
 Your customer's bank information is as sensitive as their credit card data, and needs to be stored with the same care. Encrypting this data takes a strong encryption pattern, including a KMS, key rotation, multiple encryption keys, access controls, and so much more. 
 
-In this guide, we will show you how to take an existing API and use Basis Theory to safely store the bank data while and retain the exact application functionality. 
+In this guide, we will show you how to take an existing API and use Basis Theory to safely store the bank data while retaining the exact application functionality. 
 
 If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-atomic-banks">Find it here!</a>
 
