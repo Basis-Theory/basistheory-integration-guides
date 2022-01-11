@@ -21,7 +21,7 @@ We will be leveraging the third party service https://httpbin.org/ as our extern
 HTTPBin is a free service that will accept any input request and respond with information about the request it received. 
 This will allow us to inspect the manipulated request that was forwarded from the Proxy to the destination API.
 
-If you would like to learn more about the Basis Theory Proxy first, or how this product can help you meet your security and compliance needs, check out [Oubound Proxy](/concepts/outbound-proxy) before continuing.
+If you would like to learn more about the Basis Theory Proxy first, or how this product can help you meet your security and compliance needs, check out [What is the Proxy?](/concepts/what-is-the-proxy) before continuing.
 
 ### Table of contents
 {: .no_toc .text-delta }
