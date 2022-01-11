@@ -25,7 +25,7 @@ The end result is that you can call HTTP APIs with tokenized data without needin
 ## How It Works
 
 Your system initiates an outbound HTTP request to the Proxy hosted by Basis Theory.
-The request is transformed by detokenizing any standard token interpolation patterns included in the request (patterns of the form `{%raw%}{{tokenId}}{%endraw%}`, where `tokenId` is the id of a token created within your tenant). Any token interpolation patterns will be replaced with the decrypted `data` value of this token.
+The request is transformed by detokenizing any standard token interpolation patterns included in the request (patterns of the form `{%raw%}{{tokenId}}{%endraw%}`, where `tokenId` is the id of a token created within your tenant). Any token interpolation patterns will be replaced with the detokenized `data` value of this token.
 Finally, the request is delivered to the destination URL that was specified through a `BT-PROXY-URL` HTTP header.
 
 ![Outbound Proxy Diagram](/assets/images/what_is_the_proxy/outbound-proxy.png)
@@ -36,13 +36,20 @@ For this reason, we require the destination servers to support TLSv1.2+ and that
 The application that is being used to call the Proxy must be explicitly granted `token:<classification>:use:proxy` permission on any tokens that are detokenized. 
 You should restrict which classifications of tokens an application has access to detokenize through the Proxy by only granting the minimum set of `token:<classification>:use:proxy` permissions that are necessary for your use case.
 
-To send an HTTP request through the Proxy:
-- Include a `BT-PROXY-URL` header containing the original destination URL
-- Include a `BT-API-KEY` header containing an API key for a Basis Theory application that has `token:<classification>:use:proxy` permission
-- Update your HTTP request to include one or more token interpolation pattern(s) (`{%raw%}{{tokenId}}{%endraw%}`) where you would have included the original data value(s)
-- Send the request to https://api.basistheory.com/proxy
+Whatever the content type or HTTP method, any HTTP request can be sent through the proxy simply by adding the headers `BT-API-KEY` and `BT-PROXY-URL`. For example:
+```js
+curl "https://api.basistheory.com/proxy" \
+      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
+      -H "BT-PROXY-URL: https://my-destination-api.com" \
+      -H "Content-Type: application/json" \
+      -X "POST" \
+      -d '{
+            "sensitive": "{%raw%}{{e51b0ff4-aa80-407a-b628-3909c26ff397}}{%endraw%}",
+            "nonSensitive": "plaintext data can go here"
+        }'
+```
 
-For further details, check out [our docs](https://docs.basistheory.com/api-reference/#proxy).
+For further details about how to use the Proxy, check out [our docs](https://docs.basistheory.com/api-reference/#proxy).
 
 ## Common Use Cases
 
@@ -53,10 +60,9 @@ This makes it easy to share sensitive data with a third party without needing to
 
 ### Upgrade an Existing System
 
-If you have an existing system that stores sensitive data that you wish to secure, this data can be migrated out of your systems and tokenized with Basis Theory.
-You can replace the existing data stored within your system with the corresponding tokens. However, your existing system may have been integrated with one or more external systems over an HTTP API.
-You can leverage the Proxy in order to minimize the impact of this change on your existing codebase.
-
+In existing systems with data sensitive data you wish to secure, this data can be migrated and tokenized with Basis Theory. 
+Once safely tokenized, your systems still need to utilize this data with your existing HTTP calls without pulling the raw values back into your system.
+For this, you can leverage the Proxy in order to minimize the impact of this change on your existing codebase.
 
 ## How to Choose Between the Proxy and Serverless Reactors
 
