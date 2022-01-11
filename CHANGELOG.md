@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.1.0...v1.2.0) (2022-01-10)
+
+
+### Features
+
+* convert to use BT-API-KEY auth header ([#63](https://github.com/Basis-Theory/basistheory-integration-guides/issues/63)) ([a7f21a8](https://github.com/Basis-Theory/basistheory-integration-guides/commit/a7f21a81088222bc63d80c6617e03a61d691222c))
+
 # [1.1.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.0.1...v1.1.0) (2021-12-28)
 
 

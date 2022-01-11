@@ -62,7 +62,7 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 
 ```js
 curl "https://api.basistheory.com/atomic/cards/<atomic_card_id>/react" \
-  -H "X-API-KEY: <application_api_key>" \
+  -H "BT-API-KEY: <application_api_key>" \
   -X "POST" \
   -d '{
     "reactor_id": "<reactor_id>"
