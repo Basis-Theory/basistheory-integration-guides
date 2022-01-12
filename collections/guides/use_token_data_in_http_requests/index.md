@@ -84,7 +84,7 @@ This API will be available at `https://httpbin.org/anything` and it expects an H
 }
 ```
 
-Our hypothetical source system will be storing plaintext first and last names and expiration dates of card numbers, as these fields are considered non-sensitive.
+Our hypothetical source system will be storing plaintext first names, last names, and expiration dates of card numbers, as these fields are considered non-sensitive.
 However, in order to minimize the compliance and security risk of our application, we do not want our application to store or even interact with raw credit card numbers when building this HTTP request.
 
 Instead, we will send a request to the Basis Theory Proxy which contains the non-sensitive data fields and the `id` of the `card_number` token we wish to include in the request.

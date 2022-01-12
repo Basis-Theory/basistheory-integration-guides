@@ -34,7 +34,7 @@ The Proxy terminates the inbound TLS connection from your servers and initiates 
 For this reason, we require the destination servers to support TLSv1.2+ and that the provided destination URL uses `https`.
 
 The application that is being used to call the Proxy must be explicitly granted `token:<classification>:use:proxy` permission on any tokens that are detokenized. 
-You should restrict which classifications of tokens an application has access to detokenize through the Proxy by only granting the minimum set of `token:<classification>:use:proxy` permissions that are necessary for your use case.
+You should restrict which [classifications](https://docs.basistheory.com/api-reference/#tokens-token-classifications) of tokens an application has access to detokenize through the Proxy by only granting the minimum set of `token:<classification>:use:proxy` permissions that are necessary for your use case.
 
 Whatever the content type or HTTP method, any HTTP request can be sent through the proxy simply by adding the headers `BT-API-KEY` and `BT-PROXY-URL`. For example:
 ```js
@@ -60,7 +60,7 @@ This makes it easy to share sensitive data with a third party without needing to
 
 ### Upgrade an Existing System
 
-In existing systems with data sensitive data you wish to secure, this data can be migrated and tokenized with Basis Theory. 
+In existing systems with sensitive data you wish to secure, this data can be migrated and tokenized with Basis Theory. 
 Once safely tokenized, your systems still need to utilize this data with your existing HTTP calls without pulling the raw values back into your system.
 For this, you can leverage the Proxy in order to minimize the impact of this change on your existing codebase.
 
