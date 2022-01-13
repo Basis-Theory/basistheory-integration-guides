@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.2.0...v1.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* update cards example link ([#65](https://github.com/Basis-Theory/basistheory-integration-guides/issues/65)) ([b0b9511](https://github.com/Basis-Theory/basistheory-integration-guides/commit/b0b9511b4c0c7c810980a56f9d2746622784adbf))
+
 # [1.2.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.1.0...v1.2.0) (2022-01-10)
 
 

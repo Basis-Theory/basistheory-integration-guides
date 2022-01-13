@@ -18,6 +18,12 @@ $info-bg: #1AD1DB !default;
 $danger-bg: #FB5B8B !default;
 $border-subtitles: rgba(65, 73, 112, 0.2);
 
+@media (min-width: 66.5rem) {
+    .main .iframe-container {
+        margin: 0 !important;
+    }
+}
+
 @font-face {
     font-family: 'slate';
     src:font-url('slate.eot?-syv14m');
@@ -138,14 +144,9 @@ body {
 
         ul {
             list-style: none; 
-            counter-reset: li;
             li {
-                counter-increment: li;
-                font-weight: 600;
-                font-size: 14px;
+                color: $grey-800;
                 line-height: 143%;
-                text-decoration-line: underline;
-                color: $primary-dark;
 
                 a {
                     color: $primary-dark;
@@ -155,11 +156,11 @@ body {
 
             > li::before {
                 position: absolute;
-                margin-left: -1.4em;
-                color: $grey-900;
-                content: counter(li);
+                margin-left: -1em;
+                color: $grey-800;
+                content: "\2022";
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 130%;
             }
         }
@@ -267,7 +268,7 @@ body {
                 }
             }
         }
-        .language-js.highlighter-rouge, .language-html.highlighter-rouge, .language-csharp.highlighter-rouge {
+        .language-bash.highlighter-rouge, .language-json.highlighter-rouge, .language-js.highlighter-rouge, .language-html.highlighter-rouge, .language-csharp.highlighter-rouge {
             background-color: #1B1D32;
             code {
                 background-color: transparent;
@@ -287,6 +288,9 @@ body {
             }
             .gp {
                 color: #555;
+            }
+            .nl {
+                color: #fff;
             }
             .gu {
                 color: #AAA;

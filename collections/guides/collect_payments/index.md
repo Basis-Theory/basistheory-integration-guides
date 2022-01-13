@@ -136,5 +136,5 @@ Anything is possible when you store your card data with us. To expand your possi
 See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/example-charging-card-o2qss)
 
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples?fontsize=14&hidenavigation=1&theme=dark&initialpath=/card&module=/card/public/index.html,/card/public/index.js,/card/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
