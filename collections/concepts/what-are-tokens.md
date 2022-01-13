@@ -14,7 +14,9 @@ image:
 
 # What are tokens?
 
-Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their businesses. Our tokens enable you to either own the encryption keys yourself or pass raw data to our platform, and we will handle keeping it safe for you.
+Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data
+while granting the flexibility they need to grow and operate their businesses. Our tokens enable you to either own the
+encryption keys yourself or pass raw data to our platform, and we will handle keeping it safe for you.
 
 ## How is the data stored?
 
@@ -22,11 +24,58 @@ We enable our customers to send us data in two ways, unencrypted and pre-encrypt
 
 ### You encrypt the data
 
-With privacy in mind, we've built our platform to enable you to encrypt all of your sensitive data yourself using one of our SDKs, Proxy, or your own internal encryption services. This allows your business to quickly and easily store your encrypted data in a separate air-gapped system, greatly reducing the liability of your encryption keys and data living in the same systems.
+With privacy in mind, we've built our platform to enable you to encrypt all of your sensitive data yourself using one of
+our SDKs, Proxy, or your own internal encryption services. This allows your business to quickly and easily store your
+encrypted data in a separate air-gapped system, greatly reducing the liability of your encryption keys and data living
+in the same systems.
 
 ### Basis Theory encrypts the data
 
-When you tokenize unencrypted data with Basis Theory, we will carefully encrypt the data with industry standard encryption algorithms. We ensure the data has been encrypted with a one-time use encryption key, which is then encrypted again and stored within our platform. This foundational encryption ensures your data is uniquely encrypted each time a new token is created. We will never mix our customers' encryption keys. Your keys are only used for your data, period.
+When you tokenize unencrypted data with Basis Theory, we will carefully encrypt the data with industry standard
+encryption algorithms. We ensure the data has been encrypted with a one-time use encryption key, which is then encrypted
+again and stored within our platform. This foundational encryption ensures your data is uniquely encrypted each time a
+new token is created. We will never mix our customers' encryption keys. Your keys are only used for your data, period.
+
+## What types of data can I tokenize?
+
+You can tokenize any type of data with Basis Theory - from one of our pre-defined 
+[token types](https://docs.basistheory.com/api-reference/#token-types) to arbitrary 
+unstructured data, Basis Theory can help you tokenize and secure all your data. Basis Theory leverages token types to 
+indicate the type of data contained within a token, and several properties of the token are driven off the token type, 
+such as:
+ - how the data is validated
+ - the mask pattern
+ - whether the token is fingerprinted
+ - default privacy settings
+
+In order to enable fine-grained data governance and access controls, every token is assigned
+a [Classification](https://docs.basistheory.com/api-reference/#tokens-token-classifications) indicating the type of data
+that it contains and an [Impact Level](https://docs.basistheory.com/api-reference/#tokens-token-impact-levels)
+indicating the sensitivity level of the data.
+
+The Basis Theory [token permissions](https://docs.basistheory.com/api-reference/#permissions-permission-types) model is
+driven by these Classifications and Impact Levels. We enable and encourage you to restrict your applications to the
+minimal subset of Classifications and lowest Impact Levels necessary for the given use case.
+
+The following table provides an overview of each of the supported token types. As a best practice, you should use the
+most specific token type and data classification possible for a given piece of data.
+
+| Token Type               | Classification | Min. Impact Level | When to use it?                                           |
+|--------------------------|----------------|-------------------|-----------------------------------------------------------|
+| `card_number`            | `pci`          | `high`            | Storing credit card numbers in a PCI-compliant manner     |
+| `us_bank_routing_number` | `bank`         | `low`             | Storing ABA routing numbers                               |
+| `us_bank_account_number` | `bank`         | `high`            | Storing ABA account numbers                               |
+| `social_security_number` | `pii`          | `high`            | Storing US Social Security numbers                        | 
+| `token`                  | `general`      | `low`             | Storing any other type of structured or unstructured data | 
+
+See [our docs](https://docs.basistheory.com/api-reference/#token-types) for more information about each of these token types.
+
+<span class="base-alert info">
+  <span>
+    Looking for a token type that is not listed here? 
+    Please reach out to us on our [Discord channel](https://discord.gg/NSvXxaW5Fv) or via email at [support@basistheory.com](mailto:support@basistheory.com)
+  </span>
+</span>
 
 ## Try it out
 
