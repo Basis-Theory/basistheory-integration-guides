@@ -8,11 +8,11 @@ has_children: true
 has_toc: false
 image:
     path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
-    width: 1200 
+    width: 1200
     height: 630
 ---
 
-# What are Tokens?
+# What are tokens?
 
 Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data
 while granting the flexibility they need to grow and operate their businesses. Our tokens enable you to either own the
