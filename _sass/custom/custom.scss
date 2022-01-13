@@ -144,14 +144,9 @@ body {
 
         ul {
             list-style: none; 
-            counter-reset: li;
             li {
-                counter-increment: li;
-                font-weight: 600;
-                font-size: 14px;
+                color: $grey-800;
                 line-height: 143%;
-                text-decoration-line: underline;
-                color: $primary-dark;
 
                 a {
                     color: $primary-dark;
@@ -161,11 +156,11 @@ body {
 
             > li::before {
                 position: absolute;
-                margin-left: -1.4em;
-                color: $grey-900;
-                content: counter(li);
+                margin-left: -1em;
+                color: $grey-800;
+                content: "\2022";
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 130%;
             }
         }
