@@ -1,11 +1,11 @@
 ---
-layout: post 
+layout: post
 title:  "What are tokens?"
-categories: concepts 
-permalink: /concepts/what-are-tokens/ 
-nav_order: 2 
-has_children: true 
-has_toc: false 
+categories: concepts
+permalink: /concepts/what-are-tokens/
+nav_order: 2
+has_children: true
+has_toc: false
 image:
     path: https://cdn.basistheory.com/images/seo/guides-opengraph.png
     width: 1200 
@@ -38,12 +38,15 @@ new token is created. We will never mix our customers' encryption keys. Your key
 
 ## What types of data can I tokenize?
 
-You can tokenize any type of data with Basis Theory - from one of our pre-defined data types to arbitrary unstructured
-data, Basis Theory can help you tokenize and secure all your data. Basis Theory leverages token types to indicate the
-type of data contained within a token, and several properties of the token are driven off the token type, such as:
+You can tokenize any type of data with Basis Theory - from one of our pre-defined 
+[token types](https://docs.basistheory.com/api-reference/#token-types) to arbitrary 
+unstructured data, Basis Theory can help you tokenize and secure all your data. Basis Theory leverages token types to 
+indicate the type of data contained within a token, and several properties of the token are driven off the token type, 
+such as:
  - how the data is validated
  - the mask pattern
- - whether the token is fingerprinted 
+ - whether the token is fingerprinted
+ - default privacy settings
 
 In order to enable fine-grained data governance and access controls, every token is assigned
 a [Classification](https://docs.basistheory.com/api-reference/#tokens-token-classifications) indicating the type of data
