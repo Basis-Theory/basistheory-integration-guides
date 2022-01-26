@@ -63,5 +63,9 @@ If you need to secure and store PCI credit card data, you are enabled to call ou
 
 Learn more about Atomic Cards in our [developer documentation](https://docs.basistheory.com/api-reference/#atomic-cards).
 
+<hr>
 
-Want to learn more about how you can use our Atomic types to enable your business to take advantage of your most sensitive data? [Check out how to collect Credit Cards with our Elements](/guides/collect-atomic-cards-with-elements/).
+Want to learn more about how you can use our Atomic types to enable your business to take advantage of your most sensitive data? Check out these guides:
+- [Collect and Charge Credit Cards with Javascript](/guides/collect-atomic-cards-with-elements/)
+- [Collect Credit Cards with React](/guides/collect-atomic-cards-with-elements-react/)
+- [Use U.S. Bank Accounts without touching them](/guides/use-us-bank-accounts-without-touching-them/)

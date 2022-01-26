@@ -13,7 +13,6 @@ image:
     height: 630
 ---
 # Collect Credit Cards with React
-{: .no_toc }
 
 Retain control of your card data while enabling your business to use any current or new processing relationships as you extend your business's product lines, look to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it. Even if that means exporting the data out of Basis Theory.
 
@@ -21,12 +20,7 @@ Basis Theory is here to make sure you can keep the lowest level of PCI complianc
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react">Find it here!</a>
 
-### Table of contents
-{: .no_toc .text-delta }
-1.
-{:toc}
-
-## Add Elements to your website
+## Add Elements to your application
 
 <span class="base-alert warning">
   <span>
@@ -96,7 +90,6 @@ export const CheckoutForm = () => {
 ```
 
 ## See it in action
-{: .no_toc }
 
 In this example we also:
 - Disable the "Submit" `<button>` while the `CardElement` information is not `complete`, by listening to the `onChange` event;
