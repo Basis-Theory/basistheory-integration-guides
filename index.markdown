@@ -60,7 +60,7 @@ image:
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Collect Atomic Cards</h4>
+                            <h4>Collect and Charge Credit Cards</h4>
                             <p>Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it.</p>
                         </div>
                     </div>

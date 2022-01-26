@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Collect Atomic Cards with Elements
+title: Collect and Charge Credit Cards with JavaScript
 permalink: /guides/collect-atomic-cards-with-elements/
 categories: guides
 nav_order: 3
@@ -12,14 +12,14 @@ image:
     width: 1200
     height: 630
 ---
-# Collect payments with Elements
+# Collect and Charge Credit Cards with JavaScript
 {: .no_toc }
 
 Retain control of your card data while enabling your business to use any current or new processing relationships as you extend your business's product lines, look to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it. Even if that means exporting the data out of Basis Theory.
 
 Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
 
-If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/example-charging-card-o2qss?file=/public/index.html">Find it here!</a>
+If you'd like to follow along with this guide from scratch, we suggest creating Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -133,8 +133,9 @@ Anything is possible when you store your card data with us. To expand your possi
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/example-charging-card-o2qss)
-
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements)
+`
 <div class="iframe-container">
   <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
+`

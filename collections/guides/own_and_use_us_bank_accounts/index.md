@@ -3,7 +3,7 @@ layout: default
 title: Use U.S. Bank Accounts without touching them
 permalink: /guides/use-us-bank-accounts-without-touching-them/
 categories: guides
-nav_order: 3
+nav_order: 5
 has_children: true
 has_toc: false
 description: Basis Theory

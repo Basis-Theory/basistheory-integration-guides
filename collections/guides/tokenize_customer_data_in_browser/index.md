@@ -3,7 +3,7 @@ layout: default
 title: Tokenize customer data in browser
 permalink: guides/tokenize-customer-data-in-browser/
 categories: guides
-nav_order: 4
+nav_order: 6
 has_children: true
 has_toc: false
 image:
