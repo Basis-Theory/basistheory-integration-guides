@@ -32,7 +32,7 @@ Using React? Check out the [React Guide](/guides/collect-atomic-cards-with-eleme
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Elements Application with the <code>token:pci:create</code> permission
+    To start, you'll need a new <code>Elements</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission.
   </span>
 </span>
 

@@ -25,7 +25,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:pii:create</code> permission for this step.
+    To start, you'll need a <code>Elements</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission.
   </span>
 </span>
 
