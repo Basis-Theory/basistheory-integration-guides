@@ -20,7 +20,7 @@ Basis Theory is here to make sure you can keep the lowest level of PCI complianc
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react">Find it here!</a>
 
-## Add Elements to your application
+## Let's code
 
 <span class="base-alert warning">
   <span>
@@ -34,7 +34,7 @@ Install our dedicated React package:
 npm install --save @basis-theory/basis-theory-react
 ```
 
-Initialize the Basis Theory SDK passing the API Key to the `useBasisTheory` hook:
+Initialize the Basis Theory SDK passing the API Key to the `useBasisTheory` hook and wrap your `App` contents with a `BasisTheoryProvider`:
 
 ```jsx
 import {
@@ -56,7 +56,9 @@ function App() {
 export default App;
 ```
 
-Declare a `CardElement` in your form component and pass it in the tokenization method `atomicCards.create`:
+Create a `CheckoutForm` component and add it somewhere in your `App` content.
+
+Declare a `CardElement` inside it and call the tokenization method `atomicCards.create` passing the underlying card element instance:
 
 ```jsx
 import { CardElement, useBasisTheory } from '@basis-theory/basis-theory-react';
@@ -68,8 +70,7 @@ export const CheckoutForm = () => {
       try {
         const token = await bt.atomicCards.create({
           card: bt?.getElement('myCard'),
-        });    
-        // 
+        });
       } catch (error) {
         console.error(error);
       }
@@ -88,6 +89,13 @@ export const CheckoutForm = () => {
   );
 };
 ```
+
+## Next steps
+
+The created token in `submit` function can be used in a variety of ways:
+- You can fetch the card data later in your server, using a Server-to-Server [Application](https://docs.basistheory.com/api-reference/#applications) Key to call [Get an Atomic Card API](https://docs.basistheory.com/api-reference/#atomic-cards-get-an-atomic-card);
+- Call one of our Reactors to process that card data. [Here is how to do that with Node.js](/guides/collect-atomic-cards-with-elements/#setup-and-use-a-token-reactor);
+- Make a third party API request with the raw data through our [Proxy](https://docs.basistheory.com/api-reference/#proxy). Feel free to [contact us](mailto:support@basistheory.com?subject=CardElement%20and%20Proxy%20usage) for more information on how to do it.
 
 ## See it in action
 

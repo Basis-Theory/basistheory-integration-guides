@@ -21,6 +21,8 @@ Basis Theory is here to make sure you can keep the lowest level of PCI complianc
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements">Find it here!</a>
 
+Using React? Check out the [React Guide](/guides/collect-atomic-cards-with-elements-react/).
+
 ### Table of contents
 {: .no_toc .text-delta }
 1. 
