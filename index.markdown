@@ -74,11 +74,11 @@ image:
                         </div>
                     </div>
                 </a>
-                <a href="/guides/tokenize-customer-data-in-browser/">
+                <a href="/guides/collect-pii-js/">
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Tokenize customer data</h4>
+                            <h4>Collect Customer (PII) Data</h4>
                             <p>Basis Theory is intended to handle any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.</p>
                         </div>
                     </div>

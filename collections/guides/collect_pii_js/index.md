@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Tokenize customer data in browser
-permalink: guides/tokenize-customer-data-in-browser/
+title: Collect Customer Data (PII) with JavaScript
+permalink: guides/collect-pii-js/
 categories: guides
 nav_order: 6
 has_children: true
@@ -11,7 +11,7 @@ image:
     width: 1200
     height: 630
 ---
-# Tokenize customer data in browser
+# Collect Customer Data (PII) with JavaScript
 {: .no_toc }
 
 Basis Theory is built to handle any payload of data you can serialize. The following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
