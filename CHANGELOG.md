@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.3.0...v1.3.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* adds employer_id_number token type ([#68](https://github.com/Basis-Theory/basistheory-integration-guides/issues/68)) ([b87f12c](https://github.com/Basis-Theory/basistheory-integration-guides/commit/b87f12c9a5fc3df28eb3bf8a332b009d967de404))
+
 # [1.3.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.2.1...v1.3.0) (2022-01-28)
 
 
