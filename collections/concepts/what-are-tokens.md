@@ -60,13 +60,14 @@ minimal subset of Classifications and lowest Impact Levels necessary for the giv
 The following table provides an overview of each of the supported token types. As a best practice, you should use the
 most specific token type and data classification possible for a given piece of data.
 
-| Token Type               | Classification | Min. Impact Level | When to use it?                                           |
-|--------------------------|----------------|-------------------|-----------------------------------------------------------|
-| `card_number`            | `pci`          | `high`            | Storing credit card numbers in a PCI-compliant manner     |
-| `us_bank_routing_number` | `bank`         | `low`             | Storing ABA routing numbers                               |
-| `us_bank_account_number` | `bank`         | `high`            | Storing ABA account numbers                               |
-| `social_security_number` | `pii`          | `high`            | Storing US Social Security numbers                        | 
-| `token`                  | `general`      | `low`             | Storing any other type of structured or unstructured data | 
+| Token Type               | Classification | When to use it?                                           |
+|--------------------------|----------------|-----------------------------------------------------------|
+| `card_number`            | `pci`          | Storing credit card numbers in a PCI-compliant manner     |
+| `us_bank_routing_number` | `bank`         | Storing ABA routing numbers                               |
+| `us_bank_account_number` | `bank`         | Storing ABA account numbers                               |
+| `social_security_number` | `pii`          | Storing US Social Security numbers                        | 
+| `employer_id_number`     | `pii`          | Storing US employer Id numbers (EIN)                      | 
+| `token`                  | `general`      | Storing any other type of structured or unstructured data | 
 
 See [our docs](https://docs.basistheory.com/api-reference/#token-types) for more information about each of these token types.
 
