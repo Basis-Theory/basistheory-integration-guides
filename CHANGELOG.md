@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.2.1...v1.3.0) (2022-01-28)
+
+
+### Features
+
+* add React Guides ([#66](https://github.com/Basis-Theory/basistheory-integration-guides/issues/66)) ([f8df4fb](https://github.com/Basis-Theory/basistheory-integration-guides/commit/f8df4fb74b8b10947f14af147985376c2dddf597))
+
 ## [1.2.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.2.0...v1.2.1) (2022-01-12)
 
 
