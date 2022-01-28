@@ -60,7 +60,7 @@ image:
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Collect Atomic Cards</h4>
+                            <h4>Collect and Charge Credit Cards</h4>
                             <p>Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it.</p>
                         </div>
                     </div>
@@ -74,11 +74,11 @@ image:
                         </div>
                     </div>
                 </a>
-                <a href="/guides/tokenize-customer-data-in-browser/">
+                <a href="/guides/collect-pii-js/">
                     <div class="card">
                         <img src="./assets/images/card4.svg">
                         <div class="container">
-                            <h4>Tokenize customer data</h4>
+                            <h4>Collect Customer (PII) Data</h4>
                             <p>Basis Theory is intended to handle any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.</p>
                         </div>
                     </div>

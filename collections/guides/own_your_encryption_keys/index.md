@@ -3,7 +3,7 @@ layout: default
 title: Own Your Encryption Keys
 permalink: /guides/own-your-encryption-keys/
 categories: guides
-nav_order: 3
+nav_order: 10
 has_children: true
 has_toc: false
 image:

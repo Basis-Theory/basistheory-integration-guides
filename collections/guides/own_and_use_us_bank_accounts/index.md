@@ -3,7 +3,7 @@ layout: default
 title: Use U.S. Bank Accounts without touching them
 permalink: /guides/use-us-bank-accounts-without-touching-them/
 categories: guides
-nav_order: 3
+nav_order: 5
 has_children: true
 has_toc: false
 description: Basis Theory
@@ -55,14 +55,12 @@ Second, you'll need to add the following javascript code to your application to 
   });
 
   let routingNumber = BasisTheory.createElement('text', {
-
     ...options,
     targetId: 'routingNumber',
     placeholder: 'Routing Number',
     'aria-label': 'Routing Number',
   });
   let accountNumber = BasisTheory.createElement('text', {
-
     ...options,
     targetId: 'accountNumber',
     placeholder: 'Account Number',
@@ -83,7 +81,6 @@ To create an [Atomic Bank](https://docs.basistheory.com/api-reference/#atomic-ba
 
 ```js
 const token = await BasisTheory.atomicBanks.create({
-
       bank: {
         routingNumber,
         accountNumber,

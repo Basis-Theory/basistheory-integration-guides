@@ -4,7 +4,7 @@ title: Encrypt U.S. Banks in your applications
 
 permalink: /guides/encrypt-us-banks-in-your-applications/
 categories: guides
-nav_order: 3
+nav_order: 9
 has_children: true
 has_toc: false
 description: Basis Theory

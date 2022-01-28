@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap');
 @import 'navigation';
 
 //Color
@@ -268,9 +269,16 @@ body {
                 }
             }
         }
-        .language-bash.highlighter-rouge, .language-json.highlighter-rouge, .language-js.highlighter-rouge, .language-html.highlighter-rouge, .language-csharp.highlighter-rouge {
+        .language-bash.highlighter-rouge,
+        .language-json.highlighter-rouge,
+        .language-js.highlighter-rouge,
+        .language-html.highlighter-rouge,
+        .language-csharp.highlighter-rouge,
+        .language-jsx.highlighter-rouge
+        {
             background-color: #1B1D32;
             code {
+                font-family: "Source Code Pro", "Source Sans Pro", sans-serif;
                 background-color: transparent;
                 color: #fff !important;
             }
@@ -403,7 +411,7 @@ body {
             white-space: nowrap;
             text-overflow: ellipsis;
             text-decoration: none;
-            overflow-x: hidden;     
+            overflow-x: hidden;
             padding-right: 2rem;
             padding-left: 2rem;
             padding-top: 1rem;
@@ -457,10 +465,10 @@ body {
         }
         .nav-list-item {
             .nav-list-link {
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
                 text-decoration: none;
-                overflow-x: hidden;
+                // overflow-x: hidden;
                 color: $blue-shadow;
                 font-size: 14px;
                 line-height: 143%;

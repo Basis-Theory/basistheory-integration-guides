@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Tokenize customer data in browser
-permalink: guides/tokenize-customer-data-in-browser/
+title: Collect Customer Data (PII) with JavaScript
+permalink: guides/collect-pii-js/
 categories: guides
-nav_order: 4
+nav_order: 6
 has_children: true
 has_toc: false
 image:
@@ -11,10 +11,12 @@ image:
     width: 1200
     height: 630
 ---
-# Tokenize customer data in browser
+# Collect Customer Data (PII) with JavaScript
 {: .no_toc }
 
-Basis Theory is built to handle any payload of data you can serialize. The following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
+Basis Theory is built to handle any payload of data you can serialize. The following guide shows how to collect and secure Personal Identifiable Information data in 3 simple steps, keeping it safe and secure.
+
+Using React? Check out the [Collect Customer Data (PII) with React Guide](/guides/collect-pii-react).
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -25,7 +27,7 @@ Basis Theory is built to handle any payload of data you can serialize. The follo
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>Client-side</code> [Application](https://docs.basistheory.com/api-reference/#applications) created with the <code>token:pii:create</code> permission for this step.
+    To start, you'll need a <code>Elements</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission.
   </span>
 </span>
 
