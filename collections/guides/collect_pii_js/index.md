@@ -14,7 +14,9 @@ image:
 # Collect Customer Data (PII) with JavaScript
 {: .no_toc }
 
-Basis Theory is built to handle any payload of data you can serialize. The following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
+Basis Theory is built to handle any payload of data you can serialize. The following guide shows how to collect and secure Personal Identifiable Information data in 3 simple steps, keeping it safe and secure.
+
+Using React? Check out the [Collect Customer Data (PII) with React Guide](/guides/collect-pii-react).
 
 ### Table of contents
 {: .no_toc .text-delta }

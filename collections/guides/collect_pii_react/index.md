@@ -13,7 +13,7 @@ image:
 ---
 # Collect Customer Data (PII) with React
 
-Basis Theory is built to handle any payload of data you can serialize. The following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.
+Basis Theory is built to handle any payload of data you can serialize. Once you've completed this guide, you'll know how to use our [React package](https://www.npmjs.com/package/@basis-theory/basis-theory-react) to of how to collect and secure your customer's PII (Personally Identifiable Information) data in 3 simple steps with our Elements, keeping it safe and secure.
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-pii-with-elements-react">Find it here!</a>
 
@@ -93,11 +93,13 @@ export const RegistrationForm = () => {
 };
 ```
 
+Success! 🎉 Your application is now collecting and storing PII in Basis Theory platform.
+
 ## Next steps
 
 You can further customize the [`TextElement` props](https://docs.basistheory.com/elements/#textelement) to best suit your needs.
 
-The created tokens in `submit` function can be:
+The Tokens you've created from your frontend application can be used in a variety of ways from within your system, check out a few of those below::
 - Fetched later in your servers, using a Server-to-Server [Application](https://docs.basistheory.com/api-reference/#applications) Key to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
 - Used to call on of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that data. Some use cases are:
     - Integrating with third party KYC platforms, such as [Alloy](https://www.alloy.com);
@@ -108,11 +110,11 @@ The created tokens in `submit` function can be:
 
 ## See it in action
 
-In this example we also:
+The example below uses a few of the [Element's user experience](https://docs.basistheory.com/elements/#introduction) features to ensure the best experience to your customers:
 - Pass a `mask` to the `ssn` field, restricting user input to digits only and formatting the output;
 - Use a `transform` option in the `ssn` field to strip out dash '-' characters from the tokenized data;
 - Disable the "Submit" `<button>` while the `fullName` field is empty or the `ssn` field is not `complete`, by listening to their `onChange` event;
-- Disable the both inputs and "Submit" `button` during the tokenization request inside the `submit` function;
+- Disable both inputs and the "Submit" `button` during the tokenization request inside the `submit` function;
 - Display the full stringified `tokens` response;
 - Log any tokenization errors to the `console`;
 

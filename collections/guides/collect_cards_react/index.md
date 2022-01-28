@@ -14,9 +14,7 @@ image:
 ---
 # Collect Credit Cards with React
 
-Retain control of your card data while enabling your business to use any current or new processing relationships as you extend your business's product lines, look to increase auth rates, or reduce your overall cost of payments.  No matter why you're here, we will always enable you to use the data how you want to use it. Even if that means exporting the data out of Basis Theory.
-
-Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to. We enable you to capture cards via form elements, exchange or forward that data to any other approved vendor or processor, and continue to grow and extend your business into its next growth cycle!
+Once you've completed this guide, you will have learned how your React application can use our Elements to collect and store credit card information on the Basis Theory platform. This simple task enables you to retain control of your card data and enables the use of credit card data with any third party as if you had the data stored in your own database.
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react">Find it here!</a>
 
@@ -56,7 +54,7 @@ function App() {
 export default App;
 ```
 
-Create a `CheckoutForm` component and add it somewhere in your `App` content.
+Create a `CheckoutForm` component and add it inside the `BasisTheoryProvider` in your `App` content.
 
 Declare a `CardElement` inside it and call the tokenization method `atomicCards.create` passing the underlying card element instance:
 
@@ -90,19 +88,21 @@ export const CheckoutForm = () => {
 };
 ```
 
+Success! 🎉 Your React application is now collecting and storing credit cards in Basis Theory platform.
+
 ## Next steps
 
-The created token in `submit` function can be used in a variety of ways:
+The Token you've created from your frontend application can be used in a variety of ways from within your system, check out a few of those below:
 - You can fetch the card data later in your server, using a Server-to-Server [Application](https://docs.basistheory.com/api-reference/#applications) Key to call [Get an Atomic Card API](https://docs.basistheory.com/api-reference/#atomic-cards-get-an-atomic-card);
 - Call one of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that card data. [Here is how to charge a card with Node.js](/guides/collect-atomic-cards-with-elements/#setup-and-use-a-token-reactor);
 - Make a third party API request with the raw data through our [Proxy](https://docs.basistheory.com/api-reference/#proxy). Feel free to [contact us](mailto:support@basistheory.com?subject=CardElement%20and%20Proxy%20usage) for more information on how to do it.
 
 ## See it in action
 
-In this example we also:
+The example below uses a few of the [Element's user experience](https://docs.basistheory.com/elements/#introduction) features to ensure the best experience to your customers:
 - Disable the "Submit" `<button>` while the `CardElement` information is not `complete`, by listening to the `onChange` event;
 - Disable the `CardElement` and "Submit" `button` during the tokenization request inside the `submit` function;
-- Display the full stringified `token` response;
+- Display the full `token` response;
 - Log any tokenization errors to the `console`;
 
 See it running and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react)
