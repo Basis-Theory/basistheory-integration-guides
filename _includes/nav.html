@@ -58,7 +58,27 @@
 
     {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
 
-    <a href="{{ pages_list[0].url | absolute_url }}" class="nav-list-home nav-list-link {% if page.url == pages_list[0].url %} active{% endif %}">{{ pages_list[0].title }}</a>
+    <h2>Getting Started</h2>
+    {%- for node in pages_list -%}
+    {%- if node.parent == nil and node.categories == 'quickstart' -%}
+    {%- unless node.nav_exclude -%}
+    <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+        {%- if node.has_children && page.url == node.url -%}
+        <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+        {%- endif -%}
+        <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+        {%- if node.has_children -%}
+        {%- assign children_list = pages_list | where: "parent", node.title -%}
+        {%- endif -%}
+        {% if page.url == node.url %}
+        {% include toc.html html=content sanitize=true class="nav-list nav-child" item_class="nav-list-item" anchor_class="nav-list-link" h_min=2 h_max=2 %}
+        {% endif %}
+    </li>
+    {%- endunless -%}
+    {%- endif -%}
+    {%- endfor -%}
+
+
     <h2>Concepts</h2>
     {%- for node in pages_list -%} 
       {%- if node.parent == nil and node.categories == 'concepts' -%}
