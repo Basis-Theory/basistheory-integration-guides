@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What Is the Proxy?"
+title:  "Proxy"
 categories: concepts
 permalink: /concepts/what-is-the-proxy/
 nav_order: 4
