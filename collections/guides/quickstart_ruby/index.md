@@ -49,7 +49,7 @@ require 'json'
 
 If you don’t already have a Basis Theory account and your first Tenant, create one [here](https://portal.basistheory.com/register).
 
-Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key enables you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
+Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
 ### 3.1 Enter an Application Name
 This name allows you to identify this application in the future — for this tutorial enter “Ruby Quickstart”.
@@ -179,7 +179,7 @@ foo
 ```
 
 ## Put it all together
-This completes the basic ability to secure data with Tokens and retrieve the raw data back from Basis Theory when you need to use the data in your systems. This flow allows you to secure your data at rest and removes the liability of having the data stored in your databases or having to worry about complex encryption logic.
+This completes the basic ability to secure data with Tokens and retrieve the raw data back from Basis Theory when you need to use the data in your systems. This flow allows you to secure your data at rest, removes the liability of having the data stored in your databases, and frees you from having to worry about complex encryption logic.
 
 ```ruby
 require 'uri'
