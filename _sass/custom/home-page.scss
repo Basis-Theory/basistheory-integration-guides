@@ -1,50 +1,151 @@
 @import 'variables';
 
-// TODO: tackle mobile styles for quickstart
-.quickstarts {
-  background-color: #F2F4FF;
-  background-image: url(/assets/images/home-page/quickstart-container-image.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  padding: 40px;
-  display: flex;
-  flex-direction: row;
-
-  .quickstart-info {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-  }
-
-  .quickstart-action {
+.home-page {
+  // TODO: tackle mobile styles for quickstart
+  .quickstarts {
+    background-color: #F2F4FF;
+    background-image: url(/assets/images/home-page/quickstart-container-image.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    border: 1px solid #E1E4F3;
+    border-radius: 8px;
+    padding: 40px;
     display: flex;
     flex-direction: row;
-    margin-top: 24px;
-    align-items: center;
 
-    button {
-      padding: 10px 24px;
-      background-color: $primary-text;
-      border: none;
-      border-radius: 8px;
+    .quickstart-info {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+    }
+
+    .quickstart-action {
+      display: flex;
+      flex-direction: row;
+      margin-top: 24px;
+      align-items: center;
+
+      button {
+        padding: 10px 24px;
+        background-color: $primary-text;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        margin-right: 32px;
+      }
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    .header {
+      font-size: 32px;
+      font-weight: 500;
+      color: $grey-900;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      color: $grey-600;
+    }
+  }
+
+  .sub-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 48px 0 24px 0;
+    color: $grey-900;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .icon-and-guides {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .guides {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+        max-width: 80%;
+
+        .guides-list {
+          margin-top: 32px;
+
+          li {
+            list-style-type: none;
+            list-style-position: outside;
+            list-style-image: url(/assets/images/icons/book.svg);
+
+            .guide-list-item {
+              display: flex;
+              flex-direction: row;
+            }
+
+            .guide-time-estimate {
+              color: $grey-200;
+              width: 28px;
+              font-weight: normal;
+            }
+          }
+        }
+
+      }
+    }
+
+    .icon-and-time-estimate {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .time-estimate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .card-title {
+      color: $grey-900;
+      font-size: 18px;
       font-weight: 600;
-      margin-right: 32px;
     }
 
-    img {
-      margin-right: 8px;
+    .card-content {
+      color: $grey-600;
+    }
+
+    .card {
+      border: 1px solid #E1E4F3;
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      flex-grow: 1;
+    }
+
+    .card.guide {
+      cursor: default;
+    }
+
+    .card ~ .card {
+      margin-left: 16px;
     }
   }
 
-  .header {
-    font-size: 32px;
-    font-weight: 500;
-    color: #1B1D32;
-  }
-
-  .subtitle {
-    margin-top: 16px;
-    color: $grey-600;
+  .primary-color {
+    fill: $primary-text;
   }
 }

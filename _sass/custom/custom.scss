@@ -4,7 +4,6 @@
 @import 'home-page';
 @import 'variables';
 
-
 @media (min-width: 66.5rem) {
     .main .iframe-container {
         margin: 0 !important;
@@ -130,7 +129,7 @@ body {
         }
 
         ul {
-            list-style: none; 
+            list-style: none;
             li {
                 color: $grey-800;
                 line-height: 143%;
@@ -436,7 +435,7 @@ body {
                     padding-top: 20px;
                     background-image: none;
                 }
-                
+
                 &:hover {
                     color: inherit;
                     background-image: none;
