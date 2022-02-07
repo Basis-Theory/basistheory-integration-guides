@@ -20,10 +20,21 @@ image:
     </head>
     <body>
         <div id="header">
-            <h1>Basis Theory Guides</h1>
-            <h5>Explore step-by-step guides to use our APIs and SDKs.</h5>
+            <h1>Documentation</h1>
+            <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
         </div>
         <div id="container">
+            <div class="quickstarts">
+                <div class="quickstart-info">
+                    <div class="header">Quickstarts</div>
+                    <div class="subtitle">Learn how to use Basis Theory use tokenization to encrypt personal information and safely share it to Auth0.</div>
+                    <div class="quickstart-action">
+                        <button>Quick start</button>
+                        <img src="./assets/images/icons/time.svg">
+                        <div>10 mins</div>
+                    </div>
+                </div>
+            </div>
             <h2 class="no_toc">Concepts</h2>
             <div class="card-box card-box-concepts">
                 <a href= "/concepts/what-are-tokens">

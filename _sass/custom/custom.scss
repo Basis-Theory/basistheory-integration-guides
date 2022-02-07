@@ -1,23 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap');
 @import 'navigation';
+@import 'home-page';
+@import 'variables';
 
-//Color
-$grey-200: #A4A9C5;
-$grey-600: #545A78;
-$grey-800: #1E233B;
-$grey-900: #1B1D32;
-$primary-text: #1AD1DB;
-$primary-dark: #009FA9;
-$side-bar-gray: #E5E6EC;
-$blue-light: #F2F3FF;
-$blue-shadow: #8B92B6;
-$magenta-light: #EEEBEE;
-$warning-bg: #FFD582 !default;
-$success-bg: #3AC3A2 !default;
-$info-bg: #1AD1DB !default;
-$danger-bg: #FB5B8B !default;
-$border-subtitles: rgba(65, 73, 112, 0.2);
 
 @media (min-width: 66.5rem) {
     .main .iframe-container {
@@ -95,7 +81,7 @@ body {
             line-height: 116.7%;
             margin-bottom: 0.5em;
         }
-    
+
         h5 {
             font-size: 24px !important;
             line-height: 133.4%;
@@ -687,7 +673,7 @@ body {
     }
 
     .main {
-        max-width: 800px;
+        max-width: 1032px;
         .card-box {
             grid-template-columns: repeat(2, 50%);
         }

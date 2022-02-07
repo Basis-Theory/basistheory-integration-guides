@@ -1,0 +1,50 @@
+@import 'variables';
+
+// TODO: tackle mobile styles for quickstart
+.quickstarts {
+  background-color: #F2F4FF;
+  background-image: url(/assets/images/home-page/quickstart-container-image.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+
+  .quickstart-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+
+  .quickstart-action {
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    align-items: center;
+
+    button {
+      padding: 10px 24px;
+      background-color: $primary-text;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-right: 32px;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  .header {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1B1D32;
+  }
+
+  .subtitle {
+    margin-top: 16px;
+    color: $grey-600;
+  }
+}
