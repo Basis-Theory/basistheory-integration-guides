@@ -1,5 +1,28 @@
 @import 'variables';
 
+@mixin flex-container-wrap-items($flex-basis, $max-expected-width: 2000px) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: $flex-basis;
+  }
+
+  $multiplier: 1;
+  $current-width: 0px;
+
+  @while $current-width < $max-expected-width {
+    $current-width: $current-width + $flex-basis;
+    $multiplier: $multiplier + 1;
+
+    &[min-width~="#{$flex-basis * $multiplier}"] > * {
+      max-width: percentage(1/$multiplier);
+    }
+  }
+}
+
 .home-page {
   // TODO: tackle mobile styles for quickstart
   .quickstarts {
@@ -58,10 +81,16 @@
     color: $grey-900;
   }
 
+
+
   .cards {
     display: flex;
     flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+    @include flex-container-wrap-items(306px);
+    column-gap: 16px;
+    row-gap: 16px;
 
     .icon-and-guides {
       display: flex;
@@ -128,6 +157,11 @@
       color: $grey-600;
     }
 
+    a.card {
+      color: $grey-600;
+      white-space: normal;
+    }
+
     .card {
       border: 1px solid #E1E4F3;
       border-radius: 8px;
@@ -139,9 +173,20 @@
     .card.guide {
       cursor: default;
     }
+  }
 
-    .card ~ .card {
-      margin-left: 16px;
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .card ~ .card {
+        margin-left: 0px;
+      }
+
+      .card {
+        margin-bottom: 8px;
+      }
     }
   }
 
