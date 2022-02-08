@@ -1,7 +1,8 @@
 @import 'variables';
 
+// TODO: tackle mobile styles for quickstart
+
 .home-page {
-  // TODO: tackle mobile styles for quickstart
   .quickstarts {
     background-color: #F2F4FF;
     background-image: url(/assets/images/home-page/quickstart-container-image.svg);
@@ -25,10 +26,11 @@
       margin-top: 24px;
       align-items: center;
 
-      button {
+      a {
         padding: 10px 24px;
         background-color: $primary-text;
-        border: none;
+        color: #070A1B;
+        white-space: normal;
         border-radius: 8px;
         font-weight: 600;
         margin-right: 32px;
@@ -39,13 +41,13 @@
       }
     }
 
-    .header {
+    .quickstart-header {
       font-size: 32px;
       font-weight: 500;
       color: $grey-900;
     }
 
-    .subtitle {
+    .quickstart-subtitle {
       margin-top: 16px;
       color: $grey-600;
     }
@@ -56,96 +58,5 @@
     font-weight: 600;
     margin: 48px 0 24px 0;
     color: $grey-900;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    .icon-and-guides {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-
-      .guides {
-        display: flex;
-        flex-direction: column;
-        margin-left: 24px;
-        max-width: 80%;
-
-        .guides-list {
-          margin-top: 32px;
-
-          li {
-            list-style-type: none;
-            list-style-position: outside;
-            list-style-image: url(/assets/images/icons/book.svg);
-
-            .guide-list-item {
-              display: flex;
-              flex-direction: row;
-            }
-
-            .guide-time-estimate {
-              color: $grey-200;
-              width: 28px;
-              font-weight: normal;
-            }
-          }
-        }
-
-      }
-    }
-
-    .icon-and-time-estimate {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-
-      .time-estimate {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        img {
-          width: 20px;
-          height: 20px;
-          margin-right: 8px;
-        }
-      }
-    }
-
-    .card-title {
-      color: $grey-900;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .card-content {
-      color: $grey-600;
-    }
-
-    .card {
-      border: 1px solid #E1E4F3;
-      border-radius: 8px;
-      padding: 16px;
-      cursor: pointer;
-      flex-grow: 1;
-    }
-
-    .card.guide {
-      cursor: default;
-    }
-
-    .card ~ .card {
-      margin-left: 16px;
-    }
-  }
-
-  .primary-color {
-    fill: $primary-text;
   }
 }
