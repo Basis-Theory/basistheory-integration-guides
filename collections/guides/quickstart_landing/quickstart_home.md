@@ -4,7 +4,7 @@
 
 layout: home
 title: Quickstart home
-permalink: /quickstart
+permalink: /getting_started
 nav_order: 1
 has_children: false
 image:
