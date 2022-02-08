@@ -175,21 +175,6 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .cards {
-      flex-direction: column;
-      margin-bottom: 0;
-
-      .card ~ .card {
-        margin-left: 0px;
-      }
-
-      .card {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
   .primary-color {
     fill: $primary-text;
   }
