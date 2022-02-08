@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap');
+
 @import 'navigation';
 @import 'home-page';
 @import 'variables';
+@import 'home-page-cards';
+@import 'quickstart';
 
 @media (min-width: 66.5rem) {
     .main .iframe-container {
