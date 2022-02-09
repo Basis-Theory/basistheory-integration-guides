@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with cURL
 permalink: /getting_started/quickstart_with_curl/
 categories: quickstart
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory and cURL
