@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What are tokens?"
+title:  "Tokens"
 categories: concepts
 permalink: /concepts/what-are-tokens/
 nav_order: 2

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What are Atomic Tokens?"
+title:  "Atomic Tokens"
 categories: concepts
 permalink: /concepts/what-are-atomic-tokens/
 nav_order: 3
