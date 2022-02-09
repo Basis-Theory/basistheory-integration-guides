@@ -54,7 +54,7 @@ Within your Basis Theory account, create a new Application. To create a new appl
 ### 3.1 Enter an Application Name
 This name allows you to identify this application in the future — for this tutorial enter “Ruby Quickstart”.
 
-<img src="/assets/images/getting_started/application_name.png" />
+<img src="/assets/images/getting_started/application_name_ruby.png" />
 
 ### 3.2 Select Server-to-Server Application Type
 The Server-to-Server Application Type enables server-side applications to integrate with the Basis theory Platforms directly.
@@ -144,7 +144,7 @@ Test the entire tutorial out by running the script:
 ruby basistheory.rb
 ```
 
-🎉🎉🎉 You’ve successfully created secured your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created a Token for your data and read it back: 🎉🎉🎉
 
 ```bash
 > Create a Token:
