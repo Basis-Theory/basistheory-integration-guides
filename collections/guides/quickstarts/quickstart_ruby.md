@@ -22,7 +22,7 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 ### Step 1.1: Ensure you have Ruby installed
 
-Completing this tutorial will require you to have Ruby installed on your local system or have an environment you can run your script in. If you’re looking for help getting Ruby installed for your system — checkout their guide on [installing](https://www.ruby-lang.org/en/documentation/installation/).
+Completing this tutorial will require you to have Ruby installed on your local system or have an environment you can run your script in. If you’re looking for help getting Ruby installed for your system — check out their guide on [installing](https://www.ruby-lang.org/en/documentation/installation/).
 
 ### Step 1.2: Create a Ruby script
 To start, you’ll need a new Ruby file. Use the following commands (or however you create files) to create a file called `basistheory.rb`:
@@ -57,7 +57,7 @@ This name allows you to identify this application in the future — for this tut
 <img src="/assets/images/getting_started/application_name.png" />
 
 ### 3.2 Select Server-to-Server Application Type
-The Server-to-Server Application Type enables server side applications to integrate with the Basis theory Platforms directly.
+The Server-to-Server Application Type enables server-side applications to integrate with the Basis theory Platforms directly.
 
 <img src="/assets/images/getting_started/application_type.png" />
 
@@ -120,7 +120,7 @@ You will see a response similar to:
 
 With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) and print the request’s response and raw string value.
 
-We are using the `token["id"]` from the previous Token we created inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 2:
+We are using the `token["id"]` from the previous Token we created to inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 2:
 
 ```ruby
 #Read the Token value back form Basis Theory
