@@ -44,8 +44,9 @@ image:
                         <div>10 min</div>
                     </div>
                 </div>
-                <div class="card-title">What are tokens?</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <!-- Replace with Applications? -->
+                <div class="card-title">What are Tokens?</div>
+                <div>Use Tokens to secure and share your sensitive data.</div>
             </a>
             <a class="card" href="/concepts/what-ar-atomic-tokens">
                 <div class="icon-and-time-estimate">
@@ -55,8 +56,8 @@ image:
                         <div>10 min</div>
                     </div>
                 </div>
-                <div class="card-title">What are tenants?</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="card-title">What are Tenants?</div>
+                <div>Where your Tokens and Applications are defined, managed, and stored.</div>
             </a>
             <a class="card" href="/concepts/what-ar-atomic-tokens">
                 <div class="icon-and-time-estimate">
@@ -66,6 +67,7 @@ image:
                         <div>10 min</div>
                     </div>
                 </div>
+                <!-- Replace with Proxy? -->
                 <div class="card-title">What are reactors?</div>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
             </a>
@@ -76,6 +78,7 @@ image:
         <div class="cards">
             <div class="card guide">
                 <div class="icon-and-guides">
+                    <!-- Guides having to do with collecting information -->
                     <img src="./assets/images/icons/shield-down-arrow.svg" alt="shield-down-arrow">
                     <div class="guides">
                         <div class="card-title">Collecting and Securing Data</div>
@@ -91,6 +94,7 @@ image:
             </div>
             <div class="card guide">
                 <div class="icon-and-guides">
+                    <!-- Guides having to do with processing information -->
                     <img src="./assets/images/icons/shield-up-arrow.svg" alt="shield-up-arrow">
                     <div class="guides">
                         <div class="card-title">Collecting and Securing Data</div>
@@ -114,21 +118,21 @@ image:
                     <img src="./assets/images/icons/purple-token.svg">
                 </div>
                 <div class="card-title">API Reference</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div>Use our API's and SDK's to interact with your Tokens.</div>
             </a>
             <a class="card" href="/concepts/what-ar-atomic-tokens">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-terminal.svg">
                 </div>
                 <div class="card-title">Elements</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div>Secure data from your frontend without touching it.</div>
             </a>
             <a class="card" href="/concepts/what-ar-atomic-tokens">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-reactor.svg">
                 </div>
                 <div class="card-title">Encryption</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div>Hold the encryption keys to your Tokens.</div>
             </a>
         </div>
     </body>
