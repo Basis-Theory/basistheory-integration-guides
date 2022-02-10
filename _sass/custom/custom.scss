@@ -454,10 +454,7 @@ body {
         }
         .nav-list-item {
             .nav-list-link {
-                // white-space: nowrap;
-                // text-overflow: ellipsis;
                 text-decoration: none;
-                // overflow-x: hidden;
                 color: $blue-shadow;
                 font-size: 14px;
                 line-height: 143%;
@@ -540,7 +537,6 @@ body {
 .main-header {
     background-color: $search-background-color;
     border-bottom: $border #E6E8F0;
-    //margin-left: 15rem;
 }
 
 .site-title:hover { background: transparent !important; }
@@ -650,7 +646,6 @@ body {
             box-sizing: border-box;
 
             .search-input-wrap {
-                //max-width: 800px;
 
                 .search-input {
                     background: $blue-light;
@@ -661,8 +656,6 @@ body {
             .search-results {
                 background-color: $blue-light;
                 border: 1px solid #E6E8F0;
-                //width: 100%;
-                //max-width: 25vw;
             }
         }
     }
@@ -676,7 +669,6 @@ body {
     }
 
     .main {
-        //max-width: 1032px;
         .card-box {
             grid-template-columns: repeat(2, 50%);
         }
@@ -692,6 +684,7 @@ body {
     }
     .main-header .search .search-results {
         margin-left: 280px !important;
+        left: unset !important;
     }
 }
 
@@ -719,7 +712,6 @@ body {
         .search {
             .search-input-wrap {
                 margin-left: calc( (100% - 1064px) / 2 + 159px);
-                //max-width: 800px;
 
                 .search-label {
                     padding-left: 1rem;
@@ -727,8 +719,6 @@ body {
             }
             .search-results {
                 left: calc( (100% - 1064px) / 2 + 159px);
-            //    width: 100%;
-            //    max-width: 50%;
             }
         }
     }
@@ -741,9 +731,6 @@ body {
         }
     }
     .main {
-        //margin-left: calc((100% - 1064px - 264px) / 2);
-        //display: flex;
-        //justify-content: center;
 
         .card-box {
             grid-template-columns: repeat(3, 32%);
