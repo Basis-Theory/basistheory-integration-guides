@@ -3,7 +3,7 @@ layout: post
 title:  Tenants
 categories: concepts
 permalink: /concepts/tenants/
-nav_order: 3
+nav_order: 4
 has_children: true
 has_toc: false
 image:
