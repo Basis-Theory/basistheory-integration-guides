@@ -12,6 +12,10 @@ image:
     height: 630
 ---
 
+# What are Applications?
+
+Basis Theory’s Applications do not imply any specific implementation type. Applications could be a native app on a mobile device, a single-page application in a browser, or a regular web application that executes on a server or in a serverless environment.
+
 ## How It Works
 
 Applications within Basis Theory have the following properties and characteristics:
@@ -47,13 +51,13 @@ Your Application’s API Key is used to authenticate your systems to the Basis T
 
 A common use-case for Basis Theory is to grant multiple systems access to the same data or a subset of the data that is actively being secured in a [Tenant](https://guides.basistheory.com/concepts/tenants/). This could mean that one system is allowed to only collect the data, one system is allowed to view the data, and the last system is only allowed to [Proxy](https://guides.basistheory.com/concepts/what-is-the-proxy/) the data to another 3rd party but never access the raw data.
 
-<img src="/assets/images/concepts/application_each_system.png">
+<img src="/assets/images/concepts/applications_each_system.png">
 
 ### Enable partners to use data secured by Basis Theory
 
 Often businesses need to grant their partners access to their sensitive data — traditionally these businesses would just export the needed data and send it over to their partner. With Basis Theory Applications, a business creates an Application with only permissions restricted to ONLY the data that partner needs. In some cases, businesses will not allow the partner to see the raw data, rather allow them [Proxy](https://guides.basistheory.com/concepts/what-is-the-proxy/) the data to another API or use write serverless code with Reactors.
 
-<img src="/assets/images/concepts/application_partners.png">
+<img src="/assets/images/concepts/applications_partners.png">
 
 ### Manage Basis Theory assets with Infrastructure as Code
 
@@ -61,7 +65,7 @@ The Management application type allows the Basis Theory platform to be configure
 
 Interested in using our Terraform module? [Reach out!](https://basistheory.com/contact)
 
-<img src="/assets/images/concepts/application_iac.png">
+<img src="/assets/images/concepts/applications_iac.png">
 
 ---
 
