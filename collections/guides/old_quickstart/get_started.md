@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Quickstart
+title: Sample cli application
 permalink: /guides/basis-theory-sample-app/
 categories: guides
-nav_order: 1
+nav_order: 99
 has_children: true
 has_toc: false
 image:
