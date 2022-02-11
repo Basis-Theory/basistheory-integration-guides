@@ -144,7 +144,7 @@ Test the entire tutorial out by running the script:
 ruby basistheory.rb
 ```
 
-🎉🎉🎉 You’ve successfully created a Token for your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created a Token for your data and read it back! 🎉🎉🎉
 
 ```bash
 > Create a Token:

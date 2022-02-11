@@ -44,17 +44,17 @@ If you don’t already have a Basis Theory account and your first Tenant, create
 Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
 ### 2.1 Enter an Application Name
-This name allows you to identify this application in the future — for this tutorial enter “Ruby Quickstart”.
+This name allows you to identify this application in the future — for this tutorial enter “cURL Quickstart”.
 
 <img src="/assets/images/getting_started/application_name_curl.png" />
 
 ### 2.2 Select Server-to-Server Application Type
-The Server-to-Server Application Type enables server-side applications to integrate with the Basis theory Platforms directly.
+The Server-to-Server Application Type enables server-side applications to integrate with the Basis Theory platform directly.
 
 <img src="/assets/images/getting_started/application_type.png" />
 
 ### 2.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “Low Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
+Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with “High Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
 
 <img src="/assets/images/getting_started/application_permissions.png" />
 
@@ -99,7 +99,7 @@ You will see a response similar to:
 
 ## Step 4: Read back the raw value from Basis Theory
 
-With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) and print the request’s response and raw string value.
+With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) and print the response's raw string value.
 
 You will need to replace `<! Token Id !>` with the `id` from the response in Step 3 and also replace `<! ENTER YOUR API KEY HERE !>` with your API Key from Step 2 — then run the following command in your Terminal:
 
@@ -108,7 +108,7 @@ curl "https://api.basistheory.com/tokens/<! Token Id !>" \
   -H "BT-API-KEY: <! ENTER YOUR API KEY HERE !>"
 ```
 
-🎉🎉🎉 You’ve successfully created a Token for your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created a Token for your data and read it back! 🎉🎉🎉
 
 ```bash
 {
@@ -128,7 +128,7 @@ curl "https://api.basistheory.com/tokens/<! Token Id !>" \
 
 ## What can I do next?
 
-Now that you understand the basics, you are ready to learn more about how you can take advantage of your tokenized data with the capabilities of the Basis Theory Platform.
+Now that you understand the basics, you are ready to learn more about how you can take advantage of your tokenized data with the capabilities of the Basis Theory platform.
 
 Check out the ability to use your [Token data with HTTP request](https://guides.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
