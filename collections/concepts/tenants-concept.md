@@ -3,7 +3,7 @@ layout: post
 title:  Tenants
 categories: concepts
 permalink: /concepts/tenants/
-nav_order: 3
+nav_order: 4
 has_children: true
 has_toc: false
 image:
@@ -41,7 +41,7 @@ Many large enterprise and corporate organizations have multiple business units o
 
 <img src="/assets/images/concepts/tenant_separate_data.png">
 
-## Common Questions
+## FAQs
 
 ### Can I share a Tenant’s Tokens between multiple systems?
 
