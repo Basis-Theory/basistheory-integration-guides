@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "What Is the Proxy?"
+title:  "Proxy"
 categories: concepts
 permalink: /concepts/what-is-the-proxy/
-nav_order: 4
+nav_order: 3
 has_children: true
 has_toc: false
 image:
@@ -64,7 +64,14 @@ In existing systems with sensitive data you wish to secure, this data can be mig
 Once safely tokenized, your systems still need to utilize this data with your existing HTTP calls without pulling the raw values back into your system.
 For this, you can leverage the Proxy in order to minimize the impact of this change on your existing codebase.
 
-## How to Choose Between the Proxy and Serverless Reactors
+## Samples
+
+[Use Token Data in HTTP Requests](/guides/use-token-data-in-http-requests/)
+
+
+## FAQs
+
+### How to Choose Between the Proxy and Serverless Reactors
 
 Basis Theory offers a number of out-of-the-box integrations to share your tokenized data with Third Party systems via our Serverless Reactor platform.
 
@@ -73,8 +80,3 @@ However, you may require an integration that is not yet supported, in which case
 - Use the Proxy to send the API request from your own application (your servers execute this code)
 
 Using the Proxy can provide a quicker and lower configuration option for making custom HTTP requests to a third party API than writing and maintaining a custom reactor formula.
-
-
-## Samples
-
-[Use Token Data in HTTP Requests](/guides/use-token-data-in-http-requests/)

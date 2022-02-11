@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "What are tokens?"
+title:  "Tokens"
 categories: concepts
 permalink: /concepts/what-are-tokens/
-nav_order: 2
+nav_order: 5
 has_children: true
 has_toc: false
 image:
