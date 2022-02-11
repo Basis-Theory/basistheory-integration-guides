@@ -36,40 +36,38 @@ image:
             Concepts
         </div>
         <div class="cards">
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="/concepts/what-are-tokens">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/blue-token.svg">
                     <div class="time-estimate">
                         <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
-                        <div>10 min</div>
+                        <div>5 min</div>
                     </div>
                 </div>
-                <!-- Replace with Applications? -->
                 <div class="card-title">What are Tokens?</div>
                 <div>Use Tokens to secure and share your sensitive data.</div>
             </a>
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="/concepts/what-are-tenants">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/blue-terminal.svg">
                     <div class="time-estimate">
                         <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
-                        <div>10 min</div>
+                        <div>5 min</div>
                     </div>
                 </div>
                 <div class="card-title">What are Tenants?</div>
                 <div>Where your Tokens and Applications are defined, managed, and stored.</div>
             </a>
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="/concepts/what-is-the-proxy">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/blue-reactor.svg">
                     <div class="time-estimate">
                         <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
-                        <div>10 min</div>
+                        <div>5 min</div>
                     </div>
                 </div>
-                <!-- Replace with Proxy? -->
-                <div class="card-title">What are reactors?</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="card-title">What is the Proxy?</div>
+                <div>Send tokenized data without touching it.</div>
             </a>
         </div>
         <div class="sub-header">
@@ -78,32 +76,30 @@ image:
         <div class="cards">
             <div class="card guide">
                 <div class="icon-and-guides">
-                    <!-- Guides having to do with collecting information -->
                     <img src="./assets/images/icons/shield-down-arrow.svg" alt="shield-down-arrow">
                     <div class="guides">
                         <div class="card-title">Collecting and Securing Data</div>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div>Learn how to easily tokenize your data on any platform.</div>
                         <div class="guides-list">
-                            <li><a href="/concepts/what-are-atomic-tokens">Collect with API (touching data) <span class="guide-time-estimate">15m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Collect without touching data Elements <span class="guide-time-estimate">25m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Own your encryption keys <span class="guide-time-estimate">10m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Tokenize customer data in browser <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/collect-atomic-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/encrypt-us-banks-in-your-applications">Encrypt U.S Banks in your applications <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/own-your-encryption-keys">Own your encryption keys <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/collect-pii-js">Collect Customer Data (PII) with JS <span class="guide-time-estimate">5m</span></a></li>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card guide">
                 <div class="icon-and-guides">
-                    <!-- Guides having to do with processing information -->
                     <img src="./assets/images/icons/shield-up-arrow.svg" alt="shield-up-arrow">
                     <div class="guides">
-                        <div class="card-title">Collecting and Securing Data</div>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="card-title">Processing and Sending Data</div>
+                        <div>Learn how to integrate and make the most out of tokenized data.</div>
                         <div class="guides-list">
-                            <li><a href="/concepts/what-are-atomic-tokens">Collect with API (touching data) <span class="guide-time-estimate">15m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Collect without touching data Elements <span class="guide-time-estimate">25m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Own your encryption keys <span class="guide-time-estimate">10m</span></a></li>
-                            <li><a href="/concepts/what-are-atomic-tokens">Tokenize customer data in browser <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/collect-atomic-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/setup-your-first-reactor">Set up your first Reactor <span class="guide-time-estimate">5m</span></a></li>
                         </div>
                     </div>
                 </div>

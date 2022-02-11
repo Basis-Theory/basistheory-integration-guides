@@ -1,6 +1,14 @@
 @import 'variables';
 
-// TODO: tackle mobile styles for quickstart
+@media (max-width: 1024px) {
+  .quickstarts {
+    background-image: none !important;
+
+    .quickstart-info {
+      max-width: 100% !important;
+    }
+  }
+}
 
 .home-page {
   .quickstarts {
