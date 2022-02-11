@@ -44,7 +44,8 @@ Each Application Type has different levels of permission available for the appli
 
 ### API Key
 
-Your Application’s API Key is used to authenticate your systems to the Basis Theory platform. The API Key can be used to make authenticated requests to our API directly via the `BT-API-KEY`, using Hosted Elements, or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
+Your Application’s API Key is used to authenticate your systems to the Basis Theory platform. The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
+
 
 
 ---
@@ -76,7 +77,8 @@ Interested in using IaC (Infrastructure as Code) tooling such as Terraform to co
 
 ---
 
-## Answer any Common Questions:
+## FAQs
+
 
 ### How do I pick between the Elements and Client-side Application Types?
 
