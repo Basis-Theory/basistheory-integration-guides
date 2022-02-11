@@ -160,7 +160,7 @@ Test the entire tutorial out by running the script:
   node basistheory.js
 ```
 
-🎉🎉🎉 You’ve successfully created and secured your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created and secured your data and read it back 🎉🎉🎉
 
 ```bash
 > Create a Token:

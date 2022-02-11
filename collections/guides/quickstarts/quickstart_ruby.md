@@ -62,7 +62,7 @@ The Server-to-Server Application Type enables server-side applications to integr
 <img src="/assets/images/getting_started/application_type.png" />
 
 ### 3.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “Low Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
+Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “High Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
 
 <img src="/assets/images/getting_started/application_permissions.png" />
 
@@ -144,7 +144,7 @@ Test the entire tutorial out by running the script:
 ruby basistheory.rb
 ```
 
-🎉🎉🎉 You’ve successfully created a Token for your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created a Token for your data and read it back 🎉🎉🎉
 
 ```bash
 > Create a Token:
