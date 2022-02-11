@@ -28,14 +28,14 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 Your system most likely has cURL already installed and you can check with the following command:
 
-```shell
+```bash
 curl --help
 ```
 
 ### Windows
 There is a chance that if you have Windows 10 installed, you already have cURL. If the following command doesn’t work — here is help to get [cURL installed](https://stackoverflow.com/a/16216825).
 
-```shell
+```bash
 curl --help
 ```
 
@@ -105,7 +105,7 @@ With our value safely stored in a Token, let’s read that value back to our sys
 
 You will need to replace `<! Token Id !>` with the `id` from the response in Step 3 and also replace `<! ENTER YOUR API KEY HERE !>` with your API Key from Step 2 — then run the following command in your Terminal:
 
-```shell
+```bash
 curl "https://api.basistheory.com/tokens/<! Token Id !>" \
   -H "BT-API-KEY: <! ENTER YOUR API KEY HERE !>"
 ```
