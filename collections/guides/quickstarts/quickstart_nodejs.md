@@ -39,14 +39,14 @@ type nul > basistheory.js
 
 ### Step 2.1: Install the `axios` npm package
 
-To simplify our request to Basis Theory, we will install a helper package called `axios`. This package simplifies HTTP requests in Node.js.
+To simplify our request to Basis Theory, we will install a helper package called `axios`. Axios is a promise-based HTTP client for Node.js.
 ```bash
     npm install axios
 ```
 
 ### Step 2.2 Import the `axios` dependency in your script
 
-The simplest form of securing data with Basis Theory is through our API with a JSON body. In Node.js, this requires a few different libraries to make an API call. At the top of your file, you’ll import the following dependencies:
+The simplest form of securing data with Basis Theory is through our API with a JSON body. In Node.js, you can start with just an HTTP client libary, such as Axios. At the top of your file, add the following import statement(s):
 
 ```js
 const axios = require('axios');
@@ -59,17 +59,17 @@ If you don’t already have a Basis Theory account and your first Tenant, create
 Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
 ### 3.1 Enter an Application Name
-This name allows you to identify this application in the future — for this tutorial enter “Ruby Quickstart”.
+This name allows you to identify this application in the future — for this tutorial enter “node.js Quickstart”.
 
 <img src="/assets/images/getting_started/application_name_nodejs.png" />
 
 ### 3.2 Select Server-to-Server Application Type
-The Server-to-Server Application Type enables server-side applications to integrate with the Basis theory Platforms directly.
+The Server-to-Server Application Type enables server-side applications to integrate with the Basis Theory platform directly.
 
 <img src="/assets/images/getting_started/application_type.png" />
 
 ### 3.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “Low Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
+Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with “High Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
 
 <img src="/assets/images/getting_started/application_permissions.png" />
 
@@ -79,9 +79,9 @@ Keep this API key safe for later. We will use it in the next step to create your
 <img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 4: Create a Token to secure a string
-Below we are making an HTTP POST to our  [Basis Theory Create a Token API](https://docs.basistheory.com/api-reference/#tokens-create-token), we will send a Token type of `token` ([find out more about our Tokens here](https://guides.basistheory.com/concepts/what-are-tokens/)) with a string of “foo”. We have wrapped our calls in a function called `makeMyFirstToken` to simplify `axios` promise response.
+To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the `token` Token Type (you can read more about Tokens [here](https://guides.basistheory.com/concepts/what-are-tokens/)). We have wrapped our calls in a function called `makeMyFirstToken` to simplify `axios` promise response.
 
-Update the `BT-API-KEY` header with the API Key you created in Step 2:
+Update the `BT-API-KEY` header with the API Key you created in Step 3:
 
 ```jsx
 const axios = require('axios');
@@ -97,7 +97,7 @@ async function makeMyFirstToken() {
         {
             headers: {
                 'Content-Type': 'application/json',
-                'BT-API-KEY': 'key_4qUtg83MpoVnDemfJwbzcN'
+                'BT-API-KEY': '<! ENTER YOUR API KEY HERE !>'
             }
         })
     
@@ -110,7 +110,7 @@ makeMyFirstToken();
 ```
 
 ## Step 5: Run your script to create a new Token
-Before moving on, test our script to this point. Run the following command in the directory you created your script:
+To create a token, run the following command in the directory you created your script:
 
 ```bash
 node basistheory.js
@@ -136,9 +136,9 @@ You will see a response similar to:
 
 ## Step 6: Read back the raw value from Basis Theory
 
-With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) and print the request’s response and raw string value.
+With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [`/tokens/{id}`](https://docs.basistheory.com/api-reference/#tokens-get-a-token) endpoint and print the response's raw string value.
 
-We are using the `token.data.id` from the previous Token we created to inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 2:
+We are using the `token.data.id` from the previous Token we created to inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 3:
 
 ```jsx
 const readToken = await axios.get(`https://api.basistheory.com/tokens/${token.data.id}`,
@@ -160,7 +160,7 @@ Test the entire tutorial out by running the script:
   node basistheory.js
 ```
 
-🎉🎉🎉 You’ve successfully created secured your data and read it back: 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created and secured your data and read it back: 🎉🎉🎉
 
 ```bash
 > Create a Token:
@@ -237,7 +237,7 @@ makeMyFirstToken();
 
 ## What can I do next?
 
-Now that you understand the basics, you are ready to learn more about how you can take advantage of your tokenized data with the capabilities of the Basis Theory Platform.
+Now that you understand the basics, you are ready to learn more about how you can better secure sensitive data without sacrificing data usability using the Basis Theory platform.
 
 Check out the ability to use your [Token data with HTTP request](https://guides.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
