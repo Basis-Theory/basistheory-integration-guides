@@ -37,7 +37,7 @@ type nul > basistheory.rb
 
 ### Step 2: Import needed dependencies
 
-The simplest form of securing data with Basis Theory is through our API with a JSON body. In Ruby, this requires a few different libraries to make an API call. At the top of your file, you’ll import the following dependencies:
+The simplest form of securing data with Basis Theory is through our API with a JSON body. In Ruby, you can start with just an HTTP client library, for this example we use the `uri`, `net/http`, and `json` libraries to make an API call. At the top of your file, you’ll import the following dependencies:
 
 ```ruby
 require 'uri'
@@ -57,7 +57,7 @@ This name allows you to identify this application in the future — for this tut
 <img src="/assets/images/getting_started/application_name_ruby.png" />
 
 ### 3.2 Select Server-to-Server Application Type
-The Server-to-Server Application Type enables server-side applications to integrate with the Basis theory Platforms directly.
+The Server-to-Server Application Type enables server-side applications to integrate with the Basis Theory platform directly.
 
 <img src="/assets/images/getting_started/application_type.png" />
 
@@ -72,9 +72,9 @@ Keep this API key safe for later. We will use it in the next step to create your
 <img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 4: Create a Token to secure a string
-Below we are making an HTTP POST to our  [Basis Theory Create a Token API](https://docs.basistheory.com/api-reference/#tokens-create-token), we will send a Token type of `token` ([find out more about our Tokens here](https://guides.basistheory.com/concepts/what-are-tokens/)) with a string of “foo”.
+To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the `token` Token Type (you can read more about Tokens [here](https://guides.basistheory.com/concepts/what-are-tokens/)).
 
-Update the `BT-API-KEY` header with the API Key you created in Step 2:
+Update the `BT-API-KEY` header with the API Key you created in Step 3:
 
 ```ruby
 #Create a new Token
@@ -91,7 +91,7 @@ puts JSON.pretty_generate(token)
 ```
 
 ## Step 5: Run your script to create a new Token
-Before moving on, test our script to this point. Run the following command in the directory you created your script:
+To create a token, run the following command in the directory you created your script:
 
 ```bash
 ruby basistheory.rb
@@ -118,9 +118,9 @@ You will see a response similar to:
 
 ## Step 6: Read back the raw value from Basis Theory
 
-With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) and print the request’s response and raw string value.
+With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) endpoint and print the response's raw string value.
 
-We are using the `token["id"]` from the previous Token we created to inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 2:
+We are using the `token["id"]` from the previous Token we created to inject the `id` into the Get a token request. Update the `BT-API-KEY` header with the API Key you created in Step 3:
 
 ```ruby
 #Read the Token value back form Basis Theory
@@ -144,7 +144,7 @@ Test the entire tutorial out by running the script:
 ruby basistheory.rb
 ```
 
-🎉🎉🎉 You’ve successfully created a Token for your data and read it back! 🎉🎉🎉
+🎉🎉🎉 You’ve successfully created a Token for your data and read it back: 🎉🎉🎉
 
 ```bash
 > Create a Token:
@@ -215,7 +215,7 @@ puts "Read your raw value from the Token:", raw_value["data"]
 
 ## What can I do next?
 
-Now that you understand the basics, you are ready to learn more about how you can take advantage of your tokenized data with the capabilities of the Basis Theory Platform.
+Now that you understand the basics, you are ready to learn more about how you can better secure sensitive data without sacrificing data usability using the Basis Theory platform.
 
 Check out the ability to use your [Token data with HTTP request](https://guides.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
