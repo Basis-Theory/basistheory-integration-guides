@@ -2,7 +2,7 @@
 layout: post
 title:  Applications
 categories: concepts
-permalink: /concepts/applications/
+permalink: /concepts/what-are-applications/
 nav_order: 1
 has_children: true
 has_toc: false

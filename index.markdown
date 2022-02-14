@@ -109,21 +109,21 @@ image:
             Reference
         </div>
         <div class="cards">
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="https://docs.basistheory.com/api-reference/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-token.svg">
                 </div>
                 <div class="card-title">API Reference</div>
                 <div>Use our API's and SDK's to interact with your Tokens.</div>
             </a>
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="https://docs.basistheory.com/elements/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-terminal.svg">
                 </div>
                 <div class="card-title">Elements</div>
                 <div>Secure data from your frontend without touching it.</div>
             </a>
-            <a class="card" href="/concepts/what-ar-atomic-tokens">
+            <a class="card" href="https://docs.basistheory.com/encryption/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-reactor.svg">
                 </div>
