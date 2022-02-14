@@ -27,19 +27,19 @@ image:
         <div class="cards">
             <a class="card" href="/getting_started/quickstart_with_nodejs/">
                 <div class="icon-and-time-estimate no-description">
-                    <img src="./assets/images/quickstart/quickstart_logo_nodejs.svg">
+                    <img src="/assets/images/quickstart/quickstart_logo_nodejs.svg">
                     <div class="quickstart-title">NodeJS</div>
                 </div>
             </a>
             <a class="card" href="/getting_started/quickstart_with_curl/">
                 <div class="icon-and-time-estimate no-description">
-                    <img src="./assets/images/quickstart/quickstart_logo_curl.svg">
+                    <img src="/assets/images/quickstart/quickstart_logo_curl.svg">
                     <div class="quickstart-title">Curl</div>
                 </div>
             </a>
             <a class="card" href="/getting_started/quickstart_with_ruby/">
                 <div class="icon-and-time-estimate no-description">
-                    <img src="./assets/images/quickstart/quickstart_logo_ruby.svg">
+                    <img src="/assets/images/quickstart/quickstart_logo_ruby.svg">
                     <div class="quickstart-title">Ruby</div>
                 </div>
             </a>
