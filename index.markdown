@@ -18,90 +18,118 @@ image:
         <meta charset="utf-8">
         <title>Basis Theory Overview</title>
     </head>
-    <body>
-        <div id="header">
-            <h1>Basis Theory Guides</h1>
-            <h5>Explore step-by-step guides to use our APIs and SDKs.</h5>
+    <body class="home-page">
+        <h1>Documentation</h1>
+        <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
+        <div class="quickstarts">
+            <div class="quickstart-info">
+                <div class="quickstart-header">Quickstarts</div>
+                <div class="quickstart-subtitle">In just a few steps, learn how to secure and use your data with Basis Theory's tokenization.</div>
+                <div class="quickstart-action">
+                    <a href="/getting_started">Quick start</a>
+                    <img src="./assets/images/icons/blue-time.svg" alt="time-icon">
+                    <div>10 min</div>
+                </div>
+            </div>
         </div>
-        <div id="container">
-            <h2 class="no_toc">Concepts</h2>
-            <div class="card-box card-box-concepts">
-                <a href= "/concepts/what-are-tokens">
-                    <div class="card">
-                        <img src="./assets/images/card1.svg">
-                        <div class="container">
-                            <h4>What are Tokens?</h4>
-                            <p>Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their business. Our tokens enable you to either own the encryption keys yourself, or pass raw data to our platform and we will handle keeping it safe for you.</p>
+        <div class="sub-header">
+            Concepts
+        </div>
+        <div class="cards">
+            <a class="card" href="/concepts/what-are-tokens">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/blue-token.svg">
+                    <div class="time-estimate">
+                        <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>5 min</div>
+                    </div>
+                </div>
+                <div class="card-title">What are Tokens?</div>
+                <div>Use Tokens to secure and share your sensitive data.</div>
+            </a>
+            <a class="card" href="/concepts/what-are-tenants">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/blue-terminal.svg">
+                    <div class="time-estimate">
+                        <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>5 min</div>
+                    </div>
+                </div>
+                <div class="card-title">What are Tenants?</div>
+                <div>Where your Tokens and Applications are defined, managed, and stored.</div>
+            </a>
+            <a class="card" href="/concepts/what-is-the-proxy">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/blue-reactor.svg">
+                    <div class="time-estimate">
+                        <img src="./assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>5 min</div>
+                    </div>
+                </div>
+                <div class="card-title">What is the Proxy?</div>
+                <div>Send HTTP requests with tokenized data without touching it.</div>
+            </a>
+        </div>
+        <div class="sub-header">
+            Guides
+        </div>
+        <div class="cards">
+            <div class="card guide">
+                <div class="icon-and-guides">
+                    <img src="./assets/images/icons/shield-down-arrow.svg" alt="shield-down-arrow">
+                    <div class="guides">
+                        <div class="card-title">Collecting and Securing Data</div>
+                        <div>Learn how to easily tokenize your data on any platform.</div>
+                        <div class="guides-list">
+                            <li><a href="/guides/collect-atomic-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/encrypt-us-banks-in-your-applications">Encrypt U.S Banks in your applications <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/own-your-encryption-keys">Own your encryption keys <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/collect-pii-js">Collect Customer Data (PII) with JS <span class="guide-time-estimate">5m</span></a></li>
                         </div>
                     </div>
-                </a>
-                <a href= "/concepts/what-are-atomic-tokens">
-                    <div class="card">
-                        <img src="./assets/images/card2.svg">
-                        <div class="container">
-                            <h4>What are Atomic Tokens?</h4>
-                            <p>Atomic Tokens enable your business to reduce its overall security and compliance footprint while also reducing the complexity of your application.</p>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </div>
-            <h2 class="no_toc">Guides</h2>
-            <div class="card-box">
-                <a href="/guides/basis-theory-sample-app/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Quickstart Guide</h4>
-                            <p>We are pleased to offer you this 10-step guide and sample application to demonstrate how to tokenize data using Basis Theory. This is an excellent way to quickly get started testing Basis Theory end to end.</p>
+            <div class="card guide">
+                <div class="icon-and-guides">
+                    <img src="./assets/images/icons/shield-up-arrow.svg" alt="shield-up-arrow">
+                    <div class="guides">
+                        <div class="card-title">Processing and Sending Data</div>
+                        <div>Learn how to integrate and make the most out of tokenized data.</div>
+                        <div class="guides-list">
+                            <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/collect-atomic-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/setup-your-first-reactor">Set up your first Reactor <span class="guide-time-estimate">5m</span></a></li>
                         </div>
                     </div>
-                </a>
-                <a href="/guides/collect-atomic-cards-with-elements/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Collect and Charge Credit Cards</h4>
-                            <p>Basis Theory is here to make sure you can keep the lowest level of PCI compliance while retaining your ability to use your card data whenever and however you need to use it.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/guides/style-elements-for-my-brand/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Style Elements</h4>
-                            <p>Our Elements have been built to act as normal input fields within your own application. We've taken care in building out the supported styles and needs of our customers. In this guide, we will walk you through a few of the different styles you can adjust.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/guides/collect-pii-js/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Collect Customer (PII) Data</h4>
-                            <p>Basis Theory is intended to handle any payload of data you can serialize. To show the flexibility of our tokenization platform, the following guide will show you how you can easily tokenize your customer's PII (Personally Identifiable Information) data to keep it safe and secure.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/guides/setup-your-first-reactor/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Setup your first Reactor</h4>
-                            <p>Token Reactors are foundational to your ability to make your data more usable within your application.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/guides/own-your-encryption-keys/">
-                    <div class="card">
-                        <img src="./assets/images/card4.svg">
-                        <div class="container">
-                            <h4>Own Your Encryption Keys</h4>
-                            <p>This guide will show you how to start encrypting data within your applications, so only you can see the data.</p>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </div>
+        </div>
+        <div class="sub-header">
+            Reference
+        </div>
+        <div class="cards">
+            <a class="card" href="https://docs.basistheory.com/api-reference/#introduction">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/purple-token.svg">
+                </div>
+                <div class="card-title">API Reference</div>
+                <div>Use our API's and SDK's to interact with your Tokens.</div>
+            </a>
+            <a class="card" href="https://docs.basistheory.com/elements/#introduction">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/purple-terminal.svg">
+                </div>
+                <div class="card-title">Elements</div>
+                <div>Secure data from your frontend without touching it.</div>
+            </a>
+            <a class="card" href="https://docs.basistheory.com/encryption/#introduction">
+                <div class="icon-and-time-estimate">
+                    <img src="./assets/images/icons/purple-reactor.svg">
+                </div>
+                <div class="card-title">Encryption</div>
+                <div>Hold the encryption keys to your Tokens.</div>
+            </a>
         </div>
     </body>
 </html>

@@ -1,0 +1,129 @@
+@mixin flex-container-wrap-card-items($flex-basis, $max-expected-width: 2000px) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: $flex-basis;
+  }
+
+  $multiplier: 1;
+  $current-width: 0px;
+
+  @while $current-width < $max-expected-width {
+    $current-width: $current-width + $flex-basis;
+    $multiplier: $multiplier + 1;
+
+    &[min-width~="#{$flex-basis * $multiplier}"] > * {
+      max-width: percentage(1/$multiplier);
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  @include flex-container-wrap-card-items(306px);
+  column-gap: 16px;
+  row-gap: 16px;
+
+  .icon-and-guides {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .guides {
+      display: flex;
+      flex-direction: column;
+      margin-left: 24px;
+      max-width: 80%;
+
+      .guides-list {
+        margin-top: 32px;
+
+        li {
+          list-style-type: none;
+          list-style-position: outside;
+          list-style-image: url(/assets/images/icons/book.svg);
+
+          a {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-word;
+          }
+
+          .guide-list-item {
+            display: flex;
+            flex-direction: row;
+          }
+
+          .guide-time-estimate {
+            color: $grey-200;
+            width: 28px;
+            font-weight: normal;
+          }
+        }
+      }
+
+    }
+  }
+
+  .icon-and-time-estimate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .time-estimate {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .icon-and-time-estimate.no-description {
+    margin-bottom: 0;
+    justify-content: flex-start;
+
+    .quickstart-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #070A1B;
+      margin-left: 16px;
+    }
+  }
+
+  .card-title {
+    color: $grey-900;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .card-content {
+    color: $grey-600;
+  }
+
+  .card {
+    border: 1px solid #E1E4F3;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    flex-grow: 1;
+    color: $grey-600;
+    white-space: normal;
+  }
+
+  .card.guide {
+    cursor: default;
+  }
+}

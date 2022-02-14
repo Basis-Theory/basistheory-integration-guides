@@ -32,7 +32,7 @@ image:
   height: 630
 
 logo: "assets/images/logos-guides.svg"
-color_schemes: dark
+color_scheme: dark
 
 # Build settings
 plugins:
