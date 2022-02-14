@@ -24,7 +24,7 @@ image:
         <div class="quickstarts">
             <div class="quickstart-info">
                 <div class="quickstart-header">Quickstarts</div>
-                <div class="quickstart-subtitle">Learn how to use Basis Theory use tokenization to encrypt personal information and safely share it to Auth0.</div>
+                <div class="quickstart-subtitle">In just a few steps, learn how to secure and use your data with Basis Theory's tokenization.</div>
                 <div class="quickstart-action">
                     <a href="/getting_started">Quick start</a>
                     <img src="./assets/images/icons/blue-time.svg" alt="time-icon">
@@ -67,7 +67,7 @@ image:
                     </div>
                 </div>
                 <div class="card-title">What is the Proxy?</div>
-                <div>Send tokenized data without touching it.</div>
+                <div>Send HTTP requests with tokenized data without touching it.</div>
             </a>
         </div>
         <div class="sub-header">
