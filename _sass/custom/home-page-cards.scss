@@ -49,6 +49,12 @@
           list-style-position: outside;
           list-style-image: url(/assets/images/icons/book.svg);
 
+          a {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-word;
+          }
+
           .guide-list-item {
             display: flex;
             flex-direction: row;
