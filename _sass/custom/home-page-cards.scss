@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin flex-container-wrap-card-items($flex-basis, $max-expected-width: 2000px) {
   display: flex;
   flex-wrap: wrap;
@@ -98,7 +100,7 @@
     .quickstart-title {
       font-size: 22px;
       font-weight: 600;
-      color: #070A1B;
+      color: $dark-background-color;
       margin-left: 16px;
     }
   }
