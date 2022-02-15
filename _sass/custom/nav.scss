@@ -1,0 +1,119 @@
+@import 'variables';
+
+.nav-list {
+  .side-bar-category-items {
+    margin: 8px 0 16px 0;
+
+    .guide-subcategory-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: $grey-600;
+      padding-left: 32px;
+      margin: 20px 0;
+    }
+
+    .nav-list-item {
+      .nav-list-link {
+        display: flex;
+        align-items: center;
+        max-height: 40px;
+        min-height: auto;
+        color: $blue-shadow;
+        line-height: 120%;
+        padding-left: 52px;
+
+        &:hover {
+          color: inherit;
+        }
+
+        &.active {
+          color: $primary-text;
+        }
+      }
+
+      //> .nav-list.nav-child {
+      //
+      //  .nav-list-item {
+      //    list-style: disc;
+      //    margin-left: 3rem;
+      //
+      //    .nav-list-link {
+      //      white-space: nowrap;
+      //      text-overflow: ellipsis;
+      //      overflow-x: hidden;
+      //      color: $blue-shadow;
+      //
+      //      &:hover {
+      //        color: inherit;
+      //        background-image: none;
+      //      }
+      //
+      //      &.active {
+      //        color: $primary-text;
+      //        background-image: none;
+      //      }
+      //
+      //    }
+      //  }
+      //}
+
+      //.nav-list-expander {
+      //  svg {
+      //    color: $primary-text
+      //  }
+      //
+      //  &:hover {
+      //    background-image: none;
+      //  }
+      //}
+    }
+  }
+
+  .side-bar-category {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+
+    .side-bar-category-name {
+      color: $grey-600;
+    }
+
+    .side-bar-category-name.home-link {
+      &.active {
+        color: $primary-text;
+      }
+    }
+
+    .category-icon-spacing {
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 12px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .home-icon {
+      background-image: url(/assets/images/icons/home.svg);
+    }
+
+    .getting-started-icon {
+      background-image: url(/assets/images/icons/getting-started.svg);
+    }
+
+    .concepts-icon {
+      background-image: url(/assets/images/icons/concepts-icon.svg);
+    }
+
+    .guides-icon {
+      background-image: url(/assets/images/icons/gudies-icon.svg);
+    }
+
+    .reference-icon {
+      background-image: url(/assets/images/icons/reference-icon.svg);
+    }
+  }
+
+  .side-bar-category.home-link {
+    margin-bottom: 20px;
+  }
+}

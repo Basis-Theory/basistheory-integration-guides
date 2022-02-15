@@ -3,6 +3,7 @@ layout: default
 title: Collect Credit Cards with React
 permalink: /guides/collect-atomic-cards-with-elements-react/
 categories: guides
+subcategory: processing
 nav_order: 4
 has_children: true
 has_toc: false

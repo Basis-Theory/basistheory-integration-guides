@@ -3,6 +3,7 @@ layout: default
 title: Collect and Charge Credit Cards with JavaScript
 permalink: /guides/collect-atomic-cards-with-elements/
 categories: guides
+subcategory: processing
 nav_order: 3
 has_children: true
 has_toc: false
