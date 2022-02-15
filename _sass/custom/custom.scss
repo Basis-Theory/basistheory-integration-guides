@@ -338,6 +338,7 @@ body {
 .side-bar {
     background: #13172A;
     z-index: 30;
+    padding-top: 60px;
     
     .site-title.lh-tight {
         padding: 16px;
@@ -735,7 +736,6 @@ body {
 @media (max-width: 800px) {
     .side-bar {
         position: absolute;
-        margin-top: 72px;
         width: 100%;
 
         .site-footer {

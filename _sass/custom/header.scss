@@ -9,7 +9,8 @@
   height: 72px;
   width: 100%;
   border-bottom: none;
-  z-index: 30;
+  z-index: 99;
+  position: fixed;
 
   .site-header-logo {
     background-image: url(/assets/images/header/bt-logo-icon.svg);
