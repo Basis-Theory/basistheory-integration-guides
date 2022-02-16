@@ -204,7 +204,7 @@ using var httpClient = new HttpClient
     BaseAddress = new Uri("https://api.basistheory.com"),
     DefaultRequestHeaders =
     {
-        { "BT-API-KEY", "key_WbQ4NFX5SF7JwjT3odaGj9" }
+        { "BT-API-KEY", "<! ENTER YOUR API KEY HERE !>" }
     }
 };
 
