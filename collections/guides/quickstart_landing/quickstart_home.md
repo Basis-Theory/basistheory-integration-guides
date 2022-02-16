@@ -16,7 +16,7 @@ image:
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Getting Started with Ruby, Python, .NET, Java, C#, cURL, node.js</title>
+        <title>Getting Started with Ruby, Python, .NET, Java, C#, cURL, NodeJS</title>
     </head>
     <body class="quickstart-home-page">
         <div class="header-and-description">
@@ -29,18 +29,45 @@ image:
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_nodejs.svg">
                     <div class="quickstart-title">NodeJS</div>
+
+                     <div class="time-estimate">
+                        <img src="/assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>10 min</div>
+                    </div>
                 </div>
             </a>
             <a class="card" href="/getting_started/quickstart_with_curl/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_curl.svg">
                     <div class="quickstart-title">Curl</div>
+
+                     <div class="time-estimate">
+                        <img src="/assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>10 min</div>
+                    </div>
                 </div>
             </a>
             <a class="card" href="/getting_started/quickstart_with_ruby/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_ruby.svg">
                     <div class="quickstart-title">Ruby</div>
+
+                     <div class="time-estimate">
+                        <img src="/assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>10 min</div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="/getting_started/quickstart_with_dotnet/">
+                <div class="icon-and-time-estimate no-description">
+                    <img src="/assets/images/quickstart/quickstart_logo_dotnet.svg">
+                    <div class="quickstart-title">.NET</div>
+
+                    <div class="time-estimate">
+                        <img src="/assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>10 min</div>
+                    </div>
                 </div>
             </a>
         </div>
