@@ -393,6 +393,10 @@ body {
     }
 }
 
+.main-header.nav-open {
+    display: flex;
+}
+
 .site-title:hover { background: transparent !important; }
 
 .site-button:hover { background: transparent !important; }

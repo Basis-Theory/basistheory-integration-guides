@@ -14,6 +14,7 @@
     opacity: 1;
     max-height: 500px;
     transition: max-height 0.25s ease-in, opacity 0.25s ease-in;
+    visibility: visible;
 
     .guide-subcategory-title {
       margin: 20px 0;
@@ -26,6 +27,7 @@
     max-height: 0;
     transition: max-height 0.25s ease-out, opacity 0.25s ease-out;
     margin: 8px 0 16px 0;
+    visibility: hidden;
 
     .guide-subcategory-title {
       font-size: 12px;
@@ -62,6 +64,7 @@
     align-items: center;
     justify-content: space-between;
     margin-left: 20px;
+    cursor: pointer;
 
     .icon-and-category-name {
       display: flex;
@@ -80,9 +83,6 @@
 
     .side-bar-category-name {
       color: $grey-600;
-    }
-
-    .side-bar-category-name.home-link {
       &.active {
         color: $primary-text;
       }
@@ -118,6 +118,7 @@
   }
 
   .side-bar-category.home-link {
+    margin-top: 8px;
     margin-bottom: 20px;
   }
 }

@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebarClassCategories = ['getting-started', 'concepts', 'guides', 'reference'];
 
     sidebarClassCategories.forEach((sidebarClassCategory) => {
-        const categoryExpander = document.querySelector(`#${sidebarClassCategory}-category-expander`);
+        const categoryNameAndIcon = document.querySelector(`#${sidebarClassCategory}-category-name-and-icon`);
 
-        categoryExpander.addEventListener('click', function() {
+        categoryNameAndIcon.addEventListener('click', function() {
+            const categoryExpander = document.querySelector(`#${sidebarClassCategory}-category-expander`);
             categoryExpander.classList.toggle('rotate');
             const categoryItems = document.querySelector(`#${sidebarClassCategory}-category-items`);
 

@@ -58,18 +58,18 @@
 
     {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
 
-    <div class="side-bar-category home-link">
+    <a class="side-bar-category home-link" href="/">
         <div class="icon-and-category-name">
             <div class="home-icon category-icon-spacing"></div>
-            <a class="side-bar-category-name home-link {% if page.url == '/' %} active{% endif %}" href="/">Home</a>
+            <div class="side-bar-category-name home-link {% if page.url == '/' %} active{% endif %}">Home</div>
         </div>
-    </div>
-    <div class="side-bar-category">
+    </a>
+    <div class="side-bar-category" id="getting-started-category-name-and-icon">
         <div class="icon-and-category-name">
             <div class="getting-started-icon category-icon-spacing"></div>
-            <div class="side-bar-category-name">Getting Started</div>
+            <div class="side-bar-category-name {% if page.url contains '/getting_started' %} active{% endif %}">Getting Started</div>
         </div>
-        <a href="#" class="category-expander" id="getting-started-category-expander"></a>
+        <a class="category-expander" id="getting-started-category-expander"></a>
     </div>
     <div class="side-bar-category-items" id="getting-started-category-items">
         {%- for node in pages_list -%}
@@ -83,12 +83,12 @@
         {%- endfor -%}
     </div>
 
-    <div class="side-bar-category">
+    <div class="side-bar-category" id="concepts-category-name-and-icon">
         <div class="icon-and-category-name">
             <div class="concepts-icon category-icon-spacing"></div>
-            <div class="side-bar-category-name">Concepts</div>
+            <div class="side-bar-category-name {% if page.url contains '/concepts' %} active{% endif %}">Concepts</div>
         </div>
-        <a href="#" class="category-expander" id="concepts-category-expander"></a>
+        <a class="category-expander" id="concepts-category-expander"></a>
     </div>
     <div class="side-bar-category-items" id="concepts-category-items">
         {%- for node in pages_list -%}
@@ -102,12 +102,12 @@
         {%- endfor -%}
     </div>
 
-    <div class="side-bar-category">
+    <div class="side-bar-category"  id="guides-category-name-and-icon">
         <div class="icon-and-category-name">
             <div class="guides-icon category-icon-spacing"></div>
-            <div class="side-bar-category-name">Guides</div>
+            <div class="side-bar-category-name {% if page.url contains '/guides' %} active{% endif %}">Guides</div>
         </div>
-        <a href="#" class="category-expander" id="guides-category-expander"></a>
+        <a class="category-expander" id="guides-category-expander"></a>
     </div>
     <div class="side-bar-category-items" id="guides-category-items">
         <div class="guide-subcategory-title">COLLECTING AND SECURING DATA</div>
@@ -135,12 +135,13 @@
             {%- endif -%}
         {%- endfor -%}
     </div>
-    <div class="side-bar-category">
+
+    <div class="side-bar-category" id="reference-category-name-and-icon">
         <div class="icon-and-category-name">
             <div class="reference-icon category-icon-spacing"></div>
             <div class="side-bar-category-name">Reference</div>
         </div>
-        <a href="#" class="category-expander" id="reference-category-expander"></a>
+        <a class="category-expander" id="reference-category-expander"></a>
     </div>
     <div class="side-bar-category-items"  id="reference-category-items">
         <div class="nav-list-item">
