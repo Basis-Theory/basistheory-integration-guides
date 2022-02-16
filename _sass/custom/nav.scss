@@ -30,42 +30,6 @@
           color: $primary-text;
         }
       }
-
-      //> .nav-list.nav-child {
-      //
-      //  .nav-list-item {
-      //    list-style: disc;
-      //    margin-left: 3rem;
-      //
-      //    .nav-list-link {
-      //      white-space: nowrap;
-      //      text-overflow: ellipsis;
-      //      overflow-x: hidden;
-      //      color: $blue-shadow;
-      //
-      //      &:hover {
-      //        color: inherit;
-      //        background-image: none;
-      //      }
-      //
-      //      &.active {
-      //        color: $primary-text;
-      //        background-image: none;
-      //      }
-      //
-      //    }
-      //  }
-      //}
-
-      //.nav-list-expander {
-      //  svg {
-      //    color: $primary-text
-      //  }
-      //
-      //  &:hover {
-      //    background-image: none;
-      //  }
-      //}
     }
   }
 
