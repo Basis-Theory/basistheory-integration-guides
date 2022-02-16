@@ -51,7 +51,7 @@ If you don’t already have a Basis Theory account and your first Tenant, create
 Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
 ### 3.1 Enter an Application Name
-This name allows you to identify this application in the future — for this tutorial enter “Ruby Quickstart”.
+This name allows you to identify this application in the future — for this tutorial enter .NET Quickstart”.
 
 <img src="/assets/images/getting_started/application_name_dotnet.png" />
 
