@@ -3,7 +3,7 @@ layout: post
 title:  "Tokens"
 categories: concepts
 permalink: /concepts/what-are-tokens/
-nav_order: 5
+nav_order: 3
 has_children: true
 has_toc: false
 image:
