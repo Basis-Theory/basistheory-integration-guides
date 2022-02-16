@@ -28,7 +28,11 @@ Completing this tutorial will require you to have the .NET 6.0 SDK or later inst
 To start, you will need a new .NET console application. Create a new console application in your IDE of choice named `BasisTheoryQuickstart` or use the following command to create the application:
 
 ```bash
-dotnet new console -n BasisTheoryQuickstart -o BasisTheoryQuickstart
+mkdir BasisTheoryQuickstart
+
+cd BasisTheoryQuickstart
+
+dotnet new console
 ```
 
 ### Step 2: Import needed dependencies
@@ -104,7 +108,7 @@ Console.WriteLine(JsonSerializer.Serialize(token, jsonOptions));
 To create a token, run the following command in the directory you created your console application:
 
 ```bash
-dotnet run BasisTheoryQuickstart
+dotnet run
 ```
 
 You will see a response similar to:
@@ -150,7 +154,7 @@ Console.WriteLine(getResponse.GetProperty("data"));
 Test the entire tutorial out by running the application:
 
 ```bash
-dotnet run BasisTheoryQuickstart
+dotnet run
 ```
 
 🎉🎉🎉 You’ve successfully created a Token for your data and read it back 🎉🎉🎉
