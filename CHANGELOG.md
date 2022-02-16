@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.3.1...v1.4.0) (2022-02-16)
+
+
+### Features
+
+* add .NET quickstart guide and timings on quickstart cards ([#80](https://github.com/Basis-Theory/basistheory-integration-guides/issues/80)) ([c787165](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c787165c479e4f6c1dbff1684482c6414efa1970))
+
 ## [1.3.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.3.0...v1.3.1) (2022-01-28)
 
 
