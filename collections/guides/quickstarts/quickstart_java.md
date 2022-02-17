@@ -22,7 +22,7 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 ### Step 1.1: Ensure you have Java installed
 
-We will use vanilla Java, without external dependencies or Maven or Gradle. Completing this tutorial will require you to have the Java or OpenJDK 17 or later installed on your local system. The latest version of Java can be [downloaded here](https://www.oracle.com/java/technologies/downloads/); OpenJDK can be [downloaded here](https://jdk.java.net/).
+We will use vanilla Java, without external dependencies. Completing this tutorial will require you to have the Java SE 17 or later installed on your local system. The latest version of Java can be [downloaded here](https://www.oracle.com/java/technologies/downloads/); OpenJDK can be [downloaded here](https://jdk.java.net/).
 
 ### Step 1.2: Create a simple Java class file
 To start, you will need a new Java class file.  Create a new file named `BasisTheoryQuickstart.java` or use the following command to create the application:
