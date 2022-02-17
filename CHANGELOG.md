@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.4.1...v1.4.2) (2022-02-17)
+
+
+### Bug Fixes
+
+* rename developer to developers ([#85](https://github.com/Basis-Theory/basistheory-integration-guides/issues/85)) ([a84e38e](https://github.com/Basis-Theory/basistheory-integration-guides/commit/a84e38e63456a0fa039965c07cb87db3baaa0b45))
+
 ## [1.4.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.4.0...v1.4.1) (2022-02-17)
 
 
