@@ -3,6 +3,7 @@ layout: default
 title: Use Token Data in HTTP Requests
 permalink: /guides/use-token-data-in-http-requests/
 categories: guides
+subcategory: processing
 nav_order: 11
 has_children: true
 has_toc: false

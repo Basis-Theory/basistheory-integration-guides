@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart with cURL
-permalink: /getting_started/quickstart_with_curl/
+permalink: /getting-started/quickstart-with-curl/
 categories: quickstart
 nav_order: 2
 has_children: true
