@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart with .NET
-permalink: /getting_started/quickstart_with_dotnet/
+permalink: /getting-started/quickstart-with-dotnet/
 categories: quickstart
 nav_order: 4
 has_children: true

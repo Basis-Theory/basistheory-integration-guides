@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart with Ruby
-permalink: /getting_started/quickstart_with_ruby/
+permalink: /getting-started/quickstart-with-ruby/
 categories: quickstart
 nav_order: 3
 has_children: true

@@ -26,7 +26,7 @@ image:
                 <div class="quickstart-header">Quickstarts</div>
                 <div class="quickstart-subtitle">In just a few steps, learn how to secure and use your data with Basis Theory's tokenization.</div>
                 <div class="quickstart-action">
-                    <a href="/getting_started">Quick start</a>
+                    <a href="/getting-started">Quick start</a>
                     <img src="./assets/images/icons/blue-time.svg" alt="time-icon">
                     <div>10 min</div>
                 </div>

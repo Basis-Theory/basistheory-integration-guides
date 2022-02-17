@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart with Node.js
-permalink: /getting_started/quickstart_with_nodejs/
+permalink: /getting-started/quickstart-with-nodejs/
 categories: quickstart
 nav_order: 1
 has_children: true

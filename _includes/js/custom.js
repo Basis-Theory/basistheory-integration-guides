@@ -11,5 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             categoryItems.classList.toggle('open');
         });
-    })
+    });
+
+    sidebarClassCategories.forEach((sidebarClassCategory) => {
+        if (document.location.href.includes(sidebarClassCategory)) {
+            const categoryExpander = document.querySelector(`#${sidebarClassCategory}-category-expander`);
+            const categoryItems = document.querySelector(`#${sidebarClassCategory}-category-items`);
+
+            categoryExpander.classList.toggle('rotate');
+            categoryItems.classList.toggle('open')
+        }
+    });
 });
