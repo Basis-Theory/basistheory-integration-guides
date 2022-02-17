@@ -1,6 +1,6 @@
 # Basis Theory Integration Guides
 
-The [Basis Theory](https://basistheory.com/) Integration Guides. This site is hosted at [developer.basistheory.com](https://developer.basistheory.com/)
+The [Basis Theory](https://basistheory.com/) Integration Guides. This site is hosted at [developers.basistheory.com](https://developers.basistheory.com/)
 
 ## Getting Started
 

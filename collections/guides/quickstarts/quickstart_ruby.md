@@ -16,7 +16,7 @@ image:
 
 In this tutorial, you will create a new Ruby script and use Basis Theory’s platform to secure a string of data and then read that data back out. Once you’ve completed this tutorial, you’ll have a foundational understanding of how to secure your data with Basis Theory allowing you to no longer worry about the underlying storage or encryption of the data.
 
-If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developer.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developer.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
+If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
 
 ## Step 1: Get your Ruby environment ready
 
@@ -72,7 +72,7 @@ Keep this API key safe for later. We will use it in the next step to create your
 <img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 4: Create a Token to secure a string
-To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the `token` Token Type (you can read more about Tokens [here](https://developer.basistheory.com/concepts/what-are-tokens/)).
+To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the `token` Token Type (you can read more about Tokens [here](https://developers.basistheory.com/concepts/what-are-tokens/)).
 
 Update the `BT-API-KEY` header with the API Key you created in Step 3:
 
@@ -217,6 +217,6 @@ puts "Read your raw value from the Token:", raw_value["data"]
 
 Now that you understand the basics, you are ready to learn more about how you can better secure sensitive data without sacrificing data usability using the Basis Theory platform.
 
-Check out the ability to use your [Token data with HTTP request](https://developer.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://developer.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
+Check out the ability to use your [Token data with HTTP request](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
 Was this useful, or looking for something different? Reach out to us on our [Discord](https://discord.gg/XjWsy8PqK2).
