@@ -52,7 +52,7 @@ type nul > basistheory.py
 
 ### Step 2.1: Install the `requests` pip package
 
-To simplify our request to Basis Theory, we will install a helper package called `[requests](https://docs.python-requests.org/en/latest/)`. This package simplifies HTTP requests in Python.
+To simplify our request to Basis Theory, we will install a helper package called [`requests`](https://docs.python-requests.org/en/latest/). This package simplifies HTTP requests in Python.
 
 ```bash
 pip install requests
@@ -61,7 +61,7 @@ pip install requests
 pip3 install requests
 ```
 
-### Step 2.2: Import the `requests` and `[json](https://docs.python.org/3/library/json.html)` dependencies in your script
+### Step 2.2: Import the `requests` and [`json`](https://docs.python.org/3/library/json.html) dependencies in your script
 
 The simplest form of securing data with Basis Theory is through our API with a JSON body. In Python, this requires a few different libraries to make an API call. At the top of your file, you’ll import the following dependencies:
 
