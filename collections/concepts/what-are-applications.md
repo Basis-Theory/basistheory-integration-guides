@@ -34,7 +34,7 @@ The name of your Application gives you clarity on what context it is being used 
     - Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is collecting the data itself and protecting with Basis Theory via an API call. Applications created with this type have limited permissions to enable using the API Key in publicly available code.
 
 - Management
-    - Used with scripts or the Basis Theory Terraform ([request access here](https://basistheory.com/contact)) modules to configure your [Tenant’s](https://guides.basistheory.com/concepts/tenants/) settings (Applications, Reactors, etc) without logging into our UI Portal.
+    - Used with scripts or the Basis Theory Terraform ([request access here](https://basistheory.com/contact)) modules to configure your [Tenant’s](https://developers.basistheory.com/concepts/tenants/) settings (Applications, Reactors, etc) without logging into our UI Portal.
 
 
 ### Permissions
@@ -54,14 +54,14 @@ Your Application’s API Key is used to authenticate your systems to the Basis T
 
 ### Each system accessing Basis Theory
 
-A common use-case for Basis Theory is to grant multiple systems access to the same data or a subset of the data that is being secured in a [Tenant](https://guides.basistheory.com/concepts/tenants/). This could mean that one system is allowed to only collect the data, one system is allowed to view the data, and the last system is only allowed to [Proxy](https://guides.basistheory.com/concepts/what-is-the-proxy/) the data to a 3rd party but never access the raw data.
+A common use-case for Basis Theory is to grant multiple systems access to the same data or a subset of the data that is being secured in a [Tenant](https://developers.basistheory.com/concepts/tenants/). This could mean that one system is allowed to only collect the data, one system is allowed to view the data, and the last system is only allowed to [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/) the data to a 3rd party but never access the raw data.
 
 
 <img src="/assets/images/concepts/applications_each_system.jpeg">
 
 ### Enable partners to use data secured by Basis Theory
 
-Often, businesses need to grant their partners access to their sensitive data — traditionally, these businesses would just export the needed data and send it over to their partner. With Basis Theory Applications, a business creates an Application with permissions restricted to ONLY the data that partner needs. In some cases, businesses will not allow the partner to see the raw data, but rather allow them to [Proxy](https://guides.basistheory.com/concepts/what-is-the-proxy/) the data to another API or run serverless functions with Reactors.
+Often, businesses need to grant their partners access to their sensitive data — traditionally, these businesses would just export the needed data and send it over to their partner. With Basis Theory Applications, a business creates an Application with permissions restricted to ONLY the data that partner needs. In some cases, businesses will not allow the partner to see the raw data, but rather allow them to [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/) the data to another API or run serverless functions with Reactors.
 
 
 <img src="/assets/images/concepts/applications_partners.jpeg">

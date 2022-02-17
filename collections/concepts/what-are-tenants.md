@@ -27,7 +27,7 @@ You are now able to create a blank new Tenant, by entering a Tenant name:
 
 <img src="/assets/images/concepts/tenant_create.png">
 
-From here, you’ll be able to create new Applications which will allow you to authenticate and be granted authorization to create new [Token](https://guides.basistheory.com/concepts/what-are-tokens/) data and integrations.
+From here, you’ll be able to create new Applications which will allow you to authenticate and be granted authorization to create new [Token](https://developers.basistheory.com/concepts/what-are-tokens/) data and integrations.
 
 ## Common Use Cases
 

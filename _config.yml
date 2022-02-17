@@ -23,7 +23,7 @@ email: support@basistheory.com
 description: >- # this means to ignore newlines until "baseurl:"
   Explore step-by-step guides to use our APIs and SDKs.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://guides.basistheory.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://developers.basistheory.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: basistheory
 github_username:  basis-theory
 image:

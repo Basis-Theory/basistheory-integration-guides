@@ -52,7 +52,7 @@
         }
 
         &.active {
-          color: $primary-text;
+          color: $primary-dark;
         }
       }
     }
@@ -84,7 +84,7 @@
     .side-bar-category-name {
       color: $grey-600;
       &.active {
-        color: $primary-text;
+        color: $primary-dark;
       }
     }
 
