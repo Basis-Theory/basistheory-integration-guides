@@ -3,6 +3,7 @@ layout: default
 title: Setup your first Reactor
 permalink: /guides/setup-your-first-reactor/
 categories: guides
+subcategory: processing
 nav_order: 2
 has_children: true
 has_toc: false

@@ -3,7 +3,7 @@ layout: post
 title:  Applications
 categories: concepts
 permalink: /concepts/what-are-applications/
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: false
 image:

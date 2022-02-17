@@ -6,6 +6,8 @@
 @import 'variables';
 @import 'home-page-cards';
 @import 'quickstart';
+@import 'header';
+@import 'nav';
 
 @media (min-width: 66.5rem) {
     .main .iframe-container {
@@ -45,10 +47,6 @@
   %icon-ok-sign {
     @extend %icon;
     content: url(../../assets/images/icons/check-circle.svg);
-  }
-
-  .nav-list .nav-list-item {
-      list-style-type: none !important;
   }
 
 body {
@@ -335,24 +333,10 @@ body {
     }
 }
 .side-bar {
-    background: #13172A;
+    background: $side-bar-background;
     z-index: 30;
+    padding-top: 60px;
     
-    .site-header {
-        border-bottom: 1px solid #2D2F4A;
-        &:hover {
-            background-image: none;
-        }
-        .site-button {
-            &:hover { 
-                background-image: none; 
-            }
-            .icon {
-                color: $side-bar-gray;
-            }
-        }
-
-    }
     .site-title.lh-tight {
         padding: 16px;
     }
@@ -378,143 +362,8 @@ body {
                 transform: translateY(-0.2rem);
             }
         }
-        .nav-list {
-            .nav-list-item {
-                .nav-list-link {
-                    color: $blue-shadow;
-                    font-size: 14px;
-                    line-height: 143%;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                }
-            }
-        }
-    }
-    
-    .nav-list {
-        h2 {
-            font-weight: 600;
-            font-size: 16px !important;
-            line-height: 175%;
-            letter-spacing: 0.15px;
-            color: $side-bar-gray;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            text-decoration: none;
-            overflow-x: hidden;
-            padding-right: 2rem;
-            padding-left: 2rem;
-            padding-top: 1rem;
-            margin-bottom: 0;
-        }
-
-        .nav-list-home {
-            color: $blue-shadow;
-            font-family: Source Sans Pro;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 143%;
-            padding-bottom: 26px;     
-            padding-right: 2rem;
-            padding-left: 2rem;
-
-            &:hover {
-                color: inherit;
-                background-image: none;
-            }
-
-            &.active {
-                color: $primary-text;
-                background-image: none;
-            }
-        }
-        ul {
-            padding-left: 2rem;
-            .nav-list-post {
-                list-style: none;
-                a {
-                    color: $blue-shadow;
-                    font-size: 14px;
-                    line-height: 143%;
-                    padding-top: 20px;
-                    background-image: none;
-                }
-
-                &:hover {
-                    color: inherit;
-                    background-image: none;
-                }
-
-                &.active {
-                    color: $primary-text;
-                    background-image: none;
-                }
-
-            }
-        }
-        .nav-list-item {
-            .nav-list-link {
-                text-decoration: none;
-                color: $blue-shadow;
-                font-size: 14px;
-                line-height: 143%;
-                padding: 0.25rem 2rem;
-    
-                &:hover {
-                    color: inherit;
-                    background-image: none;
-                }
-    
-                &.active {
-                    color: $primary-text;
-                    background-image: none;
-                }
-            }
-            > .nav-list.nav-child {
-
-                .nav-list-item {
-                    list-style: disc;
-                    margin-left: 3rem;
-
-                    .nav-list-link {
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        text-decoration: none;
-                        overflow-x: hidden;
-                        color: $blue-shadow;
-                        font-size: 14px;
-                        line-height: 143%;
-                        padding-top: 0.25rem;
-                        padding-bottom: 0.25rem;
-                        padding-left: 0;
-    
-                        &:hover {
-                            color: inherit;
-                            background-image: none;
-                        }
-            
-                        &.active {
-                            color: $primary-text;
-                            background-image: none;
-                        }
-    
-                    }
-                }
-            } 
-            .nav-list-expander {
-                svg {
-                    color: $primary-text
-                }
-                &:hover {
-                    background-image: none;
-                }
-            }
-        }
-    
     }
 }
-
 
 .nav-principal-href {
     font-weight: 600;
@@ -538,6 +387,14 @@ body {
 .main-header {
     background-color: $search-background-color;
     border-bottom: $border #E6E8F0;
+
+    .search {
+        margin-top: 60px;
+    }
+}
+
+.main-header.nav-open {
+    display: flex;
 }
 
 .site-title:hover { background: transparent !important; }
@@ -618,6 +475,10 @@ body {
 }
 
 @media (min-width: 50rem) {
+    .main-content-wrap {
+        padding-top: 60px;
+    }
+
     .side-bar { 
         flex-wrap: nowrap; 
         position: fixed; 
@@ -627,19 +488,11 @@ body {
         border-right: 1px solid $magenta-light; 
         align-items: flex-end;
 
-        .site-header { 
-            height: 60px; 
-            max-height: 60px;
-            border-bottom: 1px solid #2D2F4A;
-            .site-title.lh-tight {
-                padding: 0 16px;
-            }
-        }
-
         .site-nav {
             padding-top: 1rem;
         }
     }
+
     .main-header {
         .search {
             background: $blue-light;
@@ -696,7 +549,7 @@ body {
 }
 
 @media (min-width: 66.5rem) {
-    .site-nav, .site-header, .site-footer {
+    .site-nav, .site-footer {
         width:100%; 
     }
     .side-bar { 
@@ -756,13 +609,19 @@ body {
 
 @media (max-width: 800px) {
     .side-bar {
-        position: fixed;
+        position: absolute;
         width: 100%;
+
         .site-footer {
             display: none;
         }
     }
+
     .main-content-wrap {
         padding-top: 5rem;
+    }
+
+    .site-nav.nav-open {
+        margin-top: 25px;
     }
 }

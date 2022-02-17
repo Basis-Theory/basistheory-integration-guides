@@ -3,7 +3,7 @@ layout: post
 title:  "Proxy"
 categories: concepts
 permalink: /concepts/what-is-the-proxy/
-nav_order: 3
+nav_order: 5
 has_children: true
 has_toc: false
 image:

@@ -58,16 +58,24 @@ layout: table_wrappers
     </symbol>
   </svg>
 
-  <div class="side-bar">
-    <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">
-        <span class="site-logo" />
-      </a>
-
-      <a href="#" id="menu-button" class="site-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-      </a>
+  <header class="site-header">
+    <a class="site-header-logo" href="{{ '/' | absolute_url }}">
+    </a>
+    <div class="documentation-links">
+      <a class="documentation-link" href="/getting-started">Get Started</a>
+      <a class="documentation-link" href="https://docs.basistheory.com/api-reference/#introduction">API</a>
+      <a class="documentation-link" href="https://docs.basistheory.com/elements/#introduction">Elements</a>
+      <a class="documentation-link" href="https://docs.basistheory.com/encryption/#introduction">Encryption</a>
     </div>
+    <div class="portal-links">
+      <a class="portal-sign-in" href="https://portal.basistheory.com">Sign In</a>
+      <a class="portal-create-account" href="https://portal.basistheory.com/register">Create Account</a>
+    </div>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </header>
+  <div class="side-bar">
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
@@ -85,15 +93,6 @@ layout: table_wrappers
       {% else %}
         {% include nav.html pages=site.html_pages %}
       {% endif %}
-      <div class="nav-more">
-        <h1 class="nav-title">More</h1>
-        <ul class="nav-list">
-            <li class="nav-list-item"><a class="nav-list-link" href="https://docs.basistheory.com">Documentation</a></li>
-            <li class="nav-list-item"><a class="nav-list-link" href="https://discord.gg/NSvXxaW5Fv" target="_blank">Join Discord</a></li>
-            <li class="nav-list-item"><a class="nav-list-link" href="https://github.com/Basis-Theory" target="_blank">GitHub</a></li>
-            <li class="nav-list-item"><a class="nav-list-link" href="mailto:support@basistheory.com?subject=Help!">Email Support</a></li>
-        </ul>
-      </div>
     </nav>
     <footer class="site-footer">
     </footer>

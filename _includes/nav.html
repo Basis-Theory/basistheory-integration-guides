@@ -1,4 +1,4 @@
-<ul class="nav-list">
+<div class="nav-list">
     {%- assign titled_pages = include.pages
           | where_exp:"item", "item.title != nil" -%}
   
@@ -58,62 +58,96 @@
 
     {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
 
-    <h2>Getting Started</h2>
-    {%- for node in pages_list -%}
-        {%- if node.parent == nil and node.categories == 'quickstart' -%}
-            {%- unless node.nav_exclude -%}
-                <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-                    {%- if node.has_children && page.url == node.url -%}
-                        <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
-                    {%- endif -%}
-                    <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-                    {%- if node.has_children -%}
-                        {%- assign children_list = pages_list | where: "parent", node.title -%}
-                    {%- endif -%}
-                    {% if page.url == node.url %}
-                        {% include toc.html html=content sanitize=true class="nav-list nav-child" item_class="nav-list-item" anchor_class="nav-list-link" h_min=2 h_max=2 %}
-                    {% endif %}
-                </li>
-            {%- endunless -%}
-        {%- endif -%}
-    {%- endfor -%}
+    <a class="side-bar-category home-link" href="/">
+        <div class="icon-and-category-name">
+            <div class="home-icon category-icon-spacing"></div>
+            <div class="side-bar-category-name home-link {% if page.url == '/' %} active{% endif %}">Home</div>
+        </div>
+    </a>
+    <div class="side-bar-category" id="getting-started-category-name-and-icon">
+        <div class="icon-and-category-name">
+            <div class="getting-started-icon category-icon-spacing"></div>
+            <div class="side-bar-category-name {% if page.url contains '/getting-started' %} active{% endif %}">Getting Started</div>
+        </div>
+        <a class="category-expander" id="getting-started-category-expander"></a>
+    </div>
+    <div class="side-bar-category-items" id="getting-started-category-items">
+        {%- for node in pages_list -%}
+            {%- if node.parent == nil and node.categories == 'quickstart' -%}
+                {%- unless node.nav_exclude -%}
+                    <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+                        <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+                    </div>
+                {%- endunless -%}
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
 
-    <h2>Concepts</h2>
-    {%- for node in pages_list -%} 
-      {%- if node.parent == nil and node.categories == 'concepts' -%}
-        {%- unless node.nav_exclude -%}
-        <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-            {%- if node.has_children && page.url == node.url -%}
-            <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+    <div class="side-bar-category" id="concepts-category-name-and-icon">
+        <div class="icon-and-category-name">
+            <div class="concepts-icon category-icon-spacing"></div>
+            <div class="side-bar-category-name {% if page.url contains '/concepts' %} active{% endif %}">Concepts</div>
+        </div>
+        <a class="category-expander" id="concepts-category-expander"></a>
+    </div>
+    <div class="side-bar-category-items" id="concepts-category-items">
+        {%- for node in pages_list -%}
+          {%- if node.parent == nil and node.categories == 'concepts' -%}
+            {%- unless node.nav_exclude -%}
+            <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+              <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+            </div>
+            {%- endunless -%}
           {%- endif -%}
-          <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-          {%- if node.has_children -%}
-            {%- assign children_list = pages_list | where: "parent", node.title -%}
+        {%- endfor -%}
+    </div>
+
+    <div class="side-bar-category"  id="guides-category-name-and-icon">
+        <div class="icon-and-category-name">
+            <div class="guides-icon category-icon-spacing"></div>
+            <div class="side-bar-category-name {% if page.url contains '/guides' %} active{% endif %}">Guides</div>
+        </div>
+        <a class="category-expander" id="guides-category-expander"></a>
+    </div>
+    <div class="side-bar-category-items" id="guides-category-items">
+        <div class="guide-subcategory-title">COLLECTING AND SECURING DATA</div>
+        {%- for node in pages_list -%}
+          {%- if node.parent == nil and node.categories == 'guides' -%}
+            {%- if node.subcategory == 'collecting' -%}
+                {%- unless node.nav_exclude -%}
+                    <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+                      <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+                    </div>
+                {%- endunless -%}
+            {%- endif -%}
           {%- endif -%}
-            {% if page.url == node.url %}
-                {% include toc.html html=content sanitize=true class="nav-list nav-child" item_class="nav-list-item" anchor_class="nav-list-link" h_min=2 h_max=2 %}
-            {% endif %}
-        </li>
-        {%- endunless -%}
-      {%- endif -%}
-    {%- endfor -%}  
-    <h2>Guides</h2>
-    {%- for node in pages_list -%} 
-      {%- if node.parent == nil and node.categories == 'guides' -%}
-        {%- unless node.nav_exclude -%}
-        <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-            {%- if node.has_children && page.url == node.url -%}
-            <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
-          {%- endif -%}
-          <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-          {%- if node.has_children -%}
-            {%- assign children_list = pages_list | where: "parent", node.title -%}
-          {%- endif -%}
-            {% if page.url == node.url %}
-                {% include toc.html html=content sanitize=true class="nav-list nav-child" item_class="nav-list-item" anchor_class="nav-list-link" h_min=2 h_max=2 %}
-            {% endif %}
-        </li>
-        {%- endunless -%}
-      {%- endif -%}
-    {%- endfor -%}  
-  </ul>
+        {%- endfor -%}
+        <div class="guide-subcategory-title">PROCESSING AND SENDING DATA</div>
+        {%- for node in pages_list -%}
+            {%- if node.parent == nil and node.categories == 'guides' -%}
+                {%- if node.subcategory == 'processing' -%}
+                    {%- unless node.nav_exclude -%}
+                        <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+                            <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+                        </div>
+                    {%- endunless -%}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
+
+    <div class="side-bar-category" id="reference-category-name-and-icon">
+        <div class="icon-and-category-name">
+            <div class="reference-icon category-icon-spacing"></div>
+            <div class="side-bar-category-name">Reference</div>
+        </div>
+        <a class="category-expander" id="reference-category-expander"></a>
+    </div>
+    <div class="side-bar-category-items"  id="reference-category-items">
+        <div class="nav-list-item">
+            <a href="https://docs.basistheory.com/api-reference/#introduction" class="nav-list-link">API Reference</a>
+            <a href="https://docs.basistheory.com/elements/#introduction" class="nav-list-link">Elements</a>
+            <a href="https://docs.basistheory.com/encryption/#introduction" class="nav-list-link">Encryption</a>
+        </div>
+    </div>
+  </div>

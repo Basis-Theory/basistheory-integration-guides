@@ -1,0 +1,74 @@
+@import 'variables';
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $dark-background-color;
+  padding: 16px;
+  height: 72px;
+  width: 100%;
+  border-bottom: none;
+  z-index: 99;
+  position: fixed;
+
+  .site-header-logo {
+    background-image: url(/assets/images/header/bt-logo-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 114px;
+    height: 40px;
+  }
+
+  .documentation-links {
+    .documentation-link {
+      color: $blue-shadow;
+    }
+
+    a ~ a {
+      margin-left: 24px;
+    }
+  }
+
+  .portal-links {
+    .portal-sign-in {
+      color: $primary-text;
+      font-weight: 600;
+      margin-right: 24px;
+    }
+
+    .portal-create-account {
+      color: $primary-text;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: 1px solid #1ad1db75;
+      border-radius: 4px;
+    }
+  }
+
+  .site-button use {
+    color: $primary-text;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    .documentation-links {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    position: absolute;
+
+    .documentation-links {
+      display: none;
+    }
+
+    .portal-links {
+      display: none;
+    }
+  }
+}
