@@ -20,7 +20,7 @@ Looking for a Postman library?
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14036973-bd016246-4d82-4753-82a0-e75a07d167c9?action=collection%2Ffork&collection-url=entityId%3D14036973-bd016246-4d82-4753-82a0-e75a07d167c9%26entityType%3Dcollection%26workspaceId%3Dcca928dd-d01d-4c7d-9002-84d5f2b33a63)
 
-If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developer.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developer.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
+If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
 
 ## Step 1: Ensure cURL is ready on your system
 
@@ -66,7 +66,7 @@ Keep this API key safe for later. We will use it in the next step to create your
 <img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 3: Create a Token to secure a string
-Below we are making an HTTP POST to our  [Basis Theory Create a Token API](https://docs.basistheory.com/api-reference/#tokens-create-token), we will send a Token type of `token` ([find out more about our Tokens here](https://developer.basistheory.com/concepts/what-are-tokens/)) with a string of “foo”.
+Below we are making an HTTP POST to our  [Basis Theory Create a Token API](https://docs.basistheory.com/api-reference/#tokens-create-token), we will send a Token type of `token` ([find out more about our Tokens here](https://developers.basistheory.com/concepts/what-are-tokens/)) with a string of “foo”.
 
 Update the `BT-API-KEY` header with the API Key you created in Step 2 and run the following command in your Terminal:
 
@@ -132,6 +132,6 @@ curl "https://api.basistheory.com/tokens/<! Token Id !>" \
 
 Now that you understand the basics, you are ready to learn more about how you can take advantage of your tokenized data with the capabilities of the Basis Theory platform.
 
-Check out the ability to use your [Token data with HTTP request](https://developer.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://developer.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
+Check out the ability to use your [Token data with HTTP request](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
 Was this useful, or looking for something different? Reach out to us on our [Discord](https://discord.gg/XjWsy8PqK2).
