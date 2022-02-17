@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     sidebarClassCategories.forEach((sidebarClassCategory) => {
-        if (document.location.href.includes(sidebarClassCategory)) {
+        if (document.location.href.includes(sidebarClassCategory) || document.location.pathname === '/') {
             const categoryExpander = document.querySelector(`#${sidebarClassCategory}-category-expander`);
             const categoryItems = document.querySelector(`#${sidebarClassCategory}-category-items`);
 
