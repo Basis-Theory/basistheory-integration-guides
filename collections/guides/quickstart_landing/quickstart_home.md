@@ -70,6 +70,18 @@ image:
                     </div>
                 </div>
             </a>
+
+            <a class="card" href="/getting-started/quickstart-with-python/">
+                <div class="icon-and-time-estimate no-description">
+                    <img src="/assets/images/quickstart/quickstart_logo_python.svg">
+                    <div class="quickstart-title">Python</div>
+
+                    <div class="time-estimate">
+                        <img src="/assets/images/icons/grey-time.svg" alt="time-icon">
+                        <div>10 min</div>
+                    </div>
+                </div>
+            </a>
         </div>
     </body>
 </html>

@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.4.2...v1.5.0) (2022-02-18)
+
+
+### Features
+
+* add python quickstart ([#82](https://github.com/Basis-Theory/basistheory-integration-guides/issues/82)) ([378bbcd](https://github.com/Basis-Theory/basistheory-integration-guides/commit/378bbcdd799dafdcef896b8388a4ea79541209f2))
+
 ## [1.4.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.4.1...v1.4.2) (2022-02-17)
 
 
