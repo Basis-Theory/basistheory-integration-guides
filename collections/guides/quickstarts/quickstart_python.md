@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart with Python
-permalink: /getting_started/quickstart-with-python/
+permalink: /getting-started/quickstart-with-python/
 categories: quickstart
 nav_order: 1
 has_children: true
