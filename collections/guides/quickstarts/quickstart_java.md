@@ -64,7 +64,7 @@ The Server-to-Server Application Type enables server-side applications to integr
 <img src="/assets/images/getting_started/application_type.png" />
 
 ### 3.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “High Impact”. These two permissions allow your Application to create a new Token and read the value back when you need to access it.
+Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “High Impact”. These two permissions allow your Application to create a new Token and read the plaintext value back when you need to access it.
 
 <img src="/assets/images/getting_started/application_permissions.png" />
 
@@ -74,7 +74,7 @@ Keep this API key safe for later. We will use it in the next step to create your
 <img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 4: Create a Token to secure a string
-To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the `token` Token Type (you can read more about Tokens [here](https://developers.basistheory.com/concepts/what-are-tokens/)).
+To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the generic `token` Token Type (you can read more about Tokens [here](https://developers.basistheory.com/concepts/what-are-tokens/)).
 
 Update the `BT-API-KEY` header with the API Key you created in Step 3!
 
@@ -101,7 +101,7 @@ var createResponse = client.send(createRequest, BodyHandlers.ofString());
 var token = createResponse.body();
 
 // Token response
-System.out.println("Create a token:");
+System.out.println("Token created:");
 System.out.println(token);
 ```
 
@@ -115,7 +115,7 @@ java BasisTheoryQuickstart
 
 You will see a response similar to:
 ```bash
-> Create a token:
+> Token created:
 {"id":"62a71684-f148-424c-88c6-bdb44031357a","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","type":"token","privacy":{"classification":"general","impact_level":"high","restriction_policy":"redact"},"created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00"}
 ```
 
@@ -123,9 +123,9 @@ You will see a response similar to:
 
 ## Step 6: Read back the raw value from Basis Theory
 
-With our value safely stored in a Token, let’s read that value back to our system. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) endpoint and print the response's raw string value.
+With our value safely stored in a Token, let’s read it back. To do this, we will make an HTTP GET request to the [Basis Theory Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token) endpoint and print the response's raw string value.
 
-We are using the `id` property from the previous Token we created to inject the `tokenId` into the Get a token request. Because we are using vanilla Java, we will simply split the response and grab the `id` from the resulting array.
+We are using the `id` property from the previous Token we created to inject the `tokenId` into the Get a token by ID request. Because we are using vanilla Java, we will simply split the response and grab the `id` from the resulting array.
 
 ```java
 // Parse token id from response
@@ -142,7 +142,7 @@ var getRequest = HttpRequest.newBuilder()
     .build();
 
 var getResponse = client.send(getRequest, BodyHandlers.ofString());
-System.out.println(getRequest);
+System.out.println("Read a token:");
 System.out.println(getResponse.body());
 ```
 
@@ -163,7 +163,7 @@ Read a token:
 {"id":"62a71684-f148-424c-88c6-bdb44031357a","type":"token","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00","privacy":{"classification":"general","impact_level":"high","restriction_policy":"redact"}}
 ```
 
-## Put it all together
+## Putting it all together
 This completes the basic ability to secure data with Tokens and retrieve the raw data back from Basis Theory when you need to use the data in your systems. This flow allows you to secure your data at rest, removes the liability of having the data stored in your databases, and frees you from having to worry about complex encryption logic.
 
 ```java
@@ -217,8 +217,6 @@ public class BTQuickstart {
             System.out.println("Read a token:");
             System.out.println(getResponse.body());
         } catch (Exception e) {
-            System.out.println(e);
-            System.out.println(e.getMessage());
             e.printStackTrace();
         }
     }
