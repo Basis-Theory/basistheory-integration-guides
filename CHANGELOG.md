@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.5.0...v1.5.1) (2022-02-21)
+
+
+### Bug Fixes
+
+* fix header and update title of site ([#88](https://github.com/Basis-Theory/basistheory-integration-guides/issues/88)) ([3bd8a74](https://github.com/Basis-Theory/basistheory-integration-guides/commit/3bd8a74fd39da568484acf5db906c0ea856af845))
+
 # [1.5.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.4.2...v1.5.0) (2022-02-18)
 
 
