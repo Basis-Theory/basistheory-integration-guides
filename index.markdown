@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Guides Home
+title: Developers Home
 permalink: /
 nav_order: 1
 has_children: false
