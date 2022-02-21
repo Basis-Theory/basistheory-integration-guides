@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.5.1...v1.6.0) (2022-02-21)
+
+
+### Features
+
+* **quickstart:** add java quickstart ([4e2b900](https://github.com/Basis-Theory/basistheory-integration-guides/commit/4e2b900d540295636d53af1737d20ce64c852200))
+
 ## [1.5.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.5.0...v1.5.1) (2022-02-21)
 
 
