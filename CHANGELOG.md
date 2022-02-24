@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.6.0...v1.7.0) (2022-02-24)
+
+
+### Features
+
+* add styling for java code ([#89](https://github.com/Basis-Theory/basistheory-integration-guides/issues/89)) ([50c30fb](https://github.com/Basis-Theory/basistheory-integration-guides/commit/50c30fb71a28d0a2e0bb7a0fbc7da1e1dd3aee64))
+
 # [1.6.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.5.1...v1.6.0) (2022-02-21)
 
 
