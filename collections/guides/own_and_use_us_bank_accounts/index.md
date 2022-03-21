@@ -111,13 +111,13 @@ Once you’ve created your Spreedly Reactor, use the <code>reactor_id</code> and
 
 ```js
 
-const reactionToken = await bt.reactors.react(REACTOR_ID, {
+const reactorResponse = await bt.reactors.react(REACTOR_ID, {
   args: {
-    card: `{{${token.id}}}`
+    card: `{%raw%}{{${token.id}}}{%endraw%}`
   }
 });
 
-return reactionResult;
+return reactorResponse;
 
 ```
 

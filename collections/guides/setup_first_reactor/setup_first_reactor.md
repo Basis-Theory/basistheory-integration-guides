@@ -33,7 +33,7 @@ Once you're logged into the Basis Theory Portal, navigate to our [Reactors](http
 
 Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used when enriching your token.
 
-![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/token-reactor-formula.png)
+![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/selecting-reactor-formula.png)
 
 Once you find the Reactor Formula you want to create, select "Use this formula" to start creating a Reactor.  Next, you'll be able to name and add any additional configuration to the Reactor.
 
@@ -51,7 +51,7 @@ That's it! Once you've saved your first Reactor, you can begin interacting with 
 
 With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to pass in the corresponding request parameters it needs. 
 
-Request parameters are passed in via the `args` property object which may contain simple values or complex objects. You could also include token interpolations if you want to use an existing encrypted token's data to pass as parameters to your reactor. Check the [/react](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor) endpoint's documentation for more details. 
+Request parameters are passed in via the `args` property object which may contain simple values or complex objects. You could also include token interpolation patterns if you want to use an existing encrypted token's data to pass as parameters to your reactor. Check the [/react](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor) endpoint's documentation or our guide [Use Token Data in Reactors](/guides/use-token-data-in-reactors/) for more details on detokenization within Reactors. 
 
 In the following example we are interpolating a [Card Number Token](https://docs.basistheory.com/api-reference/#token-types-card-number) which will be expanded and the original value will be passed in to the reactor formula. 
 
@@ -68,13 +68,13 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   -d '{
     "args": {
       "card": {
-        "number": "{{<card_number_token_id>}}"
+        "number": "{%raw%}{{<card_number_token_id>}}{%endraw%}"
       } 
     }
   }'
 ```
 
-On a successful call, you will be returned a [React Response](https://docs.basistheory.com/api-reference/#atomic-cards-react-with-an-atomic-card-react-response-object) which contains data from your executed Reactor.
+On a successful call, you will be returned a [React Response](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor) which contains data from your executed Reactor.
 
 ```js
 {
