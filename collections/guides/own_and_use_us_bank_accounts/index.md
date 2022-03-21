@@ -4,7 +4,7 @@ title: Use U.S. Bank Accounts without touching them
 permalink: /guides/use-us-bank-accounts-without-touching-them/
 categories: guides
 subcategory: processing
-nav_order: 5
+nav_order: 6
 has_children: true
 has_toc: false
 description: Basis Theory

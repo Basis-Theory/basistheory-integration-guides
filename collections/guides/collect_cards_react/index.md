@@ -4,7 +4,7 @@ title: Collect Credit Cards with React
 permalink: /guides/collect-atomic-cards-with-elements-react/
 categories: guides
 subcategory: processing
-nav_order: 4
+nav_order: 5
 has_children: true
 has_toc: false
 description: Basis Theory
