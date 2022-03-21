@@ -171,7 +171,7 @@ Then the Spreedly Reactor will receive the following request data:
 <span class="base-alert info">
   <span>
     Note that this example uses tokens having classifications `pci` and `pii`, so the API key used must be for an 
-    application having both `token:pci:use:reactor` and `token:pii:use:reactor` permissions.
+    application having both `token:pci:use:reactor` and `token:pii:use:reactor` permissions (<a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apci%3Ause%3Areactor&permissions=token%3Apii%3Ause%3Areactor&name=Reactor User" target="_blank">click here to create one</a>).
   </span>
 </span>
 
