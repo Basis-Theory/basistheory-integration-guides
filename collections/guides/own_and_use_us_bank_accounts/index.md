@@ -110,15 +110,18 @@ To set up a Reactor, head over to our Portal and set up a new Spreedly Reactor. 
 Once you’ve created your Spreedly Reactor, use the <code>reactor_id</code> and your Atomic Bank's ID to exchange for a new Spreedly Payment Method token, enabling you to charge your customer.
 
 ```js
-const reactionToken = await bt.atomicBanks.react(token.id, {
-    reactorId: REACTOR_ID
+
+const reactorResponse = await bt.reactors.react(REACTOR_ID, {
+  args: {
+    card: `{%raw%}{{${token.id}}}{%endraw%}`
+  }
 });
 
-return reactionResult;
+return reactorResponse;
 
 ```
 
-With your Spreedly Payment Method in hand, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Payment Method, just call the `/react` endpoint for that bank, and you'll have a newly attached token.
+With your Spreedly Payment Method in hand, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Payment Method, just call the `/react` endpoint for that reactor with your token id, and you'll have a newly attached token.
 
 
 ## Wrap up

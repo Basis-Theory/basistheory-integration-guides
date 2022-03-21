@@ -92,17 +92,19 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
   </span>
 </span>
 
-Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's ID to exchange for a Stripe token, which you'll be able to use to charge your customer.
+Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's ID to exchange for a Stripe token, which you'll be able to use to charge your customer. 
 
 ```js
-const reactionToken = await bt.atomicCards.react(atomic_card.id, {
-    reactorId: REACTOR_ID
+const reactorResponse = await bt.reactors.react(REACTOR_ID, {
+  args: {
+    card: `{%raw%}{{${atomic_card.id}}}{%endraw%}`
+  }
 });
 
-return reactionToken.data.id;
+return reactorResponse.raw.id;
 ```
 
-Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that card, and you'll have a newly attached token.
+Now that you have your Stripe Payment Method, you can store this within your own platform and avoid becoming dependent on Basis Theory for your future transactions. As soon as you need a new Stripe Payment Method, just call the `/react` endpoint for that reactor with your card token id, and you'll have a newly attached token.
 
 ## Use the reaction data to charge a customer
 
