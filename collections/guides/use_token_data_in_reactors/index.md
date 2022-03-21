@@ -1,10 +1,10 @@
 ---
 layout: default
-title: How to Invoke a Reactor
-permalink: /guides/invoke-a-reactor/
+title: Use Token Data in Reactors
+permalink: /guides/use-token-data-in-reactors/
 categories: guides
 subcategory: processing
-nav_order: 3
+nav_order: 6
 has_children: true
 has_toc: false
 image:
@@ -13,32 +13,31 @@ image:
     height: 630
 ---
 
-# How to Invoke a Reactor
-
+# Use Token Data in Reactors
 {: .no_toc }
 
-In this guide, we will walk through several options for how you can invoke a Reactor and use your tokenized data.
+In this guide, we will walk through several options for how you can invoke a Reactor using your tokenized data.
 
-Based on your use cases, you may prefer to store your sensitive data with Basis Theory using our
-[Atomic Tokens](/concepts/what-are-atomic-tokens), our pre-defined [Token Types](https://docs.basistheory.com/api-reference/#token-types), 
-or even use your own custom data schema within a schemaless [generic token](https://docs.basistheory.com/api-reference/#token-types/token). 
-However you choose to tokenize your sensitive data, Basis Theory grants you the flexibility to use this data within 
+Based on your use specific cases, you may prefer to store your sensitive data with Basis Theory using our
+[Atomic Tokens](/concepts/what-are-atomic-tokens), one of our pre-defined [Token Types](https://docs.basistheory.com/#token-types),
+or even use your own custom data schema within a schemaless [generic token](https://docs.basistheory.com/#token-types-token).
+However you choose to tokenize your sensitive data, Basis Theory grants you the flexibility to use this data within
 our serverless Reactor platform.
 
 ### Table of contents
 {: .no_toc .text-delta }
-1.
+1. 
 {:toc}
 
 ## Prerequisites
 
-If Reactors are completely new to you, we recommend you first read our [Reactors](/concepts/reactors) concept page or
+If Reactors are completely new to you, we recommend you first read our [Reactors](/concepts/what-are-reactors) concept page or
 the [Setup your first Reactor](/guides/setup-your-first-reactor) guide.
 
 For the examples below, we will be using a Reactor created using the `Spreedly - Card` Reactor Formula, unless the 
-example explicitly calls out the use of a different Reactor Formula. We will need the `id` of this Reactor in the examples below: `d08bc998-9301-495c-a2e5-04f8dc0916b4`.
+example explicitly calls out otherwise. We will need the `id` of this Reactor in the examples below: `d08bc998-9301-495c-a2e5-04f8dc0916b4`.
 
-This Reactor Formula accepts the following [request parameters](https://docs.basistheory.com/api-reference/#reactor-formulas-reactor-formula-object):
+This Reactor Formula accepts the following [request parameters](https://docs.basistheory.com/#reactor-formulas-reactor-formula-object):
 
 | name                    | type     | optional |
 |:------------------------|:---------|:---------|
@@ -49,13 +48,11 @@ This Reactor Formula accepts the following [request parameters](https://docs.bas
 | `card_owner_full_name`  | *string* | false    |
 
 These examples will be using the Detokenization feature of Reactors to interpolate token identifiers and insert 
-sensitive token data into the Reactor request. For more information about Detokenization, see our [api docs](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor).
+sensitive token data into the Reactor request. For more background information about Detokenization, see our [api docs](https://docs.basistheory.com/#reactors-invoke-a-reactor).
 
 ## Using Atomic Tokens
 
-In this example, we will show how you can invoke the Spreedly Card Reactor using an [Atomic Card](https://docs.basistheory.com/api-reference/#atomic-cards-atomic-card-object) token. 
-
-Assume we have created the following Atomic Card token:
+In this example, we will show how you can invoke the Spreedly Card Reactor using an [Atomic Card](https://docs.basistheory.com/#atomic-cards-atomic-card-object) token:
 
 ```json
 {
@@ -70,7 +67,7 @@ Assume we have created the following Atomic Card token:
 }
 ```
 
-And say we have not tokenized the card owner's name, `John Doe`, and we have this plaintext value available to our application. 
+Say we have not tokenized the card owner's name, `John Doe`, and we have this plaintext value available to our application. 
 Then we can invoke the Spreedly Reactor with this token by calling:
 
 ```bash
@@ -105,7 +102,7 @@ Then the Spreedly Reactor will receive the following request data:
 
 ## Using Multiple Tokens
 
-In this example, we will show how you can invoke the Spreedly Card Reactor using a [`card_number`](https://docs.basistheory.com/api-reference/#token-types/card-number) token and a 
+In this example, we will show how you can invoke the Spreedly Card Reactor using a [Card Number](https://docs.basistheory.com/#token-types-card-number) token and a 
 generic `PII` token to hold the card owner's name.
 
 Assume we have created the following tokens:
@@ -219,7 +216,7 @@ curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/
         }'
 ```
 
-Then the Spreedly Reactor will receive the following request data:
+And the Spreedly Reactor will receive the following request data:
 
 ```json
 {
@@ -235,7 +232,7 @@ Then the Spreedly Reactor will receive the following request data:
 }
 ```
 
-Notice that the `billing_address` and its child properties were not forwarded to the Reactor because they were not declared as accepted request parameters.
+Notice that the `billing_address` and its child properties were not forwarded to the Reactor because they were not declared as accepted request parameters on the `Spreedly - Card` Reactor Formula.
 
 ## Implicit Type Conversions
 
@@ -302,7 +299,7 @@ For this example, we will be using the `Parrot` Reactor Formula, which only acce
 
 Say we have created a Parrot Reactor from this formula with the id `2bd573ae-8d0f-47a9-95d0-03e6428574a0`.
 While, you could use a single `card_number` token to supply this `card.number` property, we will be showing how an 
-[Atomic Card](https://docs.basistheory.com/api-reference/#atomic-cards-atomic-card-object) token can also be used to 
+[Atomic Card](https://docs.basistheory.com/#atomic-cards-atomic-card-object) token can also be used to 
 provide this value, even though the Atomic Card contains more data fields than this Reactor requires.
 
 Say you have stored the Atomic Card token:

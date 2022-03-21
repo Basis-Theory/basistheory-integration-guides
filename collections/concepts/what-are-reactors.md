@@ -20,6 +20,6 @@ Reactors grant you the freedom to choose how you want to enrich and process your
 
 <span class="base-alert info">
   <span>
-    More details are coming soon! In the meantime, feel free to check out our guide to [Setup your first Reactor](/guides/setup-your-first-reactor) or our [API docs](https://docs.basistheory.com/api-reference/#reactors).
+    More details are coming soon! In the meantime, feel free to check out our guide to [Setup your first Reactor](/guides/setup-your-first-reactor) or our [API docs](https://docs.basistheory.com/#reactors).
   </span>
 </span>
