@@ -68,7 +68,7 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   -d '{
     "args": {
       "card": {
-        "number": "{{card_number_token_id}}"
+        "number": "{{<card_number_token_id>}}"
       } 
     }
   }'
