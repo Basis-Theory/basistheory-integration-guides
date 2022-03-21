@@ -37,7 +37,7 @@ If you'd like to follow along with this guide jump right into our sample app - <
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Elements Application with the <code>token:bank:create</code> permission
+    To start, you'll need a new Elements Application with the <code>token:bank:create</code> permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Abank%3Acreate&type=elements&name=Bank+Collector" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -103,7 +103,7 @@ To set up a Reactor, head over to our Portal and set up a new Spreedly Reactor. 
 ## Using your new Reactor 
 <span class="base-alert warning">
   <span>
-    To use your new Spreedly Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:bank:use:reactor</code> and <code>token:bank:create</code>.
+    To use your new Spreedly Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:bank:use:reactor</code> and <code>token:bank:create</code>. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Abank%3Ause%3Areactor&permissions=token%3Abank%3Acreate&name=Bank+Reactor" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
