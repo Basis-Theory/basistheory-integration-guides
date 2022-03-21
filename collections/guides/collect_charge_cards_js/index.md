@@ -88,7 +88,7 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
 ## Using your new Reactor 
 <span class="base-alert warning">
   <span>
-    To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:pci:read:low</code>, <code>token:pci:create</code> and <code>token:pci:use:reactor</code>. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Aread%3Alow&permissions=token%3Apci%3Acreate&permissions=token%3Apci%3Ause%3Areactor&name=Card+Reactor" target="_blank">Click here to create one.</a>
+    To use your Stripe Reactor, you'll need a <code>server-to-server</code> application with the following permissions <code>token:pci:read:low</code>, <code>token:pci:create</code> and <code>token:pci:use:reactor</code>. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apci%3Aread%3Alow&permissions=token%3Apci%3Acreate&permissions=token%3Apci%3Ause%3Areactor&name=Card+Reactor" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
