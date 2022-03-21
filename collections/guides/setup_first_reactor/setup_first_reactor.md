@@ -57,7 +57,7 @@ The following example is for an [Atomic Card](https://docs.basistheory.com/api-r
 
 <span class="base-alert warning">
   <span>
-    To run a Reactor, an application needs `token:<classification>:use:reactor` permission. For this example you will need `token:pci:use:reactor`.
+    To run a Reactor, an application needs `token:<classification>:use:reactor` permission. For this example you will need `token:pci:use:reactor`. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=server_to_server&name=Card+Reactor" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
