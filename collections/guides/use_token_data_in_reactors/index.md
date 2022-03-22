@@ -175,6 +175,74 @@ Then the Spreedly Reactor will receive the following request data:
   </span>
 </span>
 
+## Combine Multiple Tokens within a Single Argument
+
+In this example, we will show how you can combine the data from multiple tokens within a single Reactor argument. Say we have 
+chosen to store the card holder's first and last names as separate tokens:
+
+```json
+{
+  "id": "523949a9-e32f-4b5b-a0ad-7a435c79deb4",
+  "type": "token",
+  "data": "John"
+}
+```
+
+```json
+{
+  "id": "42af9170-e6ca-4ea7-a43b-730a0b47b6d0",
+  "type": "token",
+  "data": "Brown"
+}
+```
+
+Also, we have the atomic card token:
+
+```json
+{
+  "id": "b78b4bee-5499-42dd-8671-f1d23d32355b",
+  "type": "card",
+  "data": {
+    "number": "5105105105105100", 
+    "expiration_month": 5,
+    "expiration_year": 2025,
+    "cvc": "123"
+  }
+}
+```
+
+Then we can invoke the Spreedly Reactor concatenating the first and last name tokens within the `card_owner_full_name` argument by calling:
+
+```bash
+curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
+      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
+      -H "Content-Type: application/json" \
+      -X "POST" \
+      -d '{
+            "args": {
+              "card": "{%raw%}{{b78b4bee-5499-42dd-8671-f1d23d32355b}}{%endraw%}",
+              "card_owner_full_name": "{%raw%}{{523949a9-e32f-4b5b-a0ad-7a435c79deb4}} {{42af9170-e6ca-4ea7-a43b-730a0b47b6d0}}{%endraw%}"
+            }
+        }'
+```
+
+Then the Spreedly Reactor will receive the following request data:
+
+```json
+{
+  "args": {
+    "card": {
+      "number": "5105105105105100",
+      "expiration_month": 5,
+      "expiration_year": 2025,
+      "cvc": "123"
+    },
+    "card_owner_full_name": "John Brown"
+  }, 
+  "configuration": {...}
+}
+```
+
 ## Using Custom Token Schemas
 
 In this example, we will store our card data within a custom generic token that contains additional fields relevant to our application:
@@ -346,3 +414,4 @@ Then the Parrot Reactor will receive the following request data:
 
 Notice that the additional `expiration_month`, `expiration_year`, and `cvc` properties were not forwarded to the Reactor. 
 Additional properties within a token's data that do not match a Reactor Formula's declared request parameters are automatically removed from the request.
+
