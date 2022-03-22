@@ -1,3 +1,17 @@
+# [1.9.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.8.0...v1.9.0) (2022-03-21)
+
+
+### Features
+
+* updating reactor guides to use the new react endpoint ([#90](https://github.com/Basis-Theory/basistheory-integration-guides/issues/90)) ([ae9d972](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ae9d97214d2bfa1a45c9c7d598d8c9b68a6ebe71))
+
+# [1.8.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.7.0...v1.8.0) (2022-03-21)
+
+
+### Features
+
+* add create application deep link on guides ([#91](https://github.com/Basis-Theory/basistheory-integration-guides/issues/91)) ([a523d07](https://github.com/Basis-Theory/basistheory-integration-guides/commit/a523d07f57fa55b93379c90c0997e34ec8526b3a))
+
 # [1.7.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.6.0...v1.7.0) (2022-02-24)
 
 

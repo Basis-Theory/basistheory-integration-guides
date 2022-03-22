@@ -100,7 +100,7 @@ app.listen(port, async () => {
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Server to Server Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission
+    To start, you'll need a new Server to Server Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Abank%3Acreate&permissions=token%3Abank%3Aread%3Ahigh&name=Bank+Retriever" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -208,7 +208,7 @@ You're now able to quickly update your existing systems to encrypt and safely st
 
 - Use our Serverless Reactors to create an ACH file (if you're looking to do this, [reach out!](https://basistheory.com/contact))
 - [Never have your systems touch bank data again](/guides/use-us-bank-accounts-without-touching-them) 
-- Interact with any other banking service you can imagine (e.g. Dwolla, Plaid, etc)
+- Interact with any other banking service you can imagine (e.g. Dwolla, Plaid, etc.)
 - [Easily encrypt your existing bank data](https://docs.basistheory.com/api-reference/#tokenize)
 
 
