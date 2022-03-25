@@ -23,7 +23,7 @@ If you need help with your migration plan - [please reach out](https://basistheo
 <span class="base-alert warning">
   <span>
     <b>Warning: Moving your compliant data</b><br/>
-    Before migrating data out of Basis Theory’s systems, you should confirm that the desired location meets all requirements for the underlying data type. For example, moving your card  data off of Basis Theory will require you or your new provider to be Payments Card Institute (PCI)  Level 1 compliant. 
+    Before migrating data out of Basis Theory’s systems, you should confirm that the desired location meets all requirements for the underlying data type. For example, moving your card data off of Basis Theory will require you or your new provider to be Payments Card Institute (PCI) Level 1 compliant. 
   </span>
 </span>
 
@@ -46,7 +46,7 @@ Read each section carefully, as certain methods may not be ideal for certain typ
 
 ### 1. Proxy
 
-Using our Proxy is the simplest path to migrating your data to another API-based service provider. Proxy enables you to forward your new tokens to a new provider without the plaintext touching your systems.
+Using our Proxy is the simplest path to migrating your data to another API-based service provider. Proxy enables you to forward your tokens to a new provider without the plaintext data touching your systems.
 
 The following example provides a pattern for proxying your plaintext data to a new provider and storing your new provider's identifiers in your database. _The array of tokens is an example of data you’ve stored in your database - replace this by querying your database._
 
