@@ -99,7 +99,7 @@ image:
                             <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/collect-atomic-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
-                            <li><a href="/guides/setup-your-first-reactor">Set up your first Reactor <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/use-token-data-in-reactors">Use Token Data in Reactors <span class="guide-time-estimate">10m</span></a></li>
                         </div>
                     </div>
                 </div>
