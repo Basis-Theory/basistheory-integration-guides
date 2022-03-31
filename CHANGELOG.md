@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.9.0...v1.9.1) (2022-03-31)
+
+
+### Bug Fixes
+
+* file name typo, app.json -> app.js ([#94](https://github.com/Basis-Theory/basistheory-integration-guides/issues/94)) ([38d38dd](https://github.com/Basis-Theory/basistheory-integration-guides/commit/38d38dd9d800721ae083e4b9010677cc445f4313))
+
 # [1.9.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.8.0...v1.9.0) (2022-03-21)
 
 
