@@ -64,7 +64,7 @@ Our simple `package.json`, only has two dependencies to start. [express](https:/
 }
 ```
 
-### app.json
+### app.js
 Our application simply allows a U.S. Bank Account to be sent into the system, stored in memory, and retrieved back. _(Even though our example doesn't show them, your systems will most likely have authentication, databases, etc.)_
 
 ```js
