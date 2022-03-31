@@ -4,7 +4,7 @@ title: Use Token Data in Reactors
 permalink: /guides/use-token-data-in-reactors/
 categories: guides
 subcategory: processing
-nav_order: 6
+nav_order: 4
 has_children: true
 has_toc: false
 image:
@@ -16,402 +16,130 @@ image:
 # Use Token Data in Reactors
 {: .no_toc }
 
-In this guide, we will walk through several options for how you can invoke a Reactor using your tokenized data.
+In this guide, we will show you how to use the pre-built [Parrot BIN service](https://askparrot.com) Reactor Formula to 
+take your tokenized card data and capture new analytical insights.
 
-Based on your use specific cases, you may prefer to store your sensitive data with Basis Theory using our
-[Atomic Tokens](/concepts/what-are-atomic-tokens), one of our pre-defined [Token Types](https://docs.basistheory.com/#token-types),
-or even use your own custom data schema within a schemaless [generic token](https://docs.basistheory.com/#token-types-token).
-However you choose to tokenize your sensitive data, Basis Theory grants you the flexibility to use this data within
-our serverless Reactor platform.
+If you are completely new to Reactors and would like to learn more about what they are before trying them out,
+check out our [Reactors](/concepts/what-are-reactors/) concept page.
 
 ### Table of contents
 {: .no_toc .text-delta }
 1. 
 {:toc}
 
-## Prerequisites
+## Create a Reactor
 
-If Reactors are completely new to you, we recommend you first read our [Reactors](/concepts/what-are-reactors) concept page or
-the [Setup your first Reactor](/guides/setup-your-first-reactor) guide.
+Initially, we will show you how to create a Reactor from our portal, although you can also use the 
+[Basis Theory API](https://docs.basistheory.com/#reactors) to replicate these steps within your own CI pipelines or code base.
 
-For the examples below, we will be using a Reactor created using the `Spreedly - Card` Reactor Formula, unless the 
-example explicitly calls out otherwise. We will need the `id` of this Reactor in the examples below: `d08bc998-9301-495c-a2e5-04f8dc0916b4`.
+Once you're logged into the Basis Theory Portal, navigate to our [Reactors](https://portal.basistheory.com/reactors) 
+page and click on "Create Reactor" on the top right to begin creating a new Reactor. 
+On this page, you'll see a listing of all available Reactor Formulas.
 
-This Reactor Formula accepts the following [request parameters](https://docs.basistheory.com/#reactor-formulas-reactor-formula-object):
+Selecting a Reactor Formula will slide out a view to explain that formula's requirements. 
+The Configuration section allows you to configure API keys or environment variables that remain static across Reactor invocations, 
+while the Request Parameters section will show you the arguments you must send to the `/react` endpoint each time it is invoked.
 
-| name                    | type     | optional |
-|:------------------------|:---------|:---------|
-| `card.number`           | *string* | false    |
-| `card.expiration_month` | *number* | false    |
-| `card.expiration_year`  | *number* | false    |
-| `card.cvc`              | *string* | true     |
-| `card_owner_full_name`  | *string* | false    |
+![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/selecting-reactor-formula.png)
 
-These examples will be using the Detokenization feature of Reactors to interpolate token identifiers and insert 
-sensitive token data into the Reactor request. For more background information about Detokenization, see our [api docs](https://docs.basistheory.com/#reactors-invoke-a-reactor).
+Once you find the Reactor Formula you want to create, select "Use this formula" to start creating a Reactor.  
+Next, you'll be able to name and add any additional configuration to the Reactor.
 
-## Using Atomic Tokens
+![Screenshot of create a Reactor](/assets/images/setup_first_reactor/create-reactor.png)
 
-In this example, we will show how you can invoke the Spreedly Card Reactor using an [Atomic Card](https://docs.basistheory.com/#atomic-cards-atomic-card-object) token:
-
-```json
-{
-  "id": "815029c2-29ec-4fc2-8cd4-99feb3ee582c",
-  "type": "card",
-  "data": {
-    "number": "4242424242424242", 
-    "expiration_month": 11,
-    "expiration_year": 2025,
-    "cvc": "123"
-  }
-}
-```
-
-Say we have not tokenized the card owner's name, `John Doe`, and we have this plaintext value available to our application. 
-Then we can invoke the Spreedly Reactor with this token by calling:
-
-```bash
-curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": {
-              "card": "{%raw%}{{815029c2-29ec-4fc2-8cd4-99feb3ee582c}}{%endraw%}",
-              "card_owner_full_name": "John Doe"
-            }
-        }'
-```
-
-Then the Spreedly Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "4242424242424242",
-      "expiration_month": 11,
-      "expiration_year": 2025,
-      "cvc": "123"
-    },
-    "card_owner_full_name": "John Doe"
-  }, 
-  "configuration": {...}
-}
-```
-
-## Using Multiple Tokens
-
-In this example, we will show how you can invoke the Spreedly Card Reactor using a [Card Number](https://docs.basistheory.com/#token-types-card-number) token and a 
-generic `PII` token to hold the card owner's name.
-
-Assume we have created the following tokens:
-
-```json
-{
-  "id": "d9939ddc-d7be-423b-a0f5-69f65fec57df",
-  "type": "card_number",
-  "data": "5555555555554444",
-  "privacy": {
-    "classification": "pci",
-    "impact_level": "high"
-  }
-}
-```
-
-```json
-{
-  "id": "f4d86311-1254-4155-b532-b651279a8cc0",
-  "type": "token",
-  "data": "Jane Doe",
-  "privacy": {
-    "classification": "pii",
-    "impact_level": "moderate"
-  }
-}
-```
-
-In this example, we have not tokenized the card's expiration date - say our application accepts these values in 
-plaintext and forwards them directly into the Reactor.
-Then we can invoke the Spreedly Reactor with this data by calling:
-
-```bash
-curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": {
-              "card": {
-                "number": "{%raw%}{{d9939ddc-d7be-423b-a0f5-69f65fec57df}}{%endraw%}",
-                "expiration_month": 10,
-                "expiration_year": 2024
-              },
-              "card_owner_full_name": "{%raw%}{{f4d86311-1254-4155-b532-b651279a8cc0}}{%endraw%}"
-            }
-        }'
-```
-
-Then the Spreedly Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "5555555555554444",
-      "expiration_month": 10,
-      "expiration_year": 2024
-    },
-    "card_owner_full_name": "Jane Doe"
-  }, 
-  "configuration": {...}
-}
-```
+That's it! Once you've saved your first Reactor, you can begin interacting with it via our API.
 
 <span class="base-alert info">
   <span>
-    Note that this example uses tokens having classifications `pci` and `pii`, so the API key used must be for an 
-    application having both `token:pci:use:reactor` and `token:pii:use:reactor` permissions (<a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apci%3Ause%3Areactor&permissions=token%3Apii%3Ause%3Areactor&name=Reactor User" target="_blank">click here to create one</a>).
+    As always, you can create the same results with the Basis Theory API to codify the <a href="https://docs.basistheory.com/api-reference/#reactors-create-reactor">creation of Reactors</a>.
   </span>
 </span>
 
-## Combine Multiple Tokens within a Single Argument
+## Use Your New Reactor
 
-In this example, we will show how you can combine the data from multiple tokens within a single Reactor argument. Say we have 
-chosen to store the card holder's first and last names as separate tokens:
-
-```json
-{
-  "id": "523949a9-e32f-4b5b-a0ad-7a435c79deb4",
-  "type": "token",
-  "data": "John"
-}
-```
-
-```json
-{
-  "id": "42af9170-e6ca-4ea7-a43b-730a0b47b6d0",
-  "type": "token",
-  "data": "Brown"
-}
-```
-
-Also, we have the atomic card token:
-
-```json
-{
-  "id": "b78b4bee-5499-42dd-8671-f1d23d32355b",
-  "type": "card",
-  "data": {
-    "number": "5105105105105100", 
-    "expiration_month": 5,
-    "expiration_year": 2025,
-    "cvc": "123"
-  }
-}
-```
-
-Then we can invoke the Spreedly Reactor concatenating the first and last name tokens within the `card_owner_full_name` argument by calling:
-
-```bash
-curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": {
-              "card": "{%raw%}{{b78b4bee-5499-42dd-8671-f1d23d32355b}}{%endraw%}",
-              "card_owner_full_name": "{%raw%}{{523949a9-e32f-4b5b-a0ad-7a435c79deb4}} {{42af9170-e6ca-4ea7-a43b-730a0b47b6d0}}{%endraw%}"
-            }
-        }'
-```
-
-Then the Spreedly Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "5105105105105100",
-      "expiration_month": 5,
-      "expiration_year": 2025,
-      "cvc": "123"
-    },
-    "card_owner_full_name": "John Brown"
-  }, 
-  "configuration": {...}
-}
-```
-
-## Using Custom Token Schemas
-
-In this example, we will store our card data within a custom generic token that contains additional fields relevant to our application:
-
-```json
-{
-  "id": "9a48a051-972b-4569-8fd5-cbe17a604f96",
-  "type": "token",
-  "data": {
-    "card": {
-      "number": "4000056655665556",
-      "expiration_month": 4,
-      "expiration_year": 2026
-    },
-    "card_owner_full_name": "John Smith",
-    "billing_address": {
-      "street_address": "175 5th Ave",
-      "city": "New York",
-      "state": "NY",
-      "zip": "10010"
-    }
-  },
-  "privacy": {
-    "classification": "pci",
-    "impact_level": "high"
-  }
-}
-```
-
-Then we can invoke the Spreedly Reactor with this token data by calling:
-
-```bash
-curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": "{%raw%}{{9a48a051-972b-4569-8fd5-cbe17a604f96}}{%endraw%}"
-        }'
-```
-
-And the Spreedly Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "4000056655665556",
-      "expiration_month": 4,
-      "expiration_year": 2026
-    },
-    "card_owner_full_name": "John Smith"
-  }, 
-  "configuration": {...}
-}
-```
-
-Notice that the `billing_address` and its child properties were not forwarded to the Reactor because they were not declared as accepted request parameters on the `Spreedly - Card` Reactor Formula.
-
-## Implicit Type Conversions
-
-In this example, we will illustrate how data is implicitly converted into the `type` declared on a Reactor Formula's request parameters,
-even if that data is stored as a different underlying type within a Basis Theory token. Say we have created the following token:
-
-```json
-{
-  "id": "e24fd837-ad97-4fa1-9510-78039ba8089e",
-  "type": "token",
-  "data": {
-    "card": {
-      "number": "5200828282828210",
-      "expiration_month": "02",
-      "expiration_year": "2027"
-    }
-  },
-  "privacy": {
-    "classification": "pci",
-    "impact_level": "high"
-  }
-}
-```
-
-Notice that the `expiration_month` and `expiration_year` fields are stored as a `string` within the token, but recall that the `Spreedly - Card`
-declared these request parameters as type `number`.
-We can still invoke the Spreedly Reactor with this token data by calling:
-
-```bash
-curl "https://api.basistheory.com/reactors/d08bc998-9301-495c-a2e5-04f8dc0916b4/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": {
-              "card": "{%raw%}{{e24fd837-ad97-4fa1-9510-78039ba8089e}}{%endraw%}",
-              "card_owner_full_name": "John Williams"
-        }'
-```
-
-Then the expiration date fields will be automatically casted to a `number` type and the Spreedly Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "5200828282828210",
-      "expiration_month": 2,
-      "expiration_year": 2027
-    },
-    "card_owner_full_name": "John Williams"
-  }, 
-  "configuration": {...}
-}
-```
-
-## Using a Subset of Data in a Token
-
-For this example, we will be using the `Parrot` Reactor Formula, which only accepts a single request parameter:
+With your Reactor created, it's time to start using your tokens in it. Depending on which Reactor Formula you chose to create a Reactor from,
+you'll need to pass in the corresponding request parameters it needs. The Parrot Reactor Formula requires only a single parameter:
 
 | name                    | type     | optional |
 |:------------------------|:---------|:---------|
 | `card.number`           | *string* | false    |
 
-Say we have created a Parrot Reactor from this formula with the id `2bd573ae-8d0f-47a9-95d0-03e6428574a0`.
-While, you could use a single `card_number` token to supply this `card.number` property, we will be showing how an 
-[Atomic Card](https://docs.basistheory.com/#atomic-cards-atomic-card-object) token can also be used to 
-provide this value, even though the Atomic Card contains more data fields than this Reactor requires.
+Request parameters are provided when [invoking a Reactor](https://docs.basistheory.com/#reactors-invoke-a-reactor) via the `args` request property.
+In order to satisfy the request parameter contract defined on the Reactor Formula, you may supply any mixture of constant values
+and [detokenization expressions](https://docs.basistheory.com/detokenization#detokenization-expressions) within `args`.
 
-Say you have stored the Atomic Card token:
+Next, we'll walk through a couple ways in which you could invoke the Parrot reactor to provide the card number depending on how you chose to tokenize your card data.
 
-```json
+<span class="base-alert warning">
+    <span>
+    To run a Reactor, an application needs `token:<classification>:use:reactor` permission for any tokens that are detokenized. 
+    For these examples you will need an application with `token:pci:use:reactor` permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=server_to_server&name=Card+Reactor" target="_blank">Click here to create one.</a>
+    </span>
+</span>
+
+In each of the following examples, on a successful request you will be returned a [React Response](https://docs.basistheory.com/#reactors-invoke-a-reactor) which contains data returned from your executed Reactor.
+
+```js
 {
-  "id": "cbc43a9b-8d6c-4e05-95e9-1e8d506d0026",
-  "type": "card",
-  "data": {
-    "number": "6011000990139424", 
-    "expiration_month": 9,
-    "expiration_year": 2023,
-    "cvc": "123"
-  }
+    "tokens": "<Tokenized Data Returned from the Reactor>",
+    "raw": "<Raw Output Returned from the Reactor>"
 }
 ```
 
-Then we can invoke the Parrot Reactor with this token data by calling:
+### Use a Card Number Token
 
-```bash
-curl "https://api.basistheory.com/reactors/2bd573ae-8d0f-47a9-95d0-03e6428574a0/react" \
-      -H "BT-API-KEY: key_NS21v84n7epsSc5WzoFjM6" \
-      -H "Content-Type: application/json" \
-      -X "POST" \
-      -d '{
-            "args": {
-              "card": "{%raw%}{{cbc43a9b-8d6c-4e05-95e9-1e8d506d0026}}{%endraw%}"
-            }
-        }'
-```
+In the following example we have opted to store the card number within a [Card Number Token](https://docs.basistheory.com/api-reference/#token-types-card-number).
+We will include a [detokenization expression](https://docs.basistheory.com/detokenization#detokenization-expressions) containing this token in the Reactor request,
+which will result in the original token data being inserted within the request sent to the Reactor.
 
-Then the Parrot Reactor will receive the following request data:
-
-```json
-{
-  "args": {
-    "card": {
-      "number": "6011000990139424"
+```js
+curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
+  -H "BT-API-KEY: <application_api_key>" \
+  -X "POST" \
+  -d '{
+    "args": {
+      "card": {
+        "number": "{%raw%}{{<card_number_token_id>}}{%endraw%}"
+      } 
     }
-  }, 
-  "configuration": {...}
-}
+  }'
 ```
 
-Notice that the additional `expiration_month`, `expiration_year`, and `cvc` properties were not forwarded to the Reactor. 
-Additional properties within a token's data that do not match a Reactor Formula's declared request parameters are automatically removed from the request.
+### Use an Atomic Card Token
 
+In the following example we have opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
+Since the token data within an Atomic Card contains a `number` property, we can simply detokenize the entire Atomic Card token
+into the `card` argument, which will cause the token's entire JSON object data to be inserted into the `card` node.
+
+```js
+curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
+  -H "BT-API-KEY: <application_api_key>" \
+  -X "POST" \
+  -d '{
+    "args": {
+      "card": "{%raw%}{{<atomic_card_token_id>}}{%endraw%}"
+    }
+  }'
+```
+
+Since Reactors validate the provided `args` against the declared request parameters and drop any undeclared arguments,
+the additional properties (`expiration_month`, `expiration_year`, `cvc`) on the Atomic Card object will be automatically removed from the request.
+
+### Use an Atomic Card Token with a JSON Path Transformation
+
+In the following example we have again opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
+However, in this example we will pass only the `number` property from the Atomic Card by using a [JSON Path Transformation](https://docs.basistheory.com/detokenization#transformations-json-path)
+to project out the `number` property.
+
+```js
+curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
+  -H "BT-API-KEY: <application_api_key>" \
+  -X "POST" \
+  -d '{
+    "args": {
+      "card": {
+        "number": "{%raw%}{{ <atomic_card_token_id> | $.number }}{%endraw%}"
+      }
+    }
+  }'
+```

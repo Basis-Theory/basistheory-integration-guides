@@ -16,9 +16,10 @@ image:
 # Set up your first Reactor
 {: .no_toc }
 
-Reactors are foundational to your ability to make your data more usable within your application. Instead of accessing sensitive data within your own system and executing your own queries and procedures on that data, our Reactor platform allows code to be executed against your data without the data ever leaving our secure and compliant environment. Reactors grant you the freedom to choose how you want to enrich and process your data without needing to worry about security or compliance.
-
 In this guide, we will show you how to use the pre-built [Parrot BIN service](https://askparrot.com) Reactor Formula to take your Atomic Cards and capture new analytical data about them in 3 short steps.
+
+If you are completely new to Reactors and would like to learn more about what they are before trying them out,
+check out our [Reactors](/concepts/what-are-reactors/) concept page.
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -31,7 +32,7 @@ Initially, we will show you how to create a Reactor from our portal, although yo
 
 Once you're logged into the Basis Theory Portal, navigate to our [Reactors](https://portal.basistheory.com/reactors) page and click on "Create Reactor" on the top right to begin creating a new Reactor. On this page, you'll see a listing of all available Reactor Formulas.
 
-Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes `api_keys` or `environment_variables` you need to configure when first creating your Reactor, while the Request Parameter section will show you the options you can send to the `/react` endpoint to be used when enriching your token.
+Selecting a Reactor Formula will slide out a view to explain the details and requirements for setting one up. The Configuration section includes API keys or environment variables you need to configure when first creating your Reactor, while the Request Parameters section will show you the arguments you must send to the `/react` endpoint each time it is invoked.
 
 ![Screenshot of selecting a Reactor Formula](/assets/images/setup_first_reactor/selecting-reactor-formula.png)
 
@@ -49,17 +50,31 @@ That's it! Once you've saved your first Reactor, you can begin interacting with 
 
 ## Use Your New Reactor
 
-With your Reactor created, it's time to start sending your tokens into it and generate your first reaction. Depending on which Reactor you chose to create, you'll need to pass in the corresponding request parameters it needs. 
+With your Reactor created, it's time to start sending your tokens into it. Depending on which Reactor Formula you chose to create a Reactor from, 
+you'll need to pass in the corresponding request parameters it needs. The Parrot Reactor Formula requires only a single parameter:
 
-Request parameters are passed in via the `args` property object which may contain simple values or complex objects. You could also include token interpolation patterns if you want to use an existing encrypted token's data to pass as parameters to your reactor. Check the [/react](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor) endpoint's documentation or our guide [Use Token Data in Reactors](/guides/use-token-data-in-reactors/) for more details on detokenization within Reactors. 
+| name                    | type     | optional |
+|:------------------------|:---------|:---------|
+| `card.number`           | *string* | false    |
 
-In the following example we are interpolating a [Card Number Token](https://docs.basistheory.com/api-reference/#token-types-card-number) which will be expanded and the original value will be passed in to the reactor formula. 
+Request parameters are provided when [invoking a Reactor](https://docs.basistheory.com/#reactors-invoke-a-reactor) via the `args` request property. 
+In order to satisfy the request parameter contract defined on the Reactor Formula, you may supply any mixture of constant 
+and [detokenization expressions](https://docs.basistheory.com/detokenization#detokenization-expressions) within `args`.
+
+We'll walk through a couple ways in which you could invoke the Parrot reactor to provide the card number.
 
 <span class="base-alert warning">
-  <span>
-    To run a Reactor, an application needs `token:<classification>:use:reactor` permission. For this example you will need `token:pci:use:reactor`. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=server_to_server&name=Card+Reactor" target="_blank">Click here to create one.</a>
-  </span>
+    <span>
+    To run a Reactor, an application needs `token:<classification>:use:reactor` permission for any tokens that are detokenized. 
+    For these examples you will need an application with `token:pci:use:reactor` permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=server_to_server&name=Card+Reactor" target="_blank">Click here to create one.</a>
+    </span>
 </span>
+
+### Use a Card Number Token
+
+In the following example we have opted to store the card number within a [Card Number Token](https://docs.basistheory.com/api-reference/#token-types-card-number).
+We will include a [detokenization expressions](https://docs.basistheory.com/detokenization#detokenization-expressions) with this token in the Reactor request, 
+which will result in the original token data being inserted within the request sent to the Reactor.
 
 ```js
 curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
@@ -74,13 +89,52 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   }'
 ```
 
-On a successful call, you will be returned a [React Response](https://docs.basistheory.com/api-reference/#reactors-invoke-a-reactor) which contains data from your executed Reactor.
+On a successful call, you will be returned a [React Response](https://docs.basistheory.com/#reactors-invoke-a-reactor) which contains data from your executed Reactor.
 
 ```js
 {
     "tokens": "<Tokenized Data Returned from the Reactor>",
     "raw": "<Raw Output Returned from the Reactor>"
 }
+```
+
+### Use an Atomic Card Token
+
+In the following example we have opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
+Since the token data within an Atomic Card contains a `number` property, we can simply detokenize the entire Atomic Card token
+into the `card` argument, which will cause the token's entire JSON object data to be inserted into the `card` node.
+
+```js
+curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
+  -H "BT-API-KEY: <application_api_key>" \
+  -X "POST" \
+  -d '{
+    "args": {
+      "card": "{%raw%}{{<atomic_card_token_id>}}{%endraw%}"
+    }
+  }'
+```
+
+Since Reactors validate the provided `args` against the declared request parameters and drop any undeclared arguments, 
+the additional properties (`expiration_month`, `expiration_year`, `cvc`) on the Atomic Card object will be automatically removed from the request. 
+
+### Use an Atomic Card Token with a JSON Path Transformation
+
+In the following example we again have opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
+However, in this example we will pass only the `number` property from the Atomic Card by using a JSON Path [Transformation](https://docs.basistheory.com/detokenization#transformations)
+to project out the `number` property.
+
+```js
+curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
+  -H "BT-API-KEY: <application_api_key>" \
+  -X "POST" \
+  -d '{
+    "args": {
+      "card": {
+        "number": "{%raw%}{{ <atomic_card_token_id> | $.number }}{%endraw%}"
+      }
+    }
+  }'
 ```
 
 <span class="base-alert info">

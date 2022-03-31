@@ -83,7 +83,7 @@ image:
                         <div class="guides-list">
                             <li><a href="/guides/collect-atomic-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
                             <li><a href="/guides/encrypt-us-banks-in-your-applications">Encrypt U.S Banks in your applications <span class="guide-time-estimate">10m</span></a></li>
-                            <li><a href="/guides/own-your-encryption-keys">Own your encryption keys <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/style-elements-for-my-brand">Style elements to match your brand <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/collect-pii-js">Collect Customer Data (PII) with JS <span class="guide-time-estimate">5m</span></a></li>
                         </div>
                     </div>
@@ -123,12 +123,12 @@ image:
                 <div class="card-title">Elements</div>
                 <div>Secure data from your frontend without touching it.</div>
             </a>
-            <a class="card" href="https://docs.basistheory.com/encryption/#introduction">
+            <a class="card" href="https://docs.basistheory.com/detokenization/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-reactor.svg">
                 </div>
-                <div class="card-title">Encryption</div>
-                <div>Hold the encryption keys to your Tokens.</div>
+                <div class="card-title">Detokenization</div>
+                <div>Learn how to detokenize your data in Reactors and Proxy.</div>
             </a>
         </div>
     </body>
