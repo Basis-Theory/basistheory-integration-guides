@@ -85,6 +85,6 @@ On a successful call, you will be returned a [React Response](https://docs.basis
 
 <span class="base-alert info">
   <span>
-    Want to create your own Formulas? Support for Custom Formulas is currently in private beta. [Join our Discord to learn more](https://discord.gg/NSvXxaW5Fv).
+    Want to create your own Formulas? Support for Custom Formulas is currently in private beta. [Join our Community to learn more](https://community.basistheory.com).
   </span>
 </span>
