@@ -4,7 +4,7 @@ title: Migrating off Basis Theory
 permalink: /guides/migrating-off-basis-theory/
 categories: guides
 subcategory: processing
-nav_order: 7
+nav_order: 6
 has_children: true
 has_toc: false
 image:

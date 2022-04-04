@@ -25,7 +25,7 @@ The end result is that you can call HTTP APIs with tokenized data without needin
 ## How It Works
 
 Your system initiates an outbound HTTP request to the Proxy hosted by Basis Theory.
-The request is transformed by detokenizing any standard token interpolation patterns included in the request (patterns of the form `{%raw%}{{tokenId}}{%endraw%}`, where `tokenId` is the id of a token created within your tenant). Any token interpolation patterns will be replaced with the detokenized `data` value of this token.
+The request is transformed by evaluating any standard [detokenization expressions](https://docs.basistheory.com/detokenization) included in the request (patterns of the form `{%raw%}{{<tokenId>}}{%endraw%}`, where `<tokenId>` is the id of a token created within your tenant). Any detokenization expressions will be replaced with the detokenized `data` value of this token.
 Finally, the request is delivered to the destination URL that was specified through a `BT-PROXY-URL` HTTP header.
 
 ![Outbound Proxy Diagram](/assets/images/what_is_the_proxy/outbound-proxy.png)
