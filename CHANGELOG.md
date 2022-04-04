@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.9.1...v1.10.0) (2022-04-04)
+
+
+### Features
+
+* Update Reactor and Proxy Detokenization guides and remove Encryption guides ([#96](https://github.com/Basis-Theory/basistheory-integration-guides/issues/96)) ([69d6589](https://github.com/Basis-Theory/basistheory-integration-guides/commit/69d658954c40114e63c9b95518bedca852b612c3))
+
 ## [1.9.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.9.0...v1.9.1) (2022-03-31)
 
 
