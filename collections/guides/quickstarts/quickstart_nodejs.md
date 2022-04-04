@@ -241,4 +241,4 @@ Now that you understand the basics, you are ready to learn more about how you ca
 
 Check out the ability to use your [Token data with HTTP request](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
-Was this useful, or looking for something different? Reach out to us on our [Discord](https://discord.gg/XjWsy8PqK2).
+Was this useful, or looking for something different? Reach out to us on our [Community](https://community.basistheory.com).

@@ -29,7 +29,7 @@ Want to just jump into an example? [Check it out here](https://codesandbox.io/s/
 
 The base variant in our style object enables you to update the way the input fields look during most user interactions (invalid, typing, etc.).
 
-For security reasons, we only support fonts from Google's list of supported fonts. If you're looking to include an additional font that you can't find, reach out and let us know in [our Discord](https://discord.gg/NSvXxaW5Fv).
+For security reasons, we only support fonts from Google's list of supported fonts. If you're looking to include an additional font that you can't find, reach out and let us know in our [Community](https://community.basistheory.com).
 
 ```js
 var cardElement = BasisTheory.createElement('card', {

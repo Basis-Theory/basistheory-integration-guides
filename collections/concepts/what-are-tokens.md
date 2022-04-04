@@ -64,7 +64,7 @@ See [our docs](https://docs.basistheory.com/api-reference/#token-types) for more
 <span class="base-alert info">
   <span>
     Looking for a token type that is not listed here? 
-    Please reach out to us on our [Discord channel](https://discord.gg/NSvXxaW5Fv) or via email at [support@basistheory.com](mailto:support@basistheory.com)
+    Please reach out to us on our [Community](https://community.basistheory.com) or via email at [support@basistheory.com](mailto:support@basistheory.com)
   </span>
 </span>
 
