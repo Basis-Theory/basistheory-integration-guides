@@ -45,4 +45,9 @@ Many large enterprise and corporate organizations have multiple business units o
 
 ### Can I share a Tenant’s Tokens between multiple systems?
 
-Yes, you can use different Applications and Permissions to allow your systems to integrate directly with the same Tenant. 
+Yes, you can use different Applications and Permissions to allow your systems to integrate directly with the same Tenant.
+
+### Can I invite other people to join my tenant?
+
+Yes, new members can be invited to an existing Tenant through the "Members" tab in the [Portal](https://portal.basistheory.com/members).
+Managing Tenant Members can also be done directly through the [API](https://docs.basistheory.com/#tenant-members).
