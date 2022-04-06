@@ -14,7 +14,7 @@ image:
 
 # What Is Fingerprinting?
 
-Tokenizing data replaces raw values with a Token Identifier referencing sensitive data, meaning you don’t have the raw value in your database. Without the raw value, your system isn’t able to perform simple queries that your application may require - For example, what if you need to check for duplicate or existing values? Fingerprints solve this problem by providing you an identifier representing your Token’s uniqueness without needing to read the decrypted data.
+Tokenizing data replaces raw values with a Token Identifier referencing sensitive data, meaning you don’t have the raw value in your database. Without the raw value, your system isn’t able to perform simple queries that your application may require - for example, what if you need to check for duplicate or existing values? Fingerprints solve this problem by providing you an identifier representing your Token’s uniqueness without needing to read the decrypted data.
 
 <span class="base-alert info">
   <span>
@@ -38,18 +38,19 @@ Due to its non-sensitive nature, fingerprints can be stored in any environment. 
 Take a look at this sample request and response:
 
 ```js
-curl "<https://api.basistheory.com/atomic/cards>" \\
-    -H "Content-Type: application/json" \\
-    -H "BT-API-KEY: <BT_API_KEY>" \\
-    -X "POST"  \\
-    -D '{
-		"card": {
+curl "https://api.basistheory.com/tokens" \
+  -H "Content-Type: application/json" \
+  -H "BT-API-KEY: <BT_API_KEY>" \
+  -X "POST"  \
+  -d '{
+        "data": {
           "number": "4242424242424242",
           "expiration_month": 12,
           "expiration_year": 2022,
           "cvc": "123"
-        }
-	}'
+        },
+        "type": "card"
+      }'
 ```
 
 The fingerprint returned in this example is `2145bff2044846149d15ea1d61d6d78e`:
@@ -96,7 +97,7 @@ Financial systems need to detect and alert on possible fraud. Without viewing th
 
 ### Identity protection
 
-The social security number token type supports fingerprinting and when  generated, a system can immediately detect whether that SSN is already associated with an existing account. All without the system searching through the underlying plaintext data or needing to decrypt or manage potentially reversible hashes itself.
+The social security number token type supports fingerprinting and when generated, a system can immediately detect whether that SSN is already associated with an existing account. All without the system searching through the underlying plaintext data or needing to decrypt or manage potentially reversible hashes itself.
 
 ### Account linking
 
