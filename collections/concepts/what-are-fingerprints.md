@@ -24,7 +24,7 @@ Tokenizing data replaces raw values with a Token Identifier referencing sensitiv
 
 ## How It Works
 
-Every [Token Type](https://docs.basistheory.com/#token-types) created with the same data will have the same fingerprint. Fingerprints are:
+Every [Token Type](https://docs.basistheory.com/#token-types) that supports fingerprinting and is created with the same data will have the same fingerprint. Fingerprints are:
  - A non-reversible random unique identifier. It is not derived from the data.
  - Unique to the underlying data 
  - Unique to the Token Type
