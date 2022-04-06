@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.10.0...v1.11.0) (2022-04-06)
+
+
+### Features
+
+* add tenant members FAQ to tenants concept ([#100](https://github.com/Basis-Theory/basistheory-integration-guides/issues/100)) ([35e9f4a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/35e9f4a7820d21bd642f01d9d331be7f41c9b654))
+
 # [1.10.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.9.1...v1.10.0) (2022-04-04)
 
 
