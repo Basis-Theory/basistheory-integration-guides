@@ -3,7 +3,7 @@ layout: post
 title:  "Fingerprints"
 categories: concepts
 permalink: /concepts/what-are-fingerprints/
-nav_order: 3
+nav_order: 5
 has_children: true
 has_toc: false
 image:
