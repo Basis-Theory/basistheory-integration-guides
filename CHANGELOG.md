@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.12.0...v1.12.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* fix concepts ordering ([#102](https://github.com/Basis-Theory/basistheory-integration-guides/issues/102)) ([a144785](https://github.com/Basis-Theory/basistheory-integration-guides/commit/a144785ad26a26252f576263fd170a24dc63d835))
+
 # [1.12.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.11.0...v1.12.0) (2022-04-07)
 
 
