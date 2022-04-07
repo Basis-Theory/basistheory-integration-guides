@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.11.0...v1.12.0) (2022-04-07)
+
+
+### Features
+
+* add fingerprint concept page ([#99](https://github.com/Basis-Theory/basistheory-integration-guides/issues/99)) ([ef78fc4](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ef78fc4e5b3a9440e9da82d961d91810f9cbbd77))
+
 # [1.11.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.10.0...v1.11.0) (2022-04-06)
 
 
