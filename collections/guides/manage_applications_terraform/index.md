@@ -18,7 +18,7 @@ image:
 
 Terraform is a popular and powerful tool that enables you to version your infrastructure as code. In this guide, we'll walk
 you through setting up Terraform to manage your resources within Basis Theory. By the end of this guide, you will have
-created an application under your tenant using Terraform, and you will an Application key available for you to use within
+created an Application under your tenant using Terraform, and you will an Application key available for you to use within
 your pipeline.
 
 Check out our open source [Terraform provider](https://github.com/Basis-Theory/terraform-provider-basistheory) for more examples and supported resources.
@@ -35,8 +35,8 @@ The best guide for installing Terraform can be found in their own website [here]
 
 ## Set up Terraform configuration
 
-Let's setup the Terraform configuration you'll need for creating an Application and exporting the Application key we'll need
-to interact with other Basis Theory resources.
+Let's setup the Terraform configuration you'll need for creating an Application and exporting the Application key you'll
+need to interact with other Basis Theory resources.
 
 ### Set up the basistheory provider
 
@@ -76,8 +76,8 @@ terraform {
 
 ### Set up the basistheory_application resource
 
-Typically, resources are set up from the `provider` and `terraform` block. So we'll create an `application.tf` file with
-the configuration for our application. Feel free to modify the following configuration for your use case:
+Typically, resources are set up from the `provider` and `terraform` block. So let's create an `application.tf` file with
+the configuration for our Application. Feel free to modify the following configuration for your use case:
 
 ```terraform
 resource "basistheory_application" "my_application" {
@@ -92,18 +92,64 @@ resource "basistheory_application" "my_application" {
 }
 ```
 
-### Set up the output for your application key
+### Set up the output for your Application key
+
+To make use of the Application you create, you'll need to extract the key. Defining `output` blocks make data about your
+resources available for use within the command line. Define the `ouput` block in a new `output.tf` file with the contents
+below:
 
 ```terraform
 output "my_application_key" {
   value       = basistheory_application.my_application.key
-  description = "My application key"
+  description = "My Application key"
   sensitive   = true
 }
 ```
 
 ## Executing Terraform
 
-## Application key output use
+Now that our configuration is set up, it's time to execute Terraform commands to get these resources created.
+
+The first step in managing any resources via Terraform, is to initialize your directory with your configuration. There are
+many things that occur when initializing Terraform, one of which is download the `basistheory` provider from the public
+Terraform registry. Let's run the following `terraform` commands within the same directory containing your configuration.
+
+```bash
+terraform init
+```
+
+A prudent step to ensure you have a valid configuration is to run `basistheory`'s provider validations against your current
+configuration. These configurations only uses local resources to validate against the downloaded provider and does not talk
+to any remote resources. 
+
+```bash
+terraform validate
+```
+
+Finally, you can apply the configuration using the `apply` command. This will output a plan Terraform intends to execute
+after confirming the plan. The plan contains differences between your current configuration and your current Terraform state.
+After executing the following command, type `yes` to create your Application within Basis Theory.
+
+```bash
+terraform apply
+```
+
+If all went successfully, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
+on the back! 🎉 You've successfully created an Application via Terraform!
+
+Now in order to use the Application key for `curl` commands, for example, you'll need to export the key that was just created.
+You can do this by executing the `output` command below:
+
+<span class="base-alert warning">
+  <span>
+    The following command will print the sensitive Application key to the terminal.
+  </span>
+</span>
+
+```bash
+terraform output -raw my_application_key
+```
 
 ## Using Terraform to manage Reactors and more
+
+
