@@ -150,5 +150,5 @@ terraform output -raw my_application_key
 
 ## Using Terraform to manage Reactors and more
 
-If you'd like to create other Basis Theory resources via Terraform, take a look at the other docs we've made available in
+If you'd like to manage other Basis Theory resources via Terraform, take a look at the other docs we've made available in
 the [Terraform provider docs](https://registry.terraform.io/providers/basistheory/basistheory/latest/docs).
