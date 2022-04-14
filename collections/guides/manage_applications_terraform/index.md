@@ -135,7 +135,7 @@ terraform apply
 If all went successfully, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
 on the back! 🎉 You've successfully created an Application via Terraform!
 
-Now in order to use the Application key for `curl` commands, for example, you'll need to export the key that was just created.
+Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just created.
 You can do this by executing the `output` command below:
 
 <span class="base-alert warning">
