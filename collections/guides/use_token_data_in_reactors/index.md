@@ -105,10 +105,10 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   }'
 ```
 
-### Use an Atomic Card Token
+### Use a Card Token
 
-In the following example we have opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
-Since the token data within an Atomic Card contains a `number` property, we can simply detokenize the entire Atomic Card token
+In the following example we have opted to store the card data within a [Card Token](https://docs.basistheory.com/#token-types-card).
+Since the data within a Card token contains a `number` property, we can simply detokenize the entire Card token
 into the `card` argument, which will cause the token's entire JSON object data to be inserted into the `card` node.
 
 ```js
@@ -117,18 +117,18 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   -X "POST" \
   -d '{
     "args": {
-      "card": "{%raw%}{{<atomic_card_token_id>}}{%endraw%}"
+      "card": "{%raw%}{{<card_token_id>}}{%endraw%}"
     }
   }'
 ```
 
 Since Reactors validate the provided `args` against the declared request parameters and drop any undeclared arguments,
-the additional properties (`expiration_month`, `expiration_year`, `cvc`) on the Atomic Card object will be automatically removed from the request.
+the additional properties (`expiration_month`, `expiration_year`, `cvc`) on the Card token object will be automatically removed from the request.
 
-### Use an Atomic Card Token with a JSON Path Transformation
+### Use a Card Token with a JSON Path Transformation
 
-In the following example we have again opted to store the card data within an [Atomic Card Token](https://docs.basistheory.com/#atomic-cards).
-However, in this example we will pass only the `number` property from the Atomic Card by using a [JSON Path Transformation](https://docs.basistheory.com/detokenization#transformations-json-path)
+In the following example we have again opted to store the card data within a [Card Token](https://docs.basistheory.com/#token-types-card).
+However, in this example we will pass only the `number` property from the Card token by using a [JSON Path Transformation](https://docs.basistheory.com/detokenization#transformations-json-path)
 to project out the `number` property.
 
 ```js
@@ -138,7 +138,7 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   -d '{
     "args": {
       "card": {
-        "number": "{%raw%}{{ <atomic_card_token_id> | $.number }}{%endraw%}"
+        "number": "{%raw%}{{ <card_token_id> | $.number }}{%endraw%}"
       }
     }
   }'

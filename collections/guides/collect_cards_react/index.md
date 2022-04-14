@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collect Credit Cards with React
-permalink: /guides/collect-atomic-cards-with-elements-react/
+permalink: /guides/collect-cards-with-elements-react/
 categories: guides
 subcategory: processing
 nav_order: 2
@@ -17,7 +17,7 @@ image:
 
 Once you've completed this guide, you will have learned how your React application can use our Elements to collect and store credit card information on the Basis Theory platform. This simple task enables you to retain control of your card data and enables the use of credit card data with any third party as if you had the data stored in your own database.
 
-If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react">Find it here!</a>
+If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react">Find it here!</a>
 
 ## Let's code
 
@@ -57,7 +57,7 @@ export default App;
 
 Create a `CheckoutForm` component and add it inside the `BasisTheoryProvider` in your `App` content.
 
-Declare a `CardElement` inside it and call the tokenization method `atomicCards.create` passing the underlying card element instance:
+Declare a `CardElement` inside it and call the tokenization method `tokens.create` passing the token's type (card) and the underlying card element instance:
 
 ```jsx
 import { CardElement, useBasisTheory } from '@basis-theory/basis-theory-react';
@@ -67,8 +67,9 @@ export const CheckoutForm = () => {
 
   const submit = async () => {
       try {
-        const token = await bt.atomicCards.create({
-          card: bt?.getElement('myCard'),
+        const token = await bt.tokens.create({
+          type: 'card',
+          data: bt?.getElement('myCard'),
         });
       } catch (error) {
         console.error(error);
@@ -94,8 +95,8 @@ Success! 🎉 Your React application is now collecting and storing credit cards 
 ## Next steps
 
 The Token you've created from your frontend application can be used in a variety of ways from within your system, check out a few of those below:
-- You can fetch the card data later in your server, using a Server-to-Server Application Key (<a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apci%3Aread%3Alow&name=Card+Retriever" target="_blank">click here to create one</a>) to call [Get an Atomic Card API](https://docs.basistheory.com/api-reference/#atomic-cards-get-an-atomic-card);
-- Call one of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that card data. [Here is how to charge a card with Node.js](/guides/collect-atomic-cards-with-elements/#setup-and-use-a-token-reactor);
+- You can fetch the card data later in your server, using a Server-to-Server Application Key (<a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apci%3Aread%3Alow&name=Card+Retriever" target="_blank">click here to create one</a>) to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
+- Call one of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that card data. [Here is how to charge a card with Node.js](/guides/collect-cards-with-elements/#setup-and-use-a-token-reactor);
 - Make a third party API request with the raw data through our [Proxy](https://docs.basistheory.com/api-reference/#proxy). Feel free to [contact us](mailto:support@basistheory.com?subject=CardElement%20and%20Proxy%20usage) for more information on how to do it.
 
 ## See it in action
@@ -106,8 +107,8 @@ The example below uses a few of the [Element's user experience](https://docs.bas
 - Display the full `token` response;
 - Log any tokenization errors to the `console`;
 
-See it running and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react)
+See it running and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react)
 
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements-react?fontsize=14&hidenavigation=1&theme=dark&module=/src/CheckoutForm.tsx,/src/App.tsx" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react?fontsize=14&hidenavigation=1&theme=dark&module=/src/CheckoutForm.tsx,/src/App.tsx" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>

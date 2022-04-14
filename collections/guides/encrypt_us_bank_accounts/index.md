@@ -27,7 +27,7 @@ Your customer's bank information is as sensitive as their credit card data, and 
 
 In this guide, we will show you how to take an existing API and use Basis Theory to safely store the bank data while retaining the exact application functionality. 
 
-If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-atomic-banks">Find it here!</a>
+If you'd like to follow along with this guide jump right into the code - <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-bank-data">Find it here!</a>
 
 
 ### Table of contents
@@ -134,14 +134,15 @@ With your initialized `BasisTheory`, your system can securely store bank informa
 app.post('/create', async (req, res) => {
     const {accountNumber, routingNumber} = req.body;
 
-    const atomicBank = await basisTheory.atomicBanks.create({
-        bank: {
+    const bankToken = await basisTheory.tokens.create({
+        type: 'bank',
+        data: {
             routingNumber,
             accountNumber
         }
     });
 
-    account = atomicBank;
+    account = bankToken;
 
     res.send()
 })
@@ -159,12 +160,12 @@ curl --location --request POST 'http://127.0.0.1:3000/create' \
 
 ## Retrieve and return the raw data
 
-After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. With that in mind, we will alter our `/get` endpoint to retrieve using our `token:bank:read:high` permission whic grants us access to the raw bank data and return it from our API:
+After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. With that in mind, we will alter our `/get` endpoint to retrieve using our `token:bank:read:high` permission which grants us access to the raw bank data and return it from our API:
 
 ```js
 app.get('/get', async (req, res) => {
-    const atomicBank = await basisTheory.atomicBanks.retrieve(account.id);
-    res.send(atomicBank.bank)
+    const bankTokenResponse = await basisTheory.tokens.retrieve(account.id);
+    res.send(bankTokenResponse.data)
 })
 ```
 
@@ -183,7 +184,7 @@ Success! You are now securely storing your data with Basis Theory *(who will man
 
 Your system may now be safely storing bank information, but how do you make your systems even safer?
 
-Basis Theory by default returns a `tokenId` and masked bank information back to your system when creating an atomic bank, so you're able to store and use this non-sensitive data while letting Basis Theory hold the raw sensitive data. Storing `tokenId`s or presenting masks to end users allows your systems to ONLY have direct access to non-sensitive data! The raw decrypted bank account data can be retrieved from Basis Theory only when you absolutely need it and only by applications that are explicitly granted access to this raw data.
+Basis Theory by default returns a `tokenId` and masked bank information back to your system when creating a bank token, so you're able to store and use this non-sensitive data while letting Basis Theory hold the raw sensitive data. Storing `tokenId`s or presenting masks to end users allows your systems to ONLY have direct access to non-sensitive data! The raw decrypted bank account data can be retrieved from Basis Theory only when you absolutely need it and only by applications that are explicitly granted access to this raw data.
 
 
 Below is a new endpoint, showing how you can return the masked data stored in your system:
@@ -215,7 +216,7 @@ You're now able to quickly update your existing systems to encrypt and safely st
 ## See it in action
 {: .no_toc }
 
-Want to see the final result? <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-atomic-banks">Find it here!</a>
+Want to see the final result? <a href="https://github.com/Basis-Theory/basis-theory-js-examples/tree/master/store-bank-data">Find it here!</a>
 
 
 ## Watch the video guide

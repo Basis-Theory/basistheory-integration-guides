@@ -26,7 +26,7 @@ Safely storing bank account data in a way that enables your entire organization 
 
 In this guide, we will show you how to quickly collect and secure your customers' U.S. Bank Account information with Basis Theory. You'll learn how to collect the data using our Elements, toknize the information, and use our Serverless Reactor platform to communicate with Spreedly to obtain a Payment Method. 
 
-If you'd like to follow along with this guide jump right into our sample app - <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-banks-with-elements?from-embed=&file=/public/index.html">Find it here!</a>
+If you'd like to follow along with this guide jump right into our sample app - <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-banks-with-elements?from-embed=&file=/public/index.html">Find it here!</a>
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -74,22 +74,23 @@ Second, you'll need to add the following javascript code to your application to 
 
 Finally, you'll see two new Elements appear on your page. Next, we will tokenize the data entered into them!
 
-## Create an Atomic Bank from your new Elements
+## Create a Bank token from your new Elements
 Creating tokens with our Elements is as easy as if you're passing raw text. 
 
 
-To create an [Atomic Bank](https://docs.basistheory.com/api-reference/#atomic-banks), you'll just need to pass the Element references from Step 1 into the `atomicBank.create` method.
+To create a [Bank](https://docs.basistheory.com/api-reference/#token-types-bank) token, you'll just need to pass the token's type (bank) and the Element references from Step 1 into the `tokens.create` method.
 
 ```js
-const token = await BasisTheory.atomicBanks.create({
-      bank: {
-        routingNumber,
-        accountNumber,
+const token = await BasisTheory.tokens.create({
+      type: 'bank',
+      data: {
+        routing_number: routingNumber,
+        account_number: accountNumber,
       },
     });
 ```
 
-You now have a new Atomic Bank assigned to `token` - typically the `id` and `mask` of this token is stored within your database which allows you to read back the data at a later date.
+You now have a new Bank token assigned to `token` - typically the `id` and `mask` of this token is stored within your database which allows you to read back the data at a later date.
 
 
 ## Set up a Spreedly Reactor
@@ -107,7 +108,7 @@ To set up a Reactor, head over to our Portal and set up a new Spreedly Reactor. 
   </span>
 </span>
 
-Once you’ve created your Spreedly Reactor, use the <code>reactor_id</code> and your Atomic Bank's ID to exchange for a new Spreedly Payment Method token, enabling you to charge your customer.
+Once you’ve created your Spreedly Reactor, use the <code>reactor_id</code> and your Bank token's ID to exchange for a new Spreedly Payment Method token, enabling you to charge your customer.
 
 ```js
 
@@ -126,7 +127,7 @@ With your Spreedly Payment Method in hand, you can store this within your own pl
 
 ## Wrap up
 
-Now that you understand the basics of using our Elements and Atomic Banks to collect and charge a customer, you have the ability to easily use your encrypted Atomic Bank in any way you'd like:
+Now that you understand the basics of using our Elements and Bank tokens to collect and charge a customer, you have the ability to easily use your encrypted Bank token in any way you'd like:
 
 - Use our Serverless Reactors to create an ACH file (if you're looking to do this, [reach out!](https://basistheory.com/contact))
 - Quickly begin securing and using raw bank data yourself with our API
@@ -137,10 +138,10 @@ Now that you understand the basics of using our Elements and Atomic Banks to col
 ## See it in action
 {: .no_toc }
 
-Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-banks-with-elements?from-embed)
+Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-banks-with-elements?from-embed)
 
 
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-banks-with-elements?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-banks-with-elements?fontsize=14&hidenavigation=1&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collect and Charge Credit Cards with JavaScript
-permalink: /guides/collect-atomic-cards-with-elements/
+permalink: /guides/collect-cards-with-elements/
 categories: guides
 subcategory: processing
 nav_order: 1
@@ -18,9 +18,9 @@ image:
 
 Once you've completed this guide, you will have learned how any website or frontend application can use our Elements to collect, store, and use credit card information with the Basis Theory platform. You'll also have a foundational understanding of how you can use your credit card data with multiple third-parties as if you had a PCI Level 1 system and were able to store the data within your own database.
 
-If you'd like to follow along with this guide from scratch, we suggest creating a new Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements">Find it here!</a>
+If you'd like to follow along with this guide from scratch, we suggest creating a new Vanilla JS sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements">Find it here!</a>
 
-Using React? Check out the [Collect Credit Cards with React Guide](/guides/collect-atomic-cards-with-elements-react/).
+Using React? Check out the [Collect Credit Cards with React Guide](/guides/collect-cards-with-elements-react/).
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -44,10 +44,11 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
     <script>
       let card;
       async function submitCard() {    
-          const atomic_card = await BasisTheory.atomicCards.create({
-              card
+          const cardToken = await BasisTheory.tokens.create({
+              type: 'card',
+              data: card
           });
-          console.log(atomic_card);
+          console.log(cardToken);
       }
 
       window.addEventListener("load", async () => {
@@ -92,12 +93,12 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
   </span>
 </span>
 
-Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Atomic Card token's ID to exchange for a Stripe token, which you'll be able to use to charge your customer. 
+Once you’ve created your Stripe Reactor, use the <code>reactor_id</code> and your Card token's ID to exchange for a Stripe token, which you'll be able to use to charge your customer. 
 
 ```js
 const reactorResponse = await bt.reactors.react(REACTOR_ID, {
   args: {
-    card: `{%raw%}{{${atomic_card.id}}}{%endraw%}`
+    card: `{%raw%}{{${cardToken.id}}}{%endraw%}`
   }
 });
 
@@ -136,9 +137,9 @@ Anything is possible when you store your card data with us. To expand your possi
 ## See it in action
 {: .no_toc }
 
-See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements)
+See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements)
 `
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-atomic-cards-with-elements?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
 `

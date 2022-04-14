@@ -22,7 +22,7 @@ image:
         <div class="header-and-description">
             <h1>Getting Started</h1>
             <h5>Step-by-step guides to securing data with Basis Theory.</h5>
-            <p>Once you’ve completed one of these tutorials, you’ll have a foundational understanding of how to secure your data with Basis Theory allowing you to no longer worry about the underlying storage or encryption of the data. If you are already familiar with Basis Theory and our platform in general, our guide on <a href="/guides/use-token-data-in-http-requests/">How to send Token data via HTTP</a> or <a href="/guides/collect-atomic-cards-with-elements/">Collecting payments with Elements</a> may be a better place to start.</p>
+            <p>Once you’ve completed one of these tutorials, you’ll have a foundational understanding of how to secure your data with Basis Theory allowing you to no longer worry about the underlying storage or encryption of the data. If you are already familiar with Basis Theory and our platform in general, our guide on <a href="/guides/use-token-data-in-http-requests/">How to send Token data via HTTP</a> or <a href="/guides/collect-cards-with-elements/">Collecting payments with Elements</a> may be a better place to start.</p>
         </div>
         <div class="cards">
             <a class="card" href="/getting-started/quickstart-with-nodejs/">

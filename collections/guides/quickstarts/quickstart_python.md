@@ -16,7 +16,7 @@ image:
 
 In this tutorial, you will create a new Python script and use Basis Theory’s platform to secure a string of data and then read that data back out. Once you’ve completed this tutorial, you’ll have a foundational understanding of how to secure your data with Basis Theory, allowing you to no longer worry about the underlying storage or encryption of the data.
 
-If you are already familiar with Basis Theory and our platform in general, our guide on “[How to send Token data via HTTP](https://guides.basistheory.com/guides/use-token-data-in-http-requests/)” or “[Collecting payments with Elements](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/)” may be better places to start.
+If you are already familiar with Basis Theory and our platform in general, our guide on “[How to send Token data via HTTP](https://guides.basistheory.com/guides/use-token-data-in-http-requests/)” or “[Collecting payments with Elements](https://guides.basistheory.com/guides/collect-cards-with-elements/)” may be better places to start.
 
 
 ## Step 1: Get your Python environment ready
@@ -260,6 +260,6 @@ print(fetched_token["data"])
 
 Now that you understand the basics, you are ready to learn more about how you can better secure sensitive data without sacrificing data usability using the Basis Theory platform.
 
-Check out the ability to use your [Token data with HTTP request](https://guides.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/) while retaining access to the credit card number for future transactions.
+Check out the ability to use your [Token data with HTTP request](https://guides.basistheory.com/guides/use-token-data-in-http-requests/) without the data ever touching your systems — or if you’re looking to secure Credit Card data, check out our guide on [How To Charge a customer with Stripe](https://guides.basistheory.com/guides/collect-cards-with-elements/) while retaining access to the credit card number for future transactions.
 
 Was this useful, or looking for something different? Reach out to us on our [Community](https://community.basistheory.com).
