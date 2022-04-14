@@ -124,9 +124,9 @@ remote resources. If your configuration is valid the command prints out `Success
 terraform validate
 ```
 
-Finally, you can apply the configuration using the `apply` command. This will output a plan Terraform intends to execute
-after confirming the plan. The plan contains differences between your current configuration and your current Terraform state.
-After executing the following command, type `yes` to create your Application within Basis Theory.
+Finally, you can apply the configuration using the `apply` command. `apply` will output a plan Terraform intends to execute
+and waits for your confirmation. This plan contains differences between your current configuration and your current Terraform state.
+After reviewing the plan, type `yes` to create your Application within Basis Theory.
 
 ```bash
 terraform apply
@@ -135,7 +135,7 @@ terraform apply
 If all went successfully, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
 on the back! 🎉 You've successfully created an Application via Terraform!
 
-Now in order to use the Application key for `curl` commands, for example, you'll need to export the key that was just created.
+Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just created.
 You can do this by executing the `output` command below:
 
 <span class="base-alert warning">
