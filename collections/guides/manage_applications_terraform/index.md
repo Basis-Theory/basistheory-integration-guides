@@ -117,8 +117,8 @@ terraform init
 ```
 
 A prudent step to ensure you have a valid configuration is to run `basistheory`'s provider validations against your current
-configuration. These configurations only uses local resources to validate against the downloaded provider and does not talk
-to any remote resources. 
+configuration. This command only uses local resources to validate against the downloaded provider and does not talk to any
+remote resources. If your configuration is valid the command prints out `Success! The configuration is valid.`.
 
 ```bash
 terraform validate
