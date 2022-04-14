@@ -21,8 +21,6 @@ you through setting up Terraform to manage your resources within Basis Theory. B
 created an Application under your tenant using Terraform, and you will an Application key available for you to use within
 your pipeline.
 
-Check out our open source [Terraform provider](https://github.com/Basis-Theory/terraform-provider-basistheory) for more examples and supported resources.
-
 ### Table of contents
 {: .no_toc .text-delta }
 1. 
@@ -152,4 +150,5 @@ terraform output -raw my_application_key
 
 ## Using Terraform to manage Reactors and more
 
-
+If you'd like to create other Basis Theory resources via Terraform, take a look at the other docs we've made available in
+the [Terraform provider docs](https://registry.terraform.io/providers/basistheory/basistheory/latest/docs).
