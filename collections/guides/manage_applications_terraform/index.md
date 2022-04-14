@@ -124,9 +124,9 @@ to any remote resources.
 terraform validate
 ```
 
-Finally, you can apply the configuration using the `apply` command. This will output a plan Terraform intends to execute
-after confirming the plan. The plan contains differences between your current configuration and your current Terraform state.
-After executing the following command, type `yes` to create your Application within Basis Theory.
+Finally, you can apply the configuration using the `apply` command. `apply` will output a plan Terraform intends to execute
+and waits for your confirmation. This plan contains differences between your current configuration and your current Terraform state.
+After reviewing the plan, type `yes` to create your Application within Basis Theory.
 
 ```bash
 terraform apply
