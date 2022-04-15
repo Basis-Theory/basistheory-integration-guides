@@ -153,7 +153,7 @@ module.exports = async function (req) {
 
 ### Generate a text file and send to an SFTP server
 
-Many legacy business process still rely heavily on comma delimited files (CVS), tab delimited files or space-delimited files to transport data between companies, typically using SFTP servers as the endpoint of this data. For example, engaging with partner banks with ACH files requires you to format your file correctly and drop it on to an SFTP server. 
+Many legacy business process still rely heavily on comma delimited files (CSV), tab delimited files or space-delimited files to transport data between companies, typically using SFTP servers as the endpoint of this data. For example, engaging with partner banks with ACH files requires you to format your file correctly and drop it on to an SFTP server. 
 
 ```js
 module.exports = async function (req) {
