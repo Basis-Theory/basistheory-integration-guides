@@ -46,10 +46,10 @@ module.exports = async function (req) {
   // code to execute
   return {
     tokenize: {
-      bar: 'foo' // will be tokenized
+      bar: 'secret' // will be tokenized
     },
     raw: {
-      foo: 'bar' // will be returned in plaintext
+      foo: 'plaintext' // will be returned in plaintext
     }
   };
 };
