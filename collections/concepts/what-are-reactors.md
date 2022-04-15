@@ -57,7 +57,7 @@ module.exports = async function (req) {
 
 <span class="base-alert info">
   <span>
-   **Quickstart hint:** Find a list of our fully compliant and maintained Official Formulas from within your [Web Portal](https://portal.basistheory.com/reactors/formulas)
+   **Quickstart hint:** Find a list of our fully compliant and maintained Official Reactor Formulas from within our [Portal](https://portal.basistheory.com/reactors/formulas)
   </span>
 </span>
 
