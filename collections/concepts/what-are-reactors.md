@@ -211,7 +211,7 @@ module.exports = async function (req) {
 
 ### Anything you can imagine
 
-When our templates and examples aren’t enough, we enable you to build anything you want to with our Reactors. Start with a blank function like the below and solve any business problem with the data you need:
+When our templates and examples aren’t enough, we enable you to build anything you want to with our Reactors. Start with a blank function like the one below and solve any business problem with the data you need:
 
 ```js
 module.exports = async function (req) {
@@ -240,7 +240,7 @@ When making a simple HTTP request, a simpler implementation can be created using
 
 ### What does the development lifecycle look like for building Reactors?
 
-Each Reactor runs a single function which can be scoped, coded, and tested all within your normal development tooling and lifecycles. Code written and pushed to your own Github repositories can be used to create new Reactor Formulas using our Terraform or [API](https://docs.basistheory.com/#reactor-formulas-reactor-formula-object) integrations.
+Each Reactor runs a single function which can be scoped, coded, and tested all within your normal development tooling and lifecycles. Code written and pushed to your own Github repositories can be used to create new Reactor Formulas using our Terraform Provider or [API](https://docs.basistheory.com/#reactor-formulas-reactor-formula-object) integrations.
 
 ### Can we run the reactor code locally to test?
 
