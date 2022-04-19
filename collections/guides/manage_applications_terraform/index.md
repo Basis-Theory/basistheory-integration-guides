@@ -37,8 +37,22 @@ need to interact with other Basis Theory resources.
 
 ### Set up the basistheory provider
 
-Firstly, you'll need to configure the `basistheory` provider in a `main.tf` file. The easiest configuration to start with
-is to define the API URL and key within the `basistheory` provider.
+Firstly, you'll need to configure the `terraform` configuration block in a `main.tf` file. Let's add a source for where
+to pull down our Terraform provider, and pin the version as well.
+
+```terraform
+terraform {
+  required_providers {
+    basistheory = {
+      source  = "basis-theory/basistheory"
+      version = ">= 0.1.1"
+    }
+  }
+}
+```
+
+Now you'll need to define some details for the provider. The easiest configuration to start with is to define the API URL
+and key within the `basistheory` provider.
 
 ```terraform
 provider "basistheory" {
@@ -50,24 +64,10 @@ provider "basistheory" {
 
 Another configuration option is to set the API URL and key through setting `BASISTHEORY_API_URL` and `BASISTHEORY_API_KEY`
 environment vars. This leaves you with optionally setting the client timeout, which defaults to 15 seconds. So the most
-minimal `main.tf` config can look like this:
+minimal `provider` config can look like this:
 
 ```terraform
 provider "basistheory" {
-}
-```
-
-Additionally, you can pin down the version of the Terraform provider you use for the configuration with the following `terraform`
-block in the same file:
-
-```terraform
-terraform {
-  required_providers {
-    basistheory = {
-      source = "basistheory/basistheory"
-      version = "1.0.0"
-    }
-  }
 }
 ```
 
@@ -150,4 +150,4 @@ terraform output -raw my_application_key
 ## Using Terraform to manage Reactors and more
 
 If you'd like to manage other Basis Theory resources via Terraform, take a look at the other docs we've made available in
-the [Terraform provider docs](https://registry.terraform.io/providers/basistheory/basistheory/latest/docs).
+the [Terraform provider docs](https://registry.terraform.io/providers/Basis-Theory/basistheory/latest/docs).
