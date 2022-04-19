@@ -45,7 +45,7 @@ terraform {
   required_providers {
     basistheory = {
       source  = "basis-theory/basistheory"
-      version = ">= 0.1.2"
+      version = ">= 0.1.3"
     }
   }
 }
@@ -62,9 +62,10 @@ provider "basistheory" {
 }
 ```
 
-Another configuration option is to set the API URL and key through setting `BASISTHEORY_API_URL` and `BASISTHEORY_API_KEY`
-environment vars. This leaves you with optionally setting the client timeout, which defaults to 15 seconds. So the most
-minimal `provider` config can look like this:
+Another configuration option is to just set the API key through setting `BASISTHEORY_API_KEY` environment var. This leaves
+you with optionally setting the API URL and client timeout through `BASISTHEORY_API_URL` and `BASISTHEORY_CLIENT_TIMEOUT`
+env vars, respectively. These don't need to be explicitly set since the API URL defaults to `https://api.basistheory.com`
+and the client timeout defaults to 15 seconds. So the most minimal `provider` config can look like this:
 
 ```terraform
 provider "basistheory" {
@@ -131,7 +132,7 @@ After reviewing the plan, type `yes` to create your Application within Basis The
 terraform apply
 ```
 
-If all went successfully, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
+If all was successful, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
 on the back! 🎉 You've successfully created an Application via Terraform!
 
 Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just created.
