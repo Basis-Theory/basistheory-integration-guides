@@ -31,7 +31,7 @@ Each Token that matches the search query and is returned in the result set becom
 
 ## Permissions
 
-The search results are filtered based on the permissions associated with the Application Key. An Application requires at least one `read` [permission](https://docs.basistheory.com/#permissions-permission-types) to search for Tokens. In order to search the `data` field, the Application’s permissions must allow [unrestricted](https://docs.basistheory.com/#tokens-token-restriction-policies) access to plaintext Token data. Searching the `type`, `metadata`, and `created_at` fields only require a `read` permission.
+The search results are filtered based on the permissions associated with the Application. An Application requires at least one `read` [permission](https://docs.basistheory.com/#permissions-permission-types) to search for Tokens. In order to search the `data` field, the Application’s permissions must allow [unrestricted](https://docs.basistheory.com/#tokens-token-restriction-policies) access to plaintext Token data. Searching the `type`, `metadata`, and `created_at` fields only require a `read` permission.
 
 ## Query Syntax
 
@@ -41,7 +41,7 @@ Basis Theory uses a [Lucene-based query syntax](http://www.lucenetutorial.com/lu
 type:social_security_number
 ```
 
-To search Token `data` on Types that support it, you can for the indexed data patterns. To search for Tokens containing the data `123-45-6789`:
+To search Token `data` on Types that support it, you can search for the indexed data patterns. To search for Tokens containing the data `123-45-6789`, you would query:
 
 ```
 data:123-45-6789
@@ -53,7 +53,7 @@ If you are searching over data that contains multiple words or spaces, you can w
 data:"data containing multiple words"
 ```
 
-Searching to Tokens using metadata is supported as well. Metadata search terms use dot notation for key in the form of `metadata.key:value`. For example, to search for Tokens having the metadata `{ customer_id: "123456" }`, query for:
+Searching Tokens using metadata is supported as well. Metadata search terms use dot notation for key in the form of `metadata.key:value`. For example, to search for Tokens having the metadata `{ customer_id: "123456" }`, query for:
 
 ```
 metadata.customer_id:123456
