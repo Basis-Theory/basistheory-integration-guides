@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with Java
 permalink: /getting-started/quickstart-with-java/
 categories: quickstart
-nav_order: 4
+nav_order: 6
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory with Java

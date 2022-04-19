@@ -4,7 +4,7 @@ title: Collect Customer Data (PII) with JavaScript
 permalink: guides/collect-pii-js/
 categories: guides
 subcategory: collecting
-nav_order: 6
+nav_order: 1
 has_children: true
 has_toc: false
 image:

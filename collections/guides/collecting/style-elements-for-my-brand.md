@@ -4,7 +4,7 @@ title: Styling Elements
 permalink: /guides/style-elements-for-my-brand/
 categories: guides
 subcategory: collecting
-nav_order: 8
+nav_order: 4
 has_children: true
 has_toc: false
 image:

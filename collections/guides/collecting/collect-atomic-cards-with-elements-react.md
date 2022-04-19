@@ -3,8 +3,8 @@ layout: default
 title: Collect Credit Cards with React
 permalink: /guides/collect-cards-with-elements-react/
 categories: guides
-subcategory: processing
-nav_order: 2
+subcategory: collecting
+nav_order: 3
 has_children: true
 has_toc: false
 description: Basis Theory

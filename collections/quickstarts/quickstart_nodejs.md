@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with Node.js
 permalink: /getting-started/quickstart-with-nodejs/
 categories: quickstart
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory with Node.js
