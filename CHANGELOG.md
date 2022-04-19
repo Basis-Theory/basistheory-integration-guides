@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.13.0...v1.14.0) (2022-04-19)
+
+
+### Features
+
+* add search concept page ([#105](https://github.com/Basis-Theory/basistheory-integration-guides/issues/105)) ([dec081d](https://github.com/Basis-Theory/basistheory-integration-guides/commit/dec081d68771c0fa09b6da84b976831d398c3061))
+
 # [1.13.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.12.1...v1.13.0) (2022-04-15)
 
 
