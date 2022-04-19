@@ -31,7 +31,7 @@ Each Token that matches the search query and is returned in the result set becom
 
 ## Permissions
 
-The search results are filtered based on the permissions associated with the Application. An Application requires at least one `read` [permission](https://docs.basistheory.com/#permissions-permission-types) to search for Tokens. In order to search the `data` field, the Application’s permissions must allow [unrestricted](https://docs.basistheory.com/#tokens-token-restriction-policies) access to plaintext Token data. Searching the `type`, `metadata`, and `created_at` fields only require a `read` permission.
+In order to search Tokens using the API, you must use an Application with at least one `read` [permission](https://docs.basistheory.com/#permissions-permission-types). The search results are filtered based on the permissions associated with the Application; you cannot search for tokens you do not have permission to access. Searching the `type`, `metadata`, and `created_at` fields does not require any additional permissions; however, in order to search the `data` field, the Application’s permissions must allow [unrestricted](https://docs.basistheory.com/#tokens-token-restriction-policies) access to plaintext Token data. 
 
 ## Query Syntax
 
