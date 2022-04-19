@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with .NET
 permalink: /getting-started/quickstart-with-dotnet/
 categories: quickstart
-nav_order: 4
+nav_order: 5
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory with .NET
