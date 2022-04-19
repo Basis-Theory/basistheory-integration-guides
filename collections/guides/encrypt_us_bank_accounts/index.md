@@ -144,7 +144,7 @@ app.post('/create', async (req, res) => {
 
     account = bankToken;
 
-    res.send()
+    res.send("Bank token created \n");
 })
 ```
 
@@ -164,8 +164,13 @@ After we've stored the information with Basis Theory, we will only be storing a 
 
 ```js
 app.get('/get', async (req, res) => {
-    const bankTokenResponse = await basisTheory.tokens.retrieve(account.id);
-    res.send(bankTokenResponse.data)
+  if (!account) {
+    return res.status(404).send();
+  }
+
+  const bankToken = await basisTheory.tokens.retrieve(account.id);
+
+  return res.send(JSON.stringify(bankToken.data) + "\n");
 })
 ```
 
@@ -190,7 +195,7 @@ Basis Theory by default returns a `tokenId` and masked bank information back to 
 Below is a new endpoint, showing how you can return the masked data stored in your system:
 ```js
 app.get('/get_mask', (req, res) => {
-    res.send(account.bank)
+    res.send(JSON.stringify(account.data) + "\n");
 })
 ```
 
