@@ -45,7 +45,7 @@ terraform {
   required_providers {
     basistheory = {
       source  = "basis-theory/basistheory"
-      version = ">= 0.1.1"
+      version = ">= 0.1.2"
     }
   }
 }
