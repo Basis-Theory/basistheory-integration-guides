@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.15.0...v1.16.0) (2022-04-20)
+
+
+### Features
+
+* **ENG-2653:** adds Manage Applications with Terraform guide ([#104](https://github.com/Basis-Theory/basistheory-integration-guides/issues/104)) ([f0ad599](https://github.com/Basis-Theory/basistheory-integration-guides/commit/f0ad599a4cf119750235e06f51b917e65bb4ecd1))
+
 # [1.15.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.14.0...v1.15.0) (2022-04-20)
 
 
