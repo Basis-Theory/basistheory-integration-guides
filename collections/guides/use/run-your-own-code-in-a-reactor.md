@@ -139,7 +139,8 @@ The standard Basis Theory [Reactor errors](https://github.com/Basis-Theory/basis
 are defined within the NPM package [@basis-theory/basistheory-reactor-formulas-sdk-js](https://www.npmjs.com/package/@basis-theory/basis-theory-reactor-formulas-sdk-js),
 which is available to import from within your Reactor Formulas.
 These standard error types will be translated by the Reactor execution environment into [HTTP errors](https://docs.basistheory.com/#errors-reactor-errors)
-returned from the Basis Theory API. Any other uncaught exceptions thrown from a Reactor Formula will be returned as an HTTP `500` error.
+returned from the Basis Theory API. Any other uncaught exceptions thrown from a Reactor Formula will be returned as a generic HTTP `500` error 
+and the original error message will be lost. The Reactor Formula will be retried up to 3 times in the event of any transient errors (an HTTP status code `>=500` or `408 Request Timeout`).
 
 As an example, if you are working with an API that returns errors indicated by HTTP response status codes, 
 your formula can translate from these potentially vendor-specific status codes to a standard Basis Theory error as follows: 
