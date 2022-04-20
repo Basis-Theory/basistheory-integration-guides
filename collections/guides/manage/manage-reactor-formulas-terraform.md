@@ -68,7 +68,7 @@ provider "basistheory" {
 
 ### Set up the basistheory_reactor_formula resource
 
-Typically, resources are set up in a different file outside of `main.tf`. Let's create a new `reactor_formula_example.tf`
+Typically, resources are set up in a different file outside of `main.tf`. Let's create a new `reactor_formula.tf`
 file with the following configuration for our Reactor Formula. Feel free to modify the following configuration for your use case:
 
 <span class="base-alert info">
@@ -122,13 +122,13 @@ resource "basistheory_reactor_formula" "my_awesome_formula" {
 ### Set up a basistheory_reactor resource from the Reactor Formula
 
 Next, we can create and configure a Reactor referencing the Reactor Formula ID of `basistheory_reactor_formula.my_awesome_formula.id`.
-Let's create a new `reactor_example.tf` file with the following configuration for our Reactor Formula.
+Let's create a new `reactor.tf` file with the following configuration for our Reactor Formula.
 Feel free to modify the following configuration for your use case:
 
 ```terraform
 resource "basistheory_reactor" "my_awesome_reactor" {
-  name       = "My Reactor"
-  formula_id = basistheory_reactor_formula.my_awesome_formula.id
+  name          = "My Awesome Reactor"
+  formula_id    = basistheory_reactor_formula.my_awesome_formula.id
   configuration = {
     SERVICE_API_KEY = "key_abcd1234"
   }
