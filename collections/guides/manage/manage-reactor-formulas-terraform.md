@@ -33,13 +33,13 @@ created a Reactor Formula under your Tenant using Terraform.
 
 <span class="base-alert warning">
   <span>
-    Creating custom Reactor Formulas is currently in Private Beta. If you would like to be added to the beta program, please <a href="mailto:support@basistheory.com?subject=Reactor Beta Access">contact us</a>!
+    Creating custom Reactor Formulas is currently in Private Beta. If you would like to be added to the beta program, please submit an<a href="https://support.basistheory.com/hc/requests/new?tf_subject=Join%20Beta%20Program%20to%20Code%20Your%20Own%20Reactor&amp;tf_description=Let%20us%20know%20what%20you%27d%20like%20to%20do%20with%20your%20Reactor&amp;tf_priority=normal" target="_blank">access request</a>!
   </span>
 </span>
 
 ## Install Terraform
 
-To achieve the following steps, you must have Terraform CLI installed locally or wherever you're planning on running your configuration.
+To achieve the following steps, you must have the Terraform CLI installed locally or wherever you're planning on running your configuration.
 The best guide for installing Terraform can be found on their own website [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Set up Terraform configuration
@@ -126,11 +126,17 @@ Let's create a new `reactor.tf` file with the following configuration for our Re
 Feel free to modify the following configuration for your use case:
 
 ```terraform
+variable "service_api_key" {
+  type      = string
+  sensitive = true
+  default   = "foo"
+}
+
 resource "basistheory_reactor" "my_awesome_reactor" {
   name          = "My Awesome Reactor"
   formula_id    = basistheory_reactor_formula.my_awesome_formula.id
   configuration = {
-    SERVICE_API_KEY = "key_abcd1234"
+    SERVICE_API_KEY = var.service_api_key # default value can be overridden by setting TF_VAR_service_api_key environment variable
   }
 }
 ```

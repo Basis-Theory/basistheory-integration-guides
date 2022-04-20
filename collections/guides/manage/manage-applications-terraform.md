@@ -33,7 +33,7 @@ created an Application under your tenant using Terraform, and you will have an A
 
 ## Install Terraform
 
-To achieve the following steps, you must have Terraform CLI installed locally or wherever you're planning on running your configuration.
+To achieve the following steps, you must have the Terraform CLI installed locally or wherever you're planning on running your configuration.
 The best guide for installing Terraform can be found on their own website [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Set up Terraform configuration
