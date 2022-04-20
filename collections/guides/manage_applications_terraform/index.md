@@ -17,7 +17,7 @@ image:
 {: .no_toc }
 
 Terraform is a popular and powerful tool that enables you to version your infrastructure as code. In this guide, we'll walk
-you through setting up Terraform to manage your resources within Basis Theory. By the end of this guide, you will have
+you through setting up Terraform to manage your resources locally within Basis Theory. By the end of this guide, you will have
 created an Application under your tenant using Terraform, and you will have an Application key available for you to use.
 
 ### Table of contents
