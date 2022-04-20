@@ -33,7 +33,7 @@ created a Reactor Formula under your Tenant using Terraform.
 
 <span class="base-alert warning">
   <span>
-    Creating custom Reactor Formulas is currently in Private Beta. If you would like to be added to the beta program, please submit an<a href="https://support.basistheory.com/hc/requests/new?tf_subject=Join%20Beta%20Program%20to%20Code%20Your%20Own%20Reactor&amp;tf_description=Let%20us%20know%20what%20you%27d%20like%20to%20do%20with%20your%20Reactor&amp;tf_priority=normal" target="_blank">access request</a>!
+    Creating custom Reactor Formulas is currently in Private Beta. If you would like to be added to the beta program, please submit an <a href="https://support.basistheory.com/hc/requests/new?tf_subject=Join%20Beta%20Program%20to%20Code%20Your%20Own%20Reactor&amp;tf_description=Let%20us%20know%20what%20you%27d%20like%20to%20do%20with%20your%20Reactor&amp;tf_priority=normal" target="_blank">access request</a>!
   </span>
 </span>
 
