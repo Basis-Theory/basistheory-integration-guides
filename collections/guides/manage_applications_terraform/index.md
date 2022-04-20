@@ -28,7 +28,7 @@ created an Application under your tenant using Terraform, and you will have an A
 ## Install Terraform
 
 To achieve the following steps, you must have Terraform CLI installed locally or wherever you're planning on running your configuration.
-The best guide for installing Terraform can be found in their own website [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+The best guide for installing Terraform can be found on their own website [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Set up Terraform configuration
 
@@ -51,8 +51,8 @@ terraform {
 }
 ```
 
-Now you'll need to define some details for the provider. The easiest configuration to start with is to define the API URL
-and key within the `basistheory` provider.
+Now you'll need to define some details for the provider. To start with you can define the API URL, API key, and client timeout
+within the `basistheory` provider.
 
 ```terraform
 provider "basistheory" {
@@ -74,8 +74,8 @@ provider "basistheory" {
 
 ### Set up the basistheory_application resource
 
-Typically, resources are set up from the `provider` and `terraform` block. So let's create an `application.tf` file with
-the configuration for our Application. Feel free to modify the following configuration for your use case:
+Typically, resources are set up in a different file from the `provider` and `terraform` block. So let's create an `application.tf`
+file with the configuration for our Application. Feel free to modify the following configuration for your use case:
 
 ```terraform
 resource "basistheory_application" "my_application" {
@@ -109,7 +109,7 @@ output "my_application_key" {
 Now that our configuration is set up, it's time to execute Terraform commands to get these resources created.
 
 The first step in managing any resources via Terraform, is to initialize your directory with your configuration. There are
-many things that occur when initializing Terraform, one of which is download the `basistheory` provider from the public
+many things that occur when initializing Terraform, one of which is downloading the `basistheory` provider from the public
 Terraform registry. Let's run the following `terraform` commands within the same directory containing your configuration.
 
 ```bash
@@ -117,8 +117,8 @@ terraform init
 ```
 
 A prudent step to ensure you have a valid configuration is to run `basistheory`'s provider validations against your current
-configuration. This command only uses local resources to validate against the downloaded provider and does not talk to any
-remote resources. If your configuration is valid the command prints out `Success! The configuration is valid.`.
+configuration. This command uses local resources to validate against the downloaded provider and does not talk to any remote
+resources. If your configuration is valid the command prints out `Success! The configuration is valid.`.
 
 ```bash
 terraform validate
