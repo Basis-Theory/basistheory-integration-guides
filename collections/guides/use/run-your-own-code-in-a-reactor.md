@@ -248,7 +248,54 @@ module.exports = async function (req) {
 ```
 
 Next, we need to create a Private Reactor Formula in Basis Theory containing this `code`, `configuration`, and `request_parameters` by calling the 
-[Create Reactor Formula](https://docs.basistheory.com/#reactor-formulas-create-reactor-formula) API with `type: "private"` (request omitted for brevity). 
+[Create Reactor Formula](https://docs.basistheory.com/#reactor-formulas-create-reactor-formula) API. Note that all newline characters must be escaped as `\n` within the `code` property of the JSON request:
+
+```bash
+curl 'https://api.basistheory.com/reactor-formulas' \
+  -X 'POST' \
+  -H 'BT-API-KEY: key_PtkNaBwXe23rGt1eZenMMx' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Lithic - Issue Card",
+      "description": "Issues a new card using Lithic",
+      "type": "private",
+      "code": "module.exports = async function (req) {\n    const { LITHIC_API_KEY } = req.configuration;\n    const { memo, type, spend_limit, spend_limit_duration } = req.args;\n  \n    const fetch = require('node-fetch');\n  \n    const body = {\n      memo,\n      type,\n      spend_limit,\n      spend_limit_duration,\n      state: 'OPEN'\n    };\n  \n    const response = await fetch(\n      `https://sandbox.lithic.com/v1/card`,\n      {\n        method: 'post',\n        body: JSON.stringify(body),\n        headers: { \n          'Authorization': `api-key ${LITHIC_API_KEY}`,\n          'Content-Type': 'application/json',\n        }\n      }\n    );\n    const lithicCard = await response.json();\n  \n    return { \n      tokenize: {\n        type: 'card',\n        data: {\n          number: lithicCard.pan,\n          expiration_month: lithicCard.exp_month,\n          expiration_year: lithicCard.exp_year,\n          cvc: lithicCard.cvv\n        },\n        metadata: {\n          lithic_token_id: lithicCard.token\n        }\n      }\n    };\n  }\n",
+      "configuration": [
+          {
+              "name": "LITHIC_API_KEY",
+              "description": "The api key issued by Lithic",
+              "type": "string"
+          }
+      ],
+      "request_parameters": [
+          {
+              "name": "memo",
+              "description": "The name to identify the card",
+              "type": "string",
+              "optional": false
+          },
+          {
+              "name": "type",
+              "description": "The type of card to issue",
+              "type": "string",
+              "optional": false
+          },
+          {
+              "name": "spend_limit",
+              "description": "The amount (in cents) to limit approved authorizations",
+              "type": "number",
+              "optional": true
+          },
+          {
+              "name": "spend_limit_duration",
+              "description": "Duration for which spend limit applies",
+              "type": "string",
+              "optional": true
+          }
+      ]
+  }'
+```
+
 The API will respond with the `id` of our new Private Reactor Formula:
 
 ```json
