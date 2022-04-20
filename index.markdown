@@ -81,7 +81,7 @@ image:
                         <div class="card-title">Secure Your Data</div>
                         <div>Learn how to easily tokenize your data on any platform.</div>
                         <div class="guides-list">
-                            <li><a href="/guides/collect-atomic-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
+                            <li><a href="/guides/collect-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
                             <li><a href="/guides/encrypt-us-banks-in-your-applications">Encrypt U.S Banks in your applications <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/style-elements-for-my-brand">Style elements to match your brand <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/collect-pii-js">Collect Customer Data (PII) with JS <span class="guide-time-estimate">5m</span></a></li>
@@ -98,7 +98,7 @@ image:
                         <div class="guides-list">
                             <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
-                            <li><a href="/guides/collect-atomic-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
+                            <li><a href="/guides/collect-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
                             <li><a href="/guides/use-token-data-in-reactors">Use Token Data in Reactors <span class="guide-time-estimate">10m</span></a></li>
                         </div>
                     </div>
