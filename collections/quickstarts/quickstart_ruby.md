@@ -20,7 +20,7 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 <span class="base-alert info">
     <span>
-      If you're looking for our a Ruby gem, try out our community built gem <a href="https://github.com/scottolsen/basis_theory" target="_blank">here.</a>
+      If you're looking for our a Ruby gem, try find our community built <a href="https://rubygems.org/gems/basis_theory" target="_blank">gem here</a> or on their <a href="https://github.com/scottolsen/basis_theory" target="_blank">github repository.</a>
     </span>
 </span>
 

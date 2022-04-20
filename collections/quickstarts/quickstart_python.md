@@ -20,7 +20,7 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 <span class="base-alert info">
     <span>
-      If you're looking for our Python SDK, you can find it <a href="https://github.com/Basis-Theory/basistheory-python" target="_blank">here.</a>
+      If you're looking for our Python SDK, you can find <a href="https://pypi.org/project/basistheory/" target="_blank">it here</a> or on our <a href="https://github.com/Basis-Theory/basistheory-python" target="_blank">github repository.</a>
     </span>
 </span>
 

@@ -20,7 +20,7 @@ If you are already familiar with Basis Theory and our platform in general, our g
 
 <span class="base-alert info">
     <span>
-    If you're looking for our NodeJS npm module, you can find it <a href="https://www.npmjs.com/package/@basis-theory/basis-theory-js" target="_blank">here.</a>
+    If you're looking for our NodeJS npm module, you can find our <a href="https://www.npmjs.com/package/@basis-theory/basis-theory-js" target="_blank">npm module here</a> or on our <a href="https://github.com/Basis-Theory/basis-theory-js" target="_blank">github repository</a>.
     </span>
 </span>
 
