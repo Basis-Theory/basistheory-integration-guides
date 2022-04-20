@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.0...v1.19.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* add space before link to request access to private beta ([#110](https://github.com/Basis-Theory/basistheory-integration-guides/issues/110)) ([1dc941a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/1dc941a7cd4903e4ed817f2c37917961749ebe70))
+
 # [1.19.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.18.0...v1.19.0) (2022-04-20)
 
 
