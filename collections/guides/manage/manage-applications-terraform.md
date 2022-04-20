@@ -166,7 +166,7 @@ terraform output -raw my_application_key
 You can follow our [quickstart with curl](https://developers.basistheory.com/getting-started/quickstart-with-curl/) guide
 and skip to step 3 to create tokens with your Application API key output. 
 
-## Using Terraform to manage Reactors and more
+## Using Terraform to manage other Basis Theory resources
 
 If you'd like to manage other Basis Theory resources via Terraform, take a look at the other docs we've made available in
 the [Terraform provider docs](https://registry.terraform.io/providers/Basis-Theory/basistheory/latest/docs).

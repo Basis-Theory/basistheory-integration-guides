@@ -168,7 +168,7 @@ on the back! 🎉 You've successfully created a Reactor Formula and configured a
 To find these new resources in the Basis Theory Portal, select the appropriate Tenant and then check out the available
 [Reactor Formulas](https://portal.basistheory.com/reactors/formulas) and [Reactors](https://portal.basistheory.com/reactors).
 
-## Using Terraform to manage Reactors and more
+## Using Terraform to manage other Basis Theory resources
 
 If you'd like to manage other Basis Theory resources via Terraform, take a look at the other docs we've made available in
 the [Terraform provider docs](https://registry.terraform.io/providers/Basis-Theory/basistheory/latest/docs).
