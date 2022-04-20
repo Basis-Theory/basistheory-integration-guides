@@ -18,6 +18,13 @@ In this tutorial, you will create a new Ruby script and use Basis Theory’s pla
 
 If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-cards-with-elements/) may be a better place to start.
 
+<span class="base-alert info">
+    <span>
+      If you're looking for our a Ruby gem, try find our community built <a href="https://rubygems.org/gems/basis_theory" target="_blank">gem here</a> or on their <a href="https://github.com/scottolsen/basis_theory" target="_blank">github repository.</a>
+    </span>
+</span>
+
+
 ## Step 1: Get your Ruby environment ready
 
 ### Step 1.1: Ensure you have Ruby installed

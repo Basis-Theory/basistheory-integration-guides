@@ -78,7 +78,7 @@ image:
                 <div class="icon-and-guides">
                     <img src="./assets/images/icons/shield-down-arrow.svg" alt="shield-down-arrow">
                     <div class="guides">
-                        <div class="card-title">Collecting and Securing Data</div>
+                        <div class="card-title">Secure Your Data</div>
                         <div>Learn how to easily tokenize your data on any platform.</div>
                         <div class="guides-list">
                             <li><a href="/guides/collect-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
@@ -93,7 +93,7 @@ image:
                 <div class="icon-and-guides">
                     <img src="./assets/images/icons/shield-up-arrow.svg" alt="shield-up-arrow">
                     <div class="guides">
-                        <div class="card-title">Processing and Sending Data</div>
+                        <div class="card-title">Use Your Data</div>
                         <div>Learn how to integrate and make the most out of tokenized data.</div>
                         <div class="guides-list">
                             <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>

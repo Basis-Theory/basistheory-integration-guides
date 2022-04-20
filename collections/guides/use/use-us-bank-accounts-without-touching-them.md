@@ -3,7 +3,7 @@ layout: default
 title: Use U.S. Bank Accounts without touching them
 permalink: /guides/use-us-bank-accounts-without-touching-them/
 categories: guides
-subcategory: processing
+subcategory: use
 nav_order: 2
 has_children: true
 has_toc: false

@@ -18,6 +18,13 @@ In this tutorial, you will create a new .NET console application and use Basis T
 
 If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-cards-with-elements/) may be a better place to start.
 
+<span class="base-alert info">
+    <span>
+      If you're looking for our a .NET library, you can find our <a href="https://www.nuget.org/packages/BasisTheory.net/" target="_blank">nuget package here</a> and or on our <a href="https://github.com/Basis-Theory/basistheory-dotnet" target="_blank">github repository</a>.
+    </span>
+</span>
+
+
 ## Step 1: Get your .NET environment ready
 
 ### Step 1.1: Ensure you have .NET installed

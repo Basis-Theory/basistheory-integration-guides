@@ -3,7 +3,7 @@ layout: default
 title: Collect Customer Data (PII) with React
 permalink: guides/collect-pii-react/
 categories: guides
-subcategory: collecting
+subcategory: secure
 nav_order: 2
 has_children: true
 has_toc: false

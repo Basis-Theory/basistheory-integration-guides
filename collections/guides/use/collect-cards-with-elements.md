@@ -3,7 +3,7 @@ layout: default
 title: Collect and Charge Credit Cards with JavaScript
 permalink: /guides/collect-cards-with-elements/
 categories: guides
-subcategory: processing
+subcategory: use
 nav_order: 1
 has_children: true
 has_toc: false
