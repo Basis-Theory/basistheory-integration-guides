@@ -3,7 +3,7 @@ layout: default
 title: Collect Customer Data (PII) with JavaScript
 permalink: guides/collect-pii-js/
 categories: guides
-subcategory: collecting
+subcategory: secure
 nav_order: 1
 has_children: true
 has_toc: false
