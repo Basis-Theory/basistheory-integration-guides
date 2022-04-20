@@ -69,7 +69,13 @@ provider "basistheory" {
 ### Set up the basistheory_reactor_formula resource
 
 Typically, resources are set up in a different file outside of `main.tf`. Let's create a new `reactor_formula_example.tf`
-file with the following HCL configuration for our Reactor Formula. Feel free to modify the following configuration for your use case:
+file with the following configuration for our Reactor Formula. Feel free to modify the following configuration for your use case:
+
+<span class="base-alert info">
+  <span>
+    For more information about writing your own code for a Reactor Formula, check out [our guide](/guides/run-your-own-code-in-a-reactor/).
+  </span>
+</span>
 
 ```terraform
 resource "basistheory_reactor_formula" "my_awesome_formula" {
@@ -81,12 +87,13 @@ resource "basistheory_reactor_formula" "my_awesome_formula" {
   module.exports = async function (req) {
     // Do something with `req.configuration.SERVICE_API_KEY`
 
-    // Do something awesome!
+    // Do anything here!
 
     return {
       raw: {
         foo: "bar"
-      }
+      },
+      tokenize: {}
     };
   };
   EOT
@@ -115,7 +122,7 @@ resource "basistheory_reactor_formula" "my_awesome_formula" {
 ### Set up a basistheory_reactor resource from the Reactor Formula
 
 Next, we can create and configure a Reactor referencing the Reactor Formula ID of `basistheory_reactor_formula.my_awesome_formula.id`.
-Let's create a new `reactor_example.tf` file with the following HCL configuration for our Reactor Formula.
+Let's create a new `reactor_example.tf` file with the following configuration for our Reactor Formula.
 Feel free to modify the following configuration for your use case:
 
 ```terraform
