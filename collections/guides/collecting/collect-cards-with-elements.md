@@ -44,26 +44,26 @@ Using our hosted elements, you can collect cards on any webpage you need to, whi
     <script>
       let card;
       async function submitCard() {    
-          const cardToken = await BasisTheory.tokens.create({
-              type: 'card',
-              data: card
-          });
-          console.log(cardToken);
+        const cardToken = await BasisTheory.tokens.create({
+          type: 'card',
+          data: card
+        });
+        console.log(cardToken);
       }
 
       window.addEventListener("load", async () => {
-          await BasisTheory.init(<ELEMENTS_API_KEY>, {
-              elements: true
-          });
+        await BasisTheory.init(<ELEMENTS_API_KEY>, {
+          elements: true
+        });
 
-          card = BasisTheory.createElement("card", style);
+        card = BasisTheory.createElement("card", style);
 
-          await card.mount("#card");
+        await card.mount("#card");
 
-          card.on("change", (e) => {
-              const button = document.getElementById("submit_button");
-              button.disabled = !e.complete;
-          });
+        card.on("change", (e) => {
+          const button = document.getElementById("submit_button");
+          button.disabled = !e.complete;
+        });
       });
     </script>
   </head>

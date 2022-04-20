@@ -135,11 +135,11 @@ app.post('/create', async (req, res) => {
     const {accountNumber, routingNumber} = req.body;
 
     const bankToken = await basisTheory.tokens.create({
-        type: 'bank',
-        data: {
-            routingNumber,
-            accountNumber
-        }
+      type: 'bank',
+      data: {
+        routingNumber,
+        accountNumber
+      }
     });
 
     account = bankToken;

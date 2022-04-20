@@ -66,15 +66,16 @@ export const CheckoutForm = () => {
   const { bt } = useBasisTheory();
 
   const submit = async () => {
-      try {
-        const token = await bt.tokens.create({
-          type: 'card',
-          data: bt?.getElement('myCard'),
-        });
-      } catch (error) {
-        console.error(error);
-      }
+    try {
+      const token = await bt.tokens.create({
+        type: 'card',
+        data: bt?.getElement('myCard'),
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   return (
     <>
         <CardElement id="myCard" />

@@ -82,12 +82,12 @@ To create a [Bank](https://docs.basistheory.com/api-reference/#token-types-bank)
 
 ```js
 const token = await BasisTheory.tokens.create({
-      type: 'bank',
-      data: {
-        routing_number: routingNumber,
-        account_number: accountNumber,
-      },
-    });
+  type: 'bank',
+  data: {
+    routing_number: routingNumber,
+    account_number: accountNumber
+  }
+});
 ```
 
 You now have a new Bank token assigned to `token` - typically the `id` and `mask` of this token is stored within your database which allows you to read back the data at a later date.
