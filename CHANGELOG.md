@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.17.0...v1.18.0) (2022-04-20)
+
+
+### Features
+
+* Removing atomic concepts and atomic prefix ([#103](https://github.com/Basis-Theory/basistheory-integration-guides/issues/103)) ([3d7b079](https://github.com/Basis-Theory/basistheory-integration-guides/commit/3d7b0796e0219bb86fdd55d2798e5fee59a5f08e))
+
 # [1.17.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.16.0...v1.17.0) (2022-04-20)
 
 
