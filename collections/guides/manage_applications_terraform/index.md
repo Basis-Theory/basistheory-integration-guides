@@ -3,7 +3,7 @@ layout: default
 title: Manage Applications with Terraform
 permalink: /guides/manage-applications-with-terraform/
 categories: guides
-subcategory: collecting
+subcategory: manage
 nav_order: 10
 has_children: true
 has_toc: false
@@ -44,7 +44,7 @@ need to interact with other Basis Theory resources.
 ### Set up the basistheory provider
 
 Firstly, you'll need to configure the `terraform` configuration block in a `main.tf` file. Let's add a source for where
-to pull down our Terraform provider, and pin the version as well.
+to pull down our Terraform provider, and pin the version as well. View the latest version available [here](https://registry.terraform.io/providers/Basis-Theory/basistheory).
 
 ```terraform
 terraform {
@@ -68,12 +68,21 @@ provider "basistheory" {
 }
 ```
 
-Another configuration option is to just set the API key through setting `BASISTHEORY_API_KEY` environment var. This leaves
-you with optionally setting the API URL and client timeout through `BASISTHEORY_API_URL` and `BASISTHEORY_CLIENT_TIMEOUT`
-env vars, respectively. These don't need to be explicitly set since the API URL defaults to `https://api.basistheory.com`
-and the client timeout defaults to 15 seconds. So the most minimal `provider` config can look like this:
+Another configuration option is to just set the API key through setting a `BASISTHEORY_API_KEY` environment variable. This
+leaves you with optionally setting the API URL and client timeout through `BASISTHEORY_API_URL` and `BASISTHEORY_CLIENT_TIMEOUT`
+environment variables, respectively. These don't need to be explicitly set since the API URL defaults to `https://api.basistheory.com`
+and the client timeout defaults to 15 seconds. So the most minimal `main.tf` file can look like this:
 
 ```terraform
+terraform {
+  required_providers {
+    basistheory = {
+      source  = "basis-theory/basistheory"
+      version = ">= 0.1.3"
+    }
+  }
+}
+
 provider "basistheory" {
 }
 ```
@@ -139,10 +148,10 @@ terraform apply
 ```
 
 If all was successful, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
-on the back! 🎉 You've successfully created an Application via Terraform!
+on the back! 🎉 You've successfully created an Application via Terraform! You can view your new application within the [portal](https://portal.basistheory/applications).
 
-Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just created.
-You can do this by executing the `output` command below:
+Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just
+created. You can do this by executing the `output` command below:
 
 <span class="base-alert warning">
   <span>
@@ -153,6 +162,9 @@ You can do this by executing the `output` command below:
 ```bash
 terraform output -raw my_application_key
 ```
+
+You can follow our [quickstart with curl](https://developers.basistheory.com/getting-started/quickstart-with-curl/) guide
+and skip to step 3 to create tokens with your Application API key output. 
 
 ## Using Terraform to manage Reactors and more
 

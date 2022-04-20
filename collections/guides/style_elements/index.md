@@ -3,7 +3,7 @@ layout: default
 title: Styling Elements 
 permalink: /guides/style-elements-for-my-brand/
 categories: guides
-subcategory: collecting
+subcategory: secure
 nav_order: 8
 has_children: true
 has_toc: false

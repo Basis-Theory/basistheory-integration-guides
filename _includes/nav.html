@@ -110,10 +110,10 @@
         <a class="category-expander" id="guides-category-expander"></a>
     </div>
     <div class="side-bar-category-items" id="guides-category-items">
-        <div class="guide-subcategory-title">COLLECTING AND SECURING DATA</div>
+        <div class="guide-subcategory-title">SECURE YOUR DATA</div>
         {%- for node in pages_list -%}
           {%- if node.parent == nil and node.categories == 'guides' -%}
-            {%- if node.subcategory == 'collecting' -%}
+            {%- if node.subcategory == 'secure' -%}
                 {%- unless node.nav_exclude -%}
                     <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
                       <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
@@ -122,10 +122,22 @@
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
-        <div class="guide-subcategory-title">PROCESSING AND SENDING DATA</div>
+        <div class="guide-subcategory-title">USE YOUR DATA</div>
         {%- for node in pages_list -%}
             {%- if node.parent == nil and node.categories == 'guides' -%}
-                {%- if node.subcategory == 'processing' -%}
+                {%- if node.subcategory == 'use' -%}
+                    {%- unless node.nav_exclude -%}
+                        <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+                            <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+                        </div>
+                    {%- endunless -%}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+        <div class="guide-subcategory-title">MANAGE YOUR DATA</div>
+        {%- for node in pages_list -%}
+            {%- if node.parent == nil and node.categories == 'guides' -%}
+                {%- if node.subcategory == 'manage' -%}
                     {%- unless node.nav_exclude -%}
                         <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
                             <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>

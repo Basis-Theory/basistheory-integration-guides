@@ -3,7 +3,7 @@ layout: default
 title: Migrating off Basis Theory
 permalink: /guides/migrating-off-basis-theory/
 categories: guides
-subcategory: processing
+subcategory: use
 nav_order: 6
 has_children: true
 has_toc: false
