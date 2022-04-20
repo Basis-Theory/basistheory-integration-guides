@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.18.0...v1.19.0) (2022-04-20)
+
+
+### Features
+
+* add guide for managing reactor formulas with Terraform ([#109](https://github.com/Basis-Theory/basistheory-integration-guides/issues/109)) ([18d7765](https://github.com/Basis-Theory/basistheory-integration-guides/commit/18d776578307320f78ee64ac4a63869e53bc66be))
+
 # [1.18.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.17.0...v1.18.0) (2022-04-20)
 
 
