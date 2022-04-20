@@ -4,7 +4,7 @@ title: Manage Applications with Terraform
 permalink: /guides/manage-applications-with-terraform/
 categories: guides
 subcategory: manage
-nav_order: 10
+nav_order: 1
 has_children: true
 has_toc: false
 image:

@@ -4,7 +4,7 @@ title: Use Token Data in Reactors
 permalink: /guides/use-token-data-in-reactors/
 categories: guides
 subcategory: use
-nav_order: 4
+nav_order: 3
 has_children: true
 has_toc: false
 image:

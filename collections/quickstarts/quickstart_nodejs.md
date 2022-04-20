@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with Node.js
 permalink: /getting-started/quickstart-with-nodejs/
 categories: quickstart
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory with Node.js
@@ -17,6 +17,12 @@ image:
 In this tutorial, you will create a new Node.js script and use Basis Theory’s platform to secure a string of data and then read that data back out. Once you’ve completed this tutorial, you’ll have a foundational understanding of how to secure your data with Basis Theory allowing you to no longer worry about the underlying storage or encryption of the data.
 
 If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
+
+<span class="base-alert info">
+    <span>
+    If you're looking for our NodeJS npm module, you can find our <a href="https://www.npmjs.com/package/@basis-theory/basis-theory-js" target="_blank">npm module here</a> or on our <a href="https://github.com/Basis-Theory/basis-theory-js" target="_blank">github repository</a>.
+    </span>
+</span>
 
 ## Step 1: Get your Node.js environment ready
 

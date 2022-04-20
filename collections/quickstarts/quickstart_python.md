@@ -3,7 +3,7 @@ layout: default
 title: Quickstart with Python
 permalink: /getting-started/quickstart-with-python/
 categories: quickstart
-nav_order: 1
+nav_order: 3
 has_children: true
 has_toc: false
 description: Get Started with Basis Theory with Python
@@ -18,6 +18,11 @@ In this tutorial, you will create a new Python script and use Basis Theory’s p
 
 If you are already familiar with Basis Theory and our platform in general, our guide on “[How to send Token data via HTTP](https://guides.basistheory.com/guides/use-token-data-in-http-requests/)” or “[Collecting payments with Elements](https://guides.basistheory.com/guides/collect-atomic-cards-with-elements/)” may be better places to start.
 
+<span class="base-alert info">
+    <span>
+      If you're looking for our Python SDK, you can find <a href="https://pypi.org/project/basistheory/" target="_blank">it here</a> or on our <a href="https://github.com/Basis-Theory/basistheory-python" target="_blank">github repository.</a>
+    </span>
+</span>
 
 ## Step 1: Get your Python environment ready
 
