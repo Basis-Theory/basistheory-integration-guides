@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.16.0...v1.17.0) (2022-04-20)
+
+
+### Features
+
+* Adding guide to 'Run Your Own Code in a Reactor' ([#108](https://github.com/Basis-Theory/basistheory-integration-guides/issues/108)) ([d52aed6](https://github.com/Basis-Theory/basistheory-integration-guides/commit/d52aed60f39ff91231bb0ce0dd4f6136380243a1))
+
 # [1.16.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.15.0...v1.16.0) (2022-04-20)
 
 
