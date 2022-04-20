@@ -18,6 +18,12 @@ In this tutorial, you will create a new Node.js script and use Basis Theory’s 
 
 If you are already familiar with Basis Theory and our platform in general, our guide on [How to send Token data via HTTP](https://developers.basistheory.com/guides/use-token-data-in-http-requests/) or [Collecting payments with Elements](https://developers.basistheory.com/guides/collect-atomic-cards-with-elements/) may be a better place to start.
 
+<span class="base-alert info">
+    <span>
+    If you're looking for our NodeJS npm module, you can find our <a href="https://www.npmjs.com/package/@basis-theory/basis-theory-js" target="_blank">npm module here</a> or on our <a href="https://github.com/Basis-Theory/basis-theory-js" target="_blank">github repository</a>.
+    </span>
+</span>
+
 ## Step 1: Get your Node.js environment ready
 
 ### Step 1.1: Ensure you have Node.js installed
