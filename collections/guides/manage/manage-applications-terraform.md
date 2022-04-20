@@ -38,7 +38,7 @@ The best guide for installing Terraform can be found on their own website [here]
 
 ## Set up Terraform configuration
 
-Let's setup the Terraform configuration you'll need for creating an Application and exporting the Application key you'll
+Let's set up the Terraform configuration you'll need for creating an Application and exporting the Application key you'll
 need to interact with other Basis Theory resources.
 
 ### Set up the basistheory provider
@@ -148,7 +148,7 @@ terraform apply
 ```
 
 If all was successful, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
-on the back! 🎉 You've successfully created an Application via Terraform! You can view your new application within the [portal](https://portal.basistheory/applications).
+on the back! 🎉 You've successfully created an Application via Terraform! You can view your new Application within the [Portal](https://portal.basistheory/applications).
 
 Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just
 created. You can do this by executing the `output` command below:
