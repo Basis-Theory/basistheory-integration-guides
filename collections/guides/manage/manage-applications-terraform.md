@@ -33,12 +33,12 @@ created an Application under your tenant using Terraform, and you will have an A
 
 ## Install Terraform
 
-To achieve the following steps, you must have Terraform CLI installed locally or wherever you're planning on running your configuration.
+To achieve the following steps, you must have the Terraform CLI installed locally or wherever you're planning on running your configuration.
 The best guide for installing Terraform can be found on their own website [here](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Set up Terraform configuration
 
-Let's setup the Terraform configuration you'll need for creating an Application and exporting the Application key you'll
+Let's set up the Terraform configuration you'll need for creating an Application and exporting the Application key you'll
 need to interact with other Basis Theory resources.
 
 ### Set up the basistheory provider
@@ -148,7 +148,7 @@ terraform apply
 ```
 
 If all was successful, Terraform should output that 1 resource was successfully added. If you made it this far, pat yourself
-on the back! 🎉 You've successfully created an Application via Terraform! You can view your new application within the [portal](https://portal.basistheory/applications).
+on the back! 🎉 You've successfully created an Application via Terraform! You can view your new Application within the [Portal](https://portal.basistheory/applications).
 
 Now in order to use the Application API Key for `curl` commands, for example, you'll need to export the key that was just
 created. You can do this by executing the `output` command below:
@@ -166,7 +166,7 @@ terraform output -raw my_application_key
 You can follow our [quickstart with curl](https://developers.basistheory.com/getting-started/quickstart-with-curl/) guide
 and skip to step 3 to create tokens with your Application API key output. 
 
-## Using Terraform to manage Reactors and more
+## Using Terraform to manage other Basis Theory resources
 
 If you'd like to manage other Basis Theory resources via Terraform, take a look at the other docs we've made available in
 the [Terraform provider docs](https://registry.terraform.io/providers/Basis-Theory/basistheory/latest/docs).
