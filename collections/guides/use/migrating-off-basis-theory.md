@@ -52,10 +52,8 @@ The following example provides a pattern for proxying your plaintext data to a n
 
 ```js
 import axios from 'axios';
-import { BasisTheory } from '@basis-theory/basis-theory-js';
 
 async function migration() {
-    const bt = await new BasisTheory().init('key_here');
 
     const rowsFromDatabase = [
         {name: "test", ssn: "fc88408b-d031-49c6-abd9-9e53589a6091"},
