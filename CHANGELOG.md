@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.1...v1.19.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* remove unused sdk in migrating off guide ([#111](https://github.com/Basis-Theory/basistheory-integration-guides/issues/111)) ([9a36cd0](https://github.com/Basis-Theory/basistheory-integration-guides/commit/9a36cd03faf50b0ae838de2882202f1deacd6896))
+
 ## [1.19.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.0...v1.19.1) (2022-04-20)
 
 
