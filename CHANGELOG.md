@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.2...v1.20.0) (2022-04-26)
+
+
+### Features
+
+* understanding permissions concept page ([#112](https://github.com/Basis-Theory/basistheory-integration-guides/issues/112)) ([8aabfd2](https://github.com/Basis-Theory/basistheory-integration-guides/commit/8aabfd2901fa81f2440210637a67ce519285409d))
+
 ## [1.19.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.1...v1.19.2) (2022-04-25)
 
 
