@@ -1,0 +1,54 @@
+@import 'variables';
+
+.header-title {
+    margin-top: 56px;
+}
+
+.card.lab {
+    cursor: default;
+}
+
+.lab-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .lab-details {
+      display: flex;
+      flex-direction: column;
+      margin-left: 24px;
+      max-width: 80%;
+
+      .lab-links {
+        margin-top: 32px;
+
+        li {
+          list-style-type: none;
+          list-style-position: outside;
+
+          a {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-word;
+          }
+        }
+
+        li.book-icon {
+          list-style-image: url(/assets/images/icons/book.svg);
+        }
+
+        li.laptop-icon {
+          list-style-image: url(/assets/images/icons/laptop.svg);
+        }
+
+        li.code-icon {
+          list-style-image: url(/assets/images/icons/code.svg);
+        }
+
+        li.download-icon {
+          list-style-image: url(/assets/images/icons/download.svg);
+        }
+      }
+
+    }
+  }

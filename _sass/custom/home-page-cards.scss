@@ -130,13 +130,23 @@
     cursor: default;
   }
 
+  .card.lab {
+    padding: 24px;
+    max-height: 283px;
+  }
+
   @media (min-width: 1278px) {
     .card {
       max-width: 32.5%;
     }
 
-    .card.guide {
+    .card.guide, .card.lab {
       max-width: 100%;
     }
+    
   }
+}
+
+.cards.labs {
+  flex-direction: column;
 }
