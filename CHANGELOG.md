@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.20.0...v1.21.0) (2022-04-28)
+
+
+### Features
+
+* add System Status to side nav ([#113](https://github.com/Basis-Theory/basistheory-integration-guides/issues/113)) ([c3ff354](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c3ff35435e04ed0d7176568595e7e08653398bfa))
+
 # [1.20.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.19.2...v1.20.0) (2022-04-26)
 
 
