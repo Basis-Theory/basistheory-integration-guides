@@ -107,11 +107,21 @@
   }
 
   .card-title {
-    color: $grey-900;
-    font-size: 18px;
+    color: $dark-background-color;
+    font-size: 20px;
     font-weight: 600;
+    line-height: 124%;
+    letter-spacing: 0.25px;
   }
 
+  .card-description {
+    color: $grey-600;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    margin-top: 8px;
+  }
   .card-content {
     color: $grey-600;
   }
@@ -135,15 +145,16 @@
     max-height: 283px;
   }
 
-  @media (min-width: 1278px) {
+  @media (max-width: 1278px) {
     .card {
       max-width: 32.5%;
     }
 
     .card.guide, .card.lab {
       max-width: 100%;
+      max-height: unset;
     }
-    
+   
   }
 }
 

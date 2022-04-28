@@ -1,11 +1,12 @@
 @import 'variables';
 
-.header-title {
-    margin-top: 56px;
+.header-description {
+  margin: 40px 0 32px 0 !important;
 }
 
 .card.lab {
     cursor: default;
+    margin-top: 8px;
 }
 
 .lab-content {
@@ -25,11 +26,14 @@
         li {
           list-style-type: none;
           list-style-position: outside;
+          font-size: 14px;
+          margin: 0 0 10px 0;
 
           a {
             white-space: pre-wrap;
             word-wrap: break-word;
             word-break: break-word;
+            letter-spacing: 0.15px;
           }
         }
 
@@ -50,5 +54,11 @@
         }
       }
 
+    }
+  }
+
+  @media (max-width: 580px) {
+    .lab-image{
+      display: none;
     }
   }

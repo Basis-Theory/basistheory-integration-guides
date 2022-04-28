@@ -98,18 +98,30 @@
 
     .home-icon {
       background-image: url(/assets/images/icons/home.svg);
+      &.active {
+        background-image: url(/assets/images/icons/home-active.svg);
+      }
     }
 
     .getting-started-icon {
       background-image: url(/assets/images/icons/getting-started.svg);
+      &.active {
+        background-image: url(/assets/images/icons/getting-started-active.svg);
+      }
     }
 
     .concepts-icon {
-      background-image: url(/assets/images/icons/concepts-icon.svg);
+      background-image: url(/assets/images/icons/concepts.svg);
+      &.active {
+        background-image: url(/assets/images/icons/concepts-active.svg);
+      }
     }
 
     .guides-icon {
-      background-image: url(/assets/images/icons/gudies-icon.svg);
+      background-image: url(/assets/images/icons/guides.svg);
+      &.active {
+        background-image: url(/assets/images/icons/guides-active.svg);
+      }
     }
 
     .reference-icon {
@@ -118,6 +130,9 @@
 
     .labs-icon {
       background-image: url(/assets/images/icons/labs.svg);
+      &.active {
+        background-image: url(/assets/images/icons/labs-active.svg);
+      }
     }
   }
 

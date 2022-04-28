@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
 
 @import 'navigation';
 @import 'home-page';
 @import 'variables';
 @import 'home-page-cards';
-@import 'quickstart';
 @import 'header';
 @import 'nav';
 @import 'labs';
@@ -51,17 +49,19 @@
   }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     background-color: $body-background-color;
 
     .main-content {
+        margin-top: 56px;
+
         h1 {
-            font-size: 48px !important;
+            font-size: 40px !important;
             line-height: 116.7%;
             color: $grey-900;
-            font-weight: normal;
+            font-weight: 600;
         }
 
         h2 {
@@ -86,21 +86,22 @@ body {
 
         h5 {
             font-size: 24px !important;
-            line-height: 133.4%;
-            color: $grey-200;
-            margin: 1.5em 0;
+            line-height: 140%;
+            color: $grey-500;
+            margin: 16px 0;
+            font-weight: 400;
         }
 
         p {
             font-size: 16px;
-            line-height: 150%;
+            line-height: 160%;
             letter-spacing: 0.15px;
-            color: $grey-800;
+            color: $grey-700;
         }
 
         code {
             font-size: 14px;
-            font-family: "Source Sans Pro", sans-serif;
+            font-family: "Inter";
             letter-spacing: 0.15px;
         }
     
@@ -200,7 +201,6 @@ body {
                         font-size: 16px;
                         line-height: 175%;
                         letter-spacing: 0.15px;
-                        margin: 0;
                         padding: 0 0 4px;
                         color: $grey-800;
                     }
@@ -209,7 +209,6 @@ body {
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         padding: 0;
-                        margin: 0;
                         color: $grey-800;
                         font-size: 14px;
                         line-height: 143%;
@@ -270,7 +269,7 @@ body {
         {
             background-color: #1B1D32;
             code {
-                font-family: "Source Code Pro", "Source Sans Pro", sans-serif;
+                font-family: "Inter";
                 background-color: transparent;
                 color: #fff !important;
             }
@@ -410,7 +409,7 @@ body {
 
 .base-alert {
     font-size: 14px;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Inter";
     font-style: normal;
     letter-spacing: 0.15px;
     padding: 1em;

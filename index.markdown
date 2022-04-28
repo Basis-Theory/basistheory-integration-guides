@@ -19,8 +19,10 @@ image:
         <title>Basis Theory Overview</title>
     </head>
     <body class="home-page">
-        <h1>Documentation</h1>
-        <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
+        <div class="header">
+            <h1>Documentation</h1>
+            <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
+        </div>
         <div class="quickstarts">
             <div class="quickstart-info">
                 <div class="quickstart-header">Quickstarts</div>
