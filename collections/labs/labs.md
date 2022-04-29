@@ -43,7 +43,7 @@ image:
             </div>
             <div class="card lab">
                 <div class="lab-content">
-                    <img class="lab-image" src="./assets/images/labs/ansible.svg" alt="ORM Tokenization">
+                    <img class="lab-image" src="./assets/images/labs/orm.svg" alt="ORM Tokenization">
                     <div class="lab-details">
                         <div class="card-title">ORM Tokenization - Entity Framework</div>
                         <div class="card-description">Example application to tokenize sensitive data with Entity Framework utilizing Basis Theory's REST API.</div>
@@ -62,7 +62,7 @@ image:
                         <div class="card-title">Send Secrets Securely</div>
                         <div class="card-description">A Basis Theory Lab that enables users to securely share passwords, credentials, or any other sensitive data with another person.</div>
                         <div class="lab-links">
-                            <li class="book-icon"><a href="https://basistheory.com/blog/centralized-operational-secrets-ansible">Send Secrets Securely</a></li>
+                            <li class="book-icon"><a href="https://basistheory.com/blog/sendsecurely-free-safe-way-secret-sharing">Send Secrets Securely</a></li>
                             <li class="laptop-icon"><a href="https://sendsecure.ly/">See it live</a></li>
                             <li class="code-icon"><a href="https://github.com/Basis-Theory-Labs/send-securely">Code Sample</a></li>
                             <li class="download-icon"><a href="https://github.com/Basis-Theory-Labs/send-securely/archive/refs/heads/main.zip">Sample App</a></li>
