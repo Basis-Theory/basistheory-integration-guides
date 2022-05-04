@@ -69,7 +69,7 @@ for example to select multiple properties from a token using a [JSON Path](https
 will only cause that token to be counted as a single MAT.
 
 Deleting a token does not cause it to be counted as a MAT. 
-However, if you previously interacted with a token causing it to become counted a MAT, then delete the token in the same month, 
+However, if you previously interacted with a token causing it to become counted as a MAT, then delete the token in the same month, 
 the token is still counted as a MAT for that month even after deleting it.
 
 The monthly period in which MATs accumulate is based on UTC time, and each Tenant's MAT counts are reset to 0 at the start of a new month. 
@@ -83,7 +83,7 @@ Your invoice will be calculated based on the specific terms of your plan - eithe
 
 For the Developer plan, you are allowed 1,000 free MATs every month before any charges will be incurred.
 If a Tenant exceeds 1,000 MATs, you will be billed at a rate of $0.10/MAT for any MATs over this free amount. 
-For example, if you have a Tenant that has accrued 1,200 MATs in a month, you will be billed for 200 MATs and will incur an charge of `200 * $0.10 = $20.00` for the month. 
+For example, if you have a Tenant that has accrued 1,200 MATs in a month, you will be billed for 200 MATs and will incur a charge of `200 * $0.10 = $20.00` for the month. 
 
 Once a Tenant exceeds the 1,000 free MATs, you will be prompted to enter a payment method to continue using Basis Theory.
 In order to facilitate your evaluation of Basis Theory, you will not be immediately blocked from continued usage of Basis Theory's services,
