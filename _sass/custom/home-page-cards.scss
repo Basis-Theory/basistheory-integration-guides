@@ -129,11 +129,15 @@
   .card {
     border: 1px solid #E1E4F3;
     border-radius: 8px;
-    padding: 16px;
+    padding: 24px;
     cursor: pointer;
     flex-grow: 1;
     color: $grey-600;
     white-space: normal;
+  }
+
+  .card-description {
+    font-size: 14px;
   }
 
   .card.guide {

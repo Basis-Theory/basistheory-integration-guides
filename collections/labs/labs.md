@@ -29,7 +29,9 @@ image:
         <div class="cards labs">
             <div class="card lab">
                 <div class="lab-content">
-                    <img class="lab-image" src="./assets/images/labs/ansible.svg" alt="Ansible Lookup Plugin">
+                    <div class="lab-image-container">
+                        <img class="lab-image" src="./assets/images/labs/ansible.svg" alt="Ansible Lookup Plugin">
+                    </div>    
                     <div class="lab-details">
                         <div class="card-title">Ansible Lookup Plugin</div>
                         <div class="card-description">Simple Ansible Lookup Plugin to retrieve secrets from Basis Theory's REST API</div>

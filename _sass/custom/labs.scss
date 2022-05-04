@@ -34,27 +34,44 @@
             word-wrap: break-word;
             word-break: break-word;
             letter-spacing: 0.15px;
+            margin-left: 24px;
           }
         }
 
         li.book-icon {
-          list-style-image: url(/assets/images/icons/book.svg);
+          list-style: none;
+          background-image: url(/assets/images/icons/book.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
         }
 
         li.laptop-icon {
-          list-style-image: url(/assets/images/icons/laptop.svg);
+          list-style: none;
+          background-image: url(/assets/images/icons/laptop.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
         }
 
         li.code-icon {
-          list-style-image: url(/assets/images/icons/code.svg);
+          list-style: none;
+          background-image: url(/assets/images/icons/code.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
         }
 
         li.download-icon {
-          list-style-image: url(/assets/images/icons/download.svg);
+          list-style: none;
+          background-image: url(/assets/images/icons/download.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
         }
       }
 
     }
+  }
+
+  .lab-image {
+    border-radius: 4px;
   }
 
   @media (max-width: 580px) {

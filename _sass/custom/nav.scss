@@ -39,9 +39,8 @@
 
     .nav-list-item {
       .nav-list-link {
-        display: flex;
+        display: inline-block;
         align-items: center;
-        max-height: 40px;
         min-height: auto;
         color: $blue-shadow;
         line-height: 120%;
@@ -83,6 +82,7 @@
 
     .side-bar-category-name {
       color: $grey-600;
+      font-weight: 500;
       &.active {
         color: $primary-dark;
       }

@@ -47,7 +47,7 @@ image:
                     </div>
                 </div>
                 <div class="card-title">What are Tokens?</div>
-                <div>Use Tokens to secure and share your sensitive data.</div>
+                <div class="card-description">Use Tokens to secure and share your sensitive data.</div>
             </a>
             <a class="card" href="/concepts/what-are-tenants">
                 <div class="icon-and-time-estimate">
@@ -58,7 +58,7 @@ image:
                     </div>
                 </div>
                 <div class="card-title">What are Tenants?</div>
-                <div>Where your Tokens and Applications are defined, managed, and stored.</div>
+                <div class="card-description">Where your Tokens and Applications are defined, managed, and stored.</div>
             </a>
             <a class="card" href="/concepts/what-is-the-proxy">
                 <div class="icon-and-time-estimate">
@@ -69,7 +69,7 @@ image:
                     </div>
                 </div>
                 <div class="card-title">What is the Proxy?</div>
-                <div>Send HTTP requests with tokenized data without touching it.</div>
+                <div class="card-description">Send HTTP requests with tokenized data without touching it.</div>
             </a>
         </div>
         <div class="sub-header">
@@ -81,7 +81,7 @@ image:
                     <img src="./assets/images/icons/shield-down-arrow.svg" alt="shield-down-arrow">
                     <div class="guides">
                         <div class="card-title">Secure Your Data</div>
-                        <div>Learn how to easily tokenize your data on any platform.</div>
+                        <div class="card-description">Learn how to easily tokenize your data on any platform.</div>
                         <div class="guides-list">
                             <li><a href="/guides/collect-cards-with-elements-react">Collect Credit Cards with React <span class="guide-time-estimate">5m</span></a></li>
                             <li><a href="/guides/encrypt-us-banks-in-your-applications">Encrypt U.S Banks in your applications <span class="guide-time-estimate">10m</span></a></li>
@@ -96,7 +96,7 @@ image:
                     <img src="./assets/images/icons/shield-up-arrow.svg" alt="shield-up-arrow">
                     <div class="guides">
                         <div class="card-title">Use Your Data</div>
-                        <div>Learn how to integrate and make the most out of tokenized data.</div>
+                        <div class="card-description">Learn how to integrate and make the most out of tokenized data.</div>
                         <div class="guides-list">
                             <li><a href="/guides/use-token-data-in-http-requests">Use Token Data in HTTP Requests <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
@@ -116,21 +116,21 @@ image:
                     <img src="./assets/images/icons/purple-token.svg">
                 </div>
                 <div class="card-title">API Reference</div>
-                <div>Use our API's and SDK's to interact with your Tokens.</div>
+                <div class="card-description">Use our API's and SDK's to interact with your Tokens.</div>
             </a>
             <a class="card" href="https://docs.basistheory.com/elements/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-terminal.svg">
                 </div>
                 <div class="card-title">Elements</div>
-                <div>Secure data from your frontend without touching it.</div>
+                <div class="card-description">Secure data from your frontend without touching it.</div>
             </a>
             <a class="card" href="https://docs.basistheory.com/detokenization/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-reactor.svg">
                 </div>
                 <div class="card-title">Detokenization</div>
-                <div>Learn how to detokenize your data in Reactors and Proxy.</div>
+                <div class="card-description">Learn how to detokenize your data in Reactors and Proxy.</div>
             </a>
         </div>
     </body>
