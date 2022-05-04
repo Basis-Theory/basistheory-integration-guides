@@ -14,7 +14,10 @@ image:
 
 # What are Tenants?
 
-Everything starts with a Tenant in your Basis Theory account. This is where you configure Basis Theory, and where your Tokens and Applications are defined, managed, and stored. You’re allowed to create as many Tenants as you’d like within Basis Theory. You can use these to isolate different domains of data, and to support your Software Development Life Cycle (SDLC).
+Everything starts with a Tenant in your Basis Theory account. This is an isolated environment where your [Tokens](/concepts/what-are-tokens) 
+and [Applications](/concepts/what-are-applications) are defined, managed, and stored. 
+Data is not shared between Tenants, but you’re allowed to create as many Tenants as you’d like within Basis Theory. 
+You can use multiple Tenants to isolate different domains of data, and to support your Software Development Life Cycle (SDLC).
 
 ## How It Works
 

@@ -14,7 +14,9 @@ image:
 
 # What are Applications?
 
-Basis Theory’s Applications do not imply any specific implementation type. Applications could be a native app on a mobile device, a single-page application in a browser, or a regular web application that executes on a server or in a serverless environment.
+An Application represents an external software system or component that will be integrated with the Basis Theory API.
+Basis Theory’s Applications do not imply any specific implementation type or technology. 
+Applications could be a native app on a mobile device, a single-page application in a browser, or a regular web application that executes on a server or in a serverless environment.
 
 ## How It Works
 

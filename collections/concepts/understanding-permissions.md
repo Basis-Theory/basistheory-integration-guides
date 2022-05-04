@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding Classifications, Impact Levels, and Permissions"
+title:  "Permissions"
 categories: concepts
 permalink: /concepts/understanding-permissions/
 nav_order: 9
