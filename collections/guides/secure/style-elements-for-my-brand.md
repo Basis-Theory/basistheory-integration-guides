@@ -40,7 +40,7 @@ var cardElement = BasisTheory.createElement('card', {
         base: {
             color: "#fff",
             fontWeight: 500,
-            fontFamily: "'Source Sans Pro'",
+            fontFamily: "'Inter'",
             fontSize: "16px",
             fontSmooth: "antialiased",
             "::placeholder": {
