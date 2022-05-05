@@ -82,21 +82,21 @@ async function submit() {
 
 In the previous example, we are overriding the token's privacy settings to specify a classification of `pii`, which is the type of data we are tokenizing. If we omit this, the default classification `general` would be used. 
 
-## Retrieve your decrypted Token on your server
+## Retrieve your Token on your server
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>server-to-server</code> api application created with the <code>token:pii:read:high</code> permission for this step. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apii%3Aread%3Ahigh&name=PII+Retriever" target="_blank">Click here to create one.</a>
+    You'll need a <code>server-to-server</code> application created with the <code>token:pii:read:high</code> permission for this step. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Apii%3Aread%3Ahigh&name=PII+Retriever" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
-We suggest only decrypting Token data via your server-side code, this will ensure your <code>server-to-server</code> application keys are never visible in the browser and your sensitive customer data is only revealed to your servers.
+We suggest only reading Token data via your server-side code, this will ensure your <code>server-to-server</code> application keys are never visible in the browser and your sensitive customer data is only revealed to your servers.
 
 ```js
 const bt = new BasisTheory();
 await bt.init(SERVER_KEY);
 
-const token = await bt.tokens.retrieveDecrypted(customerTokenId);
+const token = await bt.tokens.retrieve(customerTokenId);
 
 return token;
 ```
