@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.21.0...v1.22.0) (2022-05-05)
+
+
+### Features
+
+* Adds new MAT concept page ([#115](https://github.com/Basis-Theory/basistheory-integration-guides/issues/115)) ([7be1fb7](https://github.com/Basis-Theory/basistheory-integration-guides/commit/7be1fb7580d710dec3707474939f488c406d1112))
+
 # [1.21.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.20.0...v1.21.0) (2022-04-28)
 
 
