@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.22.0...v1.23.0) (2022-05-05)
+
+
+### Features
+
+* adding labs page ([#114](https://github.com/Basis-Theory/basistheory-integration-guides/issues/114)) ([723cc11](https://github.com/Basis-Theory/basistheory-integration-guides/commit/723cc1115b5389b09687956e8e2659d3ae286097))
+
 # [1.22.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.21.0...v1.22.0) (2022-05-05)
 
 
