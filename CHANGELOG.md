@@ -1,3 +1,10 @@
+## [1.23.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.23.0...v1.23.1) (2022-05-05)
+
+
+### Bug Fixes
+
+* fixing send secure lab code download link ([#116](https://github.com/Basis-Theory/basistheory-integration-guides/issues/116)) ([e618fa2](https://github.com/Basis-Theory/basistheory-integration-guides/commit/e618fa2171820c7ac14674bafc9f4c002831ab7a))
+
 # [1.23.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.22.0...v1.23.0) (2022-05-05)
 
 
