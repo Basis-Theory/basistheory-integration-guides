@@ -67,7 +67,7 @@ image:
                             <li class="book-icon"><a href="https://basistheory.com/blog/sendsecurely-free-safe-way-secret-sharing">Send Secrets Securely</a></li>
                             <li class="laptop-icon"><a href="https://sendsecure.ly/">See it live</a></li>
                             <li class="code-icon"><a href="https://github.com/Basis-Theory-Labs/send-securely">Code Sample</a></li>
-                            <li class="download-icon"><a href="https://github.com/Basis-Theory-Labs/send-securely/archive/refs/heads/main.zip">Sample App</a></li>
+                            <li class="download-icon"><a href="https://github.com/Basis-Theory-Labs/send-securely/archive/refs/heads/master.zip">Sample App</a></li>
                         </div>
                     </div>
                 </div>
