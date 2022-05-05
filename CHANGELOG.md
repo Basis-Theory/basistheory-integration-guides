@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.23.1...v1.24.0) (2022-05-05)
+
+
+### Features
+
+* Removing retrieveDecrypted example from guide ([#117](https://github.com/Basis-Theory/basistheory-integration-guides/issues/117)) ([b16885a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/b16885a2571c7c0ea5f65eee01884d7f9a9c7dc6))
+
 ## [1.23.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.23.0...v1.23.1) (2022-05-05)
 
 
