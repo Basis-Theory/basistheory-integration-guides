@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap');
 
 @import 'navigation';
 @import 'home-page';
@@ -101,7 +102,7 @@ body {
 
         code {
             font-size: 14px;
-            font-family: "Inter";
+            font-family: "Source Code Pro", "Inter", sans-serif;
             letter-spacing: 0.15px;
         }
     
@@ -269,7 +270,7 @@ body {
         {
             background-color: #1B1D32;
             code {
-                font-family: "Inter";
+                font-family: "Source Code Pro", "Inter", sans-serif;
                 background-color: transparent;
                 color: #fff !important;
             }
