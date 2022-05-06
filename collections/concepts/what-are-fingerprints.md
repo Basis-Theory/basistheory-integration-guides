@@ -109,4 +109,4 @@ Some services need to link accounts to track activity, usage, award loyalty poin
 
 Fingerprints are values you are able to store in your local database after you create the token. This allows you to use them in your entire stack, run queries against them and your data, and integrate it into your own data analytics. It saves an additional API call out to your Basis Theory Vault to search for the data, giving your system immediate feedback on whether that data is unique or not. All you need to query is your database!
 
-Though our search feature is extremely powerful, letting you search through the encrypted data without decrypting it first (keep in mind, this will make tokens Active, which affects your Monthly Active Token usage). Fingerprinting provides a viable alternative for recognizing data patterns without increasing your MAT usage.
+Our search API is extremely powerful, letting you search through the encrypted data without decrypting it first (keep in mind, this will make tokens Active, which affects your Monthly Active Token usage). Fingerprinting provides a viable alternative for recognizing data patterns without increasing your MAT usage.
