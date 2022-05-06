@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.0...v1.24.1) (2022-05-06)
+
+
+### Bug Fixes
+
+* clarify MAT usage with search ([#118](https://github.com/Basis-Theory/basistheory-integration-guides/issues/118)) ([ff81bf3](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ff81bf3374576f6a0c6803a42d5df82cf05d756e))
+
 # [1.24.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.23.1...v1.24.0) (2022-05-05)
 
 
