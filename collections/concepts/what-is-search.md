@@ -83,6 +83,6 @@ Only the Lucene query operators described above are supported at this time. If y
 
 [Fingerprints](https://developers.basistheory.com/concepts/what-are-fingerprints/) are a measure of uniqueness, not a representation of the underlying data. Fingerprints can be used to locate duplicate data, for instance, but do not allow you to find *specific* data. You cannot find a card number ending in `4242` with fingerprints.
 
-### How does searching to Tokens affect my Monthly Active Token usage?
+### How does searching Tokens affect my Monthly Active Token usage?
 
 Each Token that matches the search query made via the API and is returned in the result set becomes an Active Token for that month. Searching through the Portal as a logged in user will not affect MAT usage.
