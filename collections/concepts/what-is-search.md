@@ -27,8 +27,6 @@ When the Token is created the data is securely indexed in several data patterns 
 
 Currently, Basis Theory only supports searching the `data` for the `social_security_number` and `employer_id_number` [Token Types](https://docs.basistheory.com/#token-types). The data is indexed in several patterns, allowing for flexible searching. For instance, you can search for a social security number by the full number with or without dashes (`123-45-6789` and `123456789`), and only the last four (`6789`).
 
-Each Token that matches the search query and is returned in the result set becomes an Active Token for that month.
-
 ## Permissions
 
 In order to search Tokens using the API, you must use an Application with at least one `read` [permission](https://docs.basistheory.com/#permissions-permission-types). The search results are filtered based on the permissions associated with the Application; you cannot search for tokens you do not have permission to access. Searching the `type`, `metadata`, and `created_at` fields does not require any additional permissions; however, in order to search the `data` field, the Application’s permissions must allow [unrestricted](https://docs.basistheory.com/#tokens-token-restriction-policies) access to plaintext Token data. 
@@ -84,3 +82,7 @@ Only the Lucene query operators described above are supported at this time. If y
 ### What is the difference between Search and Fingerprints?
 
 [Fingerprints](https://developers.basistheory.com/concepts/what-are-fingerprints/) are a measure of uniqueness, not a representation of the underlying data. Fingerprints can be used to locate duplicate data, for instance, but do not allow you to find *specific* data. You cannot find a card number ending in `4242` with fingerprints.
+
+### How does searching Tokens affect my Monthly Active Token usage?
+
+Each Token that matches the search query made via the API and is returned in the result set becomes an Active Token for that month. Searching through the Portal as a logged in user will not affect MAT usage.
