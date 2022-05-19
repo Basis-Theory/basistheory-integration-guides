@@ -6,19 +6,23 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
-<script defer data-api="https://analytics.basistheory.com/api/event" data-domain="developers.basistheory.com" src="https://cdn.basistheory.com/javascript/analytics.js"></script>
+<script defer data-api="https://analytics.basistheory.com/api/event" data-domain="developers.basistheory.com"
+  src="https://cdn.basistheory.com/javascript/analytics.js"></script>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M56229L');</script>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-M56229L');</script>
 <!-- End Google Tag Manager -->
 
 <!-- Iubenda -->
 <script type="text/javascript">
   var _iub = _iub || [];
-  _iub.csConfiguration = {"enableCcpa":true,"ccpaApplies":true,"consentOnContinuedBrowsing":false,"ccpaAcknowledgeOnDisplay":true,"lang":"en","siteId":2378844,"floatingPreferencesButtonDisplay":false,"cookiePolicyId":13137791, "callback":{ "onPreferenceExpressedOrNotNeeded":function(preference) { dataLayer.push({iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut()}); if (!preference) { dataLayer.push({event: "iubenda_preference_not_needed"});} else { if (preference.consent === true) { dataLayer.push({event: "iubenda_consent_given"});} else if (preference.consent === false) { dataLayer.push({event: "iubenda_consent_rejected"});} else if (preference.purposes) { for (var purposeId in preference.purposes) {if (preference.purposes[purposeId]) { dataLayer.push({event: "iubenda_consent_given_purpose_" + purposeId}); }}}}} }, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#1ad1db","acceptButtonCaptionColor":"#070a1b","customizeButtonColor":"#1a1e32","customizeButtonCaptionColor":"#d2d2d2","rejectButtonDisplay":true,"rejectButtonColor":"#1e2337","rejectButtonCaptionColor":"white","position":"bottom","textColor":"#e5e6ec","backgroundColor":"#141729","acceptButtonCaption":"Accept All","content":"<style>\ndiv#iubenda-cs-banner {\n  font-size: 16px !important;\n  font-family: 'Inter', sans-serif, -apple-system, sans-serif !important;\n}\n\ndiv#iubenda-cs-banner div.iubenda-cs-container {\n  border-top: 1px solid #2f3244 !important;\n}\n\ndiv#iubenda-cs-banner .iubenda-banner-content {\n  font-family: 'Inter', -apple-system, sans-serif !important;\n  font-weight: 400 !important;\n  color: #8389a6 !important;\n  font-size: 14px !important; \n}\n\ndiv#iubenda-cs-title {\n  color: #E5E6EC !important;\n  font-size: 16px !important;\n}\n\ndiv#iubenda-cs-banner div.iubenda-cs-opt-group button {\n  padding: 12px 32px !important;\n  font-weight: 600 !important;\n  border-radius: 4px !important;\n}\n\nbutton.iubenda-cs-accept-btn {\n  box-shadow: 1px 1px 3px 0 rgb(49 255 255 / 30%), inset 0 0 0 1px hsl(0deg 0% 100% / 40%);\n  margin-left: 16px !important;\n}\n\n@media (min-width: 992px) {\n  #iubenda-cs-banner.iubenda-cs-default div.iubenda-cs-rationale {\n    max-width: 1200px !important;\n    width: 100% !important;\n  }\n}\n</style><div id=\"iubenda-cs-title\">&#x1f36a;  &nbsp;Cookie Notice</div><div id=\"iubenda-cs-paragraph\">\n\nBy clicking \"Accept All\", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our <a href=\"https://basistheory.com/privacy-policy\" target=\"_blank\">Cookie Policy</a> for more information.\n</div>" }};
+  _iub.csConfiguration = { "ccpaAcknowledgeOnDisplay": true, "consentOnContinuedBrowsing": false, "countryDetection": true, "enableCcpa": true, "gdprAppliesGlobally": false, "lang": "en", "siteId": 2378844, "cookiePolicyId": 13137791, "callback": { "onPreferenceExpressedOrNotNeeded": function (preference) { dataLayer.push({ iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut() }); if (!preference) { dataLayer.push({ event: "iubenda_preference_not_needed" }); } else { if (preference.consent === true) { dataLayer.push({ event: "iubenda_consent_given" }); } else if (preference.consent === false) { dataLayer.push({ event: "iubenda_consent_rejected" }); } else if (preference.purposes) { for (var purposeId in preference.purposes) { if (preference.purposes[purposeId]) { dataLayer.push({ event: "iubenda_consent_given_purpose_" + purposeId }); } } } } } }, "banner": { "acceptButtonCaptionColor": "#070a1b", "acceptButtonColor": "#1ad1db", "acceptButtonDisplay": true, "backgroundColor": "#141729", "closeButtonDisplay": false, "customizeButtonCaptionColor": "#d2d2d2", "customizeButtonColor": "#1a1e32", "customizeButtonDisplay": true, "position": "bottom", "rejectButtonCaptionColor": "white", "rejectButtonColor": "#1e2337", "rejectButtonDisplay": true, "textColor": "#e5e6ec", "acceptButtonCaption": "Accept All", "content": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"true\" />\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap\" rel=\"stylesheet\" />\n<style>\ndiv#iubenda-cs-banner {\n  font-size: 16px !important;\n  font-family: 'Inter', sans-serif, -apple-system, sans-serif !important;\n}\n\ndiv#iubenda-cs-banner div.iubenda-cs-container {\n  border-top: 1px solid #2f3244 !important;\n}\n\ndiv#iubenda-cs-banner .iubenda-banner-content {\n  font-family: 'Inter', sans-serif, -apple-system, sans-serif !important;\n  font-weight: 400 !important;\n  color: #8389a6 !important;\n  font-size: 14px !important; \n}\n\ndiv#iubenda-cs-title {\n  color: #E5E6EC !important;\n  font-size: 16px !important;\n}\n\ndiv#iubenda-cs-banner div.iubenda-cs-opt-group button {\n  padding: 12px 32px !important;\n  font-weight: 600 !important;\n  border-radius: 4px !important;\n}\n\nbutton.iubenda-cs-accept-btn {\n  box-shadow: 1px 1px 3px 0 rgb(49 255 255 / 30%), inset 0 0 0 1px hsl(0deg 0% 100% / 40%);\n  margin-left: 16px !important;\n}\n\n@media (min-width: 992px) {\n  #iubenda-cs-banner.iubenda-cs-default div.iubenda-cs-rationale {\n    max-width: 1200px !important;\n    width: 100% !important;\n  }\n}\n</style><div id=\"iubenda-cs-title\">&#x1f36a;  &nbsp;Cookie Notice</div><div id=\"iubenda-cs-paragraph\">\n\nBy clicking \"Accept All\", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our <a href=\"https://basistheory.com/privacy-policy\" target=\"_blank\">Cookie Policy</a> for more information.\n</div>" } };
 </script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
@@ -28,32 +32,47 @@ layout: table_wrappers
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
       <title>Link</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
       </svg>
     </symbol>
     <symbol id="svg-search" viewBox="0 0 24 24">
       <title>Search</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
     </symbol>
     <symbol id="svg-menu" viewBox="0 0 24 24">
       <title>Menu</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </symbol>
     <symbol id="svg-arrow-right" viewBox="0 0 24 24">
       <title>Expand</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-chevron-right">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
     </symbol>
     <symbol id="svg-doc" viewBox="0 0 24 24">
       <title>Document</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+        <polyline points="13 2 13 9 20 9"></polyline>
       </svg>
     </symbol>
   </svg>
@@ -72,164 +91,175 @@ layout: table_wrappers
       <a class="portal-create-account" href="https://portal.basistheory.com/register">Create Account</a>
     </div>
     <a href="#" id="menu-button" class="site-button">
-      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      <svg viewBox="0 0 24 24" class="icon">
+        <use xlink:href="#svg-menu"></use>
+      </svg>
     </a>
   </header>
   <div class="side-bar">
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% if site.just_the_docs.collections %}
-        {% assign collections_size = site.just_the_docs.collections | size %}
-        {% for collection_entry in site.just_the_docs.collections %}
-          {% assign collection_key = collection_entry[0] %}
-          {% assign collection_value = collection_entry[1] %}
-          {% assign collection = site[collection_key] %}
-          {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
-              <div class="nav-category">{{ collection_value.name }}</div>
-            {% endif %}
-            {% include nav.html pages=collection %}
-          {% endif %}
-        {% endfor %}
+      {% assign collections_size = site.just_the_docs.collections | size %}
+      {% for collection_entry in site.just_the_docs.collections %}
+      {% assign collection_key = collection_entry[0] %}
+      {% assign collection_value = collection_entry[1] %}
+      {% assign collection = site[collection_key] %}
+      {% if collection_value.nav_exclude != true %}
+      {% if collections_size > 1 %}
+      <div class="nav-category">{{ collection_value.name }}</div>
+      {% endif %}
+      {% include nav.html pages=collection %}
+      {% endif %}
+      {% endfor %}
       {% else %}
-        {% include nav.html pages=site.html_pages %}
+      {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
     <footer class="site-footer">
     </footer>
   </div>
-      <div id="main-header" class="main-header">
-      {% if site.search_enabled != false %}
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-      {% endif %}
-      {% include header_custom.html %}
-      {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <ul class="aux-nav-list">
-            {% for link in site.aux_links %}
-              <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
-                  {% if site.aux_links_new_tab %}
-                  target="_blank" rel="noopener noreferrer"
-                  {% endif %}
-                >
-                  {{ link.first }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
+  <div id="main-header" class="main-header">
+    {% if site.search_enabled != false %}
+    <div class="search">
+      <div class="search-input-wrap">
+        <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}"
+          aria-label="Search {{ site.title }}" autocomplete="off">
+        <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon">
+            <use xlink:href="#svg-search"></use>
+          </svg></label>
+      </div>
+      <div id="search-results" class="search-results"></div>
     </div>
+    {% endif %}
+    {% include header_custom.html %}
+    {% if site.aux_links %}
+    <nav aria-label="Auxiliary" class="aux-nav">
+      <ul class="aux-nav-list">
+        {% for link in site.aux_links %}
+        <li class="aux-nav-list-item">
+          <a href="{{ link.last }}" class="site-button" {% if site.aux_links_new_tab %} target="_blank"
+            rel="noopener noreferrer" {% endif %}>
+            {{ link.first }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
   <div class="main" id="top">
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
-        {% if page.parent %}
-          {%- for node in pages_list -%}
-            {%- if node.parent == nil -%}
-              {%- if page.parent == node.title or page.grand_parent == node.title -%}
-                {%- assign first_level_url = node.url | absolute_url -%}
-              {%- endif -%}
-              {%- if node.has_children -%}
-                {%- assign children_list = pages_list | where: "parent", node.title -%}
-                {%- for child in children_list -%}
-                  {%- if page.url == child.url or page.parent == child.title -%}
-                    {%- assign second_level_url = child.url | absolute_url -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-          {%- endfor -%}
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-              {% endif %}
-              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-            </ol>
-          </nav>
-        {% endif %}
+      {% if page.parent %}
+      {%- for node in pages_list -%}
+      {%- if node.parent == nil -%}
+      {%- if page.parent == node.title or page.grand_parent == node.title -%}
+      {%- assign first_level_url = node.url | absolute_url -%}
+      {%- endif -%}
+      {%- if node.has_children -%}
+      {%- assign children_list = pages_list | where: "parent", node.title -%}
+      {%- for child in children_list -%}
+      {%- if page.url == child.url or page.parent == child.title -%}
+      {%- assign second_level_url = child.url | absolute_url -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- endif -%}
+      {%- endif -%}
+      {%- endfor -%}
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb-nav-list">
+          {% if page.grand_parent %}
+          <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
+          <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
+          {% else %}
+          <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+          {% endif %}
+          <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+        </ol>
+      </nav>
+      {% endif %}
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
-          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+        {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\"
+          aria-hidden=\"true\">
+          <use xlink:href=\"#svg-link\"></use>
+        </svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
         {% else %}
-          {{ content }}
+        {{ content }}
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}
-          <h2 class="text-delta">Table of contents</h2>
-          <ol>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
-            {% for child in children_list %}
-              <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-              </li>
-            {% endfor %}
-          </ol>
+        <h2 class="text-delta">Table of contents</h2>
+        <ol>
+          {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
+          {% for child in children_list %}
+          <li>
+            <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{%
+            endif %}
+          </li>
+          {% endfor %}
+        </ol>
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}
-            {% for child in children_list %}
-                {{ child.content }}
-            {% endfor %}
+        {% for child in children_list %}
+        {{ child.content }}
+        {% endfor %}
         {% endif %}
 
         {% capture footer_custom %}
-          {%- include footer_custom.html -%}
+        {%- include footer_custom.html -%}
         {% endcapture %}
         {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
-          <hr>
-          <footer>
-            {% if site.back_to_top %}
-              <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
-            {% endif %}
+        <hr>
+        <footer>
+          {% if site.back_to_top %}
+          <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
+          {% endif %}
 
-            {{ footer_custom }}
+          {{ footer_custom }}
 
-            {% if site.last_edit_timestamp or site.gh_edit_link %}
-              <div class="d-flex mt-2">
-                {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                    Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-                  </p>
-                {% endif %}
-                {% if
-                  site.gh_edit_link and
-                  site.gh_edit_link_text and
-                  site.gh_edit_repository and
-                  site.gh_edit_branch and
-                  site.gh_edit_view_mode
-                %}
-                  <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
-                  </p>
-                {% endif %}
-              </div>
+          {% if site.last_edit_timestamp or site.gh_edit_link %}
+          <div class="d-flex mt-2">
+            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+            <p class="text-small text-grey-dk-000 mb-0 mr-2">
+              Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date:
+                site.last_edit_time_format }}</span>.
+            </p>
             {% endif %}
-          </footer>
+            {% if
+            site.gh_edit_link and
+            site.gh_edit_link_text and
+            site.gh_edit_repository and
+            site.gh_edit_branch and
+            site.gh_edit_view_mode
+            %}
+            <p class="text-small text-grey-dk-000 mb-0">
+              <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}/{{ page.path }}"
+                id="edit-this-page">{{ site.gh_edit_link_text }}</a>
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+        </footer>
         {% endif %}
 
       </div>
     </div>
 
     {% if site.search_enabled != false %}
-      {% if site.search.button %}
-        <a href="#" id="search-button" class="search-button">
-          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
-        </a>
-      {% endif %}
+    {% if site.search.button %}
+    <a href="#" id="search-button" class="search-button">
+      <svg viewBox="0 0 24 24" class="icon">
+        <use xlink:href="#svg-search"></use>
+      </svg>
+    </a>
+    {% endif %}
 
-      <div class="search-overlay"></div>
+    <div class="search-overlay"></div>
     {% endif %}
   </div>
 </body>
+
 </html>
