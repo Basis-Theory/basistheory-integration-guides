@@ -1,3 +1,10 @@
+## [1.24.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.1...v1.24.2) (2022-05-19)
+
+
+### Bug Fixes
+
+* fixes the way cards are displayed on mobile ([#119](https://github.com/Basis-Theory/basistheory-integration-guides/issues/119)) ([f043ed8](https://github.com/Basis-Theory/basistheory-integration-guides/commit/f043ed8bc067f59bfa76473d9d0aa8aa6dd4c767))
+
 ## [1.24.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.0...v1.24.1) (2022-05-06)
 
 
