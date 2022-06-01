@@ -19,6 +19,12 @@ Once you've completed this guide, you will have learned how your React applicati
 
 If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react">Find it here!</a>
 
+<span class="base-alert info">
+  <span>
+    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx">here</a>.
+  </span>
+</span>
+
 ## Let's code
 
 <span class="base-alert warning">
