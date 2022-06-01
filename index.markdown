@@ -125,12 +125,12 @@ image:
                 <div class="card-title">Elements</div>
                 <div class="card-description">Secure data from your frontend without touching it.</div>
             </a>
-            <a class="card" href="https://docs.basistheory.com/detokenization/#introduction">
+            <a class="card" href="https://docs.basistheory.com/expressions/#introduction">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/purple-reactor.svg">
                 </div>
-                <div class="card-title">Detokenization</div>
-                <div class="card-description">Learn how to detokenize your data in Reactors and Proxy.</div>
+                <div class="card-title">Expressions</div>
+                <div class="card-description">Learn about the expression language supported throughout the Basis Theory API.</div>
             </a>
         </div>
     </body>

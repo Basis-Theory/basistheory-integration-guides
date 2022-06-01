@@ -99,7 +99,7 @@ Instead, we will send a request to the Basis Theory Proxy which contains the non
 }
 ```
 
-The detokenization expression `{%raw%}{{a70f8701-8b65-476b-ac0a-21bcd7d943d5}}{%endraw%}` within the request will be identified by the Proxy, and the raw credit card number represented by this token will be substituted in its place.
+The expression `{%raw%}{{a70f8701-8b65-476b-ac0a-21bcd7d943d5}}{%endraw%}` within the request will be identified by the Proxy, and the raw credit card number represented by this token will be substituted in its place.
 
 
 ## Send the Proxy Request Containing Detokenized Values
@@ -151,4 +151,4 @@ As we can see from this response, the request received by the destination servic
 The other non-sensitive data fields that were provided in plaintext were forwarded in the request without modification.
 
 This was just a basic example of what you can accomplish using the Proxy. If you're interested in some of the more advanced proxying features, 
-check out our docs on the [Proxy](https://docs.basistheory.com/#proxy) or [Detokenization](https://docs.basistheory.com/detokenization) to learn more!
+check out our docs on the [Proxy](https://docs.basistheory.com/#proxy) or [Detokenization](https://docs.basistheory.com/expressions/#detokenization) to learn more!
