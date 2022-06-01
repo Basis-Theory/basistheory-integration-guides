@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.2...v1.25.0) (2022-06-01)
+
+
+### Features
+
+* add callout to individual card elements in guides ([#121](https://github.com/Basis-Theory/basistheory-integration-guides/issues/121)) ([4184d85](https://github.com/Basis-Theory/basistheory-integration-guides/commit/4184d8544651b3750c1002ff5d69890c77ea8995))
+
 ## [1.24.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.1...v1.24.2) (2022-05-19)
 
 
