@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.0...v1.25.1) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix links for codesandbox collect cards with elements example ([#122](https://github.com/Basis-Theory/basistheory-integration-guides/issues/122)) ([1f83908](https://github.com/Basis-Theory/basistheory-integration-guides/commit/1f839080f703cb727952734c9b0f7b6dc5e7bd9f))
+
 # [1.25.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.24.2...v1.25.0) (2022-06-01)
 
 
