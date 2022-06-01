@@ -21,7 +21,7 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert info">
   <span>
-    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-split-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx">here</a>.
+    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx">here</a>.
   </span>
 </span>
 
