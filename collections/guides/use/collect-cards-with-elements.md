@@ -24,7 +24,7 @@ Using React? Check out the [Collect Credit Cards with React Guide](/guides/colle
 
 <span class="base-alert info">
   <span>
-    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements?module=/public/index.html,/public/index.js,/api.js">here</a>.
+    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-js?module=/public/index.html,/public/index.js,/api.js">here</a>.
   </span>
 </span>
 
@@ -146,6 +146,6 @@ Anything is possible when you store your card data with us. To expand your possi
 See a sample and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements)
 `
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/blob/fd109ffbf62958d74956e9ac38a6d0b83dfa25b2/collect-cards-with-elements?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-js?fontsize=14&hidenavigation=1&theme=dark&module=/public/index.html,/public/index.js,/api.js" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
 `
