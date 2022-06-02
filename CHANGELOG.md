@@ -1,3 +1,10 @@
+## [1.25.3](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.2...v1.25.3) (2022-06-02)
+
+
+### Bug Fixes
+
+* use primary color for text selection and search dropdown ([#125](https://github.com/Basis-Theory/basistheory-integration-guides/issues/125)) ([976c4f7](https://github.com/Basis-Theory/basistheory-integration-guides/commit/976c4f7fed10fec81b52d45d82e69f582039e265))
+
 ## [1.25.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.1...v1.25.2) (2022-06-02)
 
 
