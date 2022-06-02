@@ -138,7 +138,7 @@ curl "https://api.basistheory.com/reactors/<reactor_id>/react" \
   -d '{
     "args": {
       "card": {
-        "number": "{%raw%}{{ <card_token_id> | $.number }}{%endraw%}"
+        "number": "{%raw%}{{ <card_token_id> | json: '$.number' }}{%endraw%}"
       }
     }
   }'
