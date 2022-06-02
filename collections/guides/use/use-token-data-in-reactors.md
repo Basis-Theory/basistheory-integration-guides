@@ -66,7 +66,7 @@ you'll need to pass in the corresponding request parameters it needs. The Parrot
 
 Request parameters are provided when [invoking a Reactor](https://docs.basistheory.com/#reactors-invoke-a-reactor) via the `args` request property.
 In order to satisfy the request parameter contract defined on the Reactor Formula, you may supply any mixture of constant values
-and [detokenization expressions](https://docs.basistheory.com/detokenization#detokenization-expressions) within `args`.
+and [detokenization expressions](https://docs.basistheory.com/expressions/#detokenization) within `args`.
 
 Next, we'll walk through a couple ways in which you could invoke the Parrot reactor to provide the card number depending on how you chose to tokenize your card data.
 
@@ -89,7 +89,7 @@ In each of the following examples, on a successful request you will be returned 
 ### Use a Card Number Token
 
 In the following example we have opted to store the card number within a [Card Number Token](https://docs.basistheory.com/api-reference/#token-types-card-number).
-We will include a [detokenization expression](https://docs.basistheory.com/detokenization#detokenization-expressions) containing this token in the Reactor request,
+We will include a [detokenization expression](https://docs.basistheory.com/expressions/#detokenization) containing this token in the Reactor request,
 which will result in the original token data being inserted within the request sent to the Reactor.
 
 ```js
@@ -128,7 +128,7 @@ the additional properties (`expiration_month`, `expiration_year`, `cvc`) on the 
 ### Use a Card Token with a JSON Path Transformation
 
 In the following example we have again opted to store the card data within a [Card Token](https://docs.basistheory.com/#token-types-card).
-However, in this example we will pass only the `number` property from the Card token by using a [JSON Path Transformation](https://docs.basistheory.com/detokenization#transformations-json-path)
+However, in this example we will pass only the `number` property from the Card token by using the [json filter](https://docs.basistheory.com/expressions/#filters-json)
 to project out the `number` property.
 
 ```js

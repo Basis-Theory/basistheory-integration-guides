@@ -54,7 +54,7 @@ such as a user's card number or a transaction amount.
 The `args` provided with each request to [invoke a Reactor](https://docs.basistheory.com/#reactors-invoke-a-reactor) are
 validated against the request parameter declarations on the Reactor Formula. To access sensitive data within a Reactor Formula, 
 tokens may be provided within the `args` to satisfy the request parameter contract - 
-requests to invoke a Reactor are first [detokenized](https://docs.basistheory.com/detokenization/) 
+requests to invoke a Reactor are first [detokenized](https://docs.basistheory.com/expressions/#detokenization) 
 to replace any detokenization expressions within the `args` and the request provided to the Reactor Formula Code will contain
 your detokenized sensitive data.
 
@@ -85,7 +85,7 @@ module.exports = async function (req) {
 </span>
 
 The [request](https://docs.basistheory.com/#reactor-formulas-reactor-formula-code) object provided to a Reactor Formula contains the following properties:
-- `args`: [detokenized](https://docs.basistheory.com/detokenization/) runtime arguments provided when invoking the Reactor
+- `args`: [detokenized](https://docs.basistheory.com/expressions/#detokenization) runtime arguments provided when invoking the Reactor
 - `configuration`: static [configuration](https://docs.basistheory.com/#reactor-formulas-reactor-formula-configuration) defined with the Reactor
 
 The [response](https://docs.basistheory.com/#reactor-formulas-reactor-formula-code) returned from a Reactor Formula may contain the following properties:

@@ -43,7 +43,7 @@ Tokens that match your search criteria that are contained within other non-fetch
 ### Use
 
 Any token that is used within a [Reactor](/concepts/what-are-reactors) or the [Proxy](/concepts/what-is-the-proxy) will be counted as a MAT.
-This includes any tokens that were [Detokenized](https://docs.basistheory.com/detokenization/#introduction) within a Reactor or Proxy request.
+This includes any tokens that were [Detokenized](https://docs.basistheory.com/expressions/#detokenization) within a Reactor or Proxy request.
 
 <span class="base-alert info">
     <span>
@@ -64,8 +64,8 @@ each token is counted as a MAT at most once per month.
 For example, if in a given month you create a token, read it several times, and use this token within a Reactor and the Proxy, 
 then this token will only be counted as a single MAT for the month.
 
-Likewise, [detokenizing](https://docs.basistheory.com/detokenization/#introduction) a single token multiple times within a Reactor or Proxy request,
-for example to select multiple properties from a token using a [JSON Path](https://docs.basistheory.com/detokenization/#transformations-json-path) transformation,
+Likewise, [detokenizing](https://docs.basistheory.com/expressions/#detokenization) a single token multiple times within a Reactor or Proxy request,
+for example to select multiple properties from a token using a [JSON Path](https://docs.basistheory.com/expressions/#filters-json) transformation,
 will only cause that token to be counted as a single MAT.
 
 Deleting a token does not cause it to be counted as a MAT. 
