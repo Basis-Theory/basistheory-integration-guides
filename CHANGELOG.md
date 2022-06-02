@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.3...v1.26.0) (2022-06-02)
+
+
+### Features
+
+* Updating links to docs for expressions and detokenization ([79dcb69](https://github.com/Basis-Theory/basistheory-integration-guides/commit/79dcb69ff0e12d44b2f6f0d59ca78688ed447966))
+
 ## [1.25.3](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.2...v1.25.3) (2022-06-02)
 
 
