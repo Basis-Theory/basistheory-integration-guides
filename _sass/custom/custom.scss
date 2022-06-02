@@ -629,3 +629,11 @@ body {
         margin-top: 25px;
     }
 }
+
+::selection { background: $primary-text; }
+
+a { color: $primary-dark; }
+
+.search-input:focus + .search-label .search-icon { color: $primary-dark; }
+
+.search-result-doc .search-result-icon { color: $primary-dark; }
