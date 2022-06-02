@@ -1,3 +1,10 @@
+## [1.25.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.1...v1.25.2) (2022-06-02)
+
+
+### Bug Fixes
+
+* updating cookie notice ([2822f6a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/2822f6addb39b8d36162bc121770267fae15dc5d))
+
 ## [1.25.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.0...v1.25.1) (2022-06-01)
 
 
