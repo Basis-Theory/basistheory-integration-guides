@@ -107,6 +107,7 @@ The expression `{%raw%}{{a70f8701-8b65-476b-ac0a-21bcd7d943d5}}{%endraw%}` withi
 In order to send this request payload into the Basis Theory Proxy a few additional pieces of information are required as HTTP headers:
 - BT-API-KEY: the API key of the Basis Theory application we created earlier
 - BT-PROXY-URL: the destination url to which the request should be forwarded (`https://httpbin.org/anything`)
+- BT-PROXY-KEY: the `key` of the pre-configured [proxy](https://docs.basistheory.com/#proxies-proxy-object) to use for this request
 
 ```js
 curl "https://api.basistheory.com/proxy" \
