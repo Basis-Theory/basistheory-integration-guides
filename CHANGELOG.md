@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.26.0...v1.26.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* updates Reactor JSON path expression ([#126](https://github.com/Basis-Theory/basistheory-integration-guides/issues/126)) ([36e5693](https://github.com/Basis-Theory/basistheory-integration-guides/commit/36e569321b8fcb51f6efb7689f072a10654769b6))
+
 # [1.26.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.25.3...v1.26.0) (2022-06-02)
 
 
