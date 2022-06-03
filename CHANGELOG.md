@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.26.1...v1.27.0) (2022-06-03)
+
+
+### Features
+
+* remove private reactor notices ([#127](https://github.com/Basis-Theory/basistheory-integration-guides/issues/127)) ([ce4a8f2](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ce4a8f2cad8ecd699af8979674ac8a77287678fd))
+
 ## [1.26.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.26.0...v1.26.1) (2022-06-03)
 
 
