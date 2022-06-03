@@ -79,10 +79,15 @@ module.exports = async function (req) {
 
 The [request](https://docs.basistheory.com/#reactor-formulas-reactor-formula-code) object provided to a Reactor Formula contains the following properties:
 - `args`: [detokenized](https://docs.basistheory.com/expressions/#detokenization) runtime arguments provided when invoking the Reactor
+  - `body`: when executing in the context of the [proxy](https://docs.basistheory.com/#proxy), this will contain the detokenized body of the request
+  - `headers`: when executing in the context of the [proxy](https://docs.basistheory.com/#proxy), this will contain the headers of the request
 - `configuration`: static [configuration](https://docs.basistheory.com/#reactor-formulas-reactor-formula-configuration) defined with the Reactor
+- `bt`: a pre-configured Basis Theory JS instance for the [application](https://docs.basistheory.com/#reactors-reactor-object) defined with the Reactor. This will be `null` if no application was defined
 
 The [response](https://docs.basistheory.com/#reactor-formulas-reactor-formula-code) returned from a Reactor Formula may contain the following properties:
 - `raw`: non-sensitive data that will be returned in plaintext
+  - `body`: the `body` forwarded to the destination for the [proxy](https://docs.basistheory.com/#proxy) request
+  - `headers`: the `headers` to be forwarded to the destination for the [proxy](https://docs.basistheory.com/#proxy) request
 - `tokenize`: sensitive data that will be tokenized before returning it in the response
 
 Exercise caution when returning plaintext data within the `raw` portion of the response - the systems that invoke your 
