@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.27.0...v1.28.0) (2022-06-03)
+
+
+### Features
+
+* add additional info about proxy request options ([#128](https://github.com/Basis-Theory/basistheory-integration-guides/issues/128)) ([d8a226e](https://github.com/Basis-Theory/basistheory-integration-guides/commit/d8a226ebb28dee425577fa576e819a65cf5c453a))
+
 # [1.27.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.26.1...v1.27.0) (2022-06-03)
 
 
