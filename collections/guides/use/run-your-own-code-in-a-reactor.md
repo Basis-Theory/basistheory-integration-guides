@@ -25,13 +25,6 @@ If you are completely new to Reactors and would like to first learn the basics, 
 [Reactors](/concepts/what-are-reactors/) concept page. If you'd rather learn about how to use one of our 
 Official Reactor Formulas, check out our guide on how to [Use Token Data in Reactors](/guides/use-token-data-in-reactors/).
 
-<span class="base-alert info">
-  <span>
-    Private Reactor Formulas are only currently available to members of our Private Beta program. If you're interested in 
-    creating a Reactor with your own custom code, <a href="https://support.basistheory.com/hc/requests/new?tf_subject=Join%20Beta%20Program%20to%20Code%20Your%20Own%20Reactor&amp;tf_description=Let%20us%20know%20what%20you'd%20like%20to%20do%20with%20your%20Reactor&amp;tf_priority=normal" target="_blank">click here to request access</a>!
-  </span>
-</span>
-
 ### Table of contents
 {: .no_toc .text-delta }
 1. 
@@ -388,6 +381,3 @@ The Basis Theory API will respond with a newly created `card` token that contain
 We've seen how to create Private Reactor Formulas to run your own code within Basis Theory's serverless Reactor infrastructure. 
 By bringing your own code, you have the flexibility to use your token data however you need - 
 the possibilities of what you can do with Reactors are virtually unlimited.
-
-Remember that Private Reactor Formulas are not yet generally available, but if you are interested in getting started now, 
-you can [request access](https://support.basistheory.com/hc/requests/new?tf_subject=Join%20Beta%20Program%20to%20Code%20Your%20Own%20Reactor&amp;tf_description=Let%20us%20know%20what%20you'd%20like%20to%20do%20with%20your%20Reactor&amp;tf_priority=normal) to the private beta!
