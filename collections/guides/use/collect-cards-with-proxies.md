@@ -259,7 +259,7 @@ curl "https://api.basistheory.com/proxy" \
   }'
 ```
 
-The response will be the following:
+The request to the `destination_url` will look like the following:
 
 ```json
 {
