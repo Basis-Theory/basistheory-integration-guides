@@ -41,9 +41,9 @@ For this guide, we will be using the following scenario:
 1. 
 {:toc}
 
-## Create a new Management Application
+## 1. Create a new Management Application
 
-This new management application will be used to use the Basis Theory API to create new Reactor Formulas, [Reactors](https://developers.basistheory.com/concepts/what-are-reactors/), [Applications](https://developers.basistheory.com/concepts/what-are-applications/), and the [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/). To enable this configuration, we will configure the Application with the following settings:
+This new management Application will be used to create new Reactor Formulas, [Reactors](https://developers.basistheory.com/concepts/what-are-reactors/), [Applications](https://developers.basistheory.com/concepts/what-are-applications/), and the [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/). To enable this configuration, we will configure the Application with the following settings:
 
 - Name
     - “Setup Proxy”
@@ -54,9 +54,9 @@ This new management application will be used to use the Basis Theory API to crea
 
 [You can use this link to pre-fill the Create Application form in our Portal.](https://portal.basistheory.com/applications/create?name=Setup+Proxy&permissions=application%3Acreate&permissions=reactor%3Acreate&permissions=proxy%3Acreate&type=management)
 
-*Make sure you remember the `id` of this new Application, you’ll use this in the following Steps.*
+*Make sure you remember the `key` of this new Application, you’ll use this in the following Steps.*
 
-## Create a Reactor Formula to handle the inbound request
+## 2. Create a Reactor Formula to handle the inbound request
 
 We will first create a new Reactor Formula to tokenize the card number in the inbound request. This [Reactor Formula](https://docs.basistheory.com/#reactor-formulas) will tokenize the card number and return a new `body` with the raw card number replaced with our newly created [Token](https://developers.basistheory.com/concepts/what-are-tokens/).
 
@@ -100,7 +100,7 @@ curl "https://api.basistheory.com/reactor-formulas" \
   -d '{
     "type": "private",
     "status": "verified",
-    "name": "Partner Inbound Proxy Formula",
+    "name": "Partner Proxy Formula",
     "description": "Used to tokenized cards on the way to /payments",
     "icon": "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",
     "code": "module.exports = async function (req) {\r\n  const token = await req.bt.tokenize({\r\n\t  type: \"token\",\r\n\t  data: req.args.body.card.number,\r\n\t\tprivacy: {\r\n\t\t\tclassification: \"pci\",\r\n\t\t\timpactLevel: \"high\"\r\n\t\t}\r\n\t});\r\n \r\n\tconst body = {\r\n\t\t...req.args.body,\r\n    card: {\r\n      ...req.args.body.card,\r\n      number: token.id\r\n    }\r\n\t}\r\n\r\n  return {\r\n\t\traw: {\r\n\t\t\theaders: req.args.headers,\r\n\t\t\tbody\r\n\t\t}\r\n\t};\r\n};",
@@ -111,7 +111,7 @@ curl "https://api.basistheory.com/reactor-formulas" \
 
 *Make sure you remember the `id` of this new Reactor Formula, you’ll use this in Step 3.*
 
-## Create a new Application
+## 3. Create a new Application
 
 This Application will be used by your Reactor to grant the injected `bt` [npm module](https://www.npmjs.com/package/@basis-theory/basis-theory-js) instance access to create new `pci` classification tokens.
 
@@ -142,9 +142,9 @@ curl "https://api.basistheory.com/applications" \
   }'
 ```
 
-*Make sure you remember the `id` of this new Application, you’ll use this in Step 4.*
+*Make sure you remember the `id` of this new Application, you’ll use this in Step 4. When creating the Application through the Portal, you can find the Application `id` in the last part of the URL path when viewing details for the Application.*
 
-## Create a new Reactor
+## 4. Create a new Reactor
 
 Use the following `curl` command to create a new Reacotr using the Reactor Formula id we’ve created in Step 2 and the Application id created in Step 3:
 
@@ -166,7 +166,7 @@ curl "https://api.basistheory.com/reactors" \
 
 *Make sure you remember the `id` of this new Reactor, you’ll use this in Step 5.*
 
-## Create a new Proxy
+## 5. Create a new Proxy
 
 Using our newly created Reactor (from Step 4) configure a new Proxy. When created, a new `key` will be generated for that Proxy. When that Proxy is used it will invoke the specified Reactor and forward the output to your specified `destination_url`. Anything responded from your `destination_url` will be ultimately returned to the original caller.
 
@@ -201,7 +201,7 @@ This will respond with the following:
 
 *Make sure you remember the `key` of this new Proxy, you’ll use this in Step 7.*
 
-## Create a new Application for our partner
+## 6. Create a new Application for our partner
 
 By default, all Proxies require auth. In order to grant access to call a Proxy, we'll need to create a new Application with permissions to use this Proxy.
 
@@ -230,16 +230,16 @@ curl "https://api.basistheory.com/applications" \
   }'
 ```
 
-*Make sure you remember the `id` of this new Application, you’ll use this in Step 7.*
+*Make sure you remember the `key` of this new Application, you’ll use this in Step 7.*
 
-## Call the new Proxy
+## 7. Call the new Proxy
 
 Using the new Proxy endpoint our partner can call this endpoint:
 
 ```bash
 curl "https://api.basistheory.com/proxy" \
   -H "BT-API-KEY: <API Key from Step 6>" \
-  -H "BT-PROXY-KEY: e29a50980ca5" \
+  -H "BT-PROXY-KEY: <Proxy Key from Step 5>" \
   -X "POST" \
   -d '{
     "merchantAccount": "TestMerchant",
