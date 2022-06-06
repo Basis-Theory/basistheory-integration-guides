@@ -16,11 +16,11 @@ image:
 # Collect and Use Credit Cards with Proxies
 {: .no_toc }
 
-By the end of this guide, you will have learned how to use Basis Theory’s Proxies to accept Credit Card data in your API - All without touching the card data or pulling your system into PCI scope. In this example, we will configure the Proxy to utilize a Reactor to remove any sensitive data, forward the desensitized request to your API, and finally respond to the originator.
+By the end of this guide, you will have learned how to use Basis Theory’s Proxies to accept Credit Card data in your API - all without touching the card data or pulling your system into PCI scope. In this example, we will configure the Proxy to utilize a Reactor to remove any sensitive data, forward the desensitized request to an API, and finally respond to the originator.
 
 For this guide, we will be using the following scenario:
 
-- We will accept card data via our API from one of our partners. The request body will be as follows:
+- We will accept card data via Basis Theory's API from one of our partners. The request body will be as follows:
   ```json
   {
       "merchantAccount": "TestMerchant",
@@ -33,8 +33,8 @@ For this guide, we will be using the following scenario:
   }
   ```
 - We will tokenize the credit card number
-- We will forward the request with the new tokenized card to `https://api.acme.com/payment`
-- Once `https://api.acme.com/payment` responds, this response will become the response to our partner’s original call.
+- We will forward the request with the new tokenized card to `https://httpbin.org/post` (this can be replaced by your API)
+- Once `https://httpbin.org/post` responds, this response will become the response to our partner’s original call.
 
 ### Table of contents
 {: .no_toc .text-delta }
@@ -180,9 +180,15 @@ curl "https://api.basistheory.com/proxies" \
   -d '{
     "name": "Partner Proxy",
     "request_reactor_id": "<Reactor Id from Step 4>",
-    "destination_url": "https://api.acme.com/payment"
+    "destination_url": "https://httpbin.org/post"
   }'
 ```
+
+<span class="base-alert info">
+  <span>
+    Substitute the `destination_url` for your API whenever you're ready to receive requests
+  </span>
+</span>
 
 This will respond with the following:
 
@@ -193,7 +199,7 @@ This will respond with the following:
   "name": "Partner Proxy",
   "key": "e29a50980ca5",
   "request_reactor_id": "<Reactor Id from Step 4>",
-  "destination_url": "https://api.acme.com/payment",
+  "destination_url": "https://httpbin.org/post",
   "require_auth": true,
   ...
 }
@@ -240,6 +246,7 @@ Using the new Proxy endpoint our partner can call this endpoint:
 curl "https://api.basistheory.com/proxy" \
   -H "BT-API-KEY: <API Key from Step 6>" \
   -H "BT-PROXY-KEY: <Proxy Key from Step 5>" \
+  -H "Content-Type: application/json" \
   -X "POST" \
   -d '{
     "merchantAccount": "TestMerchant",
@@ -268,4 +275,4 @@ The response will be the following:
 
 🎉 Success!
 
-After placing this call, your endpoint at https://api.acme.com/payment will be triggered and the curl command from Step 6 will have the response from this endpoint.
+After placing this call, the endpoint at https://httpbin.org/post will be called and the curl command from Step 6 will have the response from this endpoint.
