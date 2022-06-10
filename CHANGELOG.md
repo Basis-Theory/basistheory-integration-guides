@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.28.0...v1.29.0) (2022-06-08)
+
+
+### Features
+
+* adds guide for collecting cards via Proxy ([#130](https://github.com/Basis-Theory/basistheory-integration-guides/issues/130)) ([5b9fd93](https://github.com/Basis-Theory/basistheory-integration-guides/commit/5b9fd93b7f26dfd97d820348815b2f5ef164b580))
+
 # [1.28.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.27.0...v1.28.0) (2022-06-03)
 
 
