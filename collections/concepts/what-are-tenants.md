@@ -44,6 +44,13 @@ Many large enterprise and corporate organizations have multiple business units o
 
 <img src="/assets/images/concepts/tenant_separate_data.png">
 
+## Tenant Settings
+
+### Deduplicating Tokens
+
+You are able to deduplicate Tokens on creation via a [Tenant setting](https://docs.basistheory.com/#tenants-tenant-settings-object) and when [creating a Token](https://docs.basistheory.com/#tokens-token-object). When we find that the `fingerprint`, and the `impact_level` and `classification` privacy settings of an incoming Token match another, we consider the incoming Token to be a duplicate.
+In the case of any duplicates on create, we'll return the existing Token instead of creating a new one. Setting `deduplicate_token` on the request will override any settings set at the Tenant level.
+
 ## FAQs
 
 ### Can I share a Tenant’s Tokens between multiple systems?
