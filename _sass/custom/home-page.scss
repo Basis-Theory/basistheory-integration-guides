@@ -53,6 +53,7 @@
       font-size: 32px;
       font-weight: 500;
       color: $grey-900;
+      font-family: $heading-font;
     }
 
     .quickstart-subtitle {
@@ -66,5 +67,6 @@
     font-weight: 600;
     margin: 48px 0 24px 0;
     color: $grey-900;
+    font-family: $heading-font;
   }
 }
