@@ -28,6 +28,9 @@
     font-weight: 500;
     .documentation-link {
       color: $blue-shadow;
+      &.active {
+        color: $primary-dark;
+      }
     }
 
     a ~ a {

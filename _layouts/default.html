@@ -79,9 +79,10 @@ layout: table_wrappers
   <header class="site-header">
     <a class="site-header-logo" href="{{ '/' | absolute_url }}">
     </a>
+
     <div class="documentation-links">
-      <a class="documentation-link" href="/getting-started">Get Started</a>
-      <a class="documentation-link" href="/">Documentation</a>
+      <a class="documentation-link {% if page.url contains 'getting-started' %}active{% endif %}" href="/getting-started">Get Started</a>
+      <a class="documentation-link {% unless page.url contains 'getting-started' %}active{% endunless %}" href="/">Documentation</a>
       <a class="documentation-link" href="https://docs.basistheory.com/api-reference/#introduction">API Reference</a>
       <a class="documentation-link" href="https://docs.basistheory.com/elements/#introduction">Elements</a>
     </div>
