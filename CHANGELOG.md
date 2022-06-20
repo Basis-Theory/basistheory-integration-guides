@@ -1,3 +1,10 @@
+## [1.29.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.1...v1.29.2) (2022-06-20)
+
+
+### Bug Fixes
+
+* use proper heading font ([#134](https://github.com/Basis-Theory/basistheory-integration-guides/issues/134)) ([786e732](https://github.com/Basis-Theory/basistheory-integration-guides/commit/786e732db96a5c95cb504cb9b8110edc84407538))
+
 ## [1.29.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.0...v1.29.1) (2022-06-20)
 
 
