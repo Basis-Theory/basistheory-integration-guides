@@ -21,11 +21,11 @@ image:
     <body>
         <div class="header">
             <h1>Basis Theory Labs</h1>
-            <h5>Sample apps, demos and innovation powered by Basis Theory.</h5>
-            <p class="header-description">
-            Basis Theory enables you to tokenize anything, anywhere. Here you can get a sneak peek of Basis Theory's potential by looking at some interesting usages we built for you! Securing data is a must, and whether it is in the context of infrastructure as code, secret sharing, content management systems or anything else you can imagine, we have you covered. 
-            </p>
         </div>
+        <h5>Sample apps, demos and innovation powered by Basis Theory.</h5>
+        <p class="header-description">
+        Basis Theory enables you to tokenize anything, anywhere. Here you can get a sneak peek of Basis Theory's potential by looking at some interesting usages we built for you! Securing data is a must, and whether it is in the context of infrastructure as code, secret sharing, content management systems or anything else you can imagine, we have you covered. 
+        </p>
         <div class="cards labs">
             <div class="card lab">
                 <div class="lab-content">

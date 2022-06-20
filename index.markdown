@@ -21,8 +21,8 @@ image:
     <body class="home-page">
         <div class="header">
             <h1>Documentation</h1>
-            <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
         </div>
+        <h5>Explore our APIs, SDKs, and all of the tools you need to make your sensitive data more secure and usable.</h5>
         <div class="quickstarts">
             <div class="quickstart-info">
                 <div class="quickstart-header">Quickstarts</div>
