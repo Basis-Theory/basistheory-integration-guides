@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.0...v1.29.1) (2022-06-20)
+
+
+### Bug Fixes
+
+* elements font example ([#133](https://github.com/Basis-Theory/basistheory-integration-guides/issues/133)) ([c6619d9](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c6619d9a643f89665e38056ce51cd094c4a4b10a))
+
 # [1.29.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.28.0...v1.29.0) (2022-06-08)
 
 
