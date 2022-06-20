@@ -25,6 +25,7 @@
   }
 
   .documentation-links {
+    font-weight: 500;
     .documentation-link {
       color: $blue-shadow;
     }
@@ -35,15 +36,14 @@
   }
 
   .portal-links {
+    font-weight: 500;
     .portal-sign-in {
       color: $primary-text;
-      font-weight: 600;
       margin-right: 24px;
     }
 
     .portal-create-account {
       color: $primary-text;
-      font-weight: 600;
       padding: 8px 16px;
       border: 1px solid #1ad1db75;
       border-radius: 4px;
