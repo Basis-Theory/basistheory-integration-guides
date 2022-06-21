@@ -25,7 +25,7 @@ When the Token is created the data is securely indexed in several data patterns 
 - `metadata.[key]`
 - `created_at`
 
-Currently, Basis Theory supports searching `data` on `social_security_number` and `employer_id_number` [Token Types](https://docs.basistheory.com/#token-types). The data is indexed in several patterns, allowing for flexible searching. For instance, you can search for a social security number by the full number with or without dashes (`123-45-6789` and `123456789`), and only the last four (`6789`). The `data` and `metadata` fields on `token` [Token Types](https://docs.basistheory.com/#token-types) can be indexed to fit your use case. More information on that found [here](https://docs.basistheory.com/expressions/#search-indexes).
+Currently, Basis Theory supports searching `data` on `social_security_number`, `employer_id_number`, and `token` [Token Types](https://docs.basistheory.com/#token-types). The data is indexed in several patterns for `social_security_number` and `employer_id_number` [Token Types](https://docs.basistheory.com/#token-types), allowing for flexible searching. For instance, you can search for a social security number by the full number with or without dashes (`123-45-6789` and `123456789`), and only the last four (`6789`).
 
 ## Permissions
 
