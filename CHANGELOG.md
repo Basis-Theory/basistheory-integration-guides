@@ -1,3 +1,10 @@
+## [1.29.3](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.2...v1.29.3) (2022-06-21)
+
+
+### Bug Fixes
+
+* updates verbiage on Search concept page. fixes link width on nav ([#135](https://github.com/Basis-Theory/basistheory-integration-guides/issues/135)) ([e39c27f](https://github.com/Basis-Theory/basistheory-integration-guides/commit/e39c27f2cdce9ffa930f17011e08bd3b1f7a46c9))
+
 ## [1.29.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.1...v1.29.2) (2022-06-20)
 
 
