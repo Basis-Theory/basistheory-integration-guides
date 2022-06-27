@@ -25,7 +25,20 @@ If you are already familiar with Basis Theory and our platform in general, our g
 Completing this tutorial will require you to have Go installed on your local system. The latest version of Go can be [downloaded here](https://go.dev/doc/install).
 
 ### Step 1.2: Create a simple Go module
-To start, you will need a new Go module. Create a new file named `BasisTheoryQuickstart.go` or use the following command to create the application:
+To start, you will need a new Go module. First, create a new directory to store the quickstart example:
+
+```bash
+mkdir BasisTheoryQuickstart
+cd BasisTheoryQuickstart
+```
+
+Next, initialize a new Go module:
+
+```bash
+go mod init BasisTheoryQuickstart
+```
+
+Create a new file named `BasisTheoryQuickstart.go` or use the following command to create the file:
 
 ```bash
 // Mac or Linux
@@ -123,10 +136,10 @@ func main() {
 ```
 
 ## Step 5: Run your application to create a new Token
-To create a token, run the following commands in the directory you created your `BasisTheoryQuickstart.go` file:
+To create a token, run the following commands in the directory you initialized your new Go module:
 
 ```bash
-go BasisTheoryQuickstart.go
+go run .
 ```
 
 You will see a response similar to:
@@ -144,7 +157,7 @@ With our value safely stored in a Token, let’s read it back. To do this, we wi
 We are using the `id` property from the previous Token we created to inject the `tokenId` into the Get a token by ID request.
 
 ```go
-token, httpResponse, err := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.Id).Execute()
+token, httpResponse, err := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.GetId()).Execute()
 
 fmt.Println("Read a token:")
 fmt.Printf("%v", token)
@@ -154,7 +167,7 @@ fmt.Printf("%v", token)
 Test the entire tutorial out by running the application:
 
 ```bash
-go BasisTheoryQuickstart.go
+go run .
 ```
 
 🎉🎉🎉 You’ve successfully created a Token for your data and read it back 🎉🎉🎉
