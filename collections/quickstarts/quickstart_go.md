@@ -128,7 +128,7 @@ func main() {
   createTokenRequest.SetPrivacy(privacy)
 
   // Send the request
-  createTokenResponse, createTokenHttpResponse, createErr := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
+  createTokenResponse, _, _ := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
 
   fmt.Println("Token created:")
   fmt.Printf("%v", createTokenResponse)
@@ -215,13 +215,13 @@ func main() {
   createTokenRequest.SetPrivacy(privacy)
 
   // Send the request
-  createTokenResponse, createTokenHttpResponse, createErr := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
+  createTokenResponse, _, _ := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
 
   fmt.Println("Token created:")
   fmt.Printf("%v", createTokenResponse)
 
   // Read the token
-  token, httpResponse, err := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.Id).Execute()
+  token, _, _ := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.GetId()).Execute()
 
   fmt.Println("Read a token:")
   fmt.Printf("%v", token)
