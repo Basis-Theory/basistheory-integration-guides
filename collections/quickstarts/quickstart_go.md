@@ -157,7 +157,7 @@ With our value safely stored in a Token, let’s read it back. To do this, we wi
 We are using the `id` property from the previous Token we created to inject the `tokenId` into the Get a token by ID request.
 
 ```go
-token, httpResponse, err := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.GetId()).Execute()
+token, _, _ := apiClient.TokensApi.GetById(contextWithAPIKey, createTokenResponse.GetId()).Execute()
 
 fmt.Println("Read a token:")
 fmt.Printf("%v", token)
