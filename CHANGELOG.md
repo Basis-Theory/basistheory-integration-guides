@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.0...v1.30.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* go syntax highlighting ([#137](https://github.com/Basis-Theory/basistheory-integration-guides/issues/137)) ([34f341c](https://github.com/Basis-Theory/basistheory-integration-guides/commit/34f341cf7ae9ce07a3c1ddfb628cd02663b2c95d))
+
 # [1.30.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.3...v1.30.0) (2022-06-29)
 
 
