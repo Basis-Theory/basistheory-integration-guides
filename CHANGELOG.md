@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.3...v1.30.0) (2022-06-29)
+
+
+### Features
+
+* go quickstart ([#136](https://github.com/Basis-Theory/basistheory-integration-guides/issues/136)) ([8f17967](https://github.com/Basis-Theory/basistheory-integration-guides/commit/8f17967541b41067e050b826190036a4e7f554f4))
+
 ## [1.29.3](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.29.2...v1.29.3) (2022-06-21)
 
 
