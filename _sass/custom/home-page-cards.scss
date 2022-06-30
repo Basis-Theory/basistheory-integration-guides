@@ -135,9 +135,13 @@
     border-radius: 8px;
     padding: 24px;
     cursor: pointer;
-    flex-grow: 0;
+    flex-grow: 1;
     color: $grey-600;
     white-space: normal;
+
+    &.quickstart-card {
+      flex-grow: 0;
+    }
   }
 
   .card-description {

@@ -25,7 +25,7 @@ image:
         <h5>Step-by-step guides to securing data with Basis Theory.</h5>
         <p class="header-description">Once you’ve completed one of these tutorials, you’ll have a foundational understanding of how to secure your data with Basis Theory allowing you to no longer worry about the underlying storage or encryption of the data. If you are already familiar with Basis Theory and our platform in general, our guide on <a href="/guides/use-token-data-in-http-requests/">How to send Token data via HTTP</a> or <a href="/guides/collect-cards-with-elements/">Collecting payments with Elements</a> may be a better place to start.</p>
         <div class="cards">
-            <a class="card" href="/getting-started/quickstart-with-nodejs/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-nodejs/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_nodejs.svg">
                     <div class="quickstart-title">NodeJS</div>
@@ -36,7 +36,7 @@ image:
                     </div>
                 </div>
             </a>
-            <a class="card" href="/getting-started/quickstart-with-curl/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-curl/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_curl.svg">
                     <div class="quickstart-title">Curl</div>
@@ -47,7 +47,7 @@ image:
                     </div>
                 </div>
             </a>
-            <a class="card" href="/getting-started/quickstart-with-ruby/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-ruby/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_ruby.svg">
                     <div class="quickstart-title">Ruby</div>
@@ -59,7 +59,7 @@ image:
                 </div>
             </a>
 
-            <a class="card" href="/getting-started/quickstart-with-dotnet/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-dotnet/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_dotnet.svg">
                     <div class="quickstart-title">.NET</div>
@@ -71,7 +71,7 @@ image:
                 </div>
             </a>
 
-            <a class="card" href="/getting-started/quickstart-with-python/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-python/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_python.svg">
                     <div class="quickstart-title">Python</div>
@@ -83,7 +83,7 @@ image:
                 </div>
             </a>
 
-            <a class="card" href="/getting-started/quickstart-with-java/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-java/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_java.svg">
                     <div class="quickstart-title">Java</div>
@@ -95,7 +95,7 @@ image:
                 </div>
             </a>
 
-            <a class="card" href="/getting-started/quickstart-with-go/">
+            <a class="card quickstart-card" href="/getting-started/quickstart-with-go/">
                 <div class="icon-and-time-estimate no-description">
                     <img src="/assets/images/quickstart/quickstart_logo_go.svg">
                     <div class="quickstart-title">Go</div>
