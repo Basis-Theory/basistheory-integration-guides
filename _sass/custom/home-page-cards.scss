@@ -80,6 +80,10 @@
     align-items: center;
     margin-bottom: 16px;
 
+    img {
+      width: 56px;
+    }
+
     .time-estimate {
       display: flex;
       flex-direction: row;
@@ -131,7 +135,7 @@
     border-radius: 8px;
     padding: 24px;
     cursor: pointer;
-    flex-grow: 1;
+    flex-grow: 0;
     color: $grey-600;
     white-space: normal;
   }
