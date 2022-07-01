@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.1...v1.30.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* quickstart card size and alignment ([#138](https://github.com/Basis-Theory/basistheory-integration-guides/issues/138)) ([779197c](https://github.com/Basis-Theory/basistheory-integration-guides/commit/779197ce7ca8ca8ee3622b5c425d2dcfa0cf5e8f))
+
 ## [1.30.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.0...v1.30.1) (2022-06-29)
 
 
