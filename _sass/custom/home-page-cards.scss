@@ -80,6 +80,10 @@
     align-items: center;
     margin-bottom: 16px;
 
+    img {
+      width: 56px;
+    }
+
     .time-estimate {
       display: flex;
       flex-direction: row;
@@ -134,6 +138,10 @@
     flex-grow: 1;
     color: $grey-600;
     white-space: normal;
+
+    &.quickstart-card {
+      flex-grow: 0;
+    }
   }
 
   .card-description {
