@@ -3,7 +3,7 @@ layout: post
 title:  "Permissions"
 categories: concepts
 permalink: /concepts/understanding-permissions/
-nav_order: 9
+nav_order: 7
 has_children: true
 has_toc: false
 image:

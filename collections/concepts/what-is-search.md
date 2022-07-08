@@ -3,7 +3,7 @@ layout: post
 title:  "Search"
 categories: concepts
 permalink: /concepts/what-is-search/
-nav_order: 8
+nav_order: 6
 has_children: true
 has_toc: false
 image:
