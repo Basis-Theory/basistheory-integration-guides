@@ -387,9 +387,6 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "expiration_month": "{{ data.expiration_month }}",
     "expiration_year": "{{ data.expiration_year }}"
   },
-  "expires_at": {
-    "cvc": "2022-06-30T15:00:00+00:00"
-  },
   "search_indexes": [
     "{{ data.number }}",
     "{{ data.number | last4 }}"
