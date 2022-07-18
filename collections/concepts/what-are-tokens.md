@@ -208,28 +208,9 @@ In the above example, if an application has a `token:pii:read:high` permission, 
 
 ## Time to Live (TTL)
 
-The time to live token capability provides the ability to expire some or all of your token data. This is useful in scenarios such as an expiring credit card, purging the CVV on a card to meet PCI requirements, to share temporary credentials for system or user access, or meeting data retention policies.
+The time to live token capability provides the ability to expire your token data. This is useful in scenarios such as an expiring credit card, to share temporary credentials for system or user access, or meeting data retention policies.
 
-This example shows how to expire the `cvc` on a token in order to meet PCI compliance requirements:
-
-```json
-{
-  "type": "token",
-  "data": {
-    "number": "4242424242424242",
-    "expiration_month": 12,
-    "expiration_year": 2025,
-    "cvc": "123"
-  },
-  "expires_at": {
-    "cvc": "2022-06-30T15:00:00+00:00"
-  }
-}
-```
-
-When the `expires_at` date is met for the `cvc` property, it will automatically be purged from the token and no longer available.
-
-The same scenario as above may exist when you instead want to expire the entire token:
+This example shows how to expire a token with card data:
 
 ```json
 {
@@ -243,7 +224,7 @@ The same scenario as above may exist when you instead want to expire the entire 
 }
 ```
 
-In this example, once the `expires_at` date has passed, the entire token will be purged and no longer available.
+In this example, once the expires_at date has passed, the entire token will be purged and no longer available.
 
 ## Auditing
 
@@ -361,7 +342,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
 ```json
 {
   "id": "{{ data.number | alias_preserve_format }}",
-  "type": "token",
+  "type": "card",
   "data": {
     "number": "4242424242424242",
     "expiration_month": 12,
@@ -373,9 +354,6 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "number": "{{ data.number | reveal_last: 4 }}",
     "expiration_month": "{{ data.expiration_month }}",
     "expiration_year": "{{ data.expiration_year }}"
-  },
-  "expires_at": {
-    "cvc": "2022-06-30T15:00:00+00:00"
   },
   "search_indexes": [
     "{{ data.number }}",
@@ -395,8 +373,8 @@ You can easily manage the relationship between a `parent` and `child` token via 
 {% raw %}
 ```json
 {
-  "id": "3829 0183 0932 4938",
-  "type": "token",
+  "id": "3829018309324938",
+  "type": "card",
   "data": {
     "number": "XXXX XXXX XXXX 4242",
     "expiration_month": 12,
@@ -428,6 +406,12 @@ You can easily manage the relationship between a `parent` and `child` token via 
 }
 ```
 {% endraw %}
+
+<span class="base-alert info">
+  <span>
+    In order to maintain PCI compliance while capturing credit cards, you will need to use Basis Theory's `card` token type or store the CVC in a separate `token` while setting `expires_at` TTL property.
+  </span>
+</span>
 
 ## Tokenize Bank Data
 
