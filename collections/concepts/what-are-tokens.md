@@ -280,7 +280,7 @@ In this example, we have a customer account we want to search over parts of the 
 ```
 {% endraw %}
 
-In the above example, we can now perform a search with `john`, `doe`, `111-22-3333`, `3333`, `johndoe@[basistheory.com](http://basistheory.com)` and `basistheory.com` and get back the token. To see all additional capabilities of search, see our [API documentation](https://docs.basistheory.com/#tokens-search-tokens).
+In the above example, we can now perform a search with `john`, `doe`, `111-22-3333`, `3333`, `johndoe@[basistheory.com](http://basistheory.com)` or `basistheory.com` and get back the token. To see all additional capabilities of search, see our [API documentation](https://docs.basistheory.com/#tokens-search-tokens).
 
 ## Deduplication
 
