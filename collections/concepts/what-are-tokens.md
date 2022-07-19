@@ -228,7 +228,7 @@ In this example, once the expires_at date has passed, the entire token will be p
 
 ## Auditing
 
-All activities around tokens are auditing, including `create`, `read`, `update`, `delete` and whenever a token is proxied or used in a Reactor. These audit logs are available [via the API](https://docs.basistheory.com/#logs) or the web portal. Also, the creator and last modifier of a token is stored on all tokens. This can be used to lookup which application was used to create or update a token.
+All activities around tokens are audited, including `create`, `read`, `update`, `delete` and whenever a token is proxied or used in a Reactor. These audit logs are available [via the API](https://docs.basistheory.com/#logs) or the web portal. Also, the creator and last modifier of a token is stored on all tokens. This can be used to lookup which application was used to create or update a token.
 
 **Request**
 
