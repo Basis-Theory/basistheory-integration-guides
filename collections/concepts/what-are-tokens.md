@@ -43,7 +43,7 @@ Our token specification enables you to transform your data to optimize for stora
 
 ## Aliasing
 
-In some scenarios, you need your token to be in a specific format. This may be because you have to pass existing validation requirements, have an existing data format or database schema that is hard to change. Aliasing provides a simple way to customize the format of your token identifier to meet your needs.
+In some scenarios, you need your token identifier to be in a specific format. This may be because you have to pass existing validation requirements, have an existing data format or database schema that is hard to change. Aliasing provides a simple way to customize the format of your token identifier to meet your needs.
 
 Let’s assume you have a social security number you are storing and you want to alias the token identifier to match the SSN format:
 
