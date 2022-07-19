@@ -136,7 +136,7 @@ Masking is a way to securely and compliantly reveal parts of sensitive data. Thi
 
 Masks are computed based on the current value of the token data. [Updating the token](https://docs.basistheory.com/#tokens-update-token) will change what masked data is returned.
 
-A scenario where masking is useful is in enabling customer service representatives to verify the account information for a customer using the last four of a social security number without having access to the underlying data without having access to the full SSN. In this example, we will mask customer data so representatives can securely and compliantly view only part of the customer record:
+A scenario where masking is useful is in enabling customer service representatives to verify the account information for a customer using the last four of a social security number without having access to the full SSN. In this example, we will mask customer data so representatives can securely and compliantly view only part of the customer record:
 
 **Request**
 
