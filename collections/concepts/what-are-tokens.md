@@ -35,7 +35,7 @@ There are [token types](https://docs.basistheory.com/#token-types) available, su
 
 You can manage the [full lifecycle](https://docs.basistheory.com/#tokens) of all of your tokens. This includes creating, updating, reading, detokenizing, searching, and deleting tokens. Basis Theory offers the ability to also create tokens in bulk via the [tokenize API endpoint](https://docs.basistheory.com/#tokenize). This endpoint provides a way to create multiple tokens while preserving the format of your request.
 
-You can also make use of the token time to live (TTL) capability to expire part or all of your tokenized data.
+You can also make use of the token time to live (TTL) capability to expire your tokenized data.
 
 # What are the capabilities of a token?
 
