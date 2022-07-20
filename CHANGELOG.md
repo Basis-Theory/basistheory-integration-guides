@@ -1,3 +1,10 @@
+# [1.31.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.2...v1.31.0) (2022-07-20)
+
+
+### Features
+
+* update token concept page ([#139](https://github.com/Basis-Theory/basistheory-integration-guides/issues/139)) ([c360923](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c360923bd5249f31f6820b621fcbe061fd927d49))
+
 ## [1.30.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.1...v1.30.2) (2022-07-01)
 
 
