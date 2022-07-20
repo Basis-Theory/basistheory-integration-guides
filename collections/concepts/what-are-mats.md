@@ -3,7 +3,7 @@ layout: post
 title:  "Monthly Active Tokens"
 categories: concepts
 permalink: /concepts/what-are-mats/
-nav_order: 4
+nav_order: 8
 has_children: true
 has_toc: false
 image:
