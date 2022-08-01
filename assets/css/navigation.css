@@ -1,0 +1,12 @@
+.nav-principal-href {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #E5E6EC;
+}
+
+.nav-principal-href::before {
+    content: url(../images/icons/chevron-left.svg);
+}
