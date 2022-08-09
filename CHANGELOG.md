@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.31.0...v1.31.1) (2022-08-09)
+
+
+### Bug Fixes
+
+* removing community library ([#141](https://github.com/Basis-Theory/basistheory-integration-guides/issues/141)) ([20554b7](https://github.com/Basis-Theory/basistheory-integration-guides/commit/20554b70d67ea77b6d1b2af3ca75fa2927faf83d))
+
 # [1.31.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.30.2...v1.31.0) (2022-07-20)
 
 
