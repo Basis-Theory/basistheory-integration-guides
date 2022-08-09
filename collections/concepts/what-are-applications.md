@@ -28,12 +28,11 @@ The name of your Application gives you clarity on what context it is being used 
 
 ### Application Types
 
-- Server-to-Server
+- Private
     - Used with a traditional web application that runs their application logic primarily on a server or in a serverless environment (e.g. NodeJs, .NET, Java, or Ruby). This application type has the most permissions available as the API Key will be private and secured within a server environment.
-- Elements
-    - Used with browser-based applications (e.g. Vanilla Javascript, React, Angular, etc) using the Basis Theory Elements to collect and secure data. Applications created with this type have limited permissions to enable using the API Key in publicly available code.
-- Client-side
-    - Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is collecting the data itself and protecting with Basis Theory via an API call. Applications created with this type have limited permissions to enable using the API Key in publicly available code.
+
+- Public
+    - Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is collecting the data itself and protecting with Basis Theory via an API call or using Basis Theory Elements. Applications created with this type have limited permissions to enable using the API Key in publicly available code.
 
 - Management
     - Used with scripts or the Basis Theory Terraform ([request access here](https://basistheory.com/contact)) modules to configure your [Tenant’s](https://developers.basistheory.com/concepts/tenants/) settings (Applications, Reactors, etc) without logging into our UI Portal.
@@ -78,10 +77,3 @@ Interested in using IaC (Infrastructure as Code) tooling such as Terraform to co
 <img src="/assets/images/concepts/applications_iac.jpeg">
 
 ---
-
-## FAQs
-
-
-### How do I pick between the Elements and Client-side Application Types?
-
-If your system is using our Elements to collect data via Inputs on your website, you will need to use our Elements application type. When you’re collecting the data yourself on a client-side application (Mobile App, Desktop App, or Browser-based app) you’ll want to use a Client-side application type.

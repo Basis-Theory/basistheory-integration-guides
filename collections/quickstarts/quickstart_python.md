@@ -86,8 +86,8 @@ This name allows you to identify this application in the future — for this tut
 
 <img src="/assets/images/getting_started/application_name_python.png" />
 
-### 3.2 Select Server-to-Server Application Type
-The Server-to-Server Application Type enables server-side applications to integrate with the Basis Theory platform directly.
+### 3.2 Select Private Application Type
+The Private Application Type enables server-side applications to integrate with the Basis Theory platform directly.
 
 <img src="/assets/images/getting_started/application_type.png" />
 
