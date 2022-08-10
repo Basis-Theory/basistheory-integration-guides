@@ -105,7 +105,7 @@ curl "https://api.basistheory.com/tokens/<TOKEN_ID>" \
 
 ## Permissions
 
-Each [Application Type](https://docs.basistheory.com/#applications-application-types) has its own set of permissions to choose from (view the [full list here](https://docs.basistheory.com/#permissions-permission-types)).  `Client-side` and `Elements` Applications are only able to `create` Tokens, ensuring that you are able to safely use the Application Key in your client-side code without worrying about a malicious actor using that key to decrypt your data. `Management` Applications can manage infrastructure items only, such as Tenants and Applications, and they cannot interact with Tokens; all other Application Types are restricted to data operations with Tokens. Token permissions come in the format `token:<classification>:<operation>:<scope?>`, for instance `token:bank:read:low` or `token:pci:use:proxy`.
+Each [Application Type](https://docs.basistheory.com/#applications-application-types) has its own set of permissions to choose from (view the [full list here](https://docs.basistheory.com/#permissions-permission-types)).  `Public` Applications are only able to `create` and `update` Tokens, ensuring that you are able to safely use the Application Key in your client-side code without worrying about a malicious actor using that key to decrypt your data. `Management` Applications can manage infrastructure items only, such as Tenants and Applications, and they cannot interact with Tokens; all other Application Types are restricted to data operations with Tokens. Token permissions come in the format `token:<classification>:<operation>:<scope?>`, for instance `token:bank:read:low` or `token:pci:use:proxy`.
 
 Token Permissions control three things:
 

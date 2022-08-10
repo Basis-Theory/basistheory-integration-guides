@@ -73,7 +73,7 @@ Next, we'll walk through a couple ways in which you could invoke the Parrot reac
 <span class="base-alert warning">
     <span>
     To run a Reactor, an application needs `token:<classification>:use:reactor` permission for any tokens that are detokenized. 
-    For these examples you will need an application with `token:pci:use:reactor` permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=server_to_server&name=Card+Reactor" target="_blank">Click here to create one.</a>
+    For these examples you will need an application with `token:pci:use:reactor` permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Areactor&type=private&name=Card+Reactor" target="_blank">Click here to create one.</a>
     </span>
 </span>
 

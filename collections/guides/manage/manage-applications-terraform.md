@@ -95,7 +95,7 @@ file with the configuration for our Application. Feel free to modify the followi
 ```terraform
 resource "basistheory_application" "my_application" {
   name = "My Application"
-  type = "server_to_server"
+  type = "private"
   permissions = [
     "token:general:create",
     "token:general:read:low",

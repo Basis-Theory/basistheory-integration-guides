@@ -119,13 +119,13 @@ Create a new Application with the following settings:
 
 - Name
     - Create and Use Reactors Application
-- Types
-    - Server to Server
+- Type
+    - Private
 - Permissions
     - `token:pci:create`
     - `token:pci:use:reactor`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?name=Create+and+Use+Reactors+Application&permissions=token%3Apci%3Ause%3Areactor&permissions=token%3Apci%3Acreate&type=server_to_server) or you can use the following API call with your Management API Key from Step 1:
+[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?name=Create+and+Use+Reactors+Application&permissions=token%3Apci%3Ause%3Areactor&permissions=token%3Apci%3Acreate&type=private) or you can use the following API call with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \
@@ -134,7 +134,7 @@ curl "https://api.basistheory.com/applications" \
   -X "POST" \
   -d '{
     "name": "Create and Use Reactors Application",
-    "type": "server_to_server",
+    "type": "private",
     "permissions": [
       "token:pci:create",
       "token:pci:use:reactor"
@@ -215,12 +215,12 @@ Create a new Application with the following settings:
 
 - Name
     - Partner Application
-- Types
-    - Server to Server
+- Type
+    - Private
 - Permissions
     - `token:pci:use:proxy`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Aproxy&type=server_to_server&name=Partner+Application) or you can use the following API call with your Management API Key from Step 1:
+[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Aproxy&type=private&name=Partner+Application) or you can use the following API call with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \
@@ -229,7 +229,7 @@ curl "https://api.basistheory.com/applications" \
   -X "POST" \
   -d '{
     "name": "Partner Application",
-    "type": "server_to_server",
+    "type": "private",
     "permissions": [
       "token:pci:use:proxy"
     ]

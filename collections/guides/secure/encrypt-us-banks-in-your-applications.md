@@ -100,7 +100,7 @@ app.listen(port, async () => {
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Server to Server Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?type=server_to_server&permissions=token%3Abank%3Acreate&permissions=token%3Abank%3Aread%3Ahigh&name=Bank+Retriever" target="_blank">Click here to create one.</a>
+    To start, you'll need a new Private Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Abank%3Acreate&permissions=token%3Abank%3Aread%3Ahigh&name=Bank+Retriever" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
