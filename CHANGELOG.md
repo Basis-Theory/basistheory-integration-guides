@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.31.1...v1.32.0) (2022-08-10)
+
+
+### Features
+
+* update application types ([#142](https://github.com/Basis-Theory/basistheory-integration-guides/issues/142)) ([ba1d010](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ba1d01002b8430c57bfcc723ed61a8c90dc97bb7))
+
 ## [1.31.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.31.0...v1.31.1) (2022-08-09)
 
 
