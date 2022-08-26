@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.32.0...v1.33.0) (2022-08-26)
+
+
+### Features
+
+* change react examples to use refs instead of getElement ([#144](https://github.com/Basis-Theory/basistheory-integration-guides/issues/144)) ([3faa695](https://github.com/Basis-Theory/basistheory-integration-guides/commit/3faa695635294d5b6a31eb369f7d5d86adea474b))
+
 # [1.32.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.31.1...v1.32.0) (2022-08-10)
 
 
