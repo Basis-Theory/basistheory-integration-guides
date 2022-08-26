@@ -63,19 +63,23 @@ export default App;
 
 Create a `CheckoutForm` component and add it inside the `BasisTheoryProvider` in your `App` content.
 
+Create a `ref` that will be used to store the underlying elements instance.
+
 Declare a `CardElement` inside it and call the tokenization method `tokens.create` passing the token's type (card) and the underlying card element instance:
 
 ```jsx
+import { useRef } from 'react';
 import { CardElement, useBasisTheory } from '@basis-theory/basis-theory-react';
 
 export const CheckoutForm = () => {
   const { bt } = useBasisTheory();
+  const cardRef = useRef(null);
 
   const submit = async () => {
     try {
       const token = await bt.tokens.create({
         type: 'card',
-        data: bt?.getElement('myCard'),
+        data: cardRef.current,
       });
     } catch (error) {
       console.error(error);
@@ -84,7 +88,7 @@ export const CheckoutForm = () => {
 
   return (
     <>
-        <CardElement id="myCard" />
+        <CardElement id="myCard" ref={cardRef}/>
         <button
           id="submit_button"
           type="button"

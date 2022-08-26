@@ -56,22 +56,27 @@ export default App;
 
 Create a `RegistrationForm` component and add it somewhere in your `App` content.
 
-Declare two `TextElement` tags inside it, one for the "Full Name", and the other for the "Social Security Number"; then call the `tokenize` method passing the underlying elements instances:
+Create two `refs` that will be used to store the underlying elements instances.
+
+Declare two `TextElement` tags inside it, one for the "Full Name", and the other for the "Social Security Number"; then call the `tokenize` method passing the current elements instance from the `refs`:
 
 
 ```jsx
+import { useRef } from 'react';
 import { TextElement, useBasisTheory } from '@basis-theory/basis-theory-react';
 
 export const RegistrationForm = () => {
   const { bt } = useBasisTheory();
+  const fullNameRef = useRef(null);
+  const ssnRef = useRef(null);
 
   const submit = async () => {
       try {
           const response = await bt.tokenize({
-              fullName: bt.getElement('fullName'),
+              fullName: fullNameRef.current,
               ssn: {
                   type: 'social_security_number',
-                  data: bt.getElement('ssn'),
+                  data: ssnRef.current,
               },
           });
       } catch (error) {
@@ -80,8 +85,8 @@ export const RegistrationForm = () => {
   };
   return (
     <>
-        <TextElement id="fullName" />
-        <TextElement id="ssn" />
+        <TextElement id="fullName" ref={fullNameRef} />
+        <TextElement id="ssn" ref={ssnRef} />
         <button
           id="submit_button"
           type="button"
