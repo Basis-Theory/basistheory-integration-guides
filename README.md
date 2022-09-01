@@ -9,5 +9,5 @@ Run `make start` and navigate to http://localhost:4001/ in your browser
 ## Reference Links
 
 - [Jekyll Docs](https://jekyllrb.com/docs/)
-- [Jekyll Markdown Cheatsheat](https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/)
+- [Jekyll Markdown Cheatsheet](https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/)
 - [Just the Docs (Jekyll Theme)](https://pmarsceill.github.io/just-the-docs/)

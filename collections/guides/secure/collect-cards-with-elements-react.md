@@ -17,11 +17,11 @@ image:
 
 Once you've completed this guide, you will have learned how your React application can use our Elements to collect and store credit card information on the Basis Theory platform. This simple task enables you to retain control of your card data and enables the use of credit card data with any third party as if you had the data stored in your own database.
 
-If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="http://codesandbox.io/">codesandbox.io</a> and getting started from there! Want to jump right into our sample app? <a href="https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react">Find it here!</a>
+If you'd like to follow along with this guide from scratch, we suggest creating a new React sandbox using <a href="https://stackblitz.com/">Stackblitz</a> and getting started from there! Want to jump right into our sample app? <a href="https://stackblitz.com/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react">Find it here!</a>
 
 <span class="base-alert info">
   <span>
-    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx">here</a>.
+    This guide is for collecting cards using the single `CardElement`. In case you prefer to have the card number, expiration date and cvc each in separate elements, check the docs on how to use them <a href="https://docs.basistheory.com/elements/#introduction">here</a> or check out our sample app <a href="https://stackblitz.com/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-individual-elements-react?module=/src/App.tsx,/src/CheckoutForm.tsx">here</a>.
   </span>
 </span>
 
@@ -118,8 +118,6 @@ The example below uses a few of the [Element's user experience](https://docs.bas
 - Display the full `token` response;
 - Log any tokenization errors to the `console`;
 
-See it running and the code that drives it below. Want to experience the sandbox yourself? [Check it out here.](https://codesandbox.io/s/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react)
-
 <div class="iframe-container">
-  <iframe src="https://codesandbox.io/embed/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react?fontsize=14&hidenavigation=1&theme=dark&module=/src/CheckoutForm.tsx,/src/App.tsx" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
+  <iframe src="https://stackblitz.com/github/Basis-Theory/basis-theory-js-examples/tree/master/collect-cards-with-elements-react?embed=1&file=src/App.tsx,src/CheckoutForm.tsx&theme=dark" class="iframe-code" allowfullscreen="" frameborder="0"></iframe>
 </div>
