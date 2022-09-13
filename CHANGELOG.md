@@ -1,3 +1,10 @@
+## [1.33.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.1...v1.33.2) (2022-09-13)
+
+
+### Bug Fixes
+
+* format js code snippets ([#149](https://github.com/Basis-Theory/basistheory-integration-guides/issues/149)) ([c34d9cf](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c34d9cf04f8e977e8202ec93965551c6396340de))
+
 ## [1.33.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.0...v1.33.1) (2022-09-13)
 
 
