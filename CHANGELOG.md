@@ -1,3 +1,10 @@
+## [1.33.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.0...v1.33.1) (2022-09-13)
+
+
+### Bug Fixes
+
+* default fingerprint expression format ([#148](https://github.com/Basis-Theory/basistheory-integration-guides/issues/148)) ([56bf48e](https://github.com/Basis-Theory/basistheory-integration-guides/commit/56bf48e2e832188da40a10118238acaded8753a2))
+
 # [1.33.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.32.0...v1.33.0) (2022-08-26)
 
 
