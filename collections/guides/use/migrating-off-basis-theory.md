@@ -50,35 +50,38 @@ Using our Proxy is the simplest path to migrating your data to another API-based
 
 The following example provides a pattern for proxying your plaintext data to a new provider and storing your new provider's identifiers in your database. _The array of tokens is an example of data you’ve stored in your database - replace this by querying your database._
 
+{% raw %}
 ```js
 import axios from 'axios';
 
 async function migration() {
 
-    const rowsFromDatabase = [
-        {name: "test", ssn: "fc88408b-d031-49c6-abd9-9e53589a6091"},
-        {name: "test", ssn: "c35f271e-0338-45fb-a036-c36a0e290ab7"},
-        // .. more rows of data 
-    ];
+  const rowsFromDatabase = [
+    {name: 'test', ssn: 'fc88408b-d031-49c6-abd9-9e53589a6091'},
+    {name: 'test', ssn: 'c35f271e-0338-45fb-a036-c36a0e290ab7'},
+    // .. more rows of data 
+  ];
 
-    rowsFromDatabase.forEach(async (row, i) => {
-        const token = await axios.post('<https://api.basistheory.com/proxy>',
-            {
-                "value": {{${row.ssn}}},
-        "format": "UUID"
-    },
-        {headers: {
-            'BT-PROXY-URL': '<https://api.new.provider/secure>',
-                'BT-API-KEY': 'key_here',
+  rowsFromDatabase.forEach(async (row, i) => {
+    const token = await axios.post('https://api.basistheory.com/proxy',
+      {
+        value: `{{${row.ssn}}}`,
+        format: 'UUID'
+      },
+      {
+        headers: {
+          'BT-PROXY-URL': '<https://api.new.provider/secure>',
+          'BT-API-KEY': 'key_here',
         }
-        };
+      });
 
-        rowsFromDatabase[i].ssn = token.aliases[0].alias;
-    });
+    rowsFromDatabase[i].ssn = token.aliases[0].alias;
+  });
 
-    //save rowsFromDatabase to save the raw values back into your database
+  //save rowsFromDatabase to save the raw values back into your database
 }
 ```
+{% endraw %}
 
 ### 2. Export all of your data
 
@@ -92,26 +95,28 @@ Depending on your situation, you may want to export your data directly into your
 
 The following example shows how you can use the [Retrieve a Token](https://docs.basistheory.com/#tokens-get-a-token) endpoint to pull back tokens you have stored within your database. _The array of tokens is an example of data you’ve stored in your database - replace this by querying your database._
 
+{% raw %}
 ```js
-import { BasisTheory } from '@basis-theory/basis-theory-js';
+import {BasisTheory} from '@basis-theory/basis-theory-js';
 
 async function migration() {
   const bt = await new BasisTheory().init('key_here');
 
-	const rowsFromDatabase = [
-		{name: "test", ssn: "fc88408b-d031-49c6-abd9-9e53589a6091"},
-		{name: "test", ssn: "c35f271e-0338-45fb-a036-c36a0e290ab7"},
-		// .. more rows of data 
-	];
+  const rowsFromDatabase = [
+    {name: 'test', ssn: 'fc88408b-d031-49c6-abd9-9e53589a6091'},
+    {name: 'test', ssn: 'c35f271e-0338-45fb-a036-c36a0e290ab7'},
+    // .. more rows of data 
+  ];
 
-	rowsFromDatabase.forEach(async (row, i) => {
-		const token = await bt.tokens.retrieve(row.ssn);
-		rowsFromDatabase[i].ssn = token.data;
-	});
+  rowsFromDatabase.forEach(async (row, i) => {
+    const token = await bt.tokens.retrieve(row.ssn);
+    rowsFromDatabase[i].ssn = token.data;
+  });
 
-	//save rowsFromDatabase to save the raw values back into your database
+  //save rowsFromDatabase to save the raw values back into your database
 }
 ```
+{% endraw %}
 
 ### 3. Reactors to move your data to a new provider
 
