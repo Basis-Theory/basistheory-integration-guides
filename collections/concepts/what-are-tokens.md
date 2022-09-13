@@ -95,7 +95,7 @@ Another example may be that you want to format your email and retain the domain 
 
 Fingerprinting provides a way to correlate multiple tokens together that contain the same data without needing access to the underlying data. Creating multiple tokens with the same token type, data, and [fingerprint expression](https://docs.basistheory.com/expressions/#fingerprints) will result in the same fingerprint. This can be useful for correlating purchases with the same credit card for multiple members of the same household or helping with master data management of multiple user accounts.
 
-By default, all tokens are fingerprinted with the contents of the `data` property using the default fingerprint expression of `{{ data | stringify }}`, however you can customize this fingerprint expression to meet your needs of what should uniquely identify a token.
+By default, all tokens are fingerprinted with the contents of the `data` property using the default fingerprint expression of `{% raw %}{{ data | stringify }}{% endraw %}`, however you can customize this fingerprint expression to meet your needs of what should uniquely identify a token.
 
 In the following example, we will create a token with user data, but we want to fingerprint on the email address:
 
