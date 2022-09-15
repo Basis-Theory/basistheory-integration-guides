@@ -29,7 +29,7 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Acreate&type=public&name=Card+Collector" target="_blank">Click here to create one.</a>
+    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=db9148c1-a55f-4164-b830-a20ab6d720ae" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -106,7 +106,7 @@ Success! 🎉 Your React application is now collecting and storing credit cards 
 ## Next steps
 
 The Token you've created from your frontend application can be used in a variety of ways from within your system, check out a few of those below:
-- You can fetch the card data later in your server, using a Private Application Key (<a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Apci%3Aread%3Alow&name=Card+Retriever" target="_blank">click here to create one</a>) to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
+- You can fetch the card data later in your server, using a Private Application Key (<a href="https://portal.basistheory.com/applications/create?application_template_id=e6d4c554-6703-4bbb-b351-42cd2ee5cb5a" target="_blank">click here to create one</a>) to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
 - Call one of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that card data. [Here is how to charge a card with Node.js](/guides/collect-cards-with-elements/#setup-and-use-a-token-reactor);
 - Make a third party API request with the raw data through our [Proxy](https://docs.basistheory.com/api-reference/#proxy). Feel free to [contact us](mailto:support@basistheory.com?subject=CardElement%20and%20Proxy%20usage) for more information on how to do it.
 

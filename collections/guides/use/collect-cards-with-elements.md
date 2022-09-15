@@ -37,7 +37,7 @@ Using React? Check out the [Collect Credit Cards with React Guide](/guides/colle
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Acreate&type=public&name=Card+Collector" target="_blank">Click here to create one.</a>
+    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=db9148c1-a55f-4164-b830-a20ab6d720ae" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -95,7 +95,7 @@ To set up a Reactor, head over to our Portal and set up a new Stripe Reactor. If
 ## Using your new Reactor 
 <span class="base-alert warning">
   <span>
-    To use your Stripe Reactor, you'll need a <code>private</code> application with the following permissions <code>token:pci:read:low</code>, <code>token:pci:create</code> and <code>token:pci:use:reactor</code>. <a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Apci%3Aread%3Alow&permissions=token%3Apci%3Acreate&permissions=token%3Apci%3Ause%3Areactor&name=Card+Reactor" target="_blank">Click here to create one.</a>
+    To use your Stripe Reactor, you'll need a <code>private</code> application with the following permissions <code>token:pci:read:low</code>, <code>token:pci:create</code> and <code>token:pci:use:reactor</code>. <a href="https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31" target="_blank">Click here to create one.</a>
   </span>
 </span>
 

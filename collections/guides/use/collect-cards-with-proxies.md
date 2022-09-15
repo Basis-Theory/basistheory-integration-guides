@@ -52,7 +52,7 @@ This new management Application will be used to create new Reactor Formulas, [Re
     - `reactor:create`
     - `proxy:create`
 
-[You can use this link to pre-fill the Create Application form in our Portal.](https://portal.basistheory.com/applications/create?name=Setup+Proxy&permissions=application%3Acreate&permissions=reactor%3Acreate&permissions=proxy%3Acreate&type=management)
+[You can use this link to pre-fill the Create Application form in our Portal.](https://portal.basistheory.com/applications/create?application_template_id=931b306f-6be7-405d-9a8d-1442a99dd2d7)
 
 *Make sure you remember the `key` of this new Application, you’ll use this in the following Steps.*
 
@@ -125,7 +125,7 @@ Create a new Application with the following settings:
     - `token:pci:create`
     - `token:pci:use:reactor`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?name=Create+and+Use+Reactors+Application&permissions=token%3Apci%3Ause%3Areactor&permissions=token%3Apci%3Acreate&type=private) or you can use the following API call with your Management API Key from Step 1:
+[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31) or you can use the following API call with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \
@@ -220,7 +220,7 @@ Create a new Application with the following settings:
 - Permissions
     - `token:pci:use:proxy`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Aproxy&type=private&name=Partner+Application) or you can use the following API call with your Management API Key from Step 1:
+[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/application_template_id=31efed55-035c-4b49-b1a1-609a728d91ce) or you can use the following API call with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \

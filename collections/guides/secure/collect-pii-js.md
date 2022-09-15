@@ -28,7 +28,7 @@ Using React? Check out the [Collect Customer Data (PII) with React Guide](/guide
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apii%3Acreate&type=public&name=PII+Collector" target="_blank">Click here to create one.</a>
+    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=da06cf91-caf4-44f4-886a-ab3d71d9ca5f" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -86,7 +86,7 @@ In the previous example, we are overriding the token's privacy settings to speci
 
 <span class="base-alert warning">
   <span>
-    You'll need a <code>private</code> application created with the <code>token:pii:read:high</code> permission for this step. <a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Apii%3Aread%3Ahigh&name=PII+Retriever" target="_blank">Click here to create one.</a>
+    You'll need a <code>private</code> application created with the <code>token:pii:read:high</code> permission for this step. <a href="https://portal.basistheory.com/applications/create?application_template_id=fa77330e-c50d-4f56-a6cb-6342711ae37d" target="_blank">Click here to create one.</a>
   </span>
 </span>
 

@@ -22,7 +22,7 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apii%3Acreate&type=public&name=PII+Collector" target="_blank">Click here to create one.</a>
+    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=da06cf91-caf4-44f4-886a-ab3d71d9ca5f" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -106,7 +106,7 @@ Success! 🎉 Your application is now collecting and storing PII in Basis Theory
 You can further customize the [`TextElement` props](https://docs.basistheory.com/elements/#textelement) to best suit your needs.
 
 The Tokens you've created from your frontend application can be used in a variety of ways from within your system, check out a few of those below:
-- Fetched later in your servers, using a Private Application Key (<a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Apii%3Aread%3Ahigh&name=PII+Retriever" target="_blank">click here to create one</a>) to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
+- Fetched later in your servers, using a Private Application Key (<a href="https://portal.basistheory.com/applications/create?application_template_id=fa77330e-c50d-4f56-a6cb-6342711ae37d" target="_blank">click here to create one</a>) to call [Get a Token API](https://docs.basistheory.com/api-reference/#tokens-get-a-token);
 - Used to call on of our [Reactors](https://docs.basistheory.com/api-reference/#reactors) to process that data. Some use cases are:
     - Integrating with third party KYC platforms, such as [Alloy](https://www.alloy.com);
     - Pull credit reports for your customers without touching their data;
