@@ -47,9 +47,33 @@ Each Application Type has different levels of permission available for the appli
 
 Your Application’s API Key is used to authenticate your systems to the Basis Theory platform. The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
 
+## Application Templates
 
+To get you quickly started, we provide a set of application templates that cover the most common use cases. Once you are
+creating an application, a modal will appear to let you select an application template depending on your needs. If you 
+have a particular use case or want to create an application step by step, you can click the `Create Your Own` option. It
+is important to note that these templates will only pre-fill the fields in the create application page, and once created,
+your application has no relationship with the template in any way.
 
----
+<img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
+
+In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII` data.
+However, we also have the `Starters` section which allows you to create your own application step by step if you have 
+a custom use case or want to quickly get started with a `Full Access` application. The last section is `Management`, which 
+provides a `Full Management Access` template to quickly get all the managing permissions available.
+
+The `Payments`, `Banking` and `PII` sections all provide four templates each with specific 
+[Access Rules](https://developers.basistheory.com/concepts/what-are-access-rules/) for its objective. These four templates
+are `Collect (PCI/Bank/PII) Data`, which enables the application to only create or update tokens in the given
+[container](https://developers.basistheory.com/concepts/what-are-containers/); `Display (PCI/Bank/PII) Data`, which allows
+to read the sensitive raw data stored in tokens; `Use (PCI/Bank/PII) Data`, for applications that need to use tokens 
+in a Reactor or Proxy and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
+within that container.
+
+Remember these templates are more of recommendations that enable you to quickly get started, but you can update the fields
+that are pre-filled after selecting them as you like, and if none work for you, you can still create an application
+that conforms to your specific needs. 
+
 
 ## Common Use Cases
 
