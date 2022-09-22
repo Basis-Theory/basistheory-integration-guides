@@ -23,7 +23,7 @@ Container names must start and end with a `/`, and the root container is denoted
 alphanumeric characters, `-`, or `_`, and can contain an arbitrary number of nested sub-containers.
 
 You have complete control to customize your container hierarchy to meet your unique data governance requirements. By default,
-tokens will be assigned to containers based off of their data classification and impact levels, using the format 
+tokens will be assigned to containers based off their data classification and impact levels, using the format 
 `/<classification>/<impact_level>/`, e.g. `/pci/high/` or `/general/low/`.
 
 ---
