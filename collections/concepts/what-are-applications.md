@@ -57,7 +57,7 @@ your application has no relationship with the template in any way.
 
 <img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
 
-In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII` data.
+In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII Data`.
 However, we also have the `Starters` section which allows you to create your own application step by step if you have 
 a custom use case or want to quickly get started with a `Full Access` application. The last section is `Management`, which 
 provides a `Full Management Access` template to quickly get all the managing permissions available.
