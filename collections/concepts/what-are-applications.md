@@ -60,7 +60,7 @@ your application has no relationship with the template in any way.
 In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII Data`.
 However, we also have the `Starters` section which allows you to create your own application step by step if you have 
 a custom use case or want to get started quickly with a `Full Access` application. The last section is `Management`, which 
-provides a `Full Management Access` template to quickly get all the managing permissions available.
+provides a `Full Management Access` template to get all the managing permissions available.
 
 The `Payments`, `Banking` and `PII` sections all provide four templates each with specific 
 [Access Rules](https://developers.basistheory.com/concepts/what-are-access-rules/) for its objective. These four templates
