@@ -15,7 +15,7 @@ height: 630
 # What are Token Containers?
 
 Token Containers are hierarchical grouping constructs that allow you to logically segment tokens within your tenant. With
-this grouping in place, you are then able to control access to your tokens based on [Access Rules](https://developers.basistheory.com/concepts/access-controls/) 
+this grouping in place, you are able to control access to your tokens based on [Access Rules](https://developers.basistheory.com/concepts/access-controls/) 
 tied to applications that specify which containers an application has access to. 
 
 A container is represented by a hierarchical path, which is conceptually similar to directories in a UNIX filesystem.
