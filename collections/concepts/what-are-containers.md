@@ -15,7 +15,7 @@ height: 630
 # What are Token Containers?
 
 Token Containers are hierarchical grouping constructs that allow you to logically segment tokens within your tenant. With
-this grouping in place, you are then able to control access to your tokens based on [Access Rules](https://developers.basistheory.com/concepts/access-controls/) 
+this grouping in place, you are able to control access to your tokens based on [Access Rules](https://developers.basistheory.com/concepts/access-controls/) 
 tied to applications that specify which containers an Application has access to. 
 
 A container is represented by a hierarchical path, which is conceptually similar to directories in a UNIX filesystem.
@@ -23,7 +23,7 @@ Container names must start and end with a `/`, and the root container is denoted
 alphanumeric characters, `-`, or `_`, and can contain an arbitrary number of nested sub-containers.
 
 You have complete control to customize your container hierarchy to meet your unique data governance requirements. By default,
-tokens will be assigned to containers based off of their data classification and impact levels, using the format 
+tokens will be assigned to containers based off their data classification and impact levels, using the format 
 `/<classification>/<impact_level>/`, e.g. `/pci/high/` or `/general/low/`.
 
 ---
