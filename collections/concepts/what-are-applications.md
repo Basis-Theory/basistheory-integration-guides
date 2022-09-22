@@ -67,7 +67,7 @@ The `Payments`, `Banking` and `PII Data` sections all provide four templates eac
 are `Collect (PCI/Bank/PII) Data`, which enables the application to only create or update tokens in the given
 [container](https://developers.basistheory.com/concepts/what-are-containers/); `Display (PCI/Bank/PII) Data`, which allows
 applications to read the sensitive raw data stored in tokens; `Use (PCI/Bank/PII) Data`, for applications that need to use tokens 
-in a Reactor or Proxy and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
+in a Reactor or Proxy; and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
 within that container.
 
 Remember these templates are more of recommendations that enable you to quickly get started, but you can update the fields
