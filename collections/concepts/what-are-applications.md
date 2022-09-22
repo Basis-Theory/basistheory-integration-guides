@@ -62,7 +62,7 @@ However, we also have the `Starters` section which allows you to create your own
 a custom use case or want to get started quickly with a `Full Access` application. The last section is `Management`, which 
 provides a `Full Management Access` template to get all the managing permissions available.
 
-The `Payments`, `Banking` and `PII` sections all provide four templates each with specific 
+The `Payments`, `Banking` and `PII Data` sections all provide four templates each with specific 
 [Access Rules](https://developers.basistheory.com/concepts/what-are-access-rules/) for its objective. These four templates
 are `Collect (PCI/Bank/PII) Data`, which enables the application to only create or update tokens in the given
 [container](https://developers.basistheory.com/concepts/what-are-containers/); `Display (PCI/Bank/PII) Data`, which allows
