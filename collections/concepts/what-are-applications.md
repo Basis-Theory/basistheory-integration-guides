@@ -49,29 +49,29 @@ Your Applicationâ€™s API Key is used to authenticate your systems to the Basis T
 
 ## Application Templates
 
-To get you started quickly, we provide a set of application templates that cover the most common use cases. Once you click on
-"Create Application", a modal will appear to let you select an application template depending on your needs. If you 
-have a particular use case or want to create an application step by step, you can click the `Create Your Own` option. It
-is important to note that these templates will only pre-fill the fields in the create application page, and once created,
-your application has no relationship with the template in any way.
+To get you started quickly, we provide a set of Application Templates that cover the most common use cases. Once you click on
+"Create Application", a modal will appear to let you select an Application Template depending on your needs. If you 
+have a particular use case or want to create an Application step by step, you can click the `Create Your Own` option. It
+is important to note that these templates will only pre-fill the fields in the Create Application page, and once created,
+your Application has no relationship with the template in any way.
 
 <img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
 
 In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII Data`.
-However, we also have the `Starters` section which allows you to create your own application step by step if you have 
-a custom use case or want to get started quickly with a `Full Access` application. The last section is `Management`, which 
+However, we also have the `Starters` section which allows you to create your own Application step by step if you have 
+a custom use case or want to get started quickly with a `Full Access` Application. The last section is `Management`, which 
 provides a `Full Management Access` template to get all the managing permissions available.
 
 The `Payments`, `Banking` and `PII Data` sections all provide four templates each with specific 
 [Access Rules](https://developers.basistheory.com/concepts/what-are-access-rules/) for its objective. These four templates
-are `Collect (PCI/Bank/PII) Data`, which enables the application to only create or update tokens in the given
+are `Collect (PCI/Bank/PII) Data`, which enables the Application to only create or update tokens in the given
 [container](https://developers.basistheory.com/concepts/what-are-containers/); `Display (PCI/Bank/PII) Data`, which allows
 applications to read the sensitive raw data stored in tokens; `Use (PCI/Bank/PII) Data`, for applications that need to use tokens 
 in a Reactor or Proxy; and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
 within that container.
 
 Remember these templates are more of recommendations that enable you to get started quickly, but you can update the fields
-that are pre-filled after selecting them as you like, and if none work for you, you can still create an application
+that are pre-filled after selecting them as you like, and if none work for you, you can still create an Application
 that conforms to your specific needs. 
 
 
@@ -93,7 +93,7 @@ Often, businesses need to grant their partners access to their sensitive data â€
 
 ### Manage Basis Theory assets with Infrastructure as Code
 
-The Management application type allows the Basis Theory platform to be configured entirely via our API. This enables engineers to write scripts to set up new Applications or Manage your Custom Reactor Formulas all without logging into our Portal UI. 
+The Management Application type allows the Basis Theory platform to be configured entirely via our API. This enables engineers to write scripts to set up new Applications or Manage your Custom Reactor Formulas all without logging into our Portal UI. 
 
 Interested in using IaC (Infrastructure as Code) tooling such as Terraform to configure Basis Theory? [Reach out!](https://basistheory.com/contact)
 
