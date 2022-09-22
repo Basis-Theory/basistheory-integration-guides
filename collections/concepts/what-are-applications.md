@@ -70,7 +70,7 @@ applications to read the sensitive raw data stored in tokens; `Use (PCI/Bank/PII
 in a Reactor or Proxy; and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
 within that container.
 
-Remember these templates are more of recommendations that enable you to quickly get started, but you can update the fields
+Remember these templates are more of recommendations that enable you to get started quickly, but you can update the fields
 that are pre-filled after selecting them as you like, and if none work for you, you can still create an application
 that conforms to your specific needs. 
 
