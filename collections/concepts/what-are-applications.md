@@ -49,8 +49,8 @@ Your Application’s API Key is used to authenticate your systems to the Basis T
 
 ## Application Templates
 
-To get you quickly started, we provide a set of application templates that cover the most common use cases. Once you are
-creating an application, a modal will appear to let you select an application template depending on your needs. If you 
+To get you started quickly, we provide a set of application templates that cover the most common use cases. Once you click on
+"Create Application", a modal will appear to let you select an application template depending on your needs. If you 
 have a particular use case or want to create an application step by step, you can click the `Create Your Own` option. It
 is important to note that these templates will only pre-fill the fields in the create application page, and once created,
 your application has no relationship with the template in any way.
