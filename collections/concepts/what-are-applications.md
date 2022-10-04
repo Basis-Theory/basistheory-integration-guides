@@ -49,30 +49,23 @@ Your Application’s API Key is used to authenticate your systems to the Basis T
 
 ## Application Templates
 
-To get you started quickly, we provide a set of Application Templates that cover the most common use cases. Once you click on
-"Create Application", a modal will appear to let you select an Application Template depending on your needs. If you 
-have a particular use case or want to create an Application step by step, you can click the `Create Your Own` option. It
-is important to note that these templates will only pre-fill the fields in the Create Application page, and once created,
-your Application has no relationship with the template in any way.
+To help you get started quickly, we provide a set of Application Templates for many common use cases, 
+such as `Payments`, `Banking`, and `PII Data`. 
+The available application templates are presented after clicking on the "Create Application" button.
 
 <img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
 
-In this modal you can see we provide templates for the most common usages such as `Payments`, `Banking` and `PII Data`.
-However, we also have the `Starters` section which allows you to create your own Application step by step if you have 
-a custom use case or want to get started quickly with a `Full Access` Application. The last section is `Management`, which 
-provides a `Full Management Access` template to get all the managing permissions available.
+If you are just getting started with Basis Theory, the `Full Access` template can be useful for testing and prototyping.
+This template will create a test Application that has been granted all permissions for interacting with Tokens within your Tenant.
+It is important to remember that the `Full Access` template should not be used for production Applications, 
+and you should always strive to follow the principle of least privilege.
 
-The `Payments`, `Banking` and `PII Data` sections all provide four templates each with specific 
-[Access Rules](https://developers.basistheory.com/concepts/what-are-access-rules/) for its objective. These four templates
-are `Collect (PCI/Bank/PII) Data`, which enables the Application to only create or update tokens in the given
-[container](https://developers.basistheory.com/concepts/what-are-containers/); `Display (PCI/Bank/PII) Data`, which allows
-applications to read the sensitive raw data stored in tokens; `Use (PCI/Bank/PII) Data`, for applications that need to use tokens 
-in a Reactor or Proxy; and `Full (PCI/Bank/PII) Data Access`, which gives access to all token operations (create, update, read, use, delete)
-within that container.
+Selecting a template will only pre-fill the Create Application form, and any settings or access rules within the 
+Application can be customized. Once created, your Application will have no relationship with the template 
+and can be updated independently. 
 
-Remember these templates are more of recommendations that enable you to get started quickly, but you can update the fields
-that are pre-filled after selecting them as you like, and if none work for you, you can still create an Application
-that conforms to your specific needs. 
+If you have a particular use case that is not covered by one of the existing templates, you can also create a custom
+Application to satisfy your specific requirements by choosing the `Create Your Own` option.
 
 
 ## Common Use Cases
