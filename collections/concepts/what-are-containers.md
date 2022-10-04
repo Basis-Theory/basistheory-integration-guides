@@ -14,17 +14,23 @@ height: 630
 
 # What are Token Containers?
 
-Token Containers are hierarchical grouping constructs that allow you to logically segment tokens within your tenant. With
-this grouping in place, you are able to control access to your tokens based on [Access Rules](https://developers.basistheory.com/concepts/access-controls/) 
-tied to applications that specify which containers an Application has access to. 
+Tokens can be logically grouped into Containers to segment Tokens within a Tenant. 
+Containers can be leveraged to construct fine-grained access control policies by attaching one or more 
+[Access Rules](/concepts/access-controls/) to an Application. 
+Each Access Rule can be scoped to a specific Container of tokens, allowing you to grant an Application 
+permission to interact with only a subset of tokens within your Tenant.
 
-A container is represented by a hierarchical path, which is conceptually similar to directories in a UNIX filesystem.
-Container names must start and end with a `/`, and the root container is denoted by `/`. Container names may include any 
+A Container is represented by a hierarchical path, which is conceptually similar to directories in a UNIX filesystem.
+Container names must start and end with a `/`, and the root Container is denoted by `/`. Container names may include any 
 alphanumeric characters, `-`, or `_`, and can contain an arbitrary number of nested sub-containers.
 
-You have complete control to customize your container hierarchy to meet your unique data governance requirements. By default,
-tokens will be assigned to containers based off their data classification and impact levels, using the format 
+You have complete control to customize your Container hierarchy to meet your unique data governance requirements. 
+By default, Tokens will be assigned to Containers based off their data classification and impact levels, using the format 
 `/<classification>/<impact_level>/`, e.g. `/pci/high/` or `/general/low/`.
+
+A Token's Container can be modified through the [Update Token](https://docs.basistheory.com/#tokens-update-token) endpoint,
+provided that the Application performing the update has `token:update` permission to both the source and 
+destination Containers.
 
 ---
 
@@ -32,7 +38,7 @@ tokens will be assigned to containers based off their data classification and im
 
 ### Segmenting by data classification
 
-If you need to segment tokens by data classification, you could organize your tokens into the following containers:
+To segment tokens by data classification, you could organize your tokens into the following containers:
 
 - `/pci/`
 - `/bank/`
@@ -40,15 +46,31 @@ If you need to segment tokens by data classification, you could organize your to
 - `/general/`
 - `/my-custom-classification/`
 
+This would enable you to create Applications that are only granted access to a specific classification of data. 
+For example, a billing system could be granted access to only the `/pci/` and `/bank/` containers, while a 
+customer service system could only be granted access to PII data (in the `/pii/` container) in order to support 
+user account management.
+
 ---
 
 ### Segmenting by customer
 
-If you need to segment tokens by customer, you could organize your tokens into the following containers:
+To segment tokens by customer, you could organize your tokens into the following containers:
 
 - `/customer-123/`
 - `/customer-456/`
 - `/customer-789/`
 - `/customer-xyz/`
+
+This would enable you to create Applications that are only granted access to one or more specific customers' data. 
+
+Tokens may also be further segmented within each customer's container, as needed. For example, you could partition a customer's
+data by use case, say between payments related Tokens and Tokens used to store a customer's account settings. 
+You could achieve this by further dividing Tokens into the sub-containers: 
+
+- `/customer-123/payments/`
+- `/customer-123/settings/`
+- `/customer-456/payments/`
+- `/customer-456/settings/`
 
 ---
