@@ -47,9 +47,26 @@ Each Application Type has different levels of permission available for the appli
 
 Your Applicationâ€™s API Key is used to authenticate your systems to the Basis Theory platform. The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
 
+## Application Templates
 
+To help you get started quickly, we provide a set of Application Templates for many common use cases, 
+such as `Payments`, `Banking`, and `PII Data`. 
+The available application templates are presented after clicking on the "Create Application" button.
 
----
+<img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
+
+If you are just getting started with Basis Theory, the `Full Access` template can be useful for testing and prototyping.
+This template will create a test Application that has been granted all permissions for interacting with Tokens within your Tenant.
+It is important to remember that the `Full Access` template should not be used for production Applications, 
+and you should always strive to follow the principle of least privilege.
+
+Selecting a template will only pre-fill the Create Application form, and any settings or access rules within the 
+Application can be customized. Once created, your Application will have no relationship with the template 
+and can be updated independently. 
+
+If you have a particular use case that is not covered by one of the existing templates, you can also create a custom
+Application to satisfy your specific requirements by choosing the `Create Your Own` option.
+
 
 ## Common Use Cases
 
@@ -69,7 +86,7 @@ Often, businesses need to grant their partners access to their sensitive data â€
 
 ### Manage Basis Theory assets with Infrastructure as Code
 
-The Management application type allows the Basis Theory platform to be configured entirely via our API. This enables engineers to write scripts to set up new Applications or Manage your Custom Reactor Formulas all without logging into our Portal UI. 
+The Management Application type allows the Basis Theory platform to be configured entirely via our API. This enables engineers to write scripts to set up new Applications or Manage your Custom Reactor Formulas all without logging into our Portal UI. 
 
 Interested in using IaC (Infrastructure as Code) tooling such as Terraform to configure Basis Theory? [Reach out!](https://basistheory.com/contact)
 
