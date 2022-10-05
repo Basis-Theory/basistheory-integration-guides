@@ -220,7 +220,7 @@ Create a new Application with the following settings:
 - Permissions
     - `token:pci:use:proxy`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/application_template_id=31efed55-035c-4b49-b1a1-609a728d91ce) or you can use the following API call with your Management API Key from Step 1:
+[Click here to create a new Application](https://portal.basistheory.com/applications/application_template_id=31efed55-035c-4b49-b1a1-609a728d91ce) or you can make the following request with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \
