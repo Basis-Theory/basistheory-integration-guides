@@ -125,7 +125,7 @@ Create a new Application with the following settings:
     - `token:pci:create`
     - `token:pci:use:reactor`
 
-[Click here to have pre-fill a new Create Application](https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31) or you can use the following API call with your Management API Key from Step 1:
+[Click here to create a new Application](https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31) or you can make the following request with your Management API Key from Step 1:
 
 ```bash
 curl "https://api.basistheory.com/applications" \
