@@ -35,7 +35,7 @@ If you would like to learn more about the Basis Theory Proxy first, or how this 
 
 We will be creating and proxying tokens that contain PCI data in this example.
 First, we need to ensure we have a `Private` application configured that has `token:pci:create` and `token:pci:use:proxy` permissions.
-We will be using the API Key associated with this application in all HTTP requests below. <a href="https://portal.basistheory.com/applications/create?permissions=token%3Apci%3Ause%3Aproxy&permissions=token%3Apci%3Acreate&type=private&name=Card+Proxy" target="_blank">Click here to create it.</a>
+We will be using the API Key associated with this application in all HTTP requests below. <a href="https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31" target="_blank">Click here to create it.</a>
 
 <span class="base-alert info">
   <span>

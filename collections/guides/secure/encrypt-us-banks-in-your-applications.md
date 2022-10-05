@@ -100,7 +100,7 @@ app.listen(port, async () => {
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Private Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?type=private&permissions=token%3Abank%3Acreate&permissions=token%3Abank%3Aread%3Ahigh&name=Bank+Retriever" target="_blank">Click here to create one.</a>
+    To start, you'll need a new Private Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=7754ec77-2312-494f-afac-044c63b92bbc" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
