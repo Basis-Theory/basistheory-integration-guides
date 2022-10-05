@@ -27,7 +27,7 @@ created a Reactor Formula under your Tenant using Terraform.
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new <code>Management</code> [Application](https://docs.basistheory.com/api-reference/#applications) with <code>reactor:create</code>, <code>reactor:read</code>, <code>reactor:update</code>, and <code>reactor:delete</code> permissions. <a href="https://portal.basistheory.com/applications/create?application_template_id=931b306f-6be7-405d-9a8d-1442a99dd2d7" target="_blank">Click here to create one.</a>
+    To start, you'll need a new <code>Management</code> [Application](https://docs.basistheory.com/api-reference/#applications) with <code>reactor:create</code>, <code>reactor:read</code>, <code>reactor:update</code>, and <code>reactor:delete</code> permissions. <a href="https://portal.basistheory.com/applications/create?name=Terraform+Application&type=management&permissions=reactor%3Acreate&permissions=reactor%3Aread&permissions=reactor%3Aupdate&permissions=reactor%3Adelete" target="_blank">Click here to create one.</a>
   </span>
 </span>
 

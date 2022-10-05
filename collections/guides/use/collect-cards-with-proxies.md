@@ -52,7 +52,7 @@ This new management Application will be used to create new Reactor Formulas, [Re
     - `reactor:create`
     - `proxy:create`
 
-[You can use this link to pre-fill the Create Application form in our Portal.](https://portal.basistheory.com/applications/create?application_template_id=931b306f-6be7-405d-9a8d-1442a99dd2d7)
+[You can use this link to pre-fill the Create Application form in our Portal.](https://portal.basistheory.com/applications/create?name=Setup+Proxy&permissions=application%3Acreate&permissions=reactor%3Acreate&permissions=proxy%3Acreate&type=management)
 
 *Make sure you remember the `key` of this new Application, you’ll use this in the following Steps.*
 

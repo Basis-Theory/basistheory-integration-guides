@@ -27,7 +27,7 @@ created an Application under your tenant using Terraform, and you will have an A
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new <code>Management</code> [Application](https://docs.basistheory.com/api-reference/#applications) with <code>application:create</code>, <code>application:read</code>, <code>application:update</code>, and <code>application:delete</code> permissions. <a href="https://portal.basistheory.com/applications/create?application_template_id=931b306f-6be7-405d-9a8d-1442a99dd2d7" target="_blank">Click here to create one.</a>
+    To start, you'll need a new <code>Management</code> [Application](https://docs.basistheory.com/api-reference/#applications) with <code>application:create</code>, <code>application:read</code>, <code>application:update</code>, and <code>application:delete</code> permissions. href="https://portal.basistheory.com/applications/create?name=Terraform+Application&permissions=application%3Acreate&permissions=application%3Aread&permissions=application%3Aupdate&permissions=application%3Adelete&type=management" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
