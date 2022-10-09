@@ -3,7 +3,7 @@ layout: post
 title:  Access Controls
 categories: concepts
 permalink: /concepts/access-controls/
-nav_order: 8
+nav_order: 3
 has_children: true
 has_toc: false
 image:
@@ -18,8 +18,9 @@ Basis Theory secures sensitive data as [Tokens](/concepts/what-are-tokens) that 
 compliant environment, called a [Tenant](/concepts/access-controls#what-are-tenants).
 Your systems interact with Tokens or Services through the Basis Theory API using an API key that is issued to 
 an [Application](/concepts/access-controls#what-are-applications).
-Access to your Tenant's data is limited by applying access controls to an Application to ensure services and users
-only have access to the data they need.
+Access to your Tenant's data is limited by applying access controls to an Application via 
+[Permissions](https://docs.basistheory.com/api-reference/#permissions) and [Access Rules](/concepts/access-controls#what-are-access-rules)
+to ensure services and users only have access to the data they need.
 
 
 ## What are Tenants?

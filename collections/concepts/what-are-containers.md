@@ -3,7 +3,7 @@ layout: post
 title:  Token Containers
 categories: concepts
 permalink: /concepts/what-are-token-containers/
-nav_order: 3
+nav_order: 2
 has_children: true
 has_toc: false
 image:
