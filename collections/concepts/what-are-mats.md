@@ -3,7 +3,7 @@ layout: post
 title:  "Monthly Active Tokens"
 categories: concepts
 permalink: /concepts/what-are-mats/
-nav_order: 9
+nav_order: 7
 has_children: true
 has_toc: false
 image:
@@ -55,7 +55,7 @@ This includes any tokens that were [Detokenized](https://docs.basistheory.com/ex
 
 ## How are MATs counted?
 
-MATs are counted separately per [Tenant](/concepts/what-are-tenants) and are not aggregated across your Tenants. 
+MATs are counted separately per [Tenant](/concepts/access-controls/#what-are-tenants) and are not aggregated across your Tenants. 
 If you own more than one Basis Theory Tenant, e.g. for multiple environments to support your SDLC process, 
 then each tenant accrues MATs and billing charges according to its own usage.
 

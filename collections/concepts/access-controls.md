@@ -3,7 +3,7 @@ layout: post
 title:  Access Controls
 categories: concepts
 permalink: /concepts/access-controls/
-nav_order: 8
+nav_order: 3
 has_children: true
 has_toc: false
 image:
@@ -18,8 +18,9 @@ Basis Theory secures sensitive data as [Tokens](/concepts/what-are-tokens) that 
 compliant environment, called a [Tenant](/concepts/access-controls#what-are-tenants).
 Your systems interact with Tokens or Services through the Basis Theory API using an API key that is issued to 
 an [Application](/concepts/access-controls#what-are-applications).
-Access to your Tenant's data is limited by applying access controls to an Application to ensure services and users
-only have access to the data they need.
+Access to your Tenant's data is limited by applying access controls to an Application via 
+[Permissions](https://docs.basistheory.com/api-reference/#permissions) and [Access Rules](/concepts/access-controls#what-are-access-rules)
+to ensure services and users only have access to the data they need.
 
 
 ## What are Tenants?
@@ -114,6 +115,27 @@ Please see the section on [What are Access Rules](/concepts/access-controls#what
 Your Application’s API Key is used to authenticate your systems to the Basis Theory platform. 
 The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, 
 or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
+
+### Application Templates
+
+To help you get started quickly, we provide a set of Application Templates for many common use cases,
+such as `Payments`, `Banking`, and `PII Data`.
+The available application templates are presented after clicking on the "Create Application" button in the [Portal](https://portal.basistheory.com).
+
+<img alt="Application Templates" src="/assets/images/concepts/application-templates.png">
+
+If you are just getting started with Basis Theory, the `Full Access` template can be useful for testing and prototyping.
+This template will create a test Application that has been granted all permissions for interacting with Tokens within your Tenant.
+It is important to remember that the `Full Access` template should not be used for production Applications,
+and you should always strive to follow the principle of least privilege.
+
+Selecting a template will only pre-fill the Create Application form, and any settings or access rules within the
+Application can be customized. Once created, your Application will have no relationship with the template
+and can be updated independently.
+
+If you have a particular use case that is not covered by one of the existing templates, you can also create a custom
+Application to satisfy your specific requirements by choosing the `Create Your Own` option.
+
 
 ### Common Use Cases for Applications
 
