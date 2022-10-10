@@ -29,11 +29,13 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pci:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=db9148c1-a55f-4164-b830-a20ab6d720ae" target="_blank">Click here to create one.</a>
+    To start, you'll need a new <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) 
+    with the <code>token:create</code> permission granted to the `/pci/` container.
+    <a href="https://portal.basistheory.com/applications/create?application_template_id=db9148c1-a55f-4164-b830-a20ab6d720ae" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
-Install our dedicated React package:
+Install our React package:
 
 ```bash
 npm install --save @basis-theory/basis-theory-react

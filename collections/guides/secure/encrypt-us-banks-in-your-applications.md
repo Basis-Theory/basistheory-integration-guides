@@ -100,7 +100,9 @@ app.listen(port, async () => {
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a new Private Application with the <code>token:bank:create</code> and <code>token:bank:read:high</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=7754ec77-2312-494f-afac-044c63b92bbc" target="_blank">Click here to create one.</a>
+    To start, you'll need a new Private Application with the <code>token:create</code> and <code>token:read</code> 
+    permissions granted on the `/bank/` container.
+    <a href="https://portal.basistheory.com/applications/create?application_template_id=7754ec77-2312-494f-afac-044c63b92bbc" target="_blank">Click here to create one.</a>
   </span>
 </span>
 
@@ -160,7 +162,8 @@ curl --location --request POST 'http://127.0.0.1:3000/create' \
 
 ## Retrieve and return the raw data
 
-After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. With that in mind, we will alter our `/get` endpoint to retrieve using our `token:bank:read:high` permission which grants us access to the raw bank data and return it from our API:
+After we've stored the information with Basis Theory, we will only be storing a reference to the raw bank account information. 
+With that in mind, we will alter our `/get` endpoint to retrieve the raw bank account data from Basis Theory.
 
 ```js
 app.get('/get', async (req, res) => {

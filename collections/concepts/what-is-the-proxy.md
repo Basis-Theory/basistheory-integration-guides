@@ -33,8 +33,9 @@ Finally, the request is delivered to the destination URL that was specified thro
 The Proxy terminates the inbound TLS connection from your servers and initiates a new TLS connection to the destination in order to guarantee secure transmission of your sensitive token data.
 For this reason, we require the destination servers to support TLSv1.2+ and that the provided destination URL uses `https`.
 
-The application that is being used to call the Proxy must be explicitly granted `token:<classification>:use:proxy` permission on any tokens that are detokenized. 
-You should restrict which [classifications](https://docs.basistheory.com/api-reference/#tokens-token-classifications) of tokens an application has access to detokenize through the Proxy by only granting the minimum set of `token:<classification>:use:proxy` permissions that are necessary for your use case.
+The application that is being used to call the Proxy must be granted `token:use` permission on any tokens that are detokenized.
+It is recommended that you restrict which tokens the Proxy can detokenize by only granting `token:use`
+permission on the most-specific [container](/concepts/what-are-containers) of tokens that is required.
 
 Whatever the content type or HTTP method, any HTTP request can be sent through the proxy simply by adding the headers `BT-API-KEY` and `BT-PROXY-URL`. For example:
 ```js
