@@ -48,7 +48,7 @@ touch BasisTheoryQuickstart.go
 type nul > BasisTheoryQuickstart.go
 ```
 
-### Step 2: Import needed dependencies
+## Step 2: Import needed dependencies
 
 The simplest form of securing data with Basis Theory is through our API with a JSON body. Basis Theory maintains a Go SDK to make integrating with the platform that much easier. To install the Basis Theory Go SDK and its dependencies, run the following commands:
 
@@ -74,22 +74,21 @@ _Note: at the time of writing, the latest version was v3. You can find the lates
 
 If you don’t already have a Basis Theory account and your first Tenant, create one [here](https://portal.basistheory.com/register).
 
-Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
+Within your Basis Theory account, create a new Application. To create a new Application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
-### 3.1 Enter an Application Name
-This name allows you to identify this application in the future — for this tutorial enter "Go Quickstart”.
+### 3.1 Select an Application Template
+Select the [Full Access](https://portal.basistheory.com/applications/create?application_template_id=6f486ec1-ddf4-4040-b7f1-3ddca4209495)
+Application Template, which will grant your Application access to create Tokens and read the plaintext Token values.
 
-<img src="/assets/images/getting_started/application_name_go.png" />
+### 3.2 Enter an Application Name
+This name allows you to identify this application in the future — for this tutorial enter “cURL Quickstart”.
 
-### 3.2 Select Private Application Type
-The Private Application Type enables server-side applications to integrate with the Basis Theory platform directly.
+<img src="/assets/images/getting_started/application_name_curl.png" />
 
-<img src="/assets/images/getting_started/application_type.png" />
+### 3.3 Copy your API key
+Keep this API key safe for later. We will use it in the next step to create your first Token.
 
-### 3.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “High Impact”. These two permissions allow your Application to create a new Token and read the plaintext value back when you need to access it.
-
-<img src="/assets/images/getting_started/application_permissions.png" />
+<img src="/assets/images/getting_started/application_api_key.png" />
 
 ### 3.4 Copy your API key
 Keep this API key safe for later. We will use it in the next step to create your first Token.
