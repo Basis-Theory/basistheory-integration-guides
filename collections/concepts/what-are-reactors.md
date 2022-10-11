@@ -91,7 +91,7 @@ curl "https://api.basistheory.com/reactors" \
 
 Reactors may be invoked by an Application with `token:use` permission, which enables the Reactor to detokenize tokens 
 provided in the request `args`. It is recommended that you restrict which tokens a Reactor can detokenize 
-by only granting `token:use` permission on the most-specific [container](/concepts/what-are-containers) 
+by only granting `token:use` permission on the most-specific [container](/concepts/what-are-token-containers) 
 of tokens that is required. 
 
 ```bash

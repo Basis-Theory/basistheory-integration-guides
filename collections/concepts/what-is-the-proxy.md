@@ -35,7 +35,7 @@ For this reason, we require the destination servers to support TLSv1.2+ and that
 
 The application that is being used to call the Proxy must be granted `token:use` permission on any tokens that are detokenized.
 It is recommended that you restrict which tokens the Proxy can detokenize by only granting `token:use`
-permission on the most-specific [container](/concepts/what-are-containers) of tokens that is required.
+permission on the most-specific [container](/concepts/what-are-token-containers) of tokens that is required.
 
 Whatever the content type or HTTP method, any HTTP request can be sent through the proxy simply by adding the headers `BT-API-KEY` and `BT-PROXY-URL`. For example:
 ```js
