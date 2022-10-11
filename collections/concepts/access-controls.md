@@ -148,7 +148,7 @@ This could mean that one system is only allowed to collect Tokenized data, anoth
 perform analytics, and a third system is only allowed to [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/) the data 
 to an integrated 3rd party but never access the raw data.
 
-<img src="/assets/images/concepts/applications_each_system.jpeg">
+<img src="/assets/images/concepts/applications_each_system.png">
 
 #### Enable partners to use data secured by Basis Theory
 
@@ -159,7 +159,7 @@ In some cases, businesses will not allow their partners direct access to the raw
 but rather only allow them to [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/) the data to 
 another API or execute serverless workloads on the sensitive data using Reactors.
 
-<img src="/assets/images/concepts/applications_partners.jpeg">
+<img src="/assets/images/concepts/applications_partners.png">
 
 #### Manage Basis Theory Assets with Infrastructure as Code
 
@@ -167,7 +167,7 @@ The Management application type allows the Basis Theory platform to be configure
 This enables engineers to write scripts or to use IaC (Infrastructure as  Code) tooling such as 
 [Terraform](/guides/manage-applications-with-terraform/) to manage your Tenants and Services without logging into our Portal UI.
 
-<img src="/assets/images/concepts/applications_iac.jpeg">
+<img src="/assets/images/concepts/applications_iac.png">
 
 
 ## What are Access Rules?
@@ -242,37 +242,17 @@ Rules are evaluated in ascending priority order, with the lowest numerical value
 
 #### Grant Access to a Single Data Classification
 
-In order to enable Access Rules to be scoped to a single data classification, first ensure your Tokens are organized
-into classification-based [Containers](/concepts/what-are-token-containers), for example `/pci/`, `/pii/`, and `/general/`.
+Access Rules can be scoped to a specific data classification of Tokens. To enable this use case, first ensure your 
+Tokens are organized into classification-based [Containers](/concepts/what-are-token-containers), 
+for example `/pci/`, `/pii/`, and `/general/`.
 
-Then, for example, in order to grant an Application access to read plaintext PII Tokens and use them within services,
-create an Access Rule with:
-
-- Description: `Read and use plaintext PII tokens`
-- Container: `/pii/`
-- Transform: `reveal`
-- Permissions: `[ 'token:read', 'token:use' ]`
+<img alt="Access Rules" src="/assets/images/concepts/access_rules_by_classification.png">
 
 #### Grant Access to a Single Customer's Data
 
 Your customers' sensitive data can be partitioned within Basis Theory, for example, to enable you to offer your 
-customers single-tenant environments that may only access that single customer's data. 
+customers single-tenant environments that only have access to a single customer's data. 
 To enable this use case, first ensure your Tokens are organized into [Containers](/concepts/what-are-token-containers)
 by customer, for example `/customer-1/`, `/customer-2/`, etc.
 
-Then you may grant a Basis Theory Application access to create and read masked Tokens for `customer-1` and use 
-raw Token data within Services (i.e. Reactors and Proxy) by creating the Access Rules:
-
-**Rule 1**
-- Description: `Create and read masked tokens for customer-1`
-- Container: `/customer-1/`
-- Transform: `mask`
-- Permissions: `[ 'token:create', 'token:read' ]`
-- Priority: `1`
-
-**Rule 2**
-- Description: `Use plaintext tokens for customer-1`
-- Container: `/customer-1/`
-- Transform: `reveal`
-- Permissions: `[ 'token:use' ]`
-- Priority: `2`
+<img alt="Access Rules" src="/assets/images/concepts/access_rules_by_customer.png">

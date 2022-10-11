@@ -32,7 +32,6 @@ A Token's Container can be modified through the [Update Token](https://docs.basi
 provided that the Application performing the update has `token:update` permission to both the source and 
 destination Containers.
 
----
 
 ## Common Use Cases
 
@@ -41,36 +40,32 @@ destination Containers.
 To segment tokens by data classification, you could organize your tokens into the following containers:
 
 - `/pci/`
-- `/bank/`
-- `/pii/`
 - `/general/`
-- `/my-custom-classification/`
+- `/pii/`
 
 This would enable you to create Applications that are only granted access to a specific classification of data. 
-For example, a billing system could be granted access to only the `/pci/` and `/bank/` containers, while a 
-customer service system could only be granted access to PII data (in the `/pii/` container) in order to support 
-user account management.
+For example, a billing system could be granted access to only the `/pci/` container, while a 
+customer service system could only be granted access to the `/pii/` container in order to support user account management.
 
----
+<img alt="Containers" src="/assets/images/concepts/containers_by_classification.png">
 
 ### Segmenting by customer
 
 To segment tokens by customer, you could organize your tokens into the following containers:
 
-- `/customer-123/`
-- `/customer-456/`
-- `/customer-789/`
-- `/customer-xyz/`
+- `/customer-1/`
+- `/customer-2/`
+- `/customer-3/`
 
 This would enable you to create Applications that are only granted access to one or more specific customers' data. 
 
 Tokens may also be further segmented within each customer's container, as needed. For example, you could partition a customer's
-data by use case, say between payments related Tokens and Tokens used to store a customer's account settings. 
+data by classification, say between payments related Tokens and Tokens used to store a customer's contact information. 
 You could achieve this by further dividing Tokens into the sub-containers: 
 
-- `/customer-123/payments/`
-- `/customer-123/settings/`
-- `/customer-456/payments/`
-- `/customer-456/settings/`
+- `/customer-1/pci/`
+- `/customer-1/pii/`
+- `/customer-2/pci/`
+- `/customer-2/pii/`
 
----
+<img alt="Containers" src="/assets/images/concepts/containers_by_customer.png">
