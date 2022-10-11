@@ -89,7 +89,7 @@ For basic authorization scenarios, an Application can simply be granted one or m
 Each Application Type allows a different set of permissions, and you can find a detailed list of them [here](https://docs.basistheory.com/api-reference/#permissions-permission-types).
 
 Token permissions granted to Private or Public applications are applied to all Tokens 
-(i.e. they are not scoped to a particular [Container](/concepts/what-are-containers) of Tokens). 
+(i.e. they are not scoped to a particular [Container](/concepts/what-are-token-containers) of Tokens). 
 In order to ensure sensitive data is not inadvertently revealed by an Application, an implicit 
 [transform](/concepts/access-controls#what-are-access-rules-transform) is applied for each operation:
 
@@ -243,7 +243,7 @@ Rules are evaluated in ascending priority order, with the lowest numerical value
 #### Grant Access to a Single Data Classification
 
 In order to enable Access Rules to be scoped to a single data classification, first ensure your Tokens are organized
-into classification-based [Containers](/concepts/what-are-containers), for example `/pci/`, `/pii/`, and `/general/`.
+into classification-based [Containers](/concepts/what-are-token-containers), for example `/pci/`, `/pii/`, and `/general/`.
 
 Then, for example, in order to grant an Application access to read plaintext PII Tokens and use them within services,
 create an Access Rule with:
@@ -257,7 +257,7 @@ create an Access Rule with:
 
 Your customers' sensitive data can be partitioned within Basis Theory, for example, to enable you to offer your 
 customers single-tenant environments that may only access that single customer's data. 
-To enable this use case, first ensure your Tokens are organized into [Containers](/concepts/what-are-containers)
+To enable this use case, first ensure your Tokens are organized into [Containers](/concepts/what-are-token-containers)
 by customer, for example `/customer-1/`, `/customer-2/`, etc.
 
 Then you may grant a Basis Theory Application access to create and read masked Tokens for `customer-1` and use 
