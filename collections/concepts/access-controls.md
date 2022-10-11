@@ -16,7 +16,7 @@ height: 630
 
 Basis Theory secures sensitive data as [Tokens](/concepts/what-are-tokens) that are stored within an isolated 
 compliant environment, called a [Tenant](/concepts/access-controls#what-are-tenants).
-Your systems interact with Tokens or Services through the Basis Theory API using an API key that is issued to 
+Your systems interact with Tokens or Services (e.g. Proxy, Reactors) through the Basis Theory API using an API key that is issued to 
 an [Application](/concepts/access-controls#what-are-applications).
 Access to your Tenant's data is limited by applying access controls to an Application via 
 [Permissions](https://docs.basistheory.com/api-reference/#permissions) and [Access Rules](/concepts/access-controls#what-are-access-rules)
@@ -30,8 +30,9 @@ Everything starts with a Tenant in your Basis Theory account. Tenants represent 
 Data is not shared between Tenants, but you’re allowed to create as many Tenants as you’d like within Basis Theory.
 You can use multiple Tenants to isolate different domains of data, and to support your Software Development Life Cycle (SDLC).
 
-The user account that was used to create a Tenant in the [Portal](https://portal.basistheory.com/members)
-will be designated as the Tenant Owner. New members can be invited to an existing Tenant through the "Members" tab.
+The user account that was used to create a Tenant in the [Portal](https://portal.basistheory.com)
+will be designated as the Tenant Owner. New members can be invited to an existing Tenant through the 
+[Members](https://portal.basistheory.com/members) tab.
 Managing Tenant Members can also be done directly through the [API](https://docs.basistheory.com/#tenant-members).
 
 ### Common Use Cases for Tenants
@@ -85,16 +86,15 @@ Permissions, or for more advanced scenarios, by defining one or more Access Rule
 #### Permissions
 
 For basic authorization scenarios, an Application can simply be granted one or more permissions. 
-Each Application Type allows a different set of permissions, and you can find a detailed list of all of our 
-permissions for all of our Application Types [here](https://docs.basistheory.com/api-reference/#permissions-permission-types).
+Each Application Type allows a different set of permissions, and you can find a detailed list of them [here](https://docs.basistheory.com/api-reference/#permissions-permission-types).
 
 Token permissions granted to Private or Public applications are applied to all Tokens 
-(i.e. they are not scoped to a particular Container of Tokens). In order to ensure sensitive data is not inadvertently 
-revealed by an Application, an implicit [transform](/concepts/access-controls#what-are-access-rules-transform)
-is applied for each operation:
+(i.e. they are not scoped to a particular [Container](/concepts/what-are-containers) of Tokens). 
+In order to ensure sensitive data is not inadvertently revealed by an Application, an implicit 
+[transform](/concepts/access-controls#what-are-access-rules-transform) is applied for each operation:
 
 | Permission   | Transform |
-|--------------|-----------|
+|:-------------|-----------|
 | token:create | `mask`    |
 | token:update | `mask`    |
 | token:read   | `mask`    |
@@ -115,6 +115,7 @@ Please see the section on [What are Access Rules](/concepts/access-controls#what
 Your Application’s API Key is used to authenticate your systems to the Basis Theory platform. 
 The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, 
 or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
+API Keys should be regarded as highly sensitive, and should be stored a secret within in your environments.
 
 ### Application Templates
 
@@ -143,7 +144,7 @@ Application to satisfy your specific requirements by choosing the `Create Your O
 
 A common use-case for Applications is to grant minimal access to multiple systems where each system is only authorized 
 to perform necessary operations and access a relevant subset of data within a [Tenant](/concepts/access-controls/#what-are-tenants). 
-This could mean that one system is only allowed collect Tokenized data, another system is allowed to read the data to 
+This could mean that one system is only allowed to collect Tokenized data, another system is allowed to read the data to 
 perform analytics, and a third system is only allowed to [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/) the data 
 to an integrated 3rd party but never access the raw data.
 
@@ -193,7 +194,7 @@ A short description of the rule to help you identify its purpose.
 
 ### Container
 
-Access Rules can be scoped to a specific set of resources using Containers. 
+Access Rules can be scoped to a specific set of Tokens using Containers. 
 [Containers](/concepts/what-are-token-containers/) are a Token attribute that enable you to logically
 organize Tokens into hierarchical paths, similar to a UNIX directory structure.
 
@@ -202,7 +203,7 @@ granting `token:read` permission on the `/pci/` Container will allow that Applic
 read Tokens in the `/pci/low/` and `/pci/high/` Containers.
 
 To specify different access controls on a sub-Container, you may apply another rule with higher priority 
-that is scoped to the sub-Container. For example, say a rule grants `token:read` permission on the 
+that is scoped to the sub-Container. For example, given a rule that grants `token:read` permission on the 
 `/pci/high/` Container with a `mask` [transform](/concepts/access-controls#what-are-access-rules-transform)
 and another rule with lower priority grants `token:read` permission on the `/pci/` Container with a `reveal` transform,
 then reading tokens in the `/pci/high/` container will return masked data, and reading tokens in the 
@@ -225,7 +226,7 @@ the data is appropriate to expose to the Application. The following transforms a
 
 <span class="base-alert warning">
   <span>
-    Be cautious when applying a `reveal` transform while granting the `token:read` permission, 
+    Be cautious whenever applying a `reveal` transform. This is especially true when granting the `token:read` or `token:search` permissions, 
     as this will allow your Application to read plaintext data. This may result in your systems being pulled into 
     compliance scope. 
   </span>
