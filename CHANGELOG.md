@@ -1,3 +1,10 @@
+# [1.35.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.34.0...v1.35.0) (2022-10-12)
+
+
+### Features
+
+* Adds Access Controls concept page ([#153](https://github.com/Basis-Theory/basistheory-integration-guides/issues/153)) ([5847612](https://github.com/Basis-Theory/basistheory-integration-guides/commit/58476125343780c46fa85f6a1e3cbe20ddcf12da))
+
 # [1.34.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.2...v1.34.0) (2022-10-12)
 
 
