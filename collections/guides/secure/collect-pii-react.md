@@ -22,7 +22,9 @@ If you'd like to follow along with this guide from scratch, we suggest creating 
 
 <span class="base-alert warning">
   <span>
-    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) with the <code>token:pii:create</code> permission. <a href="https://portal.basistheory.com/applications/create?application_template_id=da06cf91-caf4-44f4-886a-ab3d71d9ca5f" target="_blank">Click here to create one.</a>
+    To start, you'll need a <code>Public</code> [Application](https://docs.basistheory.com/api-reference/#applications) 
+    with the <code>token:create</code> permission to the `/pii/` container. 
+    <a href="https://portal.basistheory.com/applications/create?application_template_id=da06cf91-caf4-44f4-886a-ab3d71d9ca5f" target="_blank">Click here to create one.</a>
   </span>
 </span>
 

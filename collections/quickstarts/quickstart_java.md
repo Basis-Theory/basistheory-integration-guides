@@ -35,7 +35,7 @@ touch BasisTheoryQuickstart.java
 type nul > BasisTheoryQuickstart.java
 ```
 
-### Step 2: Import needed dependencies
+## Step 2: Import needed dependencies
 
 The simplest form of securing data with Basis Theory is through our API with a JSON body. In Java 11 or later, you can start with just an HttpClient. For this example we use the `java.net.http.HttpClient` and related packages to make an API call. At the top of your file, you’ll import the following dependencies:
 
@@ -51,27 +51,17 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 If you don’t already have a Basis Theory account and your first Tenant, create one [here](https://portal.basistheory.com/register).
 
-Within your Basis Theory account, create a new Application. To create a new application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
+Within your Basis Theory account, create a new Application. To create a new Application, head to our portal [here](https://portal.basistheory.com/applications/create) — this Application’s API Key will enable you to authenticate with the Basis Theory platform and create Tokens within your Tenant.
 
-### 3.1 Enter an Application Name
-This name allows you to identify this application in the future — for this tutorial enter "Java Quickstart”.
+### 3.1 Select an Application Template
+Select the [Full Access](https://portal.basistheory.com/applications/create?application_template_id=6f486ec1-ddf4-4040-b7f1-3ddca4209495)
+Application Template, which will grant your Application access to create Tokens and read the plaintext Token values.
 
-<img src="/assets/images/getting_started/application_name_java.png" />
+### 3.2 Enter an Application Name
+This name allows you to identify this application in the future — for this tutorial enter “cURL Quickstart”.
 
-### 3.2 Select Private Application Type
-The Private Application Type enables server-side applications to integrate with the Basis Theory platform directly.
-
-<img src="/assets/images/getting_started/application_type.png" />
-
-### 3.3 Select Permissions
-Select `token:general:create` and `token:general:read` [permissions](https://docs.basistheory.com/api-reference/#permissions-permission-object) with the default “High Impact”. These two permissions allow your Application to create a new Token and read the plaintext value back when you need to access it.
-
-<img src="/assets/images/getting_started/application_permissions.png" />
-
-### 3.4 Copy your API key
+### 3.3 Copy your API key
 Keep this API key safe for later. We will use it in the next step to create your first Token.
-
-<img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 4: Create a Token to secure a string
 To create a token, we need to send an HTTP POST request to the [`/tokens`](https://docs.basistheory.com/api-reference/#tokens-create-token) endpoint. In this guide, we will be using the generic `token` Token Type (you can read more about Tokens [here](https://developers.basistheory.com/concepts/what-are-tokens/)).

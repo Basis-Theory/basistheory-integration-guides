@@ -89,7 +89,10 @@ curl "https://api.basistheory.com/reactors" \
 
 ## Invoking a Reactor
 
-Reactors are invoked by an Application with permissions to a specific data [`classification`](https://docs.basistheory.com/#tokens-token-classifications) (for example `token:pii:use:reactor`). This classification enables a Reactor to detokenize tokens matching the specific `classification` your application has been granted. 
+Reactors may be invoked by an Application with `token:use` permission, which enables the Reactor to detokenize tokens 
+provided in the request `args`. It is recommended that you restrict which tokens a Reactor can detokenize 
+by only granting `token:use` permission on the most-specific [container](/concepts/what-are-token-containers) 
+of tokens that is required. 
 
 ```bash
 curl "https://api.basistheory.com/reactors/5b493235-6917-4307-906a-2cd6f1a90b13/react" \
