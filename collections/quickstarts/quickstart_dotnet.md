@@ -66,12 +66,8 @@ Application Template, which will grant your Application access to create Tokens 
 ### 3.2 Enter an Application Name
 This name allows you to identify this application in the future — for this tutorial enter “cURL Quickstart”.
 
-<img src="/assets/images/getting_started/application_name_curl.png" />
-
 ### 3.3 Copy your API key
 Keep this API key safe for later. We will use it in the next step to create your first Token.
-
-<img src="/assets/images/getting_started/application_api_key.png" />
 
 
 ## Step 4: Create a Token to secure a string

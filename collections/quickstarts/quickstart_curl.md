@@ -52,12 +52,8 @@ Application Template, which will grant your Application access to create Tokens 
 ### 2.2 Enter an Application Name
 This name allows you to identify this application in the future — for this tutorial enter “cURL Quickstart”.
 
-<img src="/assets/images/getting_started/application_name_curl.png" />
-
 ### 2.3 Copy your API key
 Keep this API key safe for later. We will use it in the next step to create your first Token.
-
-<img src="/assets/images/getting_started/application_api_key.png" />
 
 ## Step 3: Create a Token to secure a string
 Below we are making an HTTP POST to our  [Basis Theory Create a Token API](https://docs.basistheory.com/api-reference/#tokens-create-token), we will send a Token type of `token` ([find out more about our Tokens here](https://developers.basistheory.com/concepts/what-are-tokens/)) with a string of “foo”.
