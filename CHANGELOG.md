@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.2...v1.34.0) (2022-10-12)
+
+
+### Features
+
+* Updates token permissions in developer docs ([#154](https://github.com/Basis-Theory/basistheory-integration-guides/issues/154)) ([ab0e61a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ab0e61a22b01ba716a1a3d5ec57d1600ab1f1262))
+
 ## [1.33.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.33.1...v1.33.2) (2022-09-13)
 
 
