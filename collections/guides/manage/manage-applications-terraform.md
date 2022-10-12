@@ -97,10 +97,9 @@ resource "basistheory_application" "my_application" {
   name = "My Application"
   type = "private"
   permissions = [
-    "token:general:create",
-    "token:general:read:low",
-    "token:pci:create",
-    "token:pci:read:low",
+    "token:create",
+    "token:read",
+    "token:search",
   ]
 }
 ```

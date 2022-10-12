@@ -125,8 +125,8 @@ Create a new Application with the following settings:
 - Type
     - Private
 - Permissions
-    - `token:pci:create`
-    - `token:pci:use:reactor`
+    - `token:create`
+    - `token:use`
 
 [Click here to create a new Application](https://portal.basistheory.com/applications/create?application_template_id=6a67691b-14c2-41f9-96f6-bf3bfbe6fa31) or you can make the following request with your Management API Key from Step 1:
 
@@ -136,11 +136,11 @@ curl "https://api.basistheory.com/applications" \
   -H "Content-Type: application/json" \
   -X "POST" \
   -d '{
-    "name": "Create and Use Reactors Application",
+    "name": "Create and Use Reactors",
     "type": "private",
     "permissions": [
-      "token:pci:create",
-      "token:pci:use:reactor"
+      "token:create",
+      "token:use"
     ]
   }'
 ```
@@ -221,7 +221,7 @@ Create a new Application with the following settings:
 - Type
     - Private
 - Permissions
-    - `token:pci:use:proxy`
+    - `token:use`
 
 [Click here to create a new Application](https://portal.basistheory.com/applications/application_template_id=31efed55-035c-4b49-b1a1-609a728d91ce) or you can make the following request with your Management API Key from Step 1:
 
@@ -234,7 +234,7 @@ curl "https://api.basistheory.com/applications" \
     "name": "Partner Application",
     "type": "private",
     "permissions": [
-      "token:pci:use:proxy"
+      "token:use"
     ]
   }'
 ```

@@ -185,7 +185,7 @@ A scenario where masking is useful is in enabling customer service representativ
 
 ## Privacy Settings
 
-Privacy settings are [NIST defined](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf#page=6) classification and impact levels, defined for each token to identify the type and impact of the data on your systems. These settings are used to permit the data within your internal systems, allowing certain systems access to highly confidential data and restricting access to other systems by masking or redacting the data.
+Privacy settings are [NIST defined](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf#page=6) classification and impact levels, defined for each token to identify the type and impact of the data on your systems. These settings can be used to permit the data within your internal systems, allowing certain systems access to highly confidential data and restricting access to other systems by masking or redacting the data.
 
 In a scenario where we want to store a customer’s social security number, we only want to provide access to the last 4 of the SSN to our customer service team:
 
@@ -204,7 +204,10 @@ In a scenario where we want to store a customer’s social security number, we o
 ```
 {% endraw %}
 
-In the above example, if an application has a `token:pii:read:high` permission, they can read the original, plaintext value of the token. If they have a `token:pii:read:low` or `token:pii:read:moderate` permission, they will receive the masked `data` of `XXX-XX-6789`. If the application does not have any `token:pii:read` permission, they will not have access to the token.
+In the above example, if an Application has the `token:read` permission, a `mask` transform will be applied by default,
+so reading the token will return the masked `data` of `XXX-XX-6789` and not the plaintext value.
+If you wish to read the original plaintext value of the token, you may apply an [Access Rule](/concepts/access-controls/#what-are-access-rules)
+to an Application that grants the `token:read` permission with a `reveal` transform.
 
 ## Time to Live (TTL)
 
