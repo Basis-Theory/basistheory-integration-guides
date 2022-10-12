@@ -43,7 +43,10 @@ For this guide, we will be using the following scenario:
 
 ## 1. Create a new Management Application
 
-This new management Application will be used to create new Reactor Formulas, [Reactors](https://developers.basistheory.com/concepts/what-are-reactors/), [Applications](https://developers.basistheory.com/concepts/what-are-applications/), and the [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/). To enable this configuration, we will configure the Application with the following settings:
+This new management Application will be used to create new Reactor Formulas, [Reactors](https://developers.basistheory.com/concepts/what-are-reactors/), 
+[Applications](https://developers.basistheory.com/concepts/access-controls/#what-are-applications/), 
+and the [Proxy](https://developers.basistheory.com/concepts/what-is-the-proxy/). 
+To enable this configuration, we will configure the Application with the following settings:
 
 - Name
     - “Setup Proxy”

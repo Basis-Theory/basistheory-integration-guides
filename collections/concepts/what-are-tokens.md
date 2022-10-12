@@ -287,9 +287,17 @@ In the above example, we can now perform a search with `john`, `doe`, `111-22-33
 
 ## Deduplication
 
-Duplicate data can be problematic for some systems. This can create data integrity problems in some systems where unique values are required. For example, you may have an accounts payable system and an e-commerce system both accepting credit cards for customers, and you want to ensure duplicate credit cards are not on file for that customer. Deduplication ensures tokens that have the same `fingerprint` return the same token when created. By default, every tokenization request creates a new token, but with deduplication [enabled at the tenant](https://docs.basistheory.com/#tenants-tenant-settings-object) or on each [tokenization request](https://docs.basistheory.com/#tokens-create-token), tokens will be deduplicated based upon the fingerprint. This ensures that if multiple systems or the same system creates multiple tokens with the same data, they do not create duplicate tokens.
+Duplicate data can be problematic for some systems. This can create data integrity problems in some systems where unique 
+values are required. For example, you may have an accounts payable system and an e-commerce system both accepting 
+credit cards for customers, and you want to ensure duplicate credit cards are not on file for that customer. 
+Deduplication ensures tokens that have the same `fingerprint` return the same token when created. 
+By default, every tokenization request creates a new token, but with deduplication [enabled at the tenant](https://docs.basistheory.com/#tenants-tenant-settings-object) 
+or on each [tokenization request](https://docs.basistheory.com/#tokens-create-token), tokens will be deduplicated based 
+upon their fingerprint. This ensures that if multiple systems or the same system creates multiple tokens with the same 
+data, they do not create duplicate tokens.
 
-To deduplicate a token during the tokenization request, we pass the `deduplicate_token` flag to the create token request. This will override the tenant-level deduplicate tokens setting:
+To deduplicate a token during the tokenization request, we pass the `deduplicate_token` flag to the create token request. 
+This will override the tenant-level deduplicate tokens setting:
 
 ```json
 {
@@ -299,7 +307,12 @@ To deduplicate a token during the tokenization request, we pass the `deduplicate
 }
 ```
 
-In this scenario, if we detect an existing token with the same `fingerprint`, the existing token is returned instead of creating a new token.
+In this scenario, if we detect an existing token with the same `fingerprint`, the existing token is returned instead of 
+creating a new token. When an existing token is matched, its data and metadata will only be returned within the response
+if the requester has `token:read` permission to the matched token. If the requesting Application does not have read
+permission, then the `data`, `metadata`, and other potentially sensitive attributes will be redacted to prevent 
+leaking information to unauthorized parties. Only the following properties will be included in redacted responses: 
+`id`, `type`, `tenant_id`, `fingerprint`, `privacy`, and `container`.
 
 ## Metadata
 
