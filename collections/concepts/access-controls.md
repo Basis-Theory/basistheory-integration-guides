@@ -91,7 +91,7 @@ Each Application Type allows a different set of permissions, and you can find a 
 Token permissions granted to Private or Public applications are applied to all Tokens 
 (i.e. they are not scoped to a particular [Container](/concepts/what-are-token-containers) of Tokens). 
 In order to ensure sensitive data is not inadvertently revealed by an Application, an implicit 
-[transform](/concepts/access-controls#what-are-access-rules-transform) is applied for each operation:
+[transform](/concepts/access-controls#transform) is applied for each operation:
 
 | Permission   | Transform |
 |:-------------|-----------|
@@ -175,7 +175,7 @@ This enables engineers to write scripts or to use IaC (Infrastructure as  Code) 
 Access Rules are the building blocks for constructing fine-grained access control policies for an Application.
 When performing an operation through the Basis Theory API, Access Rules are evaluated in priority order until 
 the first rule is found with matching permissions and container. Once a matching rule is identified, 
-the [transform](/concepts/access-controls#what-are-access-rules-transform) defined on the rule determines
+the [transform](/concepts/access-controls#transform) defined on the rule determines
 if and how Token data will be returned from the API. If no matching rules are found, 
 access to the requested resource is denied with a `403 Forbidden` error.
 
@@ -204,7 +204,7 @@ read Tokens in the `/pci/low/` and `/pci/high/` Containers.
 
 To specify different access controls on a sub-Container, you may apply another rule with higher priority 
 that is scoped to the sub-Container. For example, given a rule that grants `token:read` permission on the 
-`/pci/high/` Container with a `mask` [transform](/concepts/access-controls#what-are-access-rules-transform)
+`/pci/high/` Container with a `mask` [transform](/concepts/access-controls#transform)
 and another rule with lower priority grants `token:read` permission on the `/pci/` Container with a `reveal` transform,
 then reading tokens in the `/pci/high/` container will return masked data, and reading tokens in the 
 `/pci/low/` container will return plaintext data.
@@ -255,4 +255,4 @@ customers single-tenant environments that only have access to a single customer'
 To enable this use case, first ensure your Tokens are organized into [Containers](/concepts/what-are-token-containers)
 by customer, for example `/customer-1/`, `/customer-2/`, etc.
 
-[//]: # (<img alt="Access Rules" src="/assets/images/concepts/access_rules_by_customer.png">)
+<img alt="Access Rules" src="/assets/images/concepts/access_rules_by_customer.png">

@@ -68,4 +68,4 @@ You could achieve this by further dividing Tokens into the sub-containers:
 - `/customer-2/pci/`
 - `/customer-2/pii/`
 
-[//]: # (<img alt="Containers" src="/assets/images/concepts/containers_by_customer.png">)
+<img alt="Containers" src="/assets/images/concepts/containers_by_customer.png">
