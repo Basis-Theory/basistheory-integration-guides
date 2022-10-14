@@ -28,7 +28,7 @@ You have complete control to customize your Container hierarchy to meet your uni
 By default, Tokens will be assigned to Containers based off their data classification and impact levels, using the format 
 `/<classification>/<impact_level>/`, e.g. `/pci/high/` or `/general/low/`.
 
-A Token's Container can be modified through the [Update Token](https://docs.basistheory.com/#tokens-update-token) endpoint,
+A Token's Containers can be modified through the [Update Token](https://docs.basistheory.com/#tokens-update-token) endpoint,
 provided that the Application performing the update has `token:update` permission to both the source and 
 destination Containers.
 
@@ -63,9 +63,7 @@ Tokens may also be further segmented within each customer's container, as needed
 data by classification, say between payments related Tokens and Tokens used to store a customer's contact information. 
 You could achieve this by further dividing Tokens into the sub-containers: 
 
-- `/customer-1/pci/`
-- `/customer-1/pii/`
 - `/customer-2/pci/`
 - `/customer-2/pii/`
 
-[//]: # (<img alt="Containers" src="/assets/images/concepts/containers_by_customer.png">)
+<img alt="Containers" src="/assets/images/concepts/containers_by_customer.png">
