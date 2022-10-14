@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.35.0...v1.36.0) (2022-10-14)
+
+
+### Features
+
+* Updates images and links ([#155](https://github.com/Basis-Theory/basistheory-integration-guides/issues/155)) ([5d2ef54](https://github.com/Basis-Theory/basistheory-integration-guides/commit/5d2ef54cf02f95d795e99698b786416b99bca245))
+
 # [1.35.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.34.0...v1.35.0) (2022-10-12)
 
 
