@@ -183,31 +183,20 @@ A scenario where masking is useful is in enabling customer service representativ
 ```
 {% endraw %}
 
-## Privacy Settings
+## Containers
 
-Privacy settings are [NIST defined](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf#page=6) classification and impact levels, defined for each token to identify the type and impact of the data on your systems. These settings can be used to permit the data within your internal systems, allowing certain systems access to highly confidential data and restricting access to other systems by masking or redacting the data.
+[Containers](/concepts/what-are-token-containers) enable you to logically group Tokens and segment data within a Tenant,
+enabling you to organize Tokens based on your unique data governance strategy. By default, tokens are placed into 
+containers based on [NIST defined](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf#page=6) data classifications
+and impact levels. 
 
-In a scenario where we want to store a customer’s social security number, we only want to provide access to the last 4 of the SSN to our customer service team:
+Containers allow you to grant scoped access to subsets of Tokens, limiting the amount of
+data accessible by your internal systems. [Access Controls](/concepts/access-controls) can be used in conjunction with
+Containers to allow some systems access to highly confidential data while restricting access to only masked or redacted 
+Tokens from other systems.
 
-{% raw %}
-```json
-{
-  "type": "token",
-  "data": "123-45-6789",
-  "mask": "{{ data | reveal_last: 4 }}",
-  "privacy": {
-    "classification": "pii",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  }
-}
-```
-{% endraw %}
-
-In the above example, if an Application has the `token:read` permission, a `mask` transform will be applied by default,
-so reading the token will return the masked `data` of `XXX-XX-6789` and not the plaintext value.
-If you wish to read the original plaintext value of the token, you may apply an [Access Rule](/concepts/access-controls/#what-are-access-rules)
-to an Application that grants the `token:read` permission with a `reveal` transform.
+For example, we may want to store a customer’s social security number and only provide access to the last 4 digits 
+of the SSN to our customer service team.
 
 ## Time to Live (TTL)
 
@@ -312,7 +301,7 @@ creating a new token. When an existing token is matched, its data and metadata w
 if the requester has `token:read` permission to the matched token. If the requesting Application does not have read
 permission, then the `data`, `metadata`, and other potentially sensitive attributes will be redacted to prevent 
 leaking information to unauthorized parties. Only the following properties will be included in redacted responses: 
-`id`, `type`, `tenant_id`, `fingerprint`, `privacy`, and `container`.
+`id`, `type`, `tenant_id`, `fingerprint`, and `containers`.
 
 ## Metadata
 
@@ -375,11 +364,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.number }}",
     "{{ data.number | last4 }}"
   ],
-  "privacy": {
-    "classification": "pci",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  }
+  "containers": ["/pci/high/"]
 }
 ```
 {% endraw %}
@@ -407,11 +392,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.number }}",
     "{{ data.number | last4 }}"
   ],
-  "privacy": {
-    "classification": "pci",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  },
+  "containers": ["/pci/high/"],
   "created_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
   "created_at": "2020-09-15T15:53:00+00:00",
   "modified_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
@@ -448,11 +429,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.account_number }}",
     "{{ data.account_number | last4 }}"
   ],
-  "privacy": {
-    "classification": "bank",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  }
+  "containers": ["/bank/high/"]
 }
 ```
 {% endraw %}
@@ -479,11 +456,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.account_number }}",
     "{{ data.account_number | last4 }}"
   ],
-  "privacy": {
-    "classification": "bank",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  },
+  "containers": ["/bank/high/"],
   "created_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
   "created_at": "2020-09-15T15:53:00+00:00",
   "modified_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
@@ -521,11 +494,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.email_address | downcase }}",
     "{{ data.email_address | split: '@' | last }}"
   ],
-  "privacy": {
-    "classification": "pii",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  }
+  "containers": ["/pii/high/"]
 }
 ```
 {% endraw %}
@@ -559,11 +528,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "{{ data.email_address | downcase }}",
     "{{ data.email_address | split: '@' | last }}"
   ],
-  "privacy": {
-    "classification": "pii",
-    "impact_level": "high",
-    "restriction_policy": "mask"
-  },
+  "containers": ["/pii/high/"],
   "created_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
   "created_at": "2020-09-15T15:53:00+00:00",
   "modified_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
@@ -585,10 +550,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
     "password": "8n%C%r+4DG*7BdPjZ6km9Nc#"
   },
   "expires_at": "2022-07-15T00:00:00+00:00",
-  "privacy": {
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  }
+  "containers": ["/general/high/"]
 }
 ```
 {% endraw %}
@@ -603,10 +565,7 @@ You can easily manage the relationship between a `parent` and `child` token via 
   "fingerprint": "Rs2U7r4cwN137j9XRO88zg",
   "fingerprint_expression": "{{ data | stringify }}",
   "expires_at": "2022-07-15T00:00:00+00:00",
-  "privacy": {
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  },
+  "containers": ["/general/high/"],
   "created_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",
   "created_at": "2020-09-15T15:53:00+00:00",
   "modified_by": "fb124bba-f90d-45f0-9a59-5edca27b3b4a",

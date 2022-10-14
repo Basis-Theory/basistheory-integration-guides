@@ -25,10 +25,11 @@ Container names must start and end with a `/`, and the root Container is denoted
 alphanumeric characters, `-`, or `_`, and can contain an arbitrary number of nested sub-containers.
 
 You have complete control to customize your Container hierarchy to meet your unique data governance requirements. 
-By default, Tokens will be assigned to Containers based off their data classification and impact levels, using the format 
-`/<classification>/<impact_level>/`, e.g. `/pci/high/` or `/general/low/`.
+If `containers` is not specified when creating a Token, default Containers will be assigned based on the [Token Type](https://docs.basistheory.com/#token-types).
+Default containers are based on [NIST defined](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf#page=6) 
+data classifications and impact levels, e.g. `/pci/high/` for `card` tokens, or `/general/high/` for general tokens of type `token`.
 
-A Token's Containers can be modified through the [Update Token](https://docs.basistheory.com/#tokens-update-token) endpoint,
+An existing Token's Containers can be modified through the [Update Token](https://docs.basistheory.com/#tokens-update-token) endpoint,
 provided that the Application performing the update has `token:update` permission to both the source and 
 destination Containers.
 

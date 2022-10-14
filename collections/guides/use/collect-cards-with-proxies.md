@@ -70,10 +70,7 @@ module.exports = async function (req) {
   const token = await req.bt.tokenize({
     type: "token",
     data: req.args.body.card.number,
-      privacy: {
-          classification: "pci",
-          impactLevel: "high"
-      }
+    containers: ["/pci/high/"]
   });
  
   const body = {
@@ -106,7 +103,7 @@ curl "https://api.basistheory.com/reactor-formulas" \
     "name": "Partner Proxy Formula",
     "description": "Used to tokenized cards on the way to /payments",
     "icon": "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",
-    "code": "module.exports = async function (req) {\r\n  const token = await req.bt.tokenize({\r\n\t  type: \"token\",\r\n\t  data: req.args.body.card.number,\r\n\t\tprivacy: {\r\n\t\t\tclassification: \"pci\",\r\n\t\t\timpactLevel: \"high\"\r\n\t\t}\r\n\t});\r\n \r\n\tconst body = {\r\n\t\t...req.args.body,\r\n    card: {\r\n      ...req.args.body.card,\r\n      number: token.id\r\n    }\r\n\t}\r\n\r\n  return {\r\n\t\traw: {\r\n\t\t\theaders: req.args.headers,\r\n\t\t\tbody\r\n\t\t}\r\n\t};\r\n};",
+    "code": "module.exports = async function (req) {\r\n  const token = await req.bt.tokenize({\r\n\t  type: \"token\",\r\n\t  data: req.args.body.card.number,\r\n\t\tcontainers: [\"/pci/high/\"]\r\n\t});\r\n \r\n\tconst body = {\r\n\t\t...req.args.body,\r\n    card: {\r\n      ...req.args.body.card,\r\n      number: token.id\r\n    }\r\n\t}\r\n\r\n  return {\r\n\t\traw: {\r\n\t\t\theaders: req.args.headers,\r\n\t\t\tbody\r\n\t\t}\r\n\t};\r\n};",
     "configuration": [],
     "request_parameters": []
 }'
@@ -116,7 +113,8 @@ curl "https://api.basistheory.com/reactor-formulas" \
 
 ## 3. Create a new Application
 
-This Application will be used by your Reactor to grant the injected `bt` [npm module](https://www.npmjs.com/package/@basis-theory/basis-theory-js) instance access to create new `pci` classification tokens.
+This Application will be used by your Reactor to grant the injected `bt` [npm module](https://www.npmjs.com/package/@basis-theory/basis-theory-js) 
+instance access to create new tokens in the `/pci/` container.
 
 Create a new Application with the following settings:
 

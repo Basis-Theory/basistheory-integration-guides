@@ -75,14 +75,14 @@ async function submit() {
       ssn,
       phone
     },
-    privacy: {
-      classification: 'pii'
-    }
+    containers: ["/pii/"]
   });
 }
 ```
 
-In the previous example, we are overriding the token's privacy settings to specify a classification of `pii`, which is the type of data we are tokenizing. If we omit this, the default classification `general` would be used. 
+In the previous example, we are creating the token within the `/pii/` [container](/concepts/what-are-token-containers)
+to classify it as PII data. If we omit the `containers` property from the request, the token would be placed in the 
+`/general/high/` container by default. 
 
 ## Retrieve your Token on your server
 
