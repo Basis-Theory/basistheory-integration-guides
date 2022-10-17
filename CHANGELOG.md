@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.36.0...v1.37.0) (2022-10-17)
+
+
+### Features
+
+* Removes references to privacy settings and other cleanup ([a4ef183](https://github.com/Basis-Theory/basistheory-integration-guides/commit/a4ef183a6de72972f527012846273379f0dfba33))
+
 # [1.36.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.35.0...v1.36.0) (2022-10-14)
 
 
