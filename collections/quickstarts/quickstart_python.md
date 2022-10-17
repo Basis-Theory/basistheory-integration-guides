@@ -140,11 +140,7 @@ Created Token:
   "id": "5646e5f5-0075-4932-b08b-77d4250eeea2",
   "tenant_id": "71b86f56-e2e4-494c-b4f2-de8f38d1aee1",
   "type": "token",
-  "privacy": {
-    "classification": "general",
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  },
+  "containers": ["/general/high/"],
   "created_by": "69f12e84-4501-41e7-8f51-a74b307d7dc5",
   "created_at": "2022-02-17T11:49:37.7616114+00:00"
 }
@@ -187,11 +183,7 @@ Created Token:
   "id": "5646e5f5-0075-4932-b08b-77d4250eeea2",
   "tenant_id": "71b86f56-e2e4-494c-b4f2-de8f38d1aee1",
   "type": "token",
-  "privacy": {
-    "classification": "general",
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  },
+  "containers": ["/general/high/"],
   "created_by": "69f12e84-4501-41e7-8f51-a74b307d7dc5",
   "created_at": "2022-02-17T11:49:37.7616114+00:00"
 }
@@ -204,11 +196,7 @@ Read your Token:
   "data": "foo",
   "created_by": "69f12e84-4501-41e7-8f51-a74b307d7dc5",
   "created_at": "2022-02-17T11:49:37.7616114+00:00",
-  "privacy": {
-    "classification": "general",
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  }
+  "containers": ["/general/high/"]
 }
 
 Read raw Token data:

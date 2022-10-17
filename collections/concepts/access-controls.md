@@ -13,6 +13,7 @@ height: 630
 ---
 
 # Access Controls
+{: .no_toc }
 
 Basis Theory secures sensitive data as [Tokens](/concepts/what-are-tokens) that are stored within an isolated 
 compliant environment, called a [Tenant](/concepts/access-controls#what-are-tenants).
@@ -22,6 +23,10 @@ Access to your Tenant's data is limited by applying access controls to an Applic
 [Permissions](https://docs.basistheory.com/api-reference/#permissions) and [Access Rules](/concepts/access-controls#what-are-access-rules)
 to ensure services and users only have access to the data they need.
 
+### Table of contents
+{: .no_toc .text-delta }
+1. 
+{:toc}
 
 ## What are Tenants?
 

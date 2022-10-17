@@ -77,11 +77,7 @@ You will see a response similar to:
   "id": "0a5767fd-e60a-4d73-bd6e-74b4f1e022df",
   "tenant_id": "71b86f56-e2e4-494c-b4f2-de8f38d1aee1",
   "type": "token",
-  "privacy": {
-    "classification": "general",
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  },
+  "containers": ["/general/high/"],
   "created_by": "69f12e84-4501-41e7-8f51-a74b307d7dc5",
   "created_at": "2022-01-22T15:13:14.3187199+00:00"
 }
@@ -110,11 +106,7 @@ curl "https://api.basistheory.com/tokens/<! Token Id !>" \
   "data": "foo",
   "created_by": "69f12e84-4501-41e7-8f51-a74b307d7dc5",
   "created_at": "2022-01-22T15:13:14.3187199+00:00",
-  "privacy": {
-    "classification": "general",
-    "impact_level": "high",
-    "restriction_policy": "redact"
-  }
+  "containers": ["/general/high/"],
 }
 ```
 

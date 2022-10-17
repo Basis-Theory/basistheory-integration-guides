@@ -114,10 +114,6 @@ func main() {
   createTokenRequest.SetFingerprintExpression("{{ data }}")
   createTokenRequest.SetDeduplicateToken(true)
 
-  privacy := *basistheory.NewPrivacy()
-  privacy.SetRestrictionPolicy("mask")
-  createTokenRequest.SetPrivacy(privacy)
-
   // Send the request
   createTokenResponse, _, _ := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
 
@@ -136,7 +132,7 @@ go run .
 You will see a response similar to:
 ```bash
 > Token created:
-{"id":"62a71684-f148-424c-88c6-bdb44031357a","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","type":"token","privacy":{"classification":"general","impact_level":"high","restriction_policy":"redact"},"created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00"}
+{"id":"62a71684-f148-424c-88c6-bdb44031357a","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","type":"token","containers":["/general/high/"],"created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00"}
 ```
 
 🎉🎉🎉 You’ve created a token 🎉🎉🎉
@@ -165,9 +161,9 @@ go run .
 
 ```bash
 > Token created:
-{"id":"62a71684-f148-424c-88c6-bdb44031357a","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","type":"token","privacy":{"classification":"general","impact_level":"high","restriction_policy":"redact"},"created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00"}
+{"id":"62a71684-f148-424c-88c6-bdb44031357a","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","type":"token","containers":["/general/high/"],"created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00"}
 Read a token:
-{"id":"62a71684-f148-424c-88c6-bdb44031357a","type":"token","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00","privacy":{"classification":"general","impact_level":"high","restriction_policy":"redact"}}
+{"id":"62a71684-f148-424c-88c6-bdb44031357a","type":"token","tenant_id":"570b53fb-1ecf-4aaf-9cb2-145e13b566a9","created_by":"7281f0ef-eafc-455c-bdae-ce6c99ff8268","created_at":"2022-02-17T21:49:29.2596915+00:00","containers":["/general/high/"]}
 ```
 
 ## Putting it all together
@@ -200,10 +196,6 @@ func main() {
   createTokenRequest.SetSearchIndexes([]string{"{{ data }}", "{{ data | last4}}"})
   createTokenRequest.SetFingerprintExpression("{{ data }}")
   createTokenRequest.SetDeduplicateToken(true)
-
-  privacy := *basistheory.NewPrivacy()
-  privacy.SetRestrictionPolicy("mask")
-  createTokenRequest.SetPrivacy(privacy)
 
   // Send the request
   createTokenResponse, _, _ := apiClient.TokensApi.Create(contextWithAPIKey).CreateTokenRequest(createTokenRequest).Execute()
