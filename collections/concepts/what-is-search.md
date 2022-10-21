@@ -20,22 +20,23 @@ decrypt your data.
 
 ## How It Works
 
-When the Token is created the data is securely indexed in several data patterns using blind indexes. Combining the 
+When a Token is created, the data is securely indexed in several data patterns using blind indexes. Combining the 
 blind indexes with the existing metadata on the tokens allows you to search your entire Vault with a simple query. 
 You can search over the following fields:
 
-- `data`
+- `id`
 - `type`
+- `data`
+- `fingerprint`
+- `container`
 - `metadata.[key]`
+- `created_by`
 - `created_at`
+- `modified_by`
+- `modified_at`
 
-Currently, Basis Theory supports searching `data` on `social_security_number`, `employer_id_number`, and `token` 
-[Token Types](https://docs.basistheory.com/#token-types). The data is indexed in several patterns for 
-`social_security_number` and `employer_id_number` [Token Types](https://docs.basistheory.com/#token-types), 
-allowing for flexible searching. For instance, you can search for a social security number by the full number with or 
-without dashes (`123-45-6789` and `123456789`), and only the last four (`6789`). For `token` 
-[Token Types](https://docs.basistheory.com/#token-types), you can create indexes to fit your use case. Find out all the 
-details [here](https://docs.basistheory.com/expressions/#search-indexes).
+
+Searching data is not limited by [token type](https://docs.basistheory.com/#token-types). It is entirely driven by the presence of [search indexes](https://docs.basistheory.com/expressions/#search-indexes), which is an array of search index expressions that can be specified within the request when [creating a token](https://docs.basistheory.com/#tokens-create-token). Some token types have default search indexes, but they can be overridden with custom indexes to fit your use case.
 
 ## Permissions
 
