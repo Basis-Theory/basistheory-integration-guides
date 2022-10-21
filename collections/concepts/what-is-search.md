@@ -36,7 +36,7 @@ You can search over the following fields:
 - `modified_at`
 
 
-Searching data is not limited by [token type](https://docs.basistheory.com/#token-types). It is entirely driven by the presence of [search indexes](https://docs.basistheory.com/expressions/#search-indexes), which is an array of search index expressions that can be specified within the request when [creating a token](https://docs.basistheory.com/#tokens-create-token). Token types have default search indexes, but they can be overridden with custom indexes to fit your use case.
+Searching data is not limited by [token type](https://docs.basistheory.com/#token-types). It is entirely driven by the presence of [search indexes](https://docs.basistheory.com/expressions/#search-indexes), which is an array of search index expressions that can be specified within the request when [creating a token](https://docs.basistheory.com/#tokens-create-token). Some token types have default search indexes, but they can be overridden with custom indexes to fit your use case.
 
 ## Permissions
 
