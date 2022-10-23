@@ -111,6 +111,13 @@
       }
     }
 
+    .blueprints-icon {
+      background-image: url(/assets/images/icons/blueprints.svg);
+      &.active {
+        background-image: url(/assets/images/icons/blueprints-active.svg);
+      }
+    }
+
     .concepts-icon {
       background-image: url(/assets/images/icons/concepts.svg);
       &.active {

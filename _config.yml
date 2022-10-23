@@ -44,6 +44,9 @@ theme: just-the-docs
 heading_anchors: false
 
 collections:
+  blueprints:
+    output: true
+    permalink: /blueprints/:path/
   concepts:
     output: true
     permalink: /concepts/:path/
