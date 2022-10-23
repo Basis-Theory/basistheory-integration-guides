@@ -51,7 +51,7 @@ yarn add @basis-theory/basis-theory-react
 To securely collect cardholder data, you'll need a [Public Application](https://docs.basistheory.com/api-reference/#applications) using our PCI compliant template `Collect PCI Data`. [Click here to create one.](https://portal.basistheory.com/applications/create?application_template_id=db9148c1-a55f-4164-b830-a20ab6d720ae)
 
 This will create a PCI-compliant application with the following [Access Controls](/concepts/access-controls/):
-* Permissions: `token:create`
+* Permissions: `token:create`, `token:update`
 * Containers: `/pci/`
 * Transform: `mask`
 
@@ -98,7 +98,7 @@ export const CardForm = () => {
   const submit = async () => {};
 
   return (
-    <form onSubmit={submit} className="form">
+    <form onSubmit={submit}>
       <button type="button" onClick={submit} >
         Submit
       </button>
@@ -111,7 +111,7 @@ This will initialize Basis Theory JS and add your new card form.
 
 ### Add Card Element
 
-Now, we need to add a [`CardElement`](https://docs.basistheory.com/elements/#element-types-card-element) component to our form. This Element type offers a single line to capture the card number, expiration date, and CVC.
+Now, we need to add a [`CardElement`](https://docs.basistheory.com/elements/#element-types-card-element) component to our form. This Element type renders a single line containing input fields to capture the card number, expiration date, and CVC.
 
 Add the `CardElement` to our inputs:
 
@@ -142,7 +142,7 @@ export const CardForm = () => {
   const submit = async () => {};
 
   return (
-    <form onSubmit={submit} className="form">
+    <form onSubmit={submit}>
       <CardElement id="card" />
 
       <button type="button" onClick={submit} >
@@ -173,7 +173,7 @@ const submit = async () => {
     data: bt.getElement('card'),
   });
 
-  // Submit card token to your backend API
+  // Submit card token to our Next.js app's API
   // Example using Axios
   const { data } = await axios.post('/api/cards', { cardTokenId: token.id });
 };
@@ -181,7 +181,7 @@ const submit = async () => {
 
 ### What is Happening?
 
-When a user submits their payment information, we will tokenize the underlying value of the [CardElement](https://docs.basistheory.com/elements/#cardelement). This will instruct Basis Theory Elements to submit directly to [Basis Theory's Tokenize endpoint](https://docs.basistheory.com/#tokenize) and return the resulting token identifiers.
+When a user submits their payment information, we will tokenize the underlying value of the [CardElement](https://docs.basistheory.com/elements/#cardelement). This will instruct Basis Theory Elements to submit this sensitive card data directly to [Basis Theory's Tokenize endpoint](https://docs.basistheory.com/#tokenize) and return the resulting token identifiers to our front end, all without our application having accessed the sensitive card data directly.
 
 We are also creating a [`card` Token Type](https://docs.basistheory.com/#token-types-card). This is a PCI-compliant token type that will validate the card number using the [LUHN algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm) and automatically expire the `cvc` property after one hour.
 
@@ -223,8 +223,8 @@ const { data }  = await axios.post(
   'https://api.basistheory.com/proxy', 
   {
     card_number: `{%raw%}{{ ${cardTokenId} | json: '$.number' }}{%endraw%}`,
-    exp_month: `{%raw%}{{ ${cardTokenId} | json: '$.expiration_month' }}{%endraw%}`,
-    exp_year: `{%raw%}{{ ${cardTokenId} | json: '$.expiration_year' }}{%endraw%}`,
+    exp_month: `{%raw%}{{ ${cardTokenId} | json: '$.expiration_month' | to_number }}{%endraw%}`,
+    exp_year: `{%raw%}{{ ${cardTokenId} | json: '$.expiration_year' | to_number }}{%endraw%}`,
     cvc: `{%raw%}{{ ${cardTokenId} | json: '$.cvc' }}{%endraw%}`
   }, 
   {
@@ -241,8 +241,8 @@ You should see a JSON response similar to:
 ```json
 {
   "card_number": "4242424242424242",
-  "exp_month": "12",
-  "exp_year": "2025",
+  "exp_month": 12,
+  "exp_year": 2025,
   "cvc": "123"
 }
 ```
