@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sidebarClassCategories = ['getting-started', 'concepts', 'guides', 'reference'];
+    const sidebarClassCategories = ['getting-started', 'blueprints', 'concepts', 'guides', 'reference'];
 
     sidebarClassCategories.forEach((sidebarClassCategory) => {
         const categoryNameAndIcon = document.querySelector(`#${sidebarClassCategory}-category-name-and-icon`);

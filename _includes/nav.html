@@ -83,6 +83,25 @@
         {%- endfor -%}
     </div>
 
+    <div class="side-bar-category" id="blueprints-category-name-and-icon">
+        <div class="icon-and-category-name">
+            <div class="blueprints-icon category-icon-spacing {% if page.url contains '/blueprints' %} active{% endif %}"></div>
+            <div class="side-bar-category-name {% if page.url contains '/blueprints' %} active{% endif %}">Blueprints</div>
+        </div>
+        <a class="category-expander" id="blueprints-category-expander"></a>
+    </div>
+    <div class="side-bar-category-items" id="blueprints-category-items">
+        {%- for node in pages_list -%}
+          {%- if node.parent == nil and node.categories == 'blueprints' -%}
+            {%- unless node.nav_exclude -%}
+            <div class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+              <a href="{{ node.url | absolute_url }}" class="nav-list-link {% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+            </div>
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+    </div>
+
     <div class="side-bar-category" id="concepts-category-name-and-icon">
         <div class="icon-and-category-name">
             <div class="concepts-icon category-icon-spacing {% if page.url contains '/concepts' %} active{% endif %}"></div>
