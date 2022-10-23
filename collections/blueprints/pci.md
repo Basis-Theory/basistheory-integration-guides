@@ -173,7 +173,7 @@ const submit = async () => {
     data: bt.getElement('card'),
   });
 
-  // Submit card token to API
+  // Submit card token to your backend API
   // Example using Axios
   const { data } = await axios.post('/api/cards', { cardTokenId: token.id });
 };
