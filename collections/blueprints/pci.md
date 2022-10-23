@@ -199,7 +199,7 @@ You can fully customize your card token, such as the alias, mask, and metadata b
 
 Now that we have our card token, we need to be able to send the cardholder data to a PCI-compliant payment service provider (PSP) such as Stripe or Braintree. 
 
-In order to do this, we need to send the data without touching the tokenized value. To accomplish this, we will use [Basis Theory's Proxy](/concepts/what-is-the-proxy/).
+In order to do this, we will send the data without touching the tokenized value. To accomplish this, we will use [Basis Theory's Proxy](/concepts/what-is-the-proxy/).
 
 ### Create a Private Application
 
@@ -214,7 +214,7 @@ Copy the API Key to be used in the next step.
 
 ### Send the Data to the Payment Service Provider
 
-From our backend API, we now need to be able to send the cardholder data associated with our token to a third-party PSP.
+From our backend API, we will now be able to send the cardholder data associated with our token to a third-party PSP.
 
 Add the following code to your API, replacing `PRIVATE_API_KEY` with the API Key from the previous step::
 
