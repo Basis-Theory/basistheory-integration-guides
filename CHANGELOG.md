@@ -1,3 +1,10 @@
+# [1.38.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.37.0...v1.38.0) (2022-10-23)
+
+
+### Features
+
+* add PCI Blueprint ([#159](https://github.com/Basis-Theory/basistheory-integration-guides/issues/159)) ([c748105](https://github.com/Basis-Theory/basistheory-integration-guides/commit/c748105239ea38c64ed53e8d3fa4bd174700a39a))
+
 # [1.37.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.36.0...v1.37.0) (2022-10-17)
 
 
