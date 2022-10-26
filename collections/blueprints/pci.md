@@ -153,7 +153,7 @@ export const CardForm = () => {
 }
 ```
 
-You can fully customize the [look and feel](./guides/secure/../../../guides/secure/style-elements-for-my-brand.md) to match your existing site and even listen to common [events](https://docs.basistheory.com/elements/#element-events) on all Elements components.
+You can fully customize the [look and feel](/guides/style-elements-for-my-brand) to match your existing site and even listen to common [events](https://docs.basistheory.com/elements/#element-events) on all Elements components.
 
 ## Store Cards
 
