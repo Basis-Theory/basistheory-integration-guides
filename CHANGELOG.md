@@ -1,3 +1,10 @@
+## [1.39.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.39.0...v1.39.1) (2022-10-26)
+
+
+### Bug Fixes
+
+* bad link in pci blueprint ([#162](https://github.com/Basis-Theory/basistheory-integration-guides/issues/162)) ([ec1d3ef](https://github.com/Basis-Theory/basistheory-integration-guides/commit/ec1d3efdbcf1770e0532170bce08fe9634ab4f8d))
+
 # [1.39.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.38.0...v1.39.0) (2022-10-23)
 
 
