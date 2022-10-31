@@ -89,6 +89,10 @@ Once a Tenant exceeds the 1,000 free MATs, you will be prompted to enter a payme
 In order to facilitate your evaluation of Basis Theory, you will not be immediately blocked from continued usage of Basis Theory's services,
 and will have a short grace period to enter your payment details while continuing evaluation.
 
+## Are there usage limits to the monthly active tokens?
+
+The monthly active tokens are designed to make billing simple for almost every way that customers are using the platform. There are customer use cases where this model drives a high cost for Basis Theory to support the use case so we have alternate plans available when there are more than 10 interactions per MAT in a month.
+
 <span class="base-alert info">
   <span>
     Are you interested in using Basis Theory in production?
