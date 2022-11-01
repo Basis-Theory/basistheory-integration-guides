@@ -91,7 +91,7 @@ and will have a short grace period to enter your payment details while continuin
 
 ## Are there usage limits to the monthly active tokens?
 
-There is a limit of 10 interactions per MAT per month. Our billing is designed to be simple for almost every use-case for using our platform platform. In some situations more than 10 interactions per MAT in a month are required. [Contact us](https://basistheory.com/contact) for alternate plans available when this limit isn’t enough.
+There is a limit of 10 interactions per MAT per month. Our billing is designed to be simple for almost every use-case for using our platform. In some situations more than 10 interactions per MAT in a month are required. [Contact us](https://basistheory.com/contact) for alternate plans available when this limit isn’t enough.
 
 <span class="base-alert info">
   <span>
