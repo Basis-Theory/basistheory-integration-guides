@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.39.1...v1.40.0) (2022-11-01)
+
+
+### Features
+
+* MAT limits ([59e9975](https://github.com/Basis-Theory/basistheory-integration-guides/commit/59e99754f615fac58bbd0159444d3da92b451c24))
+
 ## [1.39.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.39.0...v1.39.1) (2022-10-26)
 
 
