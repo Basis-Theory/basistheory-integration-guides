@@ -83,6 +83,8 @@ A short description of the Application describing its intended use, for example 
 
 - **Management**: Used with scripts or the Basis Theory Terraform ([request access here](https://basistheory.com/contact)) modules to manage your [Tenant’s](https://developers.basistheory.com/concepts/tenants/) settings and services (Applications, Reactors, Proxy, etc) without logging into our Portal.
 
+- **Expiring**: Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is [revealing sensitive data using Basis Theory Elements](https://docs.basistheory.com/elements/#detokenization). Expiring Applications have limited permissions available and can be scoped to single tokens to ensure the API Key can be safely used within publicly available code.
+
 ### Access Controls
 
 An Application is granted access to your Tenant's resources in one of two ways: by granting the Application a set of 
@@ -121,6 +123,14 @@ Your Application’s API Key is used to authenticate your systems to the Basis T
 The API Key can be used to make authenticated requests to our API directly, using Hosted Elements, 
 or using the Basis Theory SDK. These API Keys follow a format similar to `key_4qUtg83907AnDem90aJSzcN`.
 API Keys should be regarded as highly sensitive, and should be stored a secret within in your environments.
+
+### Expires At
+
+ISO8601 compatible DateTime at which the application will be deleted. It only applies for `Expiring` applications.
+
+### Can Create Expiring Applications
+
+Flag that determines whether a `Private` application can provision `Expiring` applications.
 
 ### Application Templates
 
@@ -179,14 +189,14 @@ This enables engineers to write scripts or to use IaC (Infrastructure as  Code) 
 
 Access Rules are the building blocks for constructing fine-grained access control policies for an Application.
 When performing an operation through the Basis Theory API, Access Rules are evaluated in priority order until 
-the first rule is found with matching permissions and container. Once a matching rule is identified, 
+the first rule is found with matching container or conditions. Once a matching rule is identified, 
 the [transform](/concepts/access-controls#transform) defined on the rule determines
 if and how Token data will be returned from the API. If no matching rules are found, 
 access to the requested resource is denied with a `403 Forbidden` error.
 
 <span class="base-alert info">
   <span>
-    Access Rules are currently only supported on Private and Public Application types, and only control access to 
+    Access Rules are currently only supported on Private, Public and Expiring Application types, and only control access to 
     Token resources. Access Rules are not supported on Management Applications at this time. 
   </span>
 </span>
@@ -213,6 +223,13 @@ that is scoped to the sub-Container. For example, given a rule that grants `toke
 and another rule with lower priority grants `token:read` permission on the `/pci/` Container with a `reveal` transform,
 then reading tokens in the `/pci/high/` container will return masked data, and reading tokens in the 
 `/pci/low/` container will return plaintext data.
+
+### Conditions
+Conditions allow specifying more specific restrictions for the access rule to be matched, such as scoping them to a 
+specific token. For example, having a condition with attribute `ID`, operator `EQUALS` and value `<tokenId>`, will 
+allow the application to only access the token with the given `<tokenId>` ID.
+
+Conditions are mutually exclusive with Container and are currently only available for Expiring applications.
 
 ### Permissions
 
