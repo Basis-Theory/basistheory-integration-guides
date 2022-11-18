@@ -126,7 +126,7 @@ API Keys should be regarded as highly sensitive, and should be stored a secret w
 
 ### Expires At
 
-ISO8601 compatible DateTime in which the application will be deleted. It only applies for `Expiring` applications.
+ISO8601 compatible DateTime at which the application will be deleted. It only applies for `Expiring` applications.
 
 ### Can Create Expiring Applications
 
