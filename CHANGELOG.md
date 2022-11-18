@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.40.0...v1.41.0) (2022-11-18)
+
+
+### Features
+
+* add expiring applications docs ([#166](https://github.com/Basis-Theory/basistheory-integration-guides/issues/166)) ([e5ba24f](https://github.com/Basis-Theory/basistheory-integration-guides/commit/e5ba24f174a185f5ccda868680573fb4095ad04b))
+
 # [1.40.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.39.1...v1.40.0) (2022-11-01)
 
 
