@@ -83,7 +83,7 @@ A short description of the Application describing its intended use, for example 
 
 - **Management**: Used with scripts or the Basis Theory Terraform ([request access here](https://basistheory.com/contact)) modules to manage your [Tenant’s](https://developers.basistheory.com/concepts/tenants/) settings and services (Applications, Reactors, Proxy, etc) without logging into our Portal.
 
-- **Expiring**: Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is [revealing sensitive data using Basis Theory Elements](). Expiring Applications have limited permissions available and can be scoped to single tokens to ensure the API Key can be safely used within publicly available code.
+- **Expiring**: Used for Browser, Mobile, or Desktop applications running natively on a device (e.g. iOS, Android, Windows, etc) where the application is [revealing sensitive data using Basis Theory Elements](https://docs.basistheory.com/elements/#detokenization). Expiring Applications have limited permissions available and can be scoped to single tokens to ensure the API Key can be safely used within publicly available code.
 
 ### Access Controls
 
