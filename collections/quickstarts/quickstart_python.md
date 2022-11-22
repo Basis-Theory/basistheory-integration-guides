@@ -159,7 +159,7 @@ get_token_res = requests.get(f"{api_host}/tokens/{token['id']}", headers=headers
 fetched_token = get_token_res.json()
 
 print("\nRead your Token:")
-print(json.dumps(fetched_token, indent=2)
+print(json.dumps(fetched_token, indent=2))
 
 print("\nRead raw Token data:")
 print(fetched_token["data"])
