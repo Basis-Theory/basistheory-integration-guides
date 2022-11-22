@@ -1,3 +1,10 @@
+## [1.41.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.41.0...v1.41.1) (2022-11-22)
+
+
+### Bug Fixes
+
+* updating issue with python quickstart ([9869187](https://github.com/Basis-Theory/basistheory-integration-guides/commit/986918756ce0e7c389da08cbb814fe8aa500b422))
+
 # [1.41.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.40.0...v1.41.0) (2022-11-18)
 
 
