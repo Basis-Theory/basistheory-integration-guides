@@ -48,12 +48,12 @@ Additionally, you can also enable this through our [API or SDKs](https://docs.ba
 
 Now that the `private` application has the ability to create `expiring` applications, you can use the `private` application API key to create expiring applications from your server-side code.
 
-The example below uses the Basis Theory JS SDK to accomplish this:
+The example below uses the Basis Theory JS SDK to accomplish this, but [other](https://docs.basistheory.com/#applications-create-application) SDKs are available to better fit your workflow.
 
 ```jsx
 import { BasisTheory } from '@basis-theory/basis-theory-js';
 
-const bt = await new BasisTheory().init(process.env.BASIS_THEORY_PRIVATE_KEY);
+const bt = await new BasisTheory().init('<PRIVATE_APPLICATION_KEY>');
 
 const expiringApplication = await bt.applications.create({
   type: 'expiring',
