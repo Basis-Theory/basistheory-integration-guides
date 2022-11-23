@@ -15,21 +15,21 @@ image:
 ---
 # Reveal Card Data with React
 
-This following guide shows how you can safely reveal tokenized data to your users, without ever touching the detokenized data directly, therefore reducing your scope.  
+This guide shows how you can safely reveal tokenized data to your users, without ever touching the detokenized data directly, keeping your systems out of compliance scope.  
 
 It’s assumed on this guide that you are already familiar with the Basis Theory platform, but if that is not the case, please take a look at our getting started [guides](https://developers.basistheory.com/getting-started) before going further.
 
 ## Creating an Expiring Application
 
-Token data can only be retrieved using Basis Theory Elements with an <a href="https://docs.basistheory.com/#applications-application-types">expiring</a> application. This restriction is in place because when retrieving token data with Elements, by nature, the API key is publicly exposed by the browser network calls.  
-An `expiring` application has an expiration date, meaning that after a specified amount of time (up to 1 day), the application API key can no longer be used so the risk of having this API key publicly exposed is possibly mitigated. 
+Basis Theory Elements can only retrieve token data by using an API key issued by an <a href="https://docs.basistheory.com/#applications-application-types">expiring</a> application. This restriction is in place because the API key may be publicly exposed by the browser network calls when retrieving token data within a web application.
+An `expiring` application has an expiration date, meaning that after a specified amount of time (up to 1 day), the application's API key expires and can no longer be used. This mitigates the risk of publicly exposing this API key.
 
-The following steps address how you can create an `expiring` application:
+The following steps outline how to create an `expiring` application:
 
 ### Enable "Create Expiring Application" on a Private Application
 
-Applications of the `expiring` type are created from `private` applications, instead of a `management` application like other application types. This is done so the `expiring` application permissions are initially inherited from the parent `private` application, but still with the possibility of scoping permissions further down during creation. 
-The `private` application in question must either have the `token:read` <a href="https://developers.basistheory.com/concepts/access-controls/#permissions">permission</a> or an [access rule](https://developers.basistheory.com/concepts/access-controls/#what-are-access-rules) that has the permission in order for revealing token values to be possible. 
+An `expiring` application can only be created by a `private` application, and not by a `management` application as is required for other application types. An `expiring` application can only be granted access to resources within the parent `private` application's scope of access. In particular, this means that an `expiring` application cannot be granted access to tokens that are not accessible by the parent `private` application.
+In order for an `expiring` applications to be used to reveal token values, the issuing `private` application must either have the `token:read` <a href="https://developers.basistheory.com/concepts/access-controls/#permissions">permission</a> or an [access rule](https://developers.basistheory.com/concepts/access-controls/#what-are-access-rules) that grants the `token:read` permission to a subset of tokens.
 To enable a `private` application to create expiring applications, simply set the toggle in the Customer Portal, either during the `private` application creation or when updating an existing one: 
 
 ![Image of Create Expiring Application toggle in the portal](/assets/images/elements_reveal/enable_expiring_applications.png)
@@ -39,8 +39,8 @@ Additionally, you can also enable this through our [API or SDKs](https://docs.ba
 <span class="base-alert warning">
   <span>
     Tokens of type <code>card</code> are automatically added to the <code>/pci/high/</code> container.
-    Your private application created/updated needs <code>read</code> access to this container to continue with this tutorial.
-    If you don't have a private application yet that meets this criteria yet, you can <a href="https://portal.basistheory.com/applications/create?application_template_id=e6d4c554-6703-4bbb-b351-42cd2ee5cb5a">click here</a> to create one.
+    Your <code>private</code> application requires <code>token:read</code> access to the <code>/pci/high/</code> container to continue with this tutorial.
+    If you don't have a private application yet that meets these criteria, you can <a href="https://portal.basistheory.com/applications/create?application_template_id=e6d4c554-6703-4bbb-b351-42cd2ee5cb5a">click here</a> to create one.
   </span>
 </span>
 
@@ -63,12 +63,11 @@ const expiringApplication = await bt.applications.create({
       description: 'Reveal Card',
       priority: 1,
       transform: 'reveal', // required for reveal
-      container: '/pci/high/',
       conditions: [
         {
           attribute: 'id',
-          operator: 'EQUALS',
-          value: req.body?.tokenId, // from the request made to the server-side code
+          operator: 'equals',
+          value: req.body.tokenId, // from the request made to the server-side code
         },
       ],
       permissions: ['token:read'], // required for reveal
@@ -157,13 +156,13 @@ export const DisplayCard = () => {
 };
 ```
 
-That's it, now the token data can be displayed to the user 🎉, and since your client does not have direct access to the actual data value, it falls out of compliance scope.
+That's it, now the token data can be displayed to the user 🎉, and since your client-side application does not have direct access to the actual data value, it falls out of compliance scope.
 
 ## Demo Repository
 
-To better demonstrate this feature, a demo [repository](https://github.com/Basis-Theory-Labs/display-card-example) that you can clone and run on your local machine has been made available.
+This repository showcases some best practices and techniques for simplifying working with [Elements](https://docs.basistheory.com/elements/#introduction), including:
 
 The repository uses a few of the [Element's user experience](https://docs.basistheory.com/elements/#introduction) features to better enhance the usage experience and to make testing easier like:
-- Adds a `CardElement` for collecting cards that will be subsequently revealed. 
+- Shows how to build a `CardElement` for collecting cards that will be subsequently revealed.
 - Using the split `CardNumberElement`, `CardExpirationDateElement` and `CardVerificationCodeElement` to create a UI that resembles a credit card visually when revealing values.
 - Uses the `NextJS` server side API to fetch `expiring` application keys in real time. 
