@@ -102,6 +102,7 @@ image:
                             <li><a href="/guides/use-us-bank-accounts-without-touching-them">Use U.S. Bank Accounts <span class="guide-time-estimate">10m</span></a></li>
                             <li><a href="/guides/collect-cards-with-elements">Collect and Charge Credit Cards with JS <span class="guide-time-estimate">15m</span></a></li>
                             <li><a href="/guides/use-token-data-in-reactors">Use Token Data in Reactors <span class="guide-time-estimate">10m</span></a></li>
+                            <li><a href="/guides/reveal-cards-with-react">Reveal Card Data w/ React<span class="guide-time-estimate">10m</span></a></li>
                         </div>
                     </div>
                 </div>
