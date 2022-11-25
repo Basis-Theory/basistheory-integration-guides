@@ -1,3 +1,10 @@
+# [1.42.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.41.1...v1.42.0) (2022-11-25)
+
+
+### Features
+
+* add guide for reveal ([#167](https://github.com/Basis-Theory/basistheory-integration-guides/issues/167)) ([257cba1](https://github.com/Basis-Theory/basistheory-integration-guides/commit/257cba173d451878b1231227a5d6b56126a1e292))
+
 ## [1.41.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.41.0...v1.41.1) (2022-11-22)
 
 
