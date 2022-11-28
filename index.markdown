@@ -46,10 +46,10 @@ image:
                         <div>5 min</div>
                     </div>
                 </div>
-                <div class="card-title">What are Tokens?</div>
+                <div class="card-title">Tokens</div>
                 <div class="card-description">Use Tokens to secure and share your sensitive data.</div>
             </a>
-            <a class="card" href="/concepts/what-are-tenants">
+            <a class="card" href="/concepts/access-controls">
                 <div class="icon-and-time-estimate">
                     <img src="./assets/images/icons/blue-terminal.svg">
                     <div class="time-estimate">
@@ -57,8 +57,8 @@ image:
                         <div>5 min</div>
                     </div>
                 </div>
-                <div class="card-title">What are Tenants?</div>
-                <div class="card-description">Where your Tokens and Applications are defined, managed, and stored.</div>
+                <div class="card-title">Access Controls</div>
+                <div class="card-description">Configure your environment and manage access to your Tokens.</div>
             </a>
             <a class="card" href="/concepts/what-is-the-proxy">
                 <div class="icon-and-time-estimate">
@@ -68,7 +68,7 @@ image:
                         <div>5 min</div>
                     </div>
                 </div>
-                <div class="card-title">What is the Proxy?</div>
+                <div class="card-title">Proxy</div>
                 <div class="card-description">Send HTTP requests with tokenized data without touching it.</div>
             </a>
         </div>

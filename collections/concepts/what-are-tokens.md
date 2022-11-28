@@ -12,14 +12,15 @@ image:
     height: 630
 ---
 
-### Table of contents
+# Tokens
 {: .no_toc }
-1. 
-{:toc}
-
-# What are tokens?
 
 Tokens are the core of the Basis Theory platform, built to enable companies to remove the need to store sensitive data while granting the flexibility they need to grow and operate their businesses. Tokens are a reference to the sensitive data that’s stored in our system. Our tokens enable you to pass raw data to our platform, and we will handle keeping it safe for you while returning a non-sensitive token identifier for you to reference from your systems.
+
+### Table of contents
+{: .no_toc .text-delta }
+1. 
+{:toc}
 
 # How is the data stored?
 
