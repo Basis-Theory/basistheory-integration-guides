@@ -1,3 +1,10 @@
+## [1.42.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.42.0...v1.42.1) (2022-11-28)
+
+
+### Bug Fixes
+
+* Fixes link to access controls concept page ([#170](https://github.com/Basis-Theory/basistheory-integration-guides/issues/170)) ([fcd113a](https://github.com/Basis-Theory/basistheory-integration-guides/commit/fcd113ab678415989f64a5e38482b7b8536634d3))
+
 # [1.42.0](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.41.1...v1.42.0) (2022-11-25)
 
 
