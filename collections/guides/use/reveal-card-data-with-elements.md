@@ -145,8 +145,6 @@ export const DisplayCard = () => {
     cardRef.current.setValue(cardToken.data); 
   }
 
-  const cardToken = await bt.tokens.retrieve(tokenId, { apiKey: expiringKey });
-
   return (
     <>
       <CardElement id="myCard" ref={cardRef}/>
