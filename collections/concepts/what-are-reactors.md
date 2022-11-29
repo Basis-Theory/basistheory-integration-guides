@@ -18,12 +18,6 @@ A Reactor is a serverless compute service allowing Node.js code hosted in Basis 
 
 Reactors are invokable from any system that has the ability to make HTTPS requests and access the internet. 
 
-<span class="base-alert info">
-  <span>
-   Writing your own Node.js compatible Reactors is currently in private beta - reach out if you’re interested in using other languages or access to write your own Node.js Reactors
-  </span>
-</span>
-
 ## **How It Works**
 
 Reactors are serverless function runtimes, similar to AWS Lambda, Azure Functions, or Cloudflare Workers - except your applications, systems, and infrastructure never touches the sensitive plaintext data. 
