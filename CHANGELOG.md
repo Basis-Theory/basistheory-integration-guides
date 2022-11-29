@@ -1,3 +1,10 @@
+## [1.42.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.42.1...v1.42.2) (2022-11-29)
+
+
+### Bug Fixes
+
+* remove reactor formulas beta disclaimer ([#171](https://github.com/Basis-Theory/basistheory-integration-guides/issues/171)) ([bbb5f2d](https://github.com/Basis-Theory/basistheory-integration-guides/commit/bbb5f2de34c0d89b0260e93521ee73011ff37d98))
+
 ## [1.42.1](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.42.0...v1.42.1) (2022-11-28)
 
 
