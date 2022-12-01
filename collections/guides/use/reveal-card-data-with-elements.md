@@ -158,7 +158,7 @@ That's it, now the token data can be displayed to the user 🎉, and since your 
 
 ## Demo Repository
 
-To better demonstrate this feature, a demo [repository](https://github.com/Basis-Theory-Labs/display-card-example) that you can clone and run on your local machine has been made available.
+To better demonstrate this feature, we made available a [demo repository](https://github.com/Basis-Theory-Labs/display-card-example) that you can clone and run on your local machine.
 
 This repository showcases some best practices and techniques for simplifying working with [Elements](https://docs.basistheory.com/elements/#introduction), including:
 - Shows how to build a `CardElement` for collecting cards that will be subsequently revealed.
