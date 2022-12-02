@@ -1,3 +1,10 @@
+## [1.42.3](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.42.2...v1.42.3) (2022-12-02)
+
+
+### Bug Fixes
+
+* reveal guide errors ([#172](https://github.com/Basis-Theory/basistheory-integration-guides/issues/172)) ([6782db7](https://github.com/Basis-Theory/basistheory-integration-guides/commit/6782db785a5551c6aed4f8d5bbe4edc4ea864e8c))
+
 ## [1.42.2](https://github.com/Basis-Theory/basistheory-integration-guides/compare/v1.42.1...v1.42.2) (2022-11-29)
 
 
