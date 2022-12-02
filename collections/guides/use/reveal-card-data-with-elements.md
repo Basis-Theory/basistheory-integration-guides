@@ -145,8 +145,6 @@ export const DisplayCard = () => {
     cardRef.current.setValue(cardToken.data); 
   }
 
-  const cardToken = await bt.tokens.retrieve(tokenId, { apiKey: expiringKey });
-
   return (
     <>
       <CardElement id="myCard" ref={cardRef}/>
@@ -160,9 +158,9 @@ That's it, now the token data can be displayed to the user 🎉, and since your 
 
 ## Demo Repository
 
-This repository showcases some best practices and techniques for simplifying working with [Elements](https://docs.basistheory.com/elements/#introduction), including:
+To better demonstrate this feature, we made available a [demo repository](https://github.com/Basis-Theory-Labs/display-card-example) that you can clone and run on your local machine.
 
-The repository uses a few of the [Element's user experience](https://docs.basistheory.com/elements/#introduction) features to better enhance the usage experience and to make testing easier like:
+This repository showcases some best practices and techniques for simplifying working with [Elements](https://docs.basistheory.com/elements/#introduction), including:
 - Shows how to build a `CardElement` for collecting cards that will be subsequently revealed.
 - Using the split `CardNumberElement`, `CardExpirationDateElement` and `CardVerificationCodeElement` to create a UI that resembles a credit card visually when revealing values.
 - Uses the `NextJS` server side API to fetch `expiring` application keys in real time. 
